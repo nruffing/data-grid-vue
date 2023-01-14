@@ -30,3 +30,12 @@ export class Field {
   }
 }
 
+export interface PageData {
+ totalItems: number,
+ dataItems: any[], 
+}
+
+export const EmptyPageData = {
+  totalItems: 0,
+  dataItems: [],
+} as PageData

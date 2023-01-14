@@ -23,6 +23,7 @@ import { type DataService, StubDataService, ClientSideDataService } from '@/mode
 interface Data {
   keyColumn: Column,
   displayedData: any[],
+  totalItems: number,
   dataService: DataService,
   pageSize: number,
   currentPage: number,
@@ -58,6 +59,7 @@ export default defineComponent({
         field: new Field(''),
       },
       displayedData: [],
+      totalItems: 0,
       dataService: StubDataService,
       pageSize: 0,
       currentPage: 1,
@@ -88,8 +90,10 @@ export default defineComponent({
   },
   methods: {
     async loadPageData() {
-      this.displayedData = await this.dataService.getPage(this.currentPage, this.pageSize)
-    }
+      const pageData = await this.dataService.getPage(this.currentPage, this.pageSize)
+      this.displayedData = pageData.dataItems
+      this.totalItems = pageData.totalItems
+    },
   },
 })
 </script>
