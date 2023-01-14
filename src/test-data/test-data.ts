@@ -14,7 +14,8 @@ export interface TestDataItem {
 export const TestDataColumns = [
   {
     field: new Field('id'),
-    dataType: DataType.number
+    dataType: DataType.number,
+    isKey: true,
   },
   {
     field: new Field('firstName'),

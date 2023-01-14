@@ -12,6 +12,11 @@
         </td>
       </tr>
     </table>
+    <PageNavigation
+      v-if="paged"
+      v-model:current-page="currentPage"
+      v-model:page-size="pageSize"
+      :total-items="totalItems" />
   </div>
 </template>
 
@@ -19,6 +24,7 @@
 import { defineComponent } from 'vue';
 import { DataType, Field, type Column } from '@/models/DataGridVue';
 import { type DataService, StubDataService, ClientSideDataService } from '@/models/DataService';
+import PageNavigation from './PageNavigation.vue';
 
 interface Data {
   keyColumn: Column,
@@ -31,6 +37,9 @@ interface Data {
 
 export default defineComponent({
   name: 'DataGridVue',
+  components: {
+    PageNavigation,
+  },
   props: {
     data: {
      type: Array,
@@ -87,6 +96,11 @@ export default defineComponent({
     } else if (this.data) {
       this.displayedData = this.data
     }
+  },
+  watch: {
+    currentPage() {
+      this.loadPageData()
+    },
   },
   methods: {
     async loadPageData() {

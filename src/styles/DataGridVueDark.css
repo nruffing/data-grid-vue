@@ -1,6 +1,7 @@
 :root {
   --dgv-text-color: white;
   --cell-padding: 5px;
+  --active-page-color: orange;
 }
 
 .dgv-data-grid-container {
@@ -13,4 +14,8 @@
 
 .dgv-data-grid td {
   padding: var(--cell-padding);
+}
+
+.dgv-selected-page {
+  color: var(--active-page-color);
 }
