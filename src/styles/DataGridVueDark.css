@@ -1,0 +1,16 @@
+:root {
+  --dgv-text-color: white;
+  --cell-padding: 5px;
+}
+
+.dgv-data-grid-container {
+  color: var(--dgv-text-color);
+}
+
+.dgv-data-grid-header-row {
+  font-weight: bold;
+}
+
+.dgv-data-grid td {
+  padding: var(--cell-padding);
+}
