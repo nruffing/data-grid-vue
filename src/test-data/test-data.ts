@@ -1,6 +1,6 @@
 // https://www.mockaroo.com/
 
-import { DataType, Field, type Column } from '../models/DataGridVue'
+import { DataType, Field, type Column } from '../DataGridVue'
 
 export interface TestDataItem {
   id: number,

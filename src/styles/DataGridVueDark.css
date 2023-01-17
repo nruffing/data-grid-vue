@@ -1,23 +1,42 @@
 :root {
-  --dgv-text-color: white;
-  --cell-padding: 5px;
-  --active-page-color: orange;
+  --dgv-cell-text-color: rgb(255, 255, 255);
+  --dgv-cell-padding: 7px 12px;
+  --dgv-cell-border: 1px solid rgb(255, 255, 255);
+  --dgv-cell-font-size: 16px;
+  
+  --dgv-header-text-color: rgb(0, 0, 0);
+  --dgv-header-background: rgb(136, 136, 136);
+  --dgv-header-font-size: 18px;
+  --dgv-header-font-weight: bold;
+  --dgv-header-border: 1px solid rgb(255, 255, 255);
+  
+  --dgv-active-page-color: orange;
 }
 
 .dgv-data-grid-container {
-  color: var(--dgv-text-color);
+  color: var(--dgv-cell-text-color);
 }
 
-.dgv-data-grid-header-row {
-  font-weight: bold;
+.dgv-data-grid {
+  border-collapse: collapse;
+}
+
+.dgv-data-grid .dgv-data-grid-header-row td {
+  color: var(--dgv-header-text-color);
+  background-color: var(--dgv-header-background);
+  font-weight: var(--dgv-header-font-weight);
+  font-size: var(--header-font-size);
+  border: var(--dgv-header-border);
 }
 
 .dgv-data-grid td {
-  padding: var(--cell-padding);
+  padding: var(--dgv-cell-padding);
+  font-size: var(--dgv-font-size);
+  border: var(--dgv-cell-border);
 }
 
 .dgv-selected-page {
-  color: var(--active-page-color);
+  color: var(--dgv-active-page-color);
 }
 
 .dgv-data-grid-header-row > td.sortable {

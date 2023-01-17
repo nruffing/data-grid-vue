@@ -26,10 +26,10 @@
 
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue';
-import { DataType, Field, type Column } from '@/models/DataGridVue';
-import { type DataService, StubDataService, ClientSideDataService } from '@/models/DataService';
+import { DataType, Field, type Column } from '@/DataGridVue';
+import { type DataService, StubDataService, ClientSideDataService } from '@/DataService';
 import PageNavigation from './PageNavigation.vue';
-import { type Sort, type SortOptions, SortType } from '@/models/Sort';
+import { type Sort, type SortOptions, SortType } from '@/Sort';
 
 interface Data {
   keyColumn: Column,
