@@ -2,7 +2,11 @@
   <main>
     <DataGridVue
       :data="mockData"
-      :columns="testDataColumns">    
+      :columns="testDataColumns"
+      :sort-options="{
+        sortable: true,
+        multiColumn: false,
+      }">    
     </DataGridVue>
   </main>
 </template>
@@ -15,7 +19,6 @@ import type { Column } from './models/DataGridVue'
 
 import { TestDataColumns, type TestDataItem } from './test-data/test-data'
 import MOCK_DATA from './test-data/MOCK_DATA'
-
 
 export default defineComponent({
   name: 'App',
@@ -36,10 +39,9 @@ export default defineComponent({
 <style>
 body, html {
   margin: 0;
+  background-color: black;
 }
 main {
-  height: 100vh;
-  width: 100vw;
-  background-color: black;
+  padding: 20px;
 }
 </style>

@@ -19,3 +19,7 @@
 .dgv-selected-page {
   color: var(--active-page-color);
 }
+
+.dgv-data-grid-header-row > td.sortable {
+  cursor: pointer;
+}

@@ -19,17 +19,22 @@ export const TestDataColumns = [
   },
   {
     field: new Field('firstName'),
+    dataType: DataType.alphanumeric,
   },
   {
     field: new Field('lastName'),
+    dataType: DataType.alphanumeric,
   },
   {
     field: new Field('email'),
+    dataType: DataType.alphanumeric,
   },
   {
     field: new Field('gender'),
+    dataType: DataType.alphanumeric,
   },
   {
     field: new Field('ipAddress'),
+    dataType: DataType.alphanumeric,
   },
 ] as Column[]

@@ -2,7 +2,11 @@
   <div class="dgv-data-grid-container">
     <table class="dgv-data-grid">
       <tr class="dgv-data-grid-header-row">
-        <td v-for="column in columns" :key="column.field.fieldName">
+        <td 
+          v-for="column in columns" 
+          :key="column.field.fieldName"
+          :class="{ sortable: sortOptions?.sortable }"
+          @click="sortColumn(column)">
           {{ column.title ?? column.field.fieldName }}
         </td>
       </tr>
@@ -21,10 +25,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, type PropType } from 'vue';
 import { DataType, Field, type Column } from '@/models/DataGridVue';
 import { type DataService, StubDataService, ClientSideDataService } from '@/models/DataService';
 import PageNavigation from './PageNavigation.vue';
+import { type Sort, type SortOptions, SortType } from '@/models/Sort';
 
 interface Data {
   keyColumn: Column,
@@ -33,6 +38,7 @@ interface Data {
   dataService: DataService,
   pageSize: number,
   currentPage: number,
+  sort: Sort[],
 }
 
 export default defineComponent({
@@ -60,6 +66,11 @@ export default defineComponent({
       required: false,
       default: 15,
     },
+    sortOptions: {
+      type: Object as PropType<SortOptions>,
+      required: false,
+      default: undefined,
+    },
   },
   data(): Data {
     return {
@@ -72,6 +83,7 @@ export default defineComponent({
       dataService: StubDataService,
       pageSize: 0,
       currentPage: 1,
+      sort: [],
     }
   },
   mounted() {
@@ -104,14 +116,37 @@ export default defineComponent({
   },
   methods: {
     async loadPageData() {
-      const pageData = await this.dataService.getPage(this.currentPage, this.pageSize)
+      const pageData = await this.dataService.getPage(this.currentPage, this.pageSize, this.sort)
       this.displayedData = pageData.dataItems
       this.totalItems = pageData.totalItems
     },
+    sortColumn(column: Column) {
+      if (!this.sortOptions?.sortable) {
+        return
+      }
+
+      const newSort = {
+        fieldName: column.field.fieldName,
+        dataType: column.dataType,
+        type: SortType.ascending,
+      }
+      const existingSort = this.sort?.find(s => s.fieldName === newSort.fieldName)
+      if (existingSort) {
+        if (existingSort.type === SortType.ascending) {
+          existingSort.type = SortType.descending
+        } else {
+          this.sort = this.sort.filter(s => s.fieldName !== newSort.fieldName)
+        }
+      } else {
+        if (this.sortOptions.multiColumn) {
+          this.sort.push(newSort)
+        } else {
+          this.sort = [newSort]
+        }
+      }
+
+      this.loadPageData()
+    }
   },
 })
 </script>
-
-<style scoped>
-
-</style>
