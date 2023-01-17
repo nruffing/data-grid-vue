@@ -42,3 +42,9 @@
 .dgv-data-grid-header-row > td.sortable {
   cursor: pointer;
 }
+
+/**** Full Width ****/
+.dgv-data-grid-container.dgv-full-width {
+  display: flex;
+  flex-direction: column;
+}

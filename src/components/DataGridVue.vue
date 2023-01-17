@@ -1,5 +1,5 @@
 <template>
-  <div class="dgv-data-grid-container">
+  <div class="dgv-data-grid-container" :class="{ 'dgv-full-width': fullWidth }">
     <table class="dgv-data-grid">
       <tr class="dgv-data-grid-header-row">
         <td 
@@ -70,6 +70,11 @@ export default defineComponent({
       type: Object as PropType<SortOptions>,
       required: false,
       default: undefined,
+    },
+    fullWidth: {
+      type: Boolean,
+      required: false,
+      default: true,
     },
   },
   data(): Data {
