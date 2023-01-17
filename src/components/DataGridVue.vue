@@ -16,11 +16,14 @@
         </td>
       </tr>
     </table>
-    <PageNavigation
-      v-if="paged"
-      v-model:current-page="currentPage"
-      v-model:page-size="pageSize"
-      :total-items="totalItems" />
+    <div class="dgv-footer">
+      <PageNavigation
+        v-if="paged"
+        v-model:current-page="currentPage"
+        v-model:page-size="pageSize"
+        :total-items="totalItems" />
+      <span class="dgv-total-items">{{ totalItems }} items</span>
+    </div>
   </div>
 </template>
 
