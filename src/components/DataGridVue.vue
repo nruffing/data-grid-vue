@@ -7,7 +7,7 @@
           :key="column.field.fieldName"
           :class="{ sortable: sortOptions?.sortable }"
           @click="sortColumn(column)">
-          {{ column.title ?? column.field.fieldName }}
+          {{ column.title ?? formatter.fromCamelCase(column.field.fieldName) }}
         </td>
       </tr>
       <tr v-for="dataItem in displayedData" :key="keyColumn.field.resolveValue(dataItem)" class="dgv-data-grid-row">
@@ -33,6 +33,7 @@ import { DataType, Field, type Column } from '@/DataGridVue';
 import { type DataService, StubDataService, ClientSideDataService } from '@/DataService';
 import PageNavigation from './PageNavigation.vue';
 import { type Sort, type SortOptions, SortType } from '@/Sort';
+import Formatter from '@/Formatter';
 
 interface Data {
   keyColumn: Column,
@@ -92,6 +93,11 @@ export default defineComponent({
       pageSize: 0,
       currentPage: 1,
       sort: [],
+    }
+  },
+  computed: {
+    formatter() {
+      return Formatter
     }
   },
   mounted() {
