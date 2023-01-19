@@ -3,43 +3,52 @@
     <button
       class="dgv-button-first-page"
       @click="setCurrentPage(1)"
-      :disabled="currentPage === 1">
-      First
+      :disabled="currentPage === 1"
+      title="First page">      
+      <Icon name="first-page" />
     </button>
     <button 
       class="dgv-button-previous-page"
       @click="setCurrentPage(currentPage - 1)"
-      :disabled="currentPage === 1">
-      Previous
+      :disabled="currentPage === 1"
+      title="Previous page">
+      <Icon name="previous-page" />
     </button>
     <button 
       class="dgv-button-page"
       :class="{ 'dgv-selected-page': page === currentPage }"
       v-for="page in displayedPages"
       :key="page"
-      @click="setCurrentPage(page)">
-      {{ page  }}
+      @click="setCurrentPage(page)"
+      :title="'Page ' + page">
+      {{ page }}
     </button>
     <button 
       class="dgv-button-next-page"
       @click="setCurrentPage(currentPage + 1)"
-      :disabled="currentPage === numPages">
-      Next
+      :disabled="currentPage === numPages"
+      title="Next page">
+      <Icon name="next-page" />
     </button>
     <button 
       class="dgv-button-last-page"
       @click="setCurrentPage(numPages)"
-      :disabled="currentPage === numPages">
-      Last
+      :disabled="currentPage === numPages"
+      title="Last page">
+      <Icon name="last-page" />
     </button>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import Icon from './Icon.vue';
 
 export default defineComponent({
   name: 'PageNavigation',
+  components: {
+    Icon,
+  },
   props: {
     pageSize: {
       type: Number,

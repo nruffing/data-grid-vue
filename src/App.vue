@@ -15,7 +15,7 @@
 import { defineComponent } from 'vue'
 
 import DataGridVue from './components/DataGridVue.vue'
-import type { Column } from './models/DataGridVue'
+import type { Column } from './DataGridVue'
 
 import { TestDataColumns, type TestDataItem } from './test-data/test-data'
 import MOCK_DATA from './test-data/MOCK_DATA'

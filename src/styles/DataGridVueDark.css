@@ -17,6 +17,7 @@
   --dgv-footer-background: transparent;
   --dgv-footer-padding: 12px;
   --dgv-footer-font-size: 18px;
+  --dgv-footer-icon-size: 10px;
   --dgv-footer-font-weight: normal;
   --dgv-footer-border: 1px solid rgb(255, 255, 255);
   --dgv-footer-border-top: none;
@@ -88,6 +89,13 @@
   justify-content: space-between;
 }
 
+.dgv-footer svg {
+  height: var(--dgv-footer-icon-size);
+  width: var(--dgv-footer-icon-size);
+  stroke-width: 4;
+  fill: none;
+}
+
   /**** Page Navigation ****/
   .dgv-page-navigation {
     display: flex;
@@ -98,8 +106,13 @@
   .dgv-page-navigation button {
     cursor: pointer;
     color: var(--dgv-nav-button-text-color);
+    stroke: var(--dgv-nav-button-text-color);
     border: var(--dgv-nav-button-border);
     background: var(--dgv-nav-button-background);
+  }
+
+  .dgv-page-navigation button svg {
+    stroke: var(--dgv-nav-button-text-color);
   }
 
   .dgv-page-navigation button:disabled {
@@ -111,6 +124,10 @@
     color: var(--dgv-nav-button-hover-color);
     border: var(--dgv-nav-button-hover-border);
     background: var(--dgv-nav-button-hover-background);
+  }
+
+  .dgv-page-navigation button:hover:not(:disabled) svg {
+    stroke: var(--dgv-nav-button-hover-color);
   }
   
   .dgv-page-navigation button.dgv-selected-page {
