@@ -8,6 +8,8 @@ Example app showcasing how a native Vue3 data grid can be built without addition
 * Client-side sorting (optional)
   * Single and multiple column sorting
 
+________________________________________
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
