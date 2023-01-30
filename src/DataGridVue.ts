@@ -1,13 +1,15 @@
 export enum DataType {
-  alphanumeric = 0,
-  number = 1,
+  none = 0,
+  alphanumeric = 1,
+  number = 2,
 }
 
 export interface Column {
   title?: string,
   dataType: DataType,
   field: Field,
-  isKey?: boolean, 
+  isKey?: boolean,
+  sortable?: boolean,
 }
 
 export type FieldValueGetter = ((dataItem: any) => string) | undefined

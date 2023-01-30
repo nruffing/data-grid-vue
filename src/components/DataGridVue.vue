@@ -131,7 +131,7 @@ export default defineComponent({
       this.totalItems = pageData.totalItems
     },
     sortColumn(column: Column) {
-      if (!this.sortOptions?.sortable) {
+      if (!this.sortOptions?.sortable || !column.sortable) {
         return
       }
 

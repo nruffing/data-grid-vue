@@ -1,7 +1,7 @@
 <template>
   <td
     :key="column.field.fieldName"
-    :class="{ sortable }"
+    :class="{ sortable: sortable && column.sortable }"
     @click.prevent="$emit('onClick', column)"
   >
     {{ formattedTitle }}
