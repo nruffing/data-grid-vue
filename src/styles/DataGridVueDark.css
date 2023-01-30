@@ -11,7 +11,8 @@
   --dgv-header-font-size: 18px;
   --dgv-header-font-weight: bold;
   --dgv-header-border: 1px solid rgb(255, 255, 255);
-
+  --dgv-header-icon-size: 12px;
+  --dgv-header-icon-color: rgb(237, 166, 34);
 
   --dgv-footer-text-color: rgb(255, 255, 255);
   --dgv-footer-background: transparent;
@@ -65,6 +66,19 @@
   cursor: pointer;
 }
 
+  .dgv-data-grid-header-row svg {
+    height: var(--dgv-header-icon-size);
+    width: calc(var(--dgv-header-icon-size) * 2);
+    stroke: var(--dgv-header-icon-color);
+    stroke-width: 4;
+    fill: none;
+  }
+
+    .dgv-data-grid-header-row svg text {
+      font-size: calc(var(--dgv-header-icon-size) * 2);
+      fill: var(--dgv-header-icon-color);
+      stroke: none;
+    }
 
 /**** Cell ****/
 .dgv-data-grid td {

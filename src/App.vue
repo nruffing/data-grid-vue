@@ -5,7 +5,7 @@
       :columns="testDataColumns"
       :sort-options="{
         sortable: true,
-        multiColumn: false,
+        multiColumn: true,
       }">    
     </DataGridVue>
   </main>

@@ -2,13 +2,13 @@
   <div class="dgv-data-grid-container" :class="{ 'dgv-full-width': fullWidth }">
     <table class="dgv-data-grid">
       <tr class="dgv-data-grid-header-row">
-        <td 
-          v-for="column in columns" 
+        <HeaderCell
+          v-for="column in columns"
           :key="column.field.fieldName"
-          :class="{ sortable: sortOptions?.sortable }"
-          @click="sortColumn(column)">
-          {{ column.title ?? formatter.fromCamelCase(column.field.fieldName) }}
-        </td>
+          :column="column"
+          :sortable="sortOptions?.sortable"
+          :sort="sort"
+          @onClick="sortColumn" />
       </tr>
       <tr v-for="dataItem in displayedData" :key="keyColumn.field.resolveValue(dataItem)" class="dgv-data-grid-row">
         <td v-for="column in columns" :key="column.field.fieldName">
@@ -28,12 +28,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, type PropType } from 'vue';
-import { DataType, Field, type Column } from '@/DataGridVue';
-import { type DataService, StubDataService, ClientSideDataService } from '@/DataService';
-import PageNavigation from './PageNavigation.vue';
-import { type Sort, type SortOptions, SortType } from '@/Sort';
-import Formatter from '@/Formatter';
+import { defineComponent, type PropType } from 'vue'
+import { DataType, Field, type Column } from '@/DataGridVue'
+import { type DataService, StubDataService, ClientSideDataService } from '@/DataService'
+import { type Sort, type SortOptions, SortType } from '@/Sort'
+import HeaderCell from './HeaderCell.vue'
+import PageNavigation from './PageNavigation.vue'
 
 interface Data {
   keyColumn: Column,
@@ -48,6 +48,7 @@ interface Data {
 export default defineComponent({
   name: 'DataGridVue',
   components: {
+    HeaderCell,
     PageNavigation,
   },
   props: {
@@ -95,11 +96,6 @@ export default defineComponent({
       sort: [],
     }
   },
-  computed: {
-    formatter() {
-      return Formatter
-    }
-  },
   mounted() {
     this.pageSize = this.initialPageSize
 
@@ -144,6 +140,7 @@ export default defineComponent({
         dataType: column.dataType,
         type: SortType.ascending,
       }
+
       const existingSort = this.sort?.find(s => s.fieldName === newSort.fieldName)
       if (existingSort) {
         if (existingSort.type === SortType.ascending) {
