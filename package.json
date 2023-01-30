@@ -1,7 +1,12 @@
 {
   "name": "data-grid-vue",
   "version": "0.0.0",
-  "private": true,
+  "description": "Example app showcasing a customizable native Vue3 data grid.",
+  "license": "MIT",
+  "author": {
+    "name": "Nicholas Ruffing",
+    "email": "nicholasruffing70@gmail.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",

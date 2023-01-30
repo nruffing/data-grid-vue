@@ -1,6 +1,12 @@
 # data-grid-vue
 
-This template should help get you started developing with Vue 3 in Vite.
+Example app showcasing how a native Vue3 data grid can be built without additional dependencies. The data grid currently only contains some basic functionality but is designed to be easily expanded on.
+
+## Current Features
+
+* Client-side paging (optional)
+* Client-side sorting (optional)
+  * Single and multiple column sorting
 
 ## Recommended IDE Setup
 
