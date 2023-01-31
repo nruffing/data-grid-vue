@@ -12,7 +12,7 @@ export interface Column {
   sortable?: boolean,
 }
 
-export type FieldValueGetter = ((dataItem: any) => string) | undefined
+export type FieldValueGetter = ((dataItem: any) => any) | undefined
 
 export class Field {
   fieldName: string
