@@ -38,15 +38,14 @@ export const ClientSideSort = {
     const aValue = a[sort.fieldName]
     const bValue = b[sort.fieldName]
     
-    if (sort.dataType === DataType.alphanumeric) {
-      return this.compareAlphanumeric(aValue as string, bValue as string)
+    switch (sort.dataType) {
+      case DataType.alphanumeric:
+        return this.compareAlphanumeric(aValue as string, bValue as string)
+      case DataType.number:
+        return this.compareNumeric(aValue as number, bValue as number)
     }
-
-    if (sort.dataType === DataType.number) {
-      return this.compareNumeric(aValue as number, bValue as number)
-    }
-
-    console.warn(`Unknown data type detected while sorting: ${sort.dataType}`)
+    
+    console.warn(`Unknown data type detected while sorting: ${DataType[sort.dataType]}`)
     return 0
   },
   compareAlphanumeric(a: string, b: string): number {
