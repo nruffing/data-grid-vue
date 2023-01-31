@@ -7,6 +7,7 @@ Example app showcasing how a native Vue3 data grid can be built without addition
 * Client-side paging (optional)
 * Client-side sorting (optional)
   * Single and multiple column sorting
+* Cell render templates
 
 ________________________________________
 

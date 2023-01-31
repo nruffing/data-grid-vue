@@ -6,7 +6,11 @@
       :sort-options="{
         sortable: true,
         multiColumn: true,
-      }">    
+      }"
+    >
+      <template v-slot:cell-actions="{ dataItem }">
+        <button>Custom {{ dataItem.id }}</button>
+      </template> 
     </DataGridVue>
   </main>
 </template>

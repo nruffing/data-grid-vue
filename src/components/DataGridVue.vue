@@ -12,7 +12,12 @@
       </tr>
       <tr v-for="dataItem in displayedData" :key="keyColumn.field.resolveValue(dataItem)" class="dgv-data-grid-row">
         <td v-for="column in columns" :key="column.field.fieldName">
-          {{ column.field.resolveValue(dataItem) }}
+          <slot 
+            :name="`cell-${column.field.fieldName}`"
+            :data-item="dataItem"
+          >
+            {{ column.field.resolveValue(dataItem) }} 
+          </slot>          
         </td>
       </tr>
     </table>
