@@ -9,6 +9,7 @@ Example app showcasing how a native Vue3 data grid can be built without addition
   * Single and multiple column sorting
 * Cell render templates
 * Supply arrow function to get column's value
+* Supply custom data service to provide custom implementation of data retrieval, paging, sorting, and filtering
 
 ________________________________________
 

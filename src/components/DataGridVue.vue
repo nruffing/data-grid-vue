@@ -62,6 +62,11 @@ export default defineComponent({
      required: false,
      default: undefined,
     },
+    customDataService: {
+      type: Object as PropType<DataService>,
+      required: false,
+      default: undefined,
+    },
     columns: {
       type: Array<Column>,
       required: true,
@@ -114,7 +119,9 @@ export default defineComponent({
       console.warn('No columns specified for data grid')
     }
 
-    if (this.data) {
+    if (this.customDataService) {
+      this.dataService = this.customDataService
+    } else if (this.data) {
       this.dataService = new ClientSideDataService(this.data) 
     }
 
