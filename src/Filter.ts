@@ -90,18 +90,26 @@ export const ClientSideFilter = {
     console.warn(`Unknown data type detected while filtering: ${DataType[condition.dataType]}`)
     return false
   },
-  evaluateAlphanumericCondition(value: string, operator: FilterOperator, conditionValue: string): boolean {
+  evaluateAlphanumericCondition(value: string | undefined, operator: FilterOperator, conditionValue: string): boolean {
+    if (!value) {
+      return false
+    }
+    
     switch (operator) {
       case FilterOperator.equals:
-        return value === conditionValue
+        return value.localeCompare(conditionValue, 'en', { sensitivity: 'base' }) === 0
       case FilterOperator.contains:
-        return value.includes(conditionValue)
+        return value.toLowerCase().includes(conditionValue.toLowerCase())
     }
 
     console.warn(`Filter operator ${FilterOperator[operator]} is not supported for columns with the alphanumeric data type`)
     return false
   },
-  evaluateNumericCondition(value: number, operator: FilterOperator, conditionValue: number): boolean {
+  evaluateNumericCondition(value: number | undefined, operator: FilterOperator, conditionValue: number): boolean {
+    if (!value) {
+      return false
+    }
+    
     switch (operator) {
       case FilterOperator.equals:
         return value === conditionValue

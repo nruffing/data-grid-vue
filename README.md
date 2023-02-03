@@ -4,12 +4,17 @@ Example app showcasing how a native Vue3 data grid can be built without addition
 
 ## Current Features
 
-* Client-side paging (optional)
-* Client-side sorting (optional)
-  * Single and multiple column sorting
 * Cell render templates
 * Supply arrow function to get column's value
 * Supply custom data service to provide custom implementation of data retrieval, paging, sorting, and filtering
+* Client-side paging (optional)
+* Client-side sorting (optional)
+  * Single and multiple column sorting
+  * Enabled per column
+* Client-side filtering (optional)
+  * Enabled per column
+  * Default filter input and header cell template
+  * Multiple operators
 
 ________________________________________
 

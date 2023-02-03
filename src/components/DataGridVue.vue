@@ -8,7 +8,21 @@
           :column="column"
           :sortable="sortOptions?.sortable"
           :sort="sort"
-          @onClick="sortColumn" />
+          @onClick="sortColumn"
+        >
+          <template v-slot:filter>
+            <slot
+              :name="`filter-${column.field.fieldName}`"
+              :column="column"
+            >
+              <HeaderFilter
+                v-if="column.filterable"
+                :column="column"
+                @updated="onFilterUpdated"
+              />
+            </slot>
+          </template>
+        </HeaderCell>
       </tr>
       <tr v-for="dataItem in displayedData" :key="keyColumn.field.resolveValue(dataItem)" class="dgv-data-grid-row">
         <td v-for="column in columns" :key="column.field.fieldName">
@@ -37,7 +51,9 @@ import { defineComponent, type PropType } from 'vue'
 import { DataType, Field, type Column } from '@/DataGridVue'
 import { type DataService, StubDataService, ClientSideDataService } from '@/DataService'
 import { type Sort, type SortOptions, SortType } from '@/Sort'
+import type { Filter, FilterCondition } from '@/Filter'
 import HeaderCell from './HeaderCell.vue'
+import HeaderFilter from './HeaderFilter.vue'
 import PageNavigation from './PageNavigation.vue'
 
 interface Data {
@@ -48,12 +64,14 @@ interface Data {
   pageSize: number,
   currentPage: number,
   sort: Sort[],
+  filters: FilterCondition[],
 }
 
 export default defineComponent({
   name: 'DataGridVue',
   components: {
     HeaderCell,
+    HeaderFilter,
     PageNavigation,
   },
   props: {
@@ -104,6 +122,25 @@ export default defineComponent({
       pageSize: 0,
       currentPage: 1,
       sort: [],
+      filters: [],
+    }
+  },
+  computed: {
+    filter(): Filter | undefined {
+      if (!this?.filters.length) {
+        return undefined
+      }
+      let filter = {
+        or: [this.filters[0]],
+        and: undefined,
+      } as Filter
+      for (var i = 1; i < this.filters.length; i++) {
+        filter = {
+          or: [this.filters[i]],
+          and: filter,
+        }
+      }
+      return filter
     }
   },
   mounted() {
@@ -138,7 +175,7 @@ export default defineComponent({
   },
   methods: {
     async loadPageData() {
-      const pageData = await this.dataService.getPage(this.currentPage, this.pageSize, this.sort)
+      const pageData = await this.dataService.getPage(this.currentPage, this.pageSize, this.sort, this.filter)
       this.displayedData = pageData.dataItems
       this.totalItems = pageData.totalItems
     },
@@ -169,7 +206,21 @@ export default defineComponent({
       }
 
       this.loadPageData()
-    }
+    },
+    onFilterUpdated(condition: FilterCondition) {
+      if (!condition.value) {
+        this.filters = this.filters.filter(f => f.fieldName !== condition.fieldName)
+      } else {
+        const filter = this.filters.find(f => f.fieldName === condition.fieldName)
+        if (filter) {
+          filter.value = condition.value
+          filter.operator = condition.operator
+        } else {
+          this.filters.push(condition)
+        }
+      }
+      this.loadPageData()
+    },
   },
 })
 </script>

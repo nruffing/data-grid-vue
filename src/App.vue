@@ -10,7 +10,7 @@
     >
       <template v-slot:cell-actions="{ dataItem }">
         <button>Custom {{ dataItem.id }}</button>
-      </template> 
+      </template>
     </DataGridVue>
   </main>
 </template>

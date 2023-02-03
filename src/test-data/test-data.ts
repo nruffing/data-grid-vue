@@ -1,5 +1,6 @@
 // https://www.mockaroo.com/
 
+import { FilterOperator } from '@/Filter'
 import { DataType, Field, type Column } from '../DataGridVue'
 
 export interface TestDataItem {
@@ -17,16 +18,29 @@ export const TestDataColumns = [
     dataType: DataType.number,
     isKey: true,
     sortable: true,
+    filterable: true,
+    filterOptions: {
+      operators: [
+        FilterOperator.greaterThanOrEqualTo,
+      ],
+    },
   },
   {
     field: new Field('firstName'),
     dataType: DataType.alphanumeric,
     sortable: true,
+    filterable: true,
+    filterOptions: {
+      operators: [
+        FilterOperator.contains,
+      ],
+    },
   },
   {
     field: new Field('lastName'),
     dataType: DataType.alphanumeric,
     sortable: true,
+    filterable: true,
   },
   {
     field: new Field('email'),
@@ -46,6 +60,5 @@ export const TestDataColumns = [
   {
     field: new Field('actions'),
     title: '',
-    sortable: false,
   },
 ] as Column[]

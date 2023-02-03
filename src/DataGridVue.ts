@@ -1,3 +1,5 @@
+import type { FilterOperator } from "./Filter"
+
 export enum DataType {
   none = 0,
   alphanumeric = 1,
@@ -10,6 +12,12 @@ export interface Column {
   field: Field,
   isKey?: boolean,
   sortable?: boolean,
+  filterable?: boolean 
+  filterOptions?: ColumnFilterOptions,
+}
+
+export interface ColumnFilterOptions {
+  operators?: FilterOperator[],
 }
 
 export type FieldValueGetter = ((dataItem: any) => any) | undefined

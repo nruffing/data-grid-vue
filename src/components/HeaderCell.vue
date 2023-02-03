@@ -2,14 +2,21 @@
   <td
     :key="column.field.fieldName"
     :class="{ sortable: sortable && column.sortable }"
-    @click.prevent="$emit('onClick', column)"
   >
-    {{ formattedTitle }}
-    <Icon 
-      v-if="sortable" 
-      :name="iconName" 
-      :text="iconText"
-    />
+    <div class="dgv-header-container">
+      <span
+        class="dgv-header-text"
+        @click.prevent="$emit('onClick', column)"
+      >
+        {{ formattedTitle }}
+        <Icon 
+          v-if="sortable" 
+          :name="iconName" 
+          :text="iconText"
+        />
+      </span>      
+      <slot name="filter"></slot>
+    </div>
   </td>
 </template>
 
