@@ -35,17 +35,15 @@ export class ClientSideDataService implements DataService {
     if (!sort?.length) {
       this.sorted = [...this.dataItems]
       this.previousSortJson = '[]'
-      return
+    } else {
+      const sortJson = JSON.stringify(sort)
+      if (sortJson !== this.previousSortJson) {
+        ClientSideSort.sort(sort, this.sorted)
+        this.previousSortJson = sortJson
+      }
     }
 
-    const sortJson = JSON.stringify(sort)
-    if (sortJson === this.previousSortJson) {
-      return
-    }
-
-    ClientSideSort.sort(sort, this.sorted)
     this.filtered = [...this.sorted]
-    this.previousSortJson = sortJson
   }
 
   filter(filter: Filter | undefined) {
