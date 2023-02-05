@@ -6,11 +6,14 @@ export interface FilterOptions {
 
 export enum FilterOperator {
   equals = 0,
-  contains = 1,
-  greaterThan = 2,
-  lessThan = 3,
-  greaterThanOrEqualTo = 4,
-  lessThanOrEqualTo = 5,
+  notEquals = 1,
+  contains = 2,
+  startsWith = 3,
+  endsWith = 4,
+  greaterThan = 5,
+  lessThan = 6,
+  greaterThanOrEqualTo = 7,
+  lessThanOrEqualTo = 8,
 }
 
 export const ValidOperatorsMap = new Map<DataType, Set<FilterOperator>>([
@@ -22,13 +25,39 @@ export const ValidOperatorsMap = new Map<DataType, Set<FilterOperator>>([
     DataType.alphanumeric,
     new Set([
       FilterOperator.equals,
+      FilterOperator.notEquals,
       FilterOperator.contains,
+      FilterOperator.startsWith,
+      FilterOperator.endsWith,
     ]),
   ],
   [
     DataType.number,
     new Set([
       FilterOperator.equals,
+      FilterOperator.notEquals,
+      FilterOperator.greaterThan,
+      FilterOperator.lessThan,
+      FilterOperator.greaterThanOrEqualTo,
+      FilterOperator.lessThanOrEqualTo,
+    ]),
+  ],
+  [
+    DataType.date,
+    new Set([
+      FilterOperator.equals,
+      FilterOperator.notEquals,
+      FilterOperator.greaterThan,
+      FilterOperator.lessThan,
+      FilterOperator.greaterThanOrEqualTo,
+      FilterOperator.lessThanOrEqualTo,
+    ]),
+  ],
+  [
+    DataType.date,
+    new Set([
+      FilterOperator.equals,
+      FilterOperator.notEquals,
       FilterOperator.greaterThan,
       FilterOperator.lessThan,
       FilterOperator.greaterThanOrEqualTo,

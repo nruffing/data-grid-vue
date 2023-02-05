@@ -9,7 +9,7 @@ export interface TestDataItem {
   lastName: string,
   email?: string,
   gender?: string,
-  ipAddress?: string
+  ipAddress?: string,
 }
 
 export const TestDataColumns = [

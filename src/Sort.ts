@@ -43,6 +43,10 @@ export const ClientSideSort = {
         return this.compareAlphanumeric(aValue as string, bValue as string)
       case DataType.number:
         return this.compareNumeric(aValue as number, bValue as number)
+      case DataType.date:
+        return this.compareDate(new Date(aValue), new Date(bValue))
+      case DataType.dateTime:
+        return this.compareDateTime(new Date(aValue), new Date(bValue))
     }
     
     console.warn(`Unknown data type detected while sorting: ${DataType[sort.dataType]}`)
@@ -59,5 +63,13 @@ export const ClientSideSort = {
   },
   compareNumeric(a: number, b: number) {
     return a - b
+  },
+  compareDate(a: Date, b: Date) {
+    const aJustDate = new Date(a.getFullYear(), a.getMonth(), a.getDate())
+    const bJustDate = new Date(b.getFullYear(), b.getMonth(), b.getDate())
+    return this.compareDateTime(aJustDate, bJustDate)
+  },
+  compareDateTime(a: Date, b: Date) {
+    return a.getTime() - b.getTime()
   },
 }

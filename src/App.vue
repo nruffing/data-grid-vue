@@ -1,6 +1,16 @@
 <template>
   <main>
     <DataGridVue
+      :data="mockData2"
+      :columns="testDataColumns2"
+      :sort-options="{
+        sortable: true,
+        multiColumn: false,
+      }"
+    >
+    </DataGridVue>
+    
+    <DataGridVue
       :data="mockData"
       :columns="testDataColumns"
       :sort-options="{
@@ -24,6 +34,9 @@ import type { Column } from './DataGridVue'
 import { TestDataColumns, type TestDataItem } from './test-data/test-data'
 import MOCK_DATA from './test-data/MOCK_DATA'
 
+import { TestDataColumns2, type TestDataItem2 } from './test-data/test-data-2'
+import MOCK_DATA_2 from './test-data/MOCK_DATA_2'
+
 export default defineComponent({
   name: 'App',
   components: {
@@ -35,7 +48,14 @@ export default defineComponent({
     },
     mockData(): TestDataItem[] {
       return MOCK_DATA
-    }
+    },
+
+    testDataColumns2(): Column[] {
+      return TestDataColumns2
+    },
+    mockData2(): TestDataItem2[] {
+      return MOCK_DATA_2
+    },
   },
 })
 </script>
@@ -47,5 +67,8 @@ body, html {
 }
 main {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 </style>
