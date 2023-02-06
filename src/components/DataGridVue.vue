@@ -49,7 +49,7 @@
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue'
 import { DataType, Field, type Column } from '@/DataGridVue'
-import { type DataService, StubDataService, ClientSideDataService } from '@/DataService'
+import { type DataService, StubDataService, ClientSideDataService, type ServerSideDataServiceOptions, ServerSideDataService } from '@/DataService'
 import { type Sort, type SortOptions, SortType } from '@/Sort'
 import type { Filter, FilterCondition } from '@/Filter'
 import HeaderCell from './HeaderCell.vue'
@@ -79,6 +79,11 @@ export default defineComponent({
      type: Array,
      required: false,
      default: undefined,
+    },
+    serverSideOptions: {
+      type: Object as PropType<ServerSideDataServiceOptions>,
+      required: false,
+      default: undefined,
     },
     customDataService: {
       type: Object as PropType<DataService>,
@@ -153,13 +158,17 @@ export default defineComponent({
       }
       this.keyColumn = firstKey ?? this.columns[0]
     } else {
-      console.warn('No columns specified for data grid')
+      console.error('No columns specified for data grid')
     }
 
     if (this.customDataService) {
       this.dataService = this.customDataService
+    } else if (this.serverSideOptions) {
+      this.dataService = new ServerSideDataService(this.serverSideOptions)
     } else if (this.data) {
       this.dataService = new ClientSideDataService(this.data) 
+    } else {
+      console.error('data, serverSideOptions, or customDataService prop needs to be set to populate the grid with data')
     }
 
     if (this.paged) {

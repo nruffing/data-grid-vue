@@ -9,8 +9,8 @@ export interface TestDataItem2 {
   lastName: string,
   email?: string,
   phoneNumber?: number,
-  dateOfBirth: string,
-  created: string,
+  dateOfBirth: Date,
+  created: Date,
 }
 
 export const TestDataColumns2 = [

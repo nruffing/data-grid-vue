@@ -92,3 +92,67 @@ export class ClientSideDataService implements DataService {
     })
   }
 }
+
+export interface PageDataRequest {
+  pageNum: number,
+  pageSize: number,
+  sort: Sort[],
+  filter: Filter | undefined,
+}
+
+export type BeforeRequestHandler = (request: Request, body: PageDataRequest) => Promise<Request>
+export type ResponseHandler = (response: Response) => Promise<PageData>
+export interface ServerSideDataServiceOptions {
+  postRoute?: string | URL,
+  beforeRequest?: BeforeRequestHandler,
+  responseHandler?: ResponseHandler,
+}
+
+export class ServerSideDataService implements DataService {
+  options: ServerSideDataServiceOptions
+
+  constructor(options: ServerSideDataServiceOptions) {
+    this.options = options
+  }
+
+  async getPage(pageNum: number, pageSize: number, sort: Sort[], filter: Filter | undefined): Promise<PageData> {
+    const body = {
+      pageNum,
+      pageSize,
+      sort,
+      filter,
+    } as PageDataRequest
+
+    let request = new Request(this.options.postRoute ?? '', {
+      method: 'POST',
+      headers: new Headers({ 
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      }),
+      mode: 'cors',
+      cache: 'no-cache',
+      body: JSON.stringify(body)
+    })
+    
+    if (this.options.beforeRequest) {
+      request = await this.options.beforeRequest(request, body)
+    }
+
+    if (!request.url) {
+      console.error('A request url for the page data request has to be set either by supplying it directly or setting it as part of beforeRequest handler.')
+      return EmptyPageData
+    }
+
+    var response = await fetch(request)
+
+    if (this.options.responseHandler) {
+      return await this.options.responseHandler(response)
+    }
+
+    if (response.status >= 400) {
+      console.error('Failed to retrieve page data', await response.text(), response)
+      return EmptyPageData
+    }
+    return response.json()
+  }
+}

@@ -7,11 +7,15 @@ Example app showcasing how a native Vue3 data grid can be built without addition
 * Cell render templates
 * Supply arrow function to get column's value
 * Supply custom data service to provide custom implementation of data retrieval, paging, sorting, and filtering
-* Client-side paging (optional)
-* Client-side sorting (optional)
+* Built-in data services for client-side and server-side data retrieval, sorting, filtering and paging
+* Server-side data service
+  * If using the default data contracts (i.e. PageDataRequest and PageData) just a valid POST url is required to be configured
+  * Optional hooks for modifying/replacing the Request and converting the returned data to a PageData object
+  * (WIP) If using an ASP.NET Core API with EF Core or any other ORM leveraging IQueryable [this library](https://github.com/nruffing/data-grid-vue-dotnet) can be used to automatically apply the PageDataRequest to an IQueryable.
+* Sorting
   * Single and multiple column sorting
   * Enabled per column
-* Client-side filtering (optional)
+* Filtering
   * Enabled per column
   * Default filter input and header cell template
   * Multiple operators
