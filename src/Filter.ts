@@ -109,6 +109,10 @@ export const ClientSideFilter = {
   evaluateCondition(condition: FilterCondition, dataItem: any): boolean {
     const value = dataItem[condition.fieldName]
 
+    if (condition.operator === FilterOperator.notEquals) {
+      return !this.evaluateCondition({...condition, operator: FilterOperator.equals}, dataItem)
+    }
+
     switch (condition.dataType) {
       case DataType.alphanumeric:
         return this.evaluateAlphanumericCondition(value as string, condition.operator, condition.value as string)
@@ -129,6 +133,10 @@ export const ClientSideFilter = {
         return value.localeCompare(conditionValue, 'en', { sensitivity: 'base' }) === 0
       case FilterOperator.contains:
         return value.toLowerCase().includes(conditionValue.toLowerCase())
+      case FilterOperator.startsWith:
+        return value.toLowerCase().startsWith(conditionValue.toLowerCase())
+      case FilterOperator.endsWith:
+        return value.toLowerCase().endsWith(conditionValue.toLowerCase())
     }
 
     console.warn(`Filter operator ${FilterOperator[operator]} is not supported for columns with the alphanumeric data type`)
