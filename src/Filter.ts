@@ -54,7 +54,7 @@ export const ValidOperatorsMap = new Map<DataType, Set<FilterOperator>>([
     ]),
   ],
   [
-    DataType.date,
+    DataType.dateTime,
     new Set([
       FilterOperator.equals,
       FilterOperator.notEquals,
