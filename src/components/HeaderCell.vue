@@ -14,8 +14,7 @@
           :name="iconName" 
           :text="iconText"
         />
-      </span>      
-      <slot name="filter"></slot>
+      </span>
     </div>
   </td>
 </template>

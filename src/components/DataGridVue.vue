@@ -1,5 +1,16 @@
 <template>
   <div class="dgv-data-grid-container" :class="{ 'dgv-full-width': fullWidth }">
+    <div class="dgv-options-header">
+      <span 
+        v-if="filterable"
+        class="dgv-action-text"
+        tabindex="0"
+        @click="filterOptionsShown = !filterOptionsShown"
+      >
+        <Icon name="filter" />
+        <span>{{ filterOptionsShown ? 'Hide' : 'Show' }} Filter Options</span>
+      </span>
+    </div>
     <table class="dgv-data-grid">
       <tr class="dgv-data-grid-header-row">
         <HeaderCell
@@ -9,9 +20,14 @@
           :sortable="sortOptions?.sortable"
           :sort="sort"
           @onClick="sortColumn"
-        >
-          <template v-slot:filter>
-            <slot
+        />
+      </tr>
+      <tr 
+        v-if="filterOptionsShown"
+        class="dgv-filter-options-row"
+      >
+        <td v-for="column in columns" :key="column.field.fieldName">
+          <slot
               :name="`filter-${column.field.fieldName}`"
               :column="column"
             >
@@ -21,8 +37,7 @@
                 @updated="onFilterUpdated"
               />
             </slot>
-          </template>
-        </HeaderCell>
+        </td>
       </tr>
       <tr v-for="dataItem in displayedData" :key="keyColumn.field.resolveValue(dataItem)" class="dgv-data-grid-row">
         <td v-for="column in columns" :key="column.field.fieldName">
@@ -55,6 +70,7 @@ import type { Filter, FilterCondition } from '@/Filter'
 import HeaderCell from './HeaderCell.vue'
 import HeaderFilter from './HeaderFilter.vue'
 import PageNavigation from './PageNavigation.vue'
+import Icon from './Icon.vue'
 
 interface Data {
   keyColumn: Column,
@@ -65,6 +81,7 @@ interface Data {
   currentPage: number,
   sort: Sort[],
   filters: FilterCondition[],
+  filterOptionsShown: boolean,
 }
 
 export default defineComponent({
@@ -73,6 +90,7 @@ export default defineComponent({
     HeaderCell,
     HeaderFilter,
     PageNavigation,
+    Icon,
   },
   props: {
     data: {
@@ -128,9 +146,13 @@ export default defineComponent({
       currentPage: 1,
       sort: [],
       filters: [],
+      filterOptionsShown: false,
     }
   },
   computed: {
+    filterable(): boolean {
+      return !!this.columns.find(c => c.filterable)
+    },
     filter(): Filter | undefined {
       if (!this?.filters.length) {
         return undefined
@@ -146,7 +168,7 @@ export default defineComponent({
         }
       }
       return filter
-    }
+    },
   },
   mounted() {
     this.pageSize = this.initialPageSize

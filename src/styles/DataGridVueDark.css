@@ -21,6 +21,10 @@
   --dgv-header-icon-size: 12px;
   --dgv-header-icon-color: var(--accent);
 
+  
+  --dgv-filter-options-background-color: var(--opaque-2);
+  --dgv-filter-options-border-bottom: 3px solid var(--opaque-1);
+
 
   --dgv-cell-text-color: rgb(255, 255, 255);
   --dgv-cell-padding: 15px 12px;
@@ -65,6 +69,21 @@
 
   --dgv-button-hover-text-color: var(--black);
   --dgv-button-hover-background-color: var(--accent);
+
+
+  --dgv-action-text-font-size: 16px;
+  --dgv-action-text-font-weight: normal;
+  --dgv-action-text-color: var(--opaque-1);
+
+  --dgv-action-text-hover-color: var(--accent);
+
+
+  --dgv-input-padding: 5px;
+  --dgv-input-border: 2px solid var(--opaque-1);
+  --dgv-input-text-color: var(--black);
+  --dgv-input-background: var(--opaque-1);
+
+  --dgv-input-focus-border: 2px solid var(--accent);
 }
 
 
@@ -123,11 +142,11 @@
   border: var(--dgv-cell-border);
 }
 
-  .dgv-data-grid tr td {
+  .dgv-data-grid tr.dgv-data-grid-row td {
     background-color: var(--dgv-cell-background);
   }
 
-  .dgv-data-grid tr:nth-child(even) td {
+  .dgv-data-grid tr.dgv-data-grid-row:nth-child(even) td {
     background-color: var(--dgv-cell-alt-background);
   }
 
@@ -214,4 +233,53 @@
     color: var(--dgv-button-hover-text-color);
     background-color: var(--dgv-button-hover-background-color);
     outline: none;
+  }
+
+
+/**** Options Header ****/
+.dgv-options-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+
+/**** Action Text (e.g. Show Filter Options) ****/
+.dgv-action-text {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: var(--dgv-action-text-font-size);
+  font-weight: var(--dgv-action-text-font-weight);
+  color: var(--dgv-action-text-color);
+  fill: var(--dgv-action-text-color);
+  
+}
+
+  .dgv-action-text:hover {
+    color: var(--dgv-action-text-hover-color);
+    fill: var(--dgv-action-text-hover-color);
+  }
+
+/**** Filter Options Row ***/
+.dgv-filter-options-row {
+  border-bottom: var(--dgv-filter-options-border-bottom);
+}
+
+  .dgv-filter-options-row td {
+    background-color: var(--dgv-filter-options-background-color); 
+  }
+
+/**** Input ****/
+.dgv-data-grid input {
+  padding: var(--dgv-input-padding);
+  border: var(--dgv-input-border);
+  color: var(--dgv-input-text-color);
+  background-color: var(--dgv-input-background);
+}
+
+  .dgv-data-grid input:focus {
+    outline: none;
+    border: var(--dgv-input-focus-border);
   }
