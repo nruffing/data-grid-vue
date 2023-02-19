@@ -67,7 +67,7 @@ export default defineComponent({
 <style>
 body, html {
   margin: 0;
-  background-color: black;
+  background-color: rgb(40, 69, 97);
 }
 main {
   padding: 20px;
