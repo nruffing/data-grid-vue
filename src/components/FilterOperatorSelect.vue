@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, type PropType } from 'vue';
+import { defineComponent } from 'vue';
 import { FilterOperator } from '@/Filter';
 import Formatter from '@/Formatter';
 import Icon from './Icon.vue';
@@ -32,11 +32,11 @@ export default defineComponent({
   },
   props: {
     operators: {
-      type: Object as PropType<FilterOperator[]>,
+      type: Array<FilterOperator>,
       required: true,
     },
     modelValue: {
-      type: Object as PropType<FilterOperator>,
+      type: Number,
     },
   },
   methods: {
