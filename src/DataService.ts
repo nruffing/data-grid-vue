@@ -87,7 +87,7 @@ export class ClientSideDataService implements DataService {
     }
 
     return Promise.resolve({
-      totalItems: this.dataItems.length,
+      totalItems: this.filtered.length,
       dataItems: this.filtered.slice(startIndex, endIndex),
     })
   }

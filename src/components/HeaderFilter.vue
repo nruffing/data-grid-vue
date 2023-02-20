@@ -76,7 +76,7 @@ export default defineComponent({
       }
       return FilterOperator.equals
     },
-    onFilterValueUpdated(event: Event) {
+    onFilterValueUpdated() {
       this.$emit('updated', {
         fieldName: this.column.field.fieldName,
         operator: this.operator,
