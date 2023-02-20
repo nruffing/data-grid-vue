@@ -1,5 +1,6 @@
 <template>
   <div class="dgv-filter">
+    <FilterOperatorSelect :operators="column.filterOptions?.operators ?? []" />
     <input
       :type="inputType"  
       @input="onFilterValueUpdated"
@@ -11,9 +12,13 @@
 import { defineComponent, type PropType } from 'vue';
 import { DataType, type Column } from '@/DataGridVue'
 import { FilterOperator, ValidOperatorsMap, type FilterCondition } from '@/Filter';
+import FilterOperatorSelect from './FilterOperatorSelect.vue';
 
 export default defineComponent({
   name: 'HeaderFilter',
+  components: {
+    FilterOperatorSelect,
+  },
   props: {
     column: {
       type: Object as PropType<Column>,

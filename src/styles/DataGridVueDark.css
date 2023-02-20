@@ -17,6 +17,7 @@
   --dgv-header-padding: 12px;
   --dgv-header-font-size: 18px;
   --dgv-header-font-weight: bold;
+  --dgv-header-border-top: 3px solid var(--opaque-1);
   --dgv-header-border-bottom: 3px solid var(--opaque-1);
   --dgv-header-icon-size: 12px;
   --dgv-header-icon-color: var(--accent);
@@ -37,12 +38,12 @@
 
   --dgv-footer-text-color: var(--white);
   --dgv-footer-background: transparent;
-  --dgv-footer-padding: 12px;
+  --dgv-footer-padding: 6px 12px;
   --dgv-footer-font-size: 18px;
   --dgv-footer-icon-size: 10px;
   --dgv-footer-font-weight: normal;
-  --dgv-footer-border: none;
   --dgv-footer-border-top: 3px solid var(--opaque-1);
+  --dgv-footer-border-bottom: 3px solid var(--opaque-1);
 
   
   --dgv-nav-button-text-color: var(--white);
@@ -107,6 +108,7 @@
   background-color: var(--dgv-header-background);
   font-weight: var(--dgv-header-font-weight);
   font-size: var(--header-font-size);
+  border-top: var(--dgv-header-border-top);
   border-bottom: var(--dgv-header-border-bottom);
 }
 
@@ -157,8 +159,8 @@
   background-color: var(--dgv-footer-background);
   font-weight: var(--dgv-footer-font-weight);
   font-size: var(--footer-font-size);
-  border: var(--dgv-footer-border);
   border-top: var(--dgv-footer-border-top);
+  border-bottom: var(--dgv-footer-border-bottom);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -241,6 +243,7 @@
   display: flex;
   flex-direction: row;
   justify-content: end;
+  margin-bottom: 5px;
 }
 
 
@@ -262,6 +265,7 @@
     fill: var(--dgv-action-text-hover-color);
   }
 
+
 /**** Filter Options Row ***/
 .dgv-filter-options-row {
   border-bottom: var(--dgv-filter-options-border-bottom);
@@ -270,6 +274,36 @@
   .dgv-filter-options-row td {
     background-color: var(--dgv-filter-options-background-color); 
   }
+
+
+/**** Filter ****/
+.dgv-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+  .dgv-filter-operator-select {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-bottom: 3px;
+  }
+
+  .dgv-filter-operator-item {
+    cursor: pointer;
+    stroke: var(--black);
+    border: 1px solid var(--black);
+    opacity: 0.7;
+  }
+
+    .dgv-filter-operator-item:hover,
+    .dgv-filter-operator-item:focus,
+    .dgv-filter-operator-item.dgv-selected-filter-operator {
+      outline: none;
+      opacity: 1;
+      background-color: var(--accent)       ;
+    }
 
 /**** Input ****/
 .dgv-data-grid input {

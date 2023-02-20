@@ -30,6 +30,19 @@
     <g v-if="name === 'filter'" transform="scale(.65) translate(-3, 4)">
       <path d="M4.22657 2C2.50087 2 1.58526 4.03892 2.73175 5.32873L8.99972 12.3802V19C8.99972 19.3788 9.21373 19.725 9.55251 19.8944L13.5525 21.8944C13.8625 22.0494 14.2306 22.0329 14.5255 21.8507C14.8203 21.6684 14.9997 21.3466 14.9997 21V12.3802L21.2677 5.32873C22.4142 4.03893 21.4986 2 19.7729 2H4.22657Z"></path>
     </g>
+
+    <!-- Operator - Equals -->
+    <g v-if="name === 'operator-equals'" transform="translate(0, 8)">
+      <line y1="1" x2="12" y2="1" stroke-width="2"/>
+      <line y1="7" x2="12" y2="7" stroke-width="2"/>
+    </g>
+    <!-- Operator - Not Equals -->
+    <g v-if="name === 'operator-notEquals'" transform="translate(0, 5)">
+      <line y1="4" x2="12" y2="4" stroke-width="2"/>
+      <line y1="10" x2="12" y2="10" stroke-width="2"/>
+      <line x1="1.6" y1="12.7" x2="10.6" y2="0.7"/>
+    </g>
+
     <!-- Text Value -->
     <g v-if="text" transform="translate(15, 18)">
       <text>{{ text }}</text>

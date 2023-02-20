@@ -22,7 +22,12 @@ export const TestDataColumns2 = [
     filterable: true,
     filterOptions: {
       operators: [
+        FilterOperator.equals,
+        FilterOperator.notEquals,
+        FilterOperator.greaterThan,
+        FilterOperator.lessThan,
         FilterOperator.greaterThanOrEqualTo,
+        FilterOperator.lessThanOrEqualTo,
       ],
     },
   },

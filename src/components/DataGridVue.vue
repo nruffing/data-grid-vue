@@ -28,14 +28,14 @@
       >
         <td v-for="column in columns" :key="column.field.fieldName">
           <slot
-              :name="`filter-${column.field.fieldName}`"
+            :name="`filter-${column.field.fieldName}`"
+            :column="column"
+          >
+            <HeaderFilter
+              v-if="column.filterable"
               :column="column"
-            >
-              <HeaderFilter
-                v-if="column.filterable"
-                :column="column"
-                @updated="onFilterUpdated"
-              />
+              @updated="onFilterUpdated"
+            />
             </slot>
         </td>
       </tr>
