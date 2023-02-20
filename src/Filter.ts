@@ -70,7 +70,7 @@ export interface FilterCondition {
   fieldName: string,
   operator: FilterOperator,
   dataType: DataType,
-  value: any,
+  value: string | undefined,
 }
 
 export interface Filter {
@@ -117,7 +117,7 @@ export const ClientSideFilter = {
       case DataType.alphanumeric:
         return this.evaluateAlphanumericCondition(value as string, condition.operator, condition.value as string)
       case DataType.number:
-        return this.evaluateNumericCondition(value as number, condition.operator, condition.value as number)
+        return this.evaluateNumericCondition(value as number, condition.operator, parseFloat(condition.value ?? ''))
     }
 
     console.warn(`Unknown data type detected while filtering: ${DataType[condition.dataType]}`)

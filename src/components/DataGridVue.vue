@@ -30,11 +30,13 @@
           <slot
             :name="`filter-${column.field.fieldName}`"
             :column="column"
+            :initialFilterCondition="getFilterCondition(column.field.fieldName)"
+            :onFilterUpdated="onFilterUpdated"
           >
             <HeaderFilter
               v-if="column.filterable"
               :column="column"
-              :initial-filter-condition="getFilterCondition(column.field.fieldName)"
+              :initialFilterCondition="getFilterCondition(column.field.fieldName)"
               @updated="onFilterUpdated"
             />
             </slot>

@@ -61,6 +61,12 @@ export const TestDataColumns2 = [
     field: new Field('phoneNumber', t => formatPhoneNumber(t.phoneNumber)),
     dataType: DataType.number,
     sortable: true,
+    filterable: true,
+    filterOptions: {
+      operators: [
+        FilterOperator.equals,
+      ],
+    },
   },
   {
     field: new Field('dateOfBirth', t => formatDate(t.dateOfBirth)),
@@ -74,7 +80,7 @@ export const TestDataColumns2 = [
   },
 ] as Column[]
 
-function formatPhoneNumber(phone: number | string | undefined): string {
+export function formatPhoneNumber(phone: number | string | undefined): string {
   if (!phone) {
     return ''
   }

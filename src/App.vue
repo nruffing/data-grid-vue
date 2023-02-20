@@ -11,6 +11,11 @@
         multiColumn: false,
       }"
     >
+      <template v-slot:filter-phoneNumber="{ column, initialFilterCondition, onFilterUpdated }">
+        <div class="custom-filter">
+          <input type="tel" :value="formatPhoneNumber(initialFilterCondition?.value)" @input="onPhoneNumberFilterInput($event, onFilterUpdated)" />
+        </div>
+      </template>
     </DataGridVue>
 
     <DataGridVue
@@ -32,12 +37,13 @@
 import { defineComponent } from 'vue'
 
 import DataGridVue from './components/DataGridVue.vue'
-import type { Column } from './DataGridVue'
+import { DataType, type Column } from './DataGridVue'
+import { FilterOperator, type FilterCondition } from './Filter'
 
 import { TestDataColumns, type TestDataItem } from './test-data/test-data'
 import MOCK_DATA from './test-data/MOCK_DATA'
 
-import { TestDataColumns2 } from './test-data/test-data-2'
+import { TestDataColumns2, formatPhoneNumber } from './test-data/test-data-2'
 
 export default defineComponent({
   name: 'App',
@@ -60,6 +66,21 @@ export default defineComponent({
       console.log(request)
       return Promise.resolve(request)
     },
+    formatPhoneNumber(phoneNumber: number | undefined): string {
+      return formatPhoneNumber(phoneNumber)
+    },
+    onPhoneNumberFilterInput(event: Event, onFilterUpdated: (o: FilterCondition) => void) {
+      const input = event.target as HTMLInputElement
+      const rawValue = input.value
+      const strippedValue = rawValue.replace(/\D/g,'');
+
+      onFilterUpdated({ 
+        fieldName: 'phoneNumber',
+        operator: FilterOperator.equals,
+        dataType: DataType.number,
+        value: strippedValue,
+      })
+    }
   },
 })
 </script>
@@ -69,10 +90,18 @@ body, html {
   margin: 0;
   background-color: rgb(40, 69, 97);
 }
+
 main {
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 60px;
+}
+
+.custom-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
 }
 </style>

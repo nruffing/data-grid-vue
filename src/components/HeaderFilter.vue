@@ -54,7 +54,7 @@ export default defineComponent({
   },
   mounted() {
     if (this.initialFilterCondition) {
-      this.getInput().value = this.initialFilterCondition.value
+      this.getInput().value = this.initialFilterCondition.value ?? ''
       this.operator = this.initialFilterCondition.operator
     } else {
       this.operator = this.getDefaultOperator()
