@@ -11,6 +11,8 @@
       }"
       :title="getTitle(operator)"
       @click="onClick(operator)"
+      @keydown.enter="onClick(operator)"
+      @keydown.space="onClick(operator)"
     >
       <Icon :name="`operator-${getOperatorName(operator)}`" />
     </span>

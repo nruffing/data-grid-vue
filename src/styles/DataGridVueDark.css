@@ -307,9 +307,7 @@
   }
 
     .dgv-filter-operator-item:hover,
-    .dgv-filter-operator-item:focus,
     .dgv-filter-operator-item.dgv-selected-filter-operator {
-      outline: none;
       opacity: var(--dgv-filter-operator-item-hover-opacity);
       background-color: var(--dgv-filter-operator-item-hover-background-color);
     }
