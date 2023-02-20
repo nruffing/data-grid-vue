@@ -85,6 +85,13 @@
   --dgv-input-background: var(--opaque-1);
 
   --dgv-input-focus-border: 2px solid var(--accent);
+
+
+  --dgv-filter-operator-item-color: var(--black);
+  --dgv-filter-operator-item-opacity: 0.7;
+
+  --dgv-filter-operator-item-hover-background-color: var(--accent);
+  --dgv-filter-operator-item-hover-opacity: 1;
 }
 
 
@@ -92,6 +99,7 @@
 .dgv-data-grid {
   border-collapse: collapse;
   font-family: var(--dbv-font-family);
+  height: fit-content;
 }
 
   /**** Full Width ****/
@@ -269,10 +277,11 @@
 /**** Filter Options Row ***/
 .dgv-filter-options-row {
   border-bottom: var(--dgv-filter-options-border-bottom);
+  height: 100%;
 }
 
   .dgv-filter-options-row td {
-    background-color: var(--dgv-filter-options-background-color); 
+    background-color: var(--dgv-filter-options-background-color);
   }
 
 
@@ -281,6 +290,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
   .dgv-filter-operator-select {
@@ -292,17 +302,16 @@
 
   .dgv-filter-operator-item {
     cursor: pointer;
-    stroke: var(--black);
-    border: 1px solid var(--black);
-    opacity: 0.7;
+    stroke: var(--dgv-filter-operator-item-color);
+    opacity: var(--dgv-filter-operator-item-opacity);
   }
 
     .dgv-filter-operator-item:hover,
     .dgv-filter-operator-item:focus,
     .dgv-filter-operator-item.dgv-selected-filter-operator {
       outline: none;
-      opacity: 1;
-      background-color: var(--accent)       ;
+      opacity: var(--dgv-filter-operator-item-hover-opacity);
+      background-color: var(--dgv-filter-operator-item-hover-background-color);
     }
 
 /**** Input ****/

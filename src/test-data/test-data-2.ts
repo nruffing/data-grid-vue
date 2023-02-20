@@ -22,12 +22,12 @@ export const TestDataColumns2 = [
     filterable: true,
     filterOptions: {
       operators: [
-        FilterOperator.equals,
-        FilterOperator.notEquals,
-        FilterOperator.greaterThan,
-        FilterOperator.lessThan,
         FilterOperator.greaterThanOrEqualTo,
         FilterOperator.lessThanOrEqualTo,
+        FilterOperator.greaterThan,
+        FilterOperator.lessThan,
+        FilterOperator.equals,
+        FilterOperator.notEquals,
       ],
     },
   },
@@ -39,6 +39,10 @@ export const TestDataColumns2 = [
     filterOptions: {
       operators: [
         FilterOperator.contains,
+        FilterOperator.startsWith,
+        FilterOperator.endsWith,
+        FilterOperator.notEquals,
+        FilterOperator.equals,
       ],
     },
   },

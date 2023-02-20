@@ -34,6 +34,7 @@
             <HeaderFilter
               v-if="column.filterable"
               :column="column"
+              :initial-filter-condition="getFilterCondition(column.field.fieldName)"
               @updated="onFilterUpdated"
             />
             </slot>
@@ -238,11 +239,14 @@ export default defineComponent({
 
       this.loadPageData()
     },
+    getFilterCondition(fieldName: string): FilterCondition | undefined {
+      return this.filters.find(f => f.fieldName === fieldName)
+    },
     onFilterUpdated(condition: FilterCondition) {
       if (!condition.value) {
         this.filters = this.filters.filter(f => f.fieldName !== condition.fieldName)
       } else {
-        const filter = this.filters.find(f => f.fieldName === condition.fieldName)
+        const filter = this.getFilterCondition(condition.fieldName)
         if (filter) {
           filter.value = condition.value
           filter.operator = condition.operator

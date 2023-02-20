@@ -10,6 +10,7 @@
         'dgv-selected-filter-operator': operator === modelValue
       }"
       :title="getTitle(operator)"
+      @click="onClick(operator)"
     >
       <Icon :name="`operator-${getOperatorName(operator)}`" />
     </span>
@@ -42,6 +43,12 @@ export default defineComponent({
     },
     getTitle(operator: FilterOperator): string {
       return Formatter.fromCamelCase(FilterOperator[operator])
+    },
+    onClick(operator: FilterOperator) {
+      if (operator === this.modelValue) {
+        return
+      }
+      this.$emit('update:modelValue', operator)
     },
   },
 })

@@ -1,7 +1,12 @@
 <template>
   <div class="dgv-filter">
-    <FilterOperatorSelect :operators="column.filterOptions?.operators ?? []" />
+    <FilterOperatorSelect
+      v-model="operator"
+      :operators="column.filterOptions?.operators ?? []"
+      @update:modelValue="onFilterValueUpdated"
+    />
     <input
+      ref="input"
       :type="inputType"  
       @input="onFilterValueUpdated"
     />
@@ -14,15 +19,29 @@ import { DataType, type Column } from '@/DataGridVue'
 import { FilterOperator, ValidOperatorsMap, type FilterCondition } from '@/Filter';
 import FilterOperatorSelect from './FilterOperatorSelect.vue';
 
+interface Data {
+  operator: FilterOperator,
+}
+
 export default defineComponent({
   name: 'HeaderFilter',
   components: {
     FilterOperatorSelect,
   },
+  data(): Data {
+    return {
+      operator: FilterOperator.equals,
+    }
+  },
   props: {
     column: {
       type: Object as PropType<Column>,
       required: true,
+    },
+    initialFilterCondition: {
+      type: Object as PropType<FilterCondition>,
+      required: false,
+      default: undefined,
     },
   },
   computed: {
@@ -31,8 +50,21 @@ export default defineComponent({
         return "number"
       }
       return "text"
+    }, 
+  },
+  mounted() {
+    if (this.initialFilterCondition) {
+      this.getInput().value = this.initialFilterCondition.value
+      this.operator = this.initialFilterCondition.operator
+    } else {
+      this.operator = this.getDefaultOperator()
+    }
+  },
+  methods: {
+    getInput(): HTMLInputElement {
+      return this.$refs.input as HTMLInputElement
     },
-    operator(): FilterOperator {
+    getDefaultOperator(): FilterOperator {
       if (this.column.filterOptions?.operators?.length) {
         return this.column.filterOptions.operators[0]
       }
@@ -44,16 +76,12 @@ export default defineComponent({
       }
       return FilterOperator.equals
     },
-  },
-  methods: {
     onFilterValueUpdated(event: Event) {
-      const inputEvent = event as InputEvent
-      const input = inputEvent.target as HTMLInputElement
       this.$emit('updated', {
         fieldName: this.column.field.fieldName,
         operator: this.operator,
         dataType: this.column.dataType,
-        value: input.value,
+        value: this.getInput().value,
       } as FilterCondition)
     },
   },
