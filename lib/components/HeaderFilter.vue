@@ -15,8 +15,8 @@
 
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue';
-import { DataType, type Column } from '@/DataGridVue'
-import { FilterOperator, ValidOperatorsMap, type FilterCondition } from '@/Filter';
+import { DataType, type Column } from '../DataGridVue'
+import { FilterOperator, ValidOperatorsMap, type FilterCondition } from '../Filter';
 import FilterOperatorSelect from './FilterOperatorSelect.vue';
 
 interface Data {

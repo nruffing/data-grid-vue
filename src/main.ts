@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import './styles/DataGridVueDark.css'
+import '../lib/styles/DataGridVueDark.css'
 
 createApp(App).mount('#app')

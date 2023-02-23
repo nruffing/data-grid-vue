@@ -36,9 +36,9 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import DataGridVue from './components/DataGridVue.vue'
-import { DataType, type Column } from './DataGridVue'
-import { FilterOperator, type FilterCondition } from './Filter'
+import DataGridVue from '../lib/components/DataGridVue.vue'
+import { DataType, type Column } from '../lib/DataGridVue'
+import { FilterOperator, type FilterCondition } from '../lib/Filter'
 
 import { TestDataColumns, type TestDataItem } from './test-data/test-data'
 import MOCK_DATA from './test-data/MOCK_DATA'

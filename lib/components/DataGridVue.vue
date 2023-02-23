@@ -66,10 +66,10 @@
 
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue'
-import { DataType, Field, type Column } from '@/DataGridVue'
-import { type DataService, StubDataService, ClientSideDataService, type ServerSideDataServiceOptions, ServerSideDataService } from '@/DataService'
-import { type Sort, type SortOptions, SortType } from '@/Sort'
-import type { Filter, FilterCondition } from '@/Filter'
+import { DataType, Field, type Column } from '../DataGridVue'
+import { type DataService, StubDataService, ClientSideDataService, type ServerSideDataServiceOptions, ServerSideDataService } from '../DataService'
+import { type Sort, type SortOptions, SortType } from '../Sort'
+import type { Filter, FilterCondition } from '../Filter'
 import HeaderCell from './HeaderCell.vue'
 import HeaderFilter from './HeaderFilter.vue'
 import PageNavigation from './PageNavigation.vue'

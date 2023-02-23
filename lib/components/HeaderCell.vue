@@ -21,9 +21,9 @@
 
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue'
-import type { Column } from '@/DataGridVue'
-import { type Sort, SortType } from '@/Sort'
-import Formatter from '@/Formatter'
+import type { Column } from '../DataGridVue'
+import { type Sort, SortType } from '../Sort'
+import Formatter from '../Formatter'
 import Icon from './Icon.vue'
 
 export default defineComponent({

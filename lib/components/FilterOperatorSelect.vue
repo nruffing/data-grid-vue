@@ -21,8 +21,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { FilterOperator } from '@/Filter';
-import Formatter from '@/Formatter';
+import { FilterOperator } from '../Filter';
+import Formatter from '../Formatter';
 import Icon from './Icon.vue';
 
 export default defineComponent({

@@ -1,7 +1,7 @@
 // https://www.mockaroo.com/
 
-import { FilterOperator } from '@/Filter'
-import { DataType, Field, type Column } from '../DataGridVue'
+import { FilterOperator } from '../../lib/Filter'
+import { DataType, Field, type Column } from '../../lib/DataGridVue'
 
 export interface TestDataItem {
   id: number,
