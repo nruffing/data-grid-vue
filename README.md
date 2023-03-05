@@ -1,6 +1,8 @@
 # data-grid-vue
 
-Example app showcasing how a native Vue3 data grid can be built without additional dependencies. The data grid currently only contains some basic functionality but is designed to be easily expanded on.
+Customizable native Vue3 data grid with no additional dependencies.
+
+[NPM](https://www.npmjs.com/package/data-grid-vue)
 
 ## Current Features
 
@@ -20,6 +22,27 @@ Example app showcasing how a native Vue3 data grid can be built without addition
   * Default filter input and header cell template
   * Multiple operators
 
+## Example
+
+```vue
+<DataGridVue
+  :server-side-options="{
+    postRoute: 'https://localhost:7179/DataGridVue',
+    beforeRequest: onBeforeRequest,
+  }"
+  :columns="testDataColumns2"
+  :sort-options="{
+    sortable: true,
+    multiColumn: false,
+  }"
+>
+  <template v-slot:filter-phoneNumber="{ column, initialFilterCondition, onFilterUpdated }">
+    <div class="custom-filter">
+      <input type="tel" :value="formatPhoneNumber(initialFilterCondition?.value)" @input="onPhoneNumberFilterInput($event, onFilterUpdated)" />
+    </div>
+  </template>
+</DataGridVue>
+```
 ________________________________________
 
 ## Build Package
