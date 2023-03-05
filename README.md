@@ -38,7 +38,7 @@ Customizable native Vue3 data grid with no additional dependencies.
 >
   <template v-slot:filter-phoneNumber="{ column, initialFilterCondition, onFilterUpdated }">
     <div class="custom-filter">
-      <input type="tel" :value="formatPhoneNumber(initialFilterCondition?.value)" @input="onPhoneNumberFilterInput($event, onFilterUpdated)" />
+      <input type="tel" :value="formatPhoneNumber(initialFilterCondition?.value)" @input="onPhoneNumberFilterInput($event, onFilterUpdated)">
     </div>
   </template>
 </DataGridVue>
