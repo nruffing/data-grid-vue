@@ -1,6 +1,6 @@
 {
   "name": "data-grid-vue",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "description": "Customizable native Vue3 data grid",
   "license": "MIT",
   "author": {
@@ -31,6 +31,7 @@
       "require": "./lib/styles/DataGridVueDark.css"
     }
   },
+  "types": "./dist/types/main.d.ts",
   "main": "dist/data-grid-vue.umd.js",
   "module": "dist/data-grid-vue.mjs",
   "browser": "dist/data-grid-vue.umd.js",

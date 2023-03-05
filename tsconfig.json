@@ -7,7 +7,7 @@
       "@/*": ["./src/*"]
     },
     "declaration": true,
-    "outDir": "dist"
+    "outDir": "dist/types"
   },
   "references": [
     {
