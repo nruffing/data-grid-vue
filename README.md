@@ -22,6 +22,13 @@ Example app showcasing how a native Vue3 data grid can be built without addition
 
 ________________________________________
 
+## Build Package
+
+```sh
+npm run build
+```
+________________________________________
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).

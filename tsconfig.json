@@ -1,13 +1,14 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "lib/**/*", "lib/**/*.vue", "lib/DataGridVue.ts"],
+  "include": ["env.d.ts", "lib/**/*", "lib/**/*.vue", "lib/DataGridVue.ts"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "declaration": true,
+    "outDir": "dist"
   },
-
   "references": [
     {
       "path": "./tsconfig.config.json"
