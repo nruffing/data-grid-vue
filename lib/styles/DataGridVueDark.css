@@ -14,23 +14,23 @@
 
   --dgv-header-text-color: var(--dgv-white);
   --dgv-header-background: transparent;
-  --dgv-header-padding: 12px;
-  --dgv-header-font-size: 18px;
+  --dgv-header-padding: 1rem;
+  --dgv-header-font-size: 1rem;
   --dgv-header-font-weight: bold;
-  --dgv-header-border-top: 3px solid var(--dgv-opaque-1);
-  --dgv-header-border-bottom: 3px solid var(--dgv-opaque-1);
-  --dgv-header-icon-size: 12px;
+  --dgv-header-border-top: 0.2rem solid var(--dgv-opaque-1);
+  --dgv-header-border-bottom: 0.2rem solid var(--dgv-opaque-1);
+  --dgv-header-icon-size: 0.8rem;
   --dgv-header-icon-color: var(--dgv-accent);
 
   
   --dgv-filter-options-background-color: var(--dgv-opaque-2);
-  --dgv-filter-options-border-bottom: 3px solid var(--dgv-opaque-1);
+  --dgv-filter-options-border-bottom: 0.2rem solid var(--dgv-opaque-1);
 
 
   --dgv-cell-text-color: rgb(255, 255, 255);
-  --dgv-cell-padding: 15px 12px;
+  --dgv-cell-padding: 1rem 0.8rem;
   --dgv-cell-border: none;
-  --dgv-cell-font-size: 16px;
+  --dgv-cell-font-size: 1rem;
   --dgv-cell-background: var(--dgv-opaque-3);
   
   --dgv-cell-alt-background: var(--dgv-opaque-2);
@@ -38,19 +38,19 @@
 
   --dgv-footer-text-color: var(--dgv-white);
   --dgv-footer-background: transparent;
-  --dgv-footer-padding: 6px 12px;
-  --dgv-footer-font-size: 18px;
-  --dgv-footer-icon-size: 10px;
+  --dgv-footer-padding: 0.5rem 1rem;
+  --dgv-footer-font-size: 1rem;
+  --dgv-footer-icon-size: 0.6rem;
   --dgv-footer-font-weight: normal;
-  --dgv-footer-border-top: 3px solid var(--dgv-opaque-1);
-  --dgv-footer-border-bottom: 3px solid var(--dgv-opaque-1);
+  --dgv-footer-border-top: 0.2rem solid var(--dgv-opaque-1);
+  --dgv-footer-border-bottom: 0.2rem solid var(--dgv-opaque-1);
 
   
   --dgv-nav-button-text-color: var(--dgv-white);
   --dgv-nav-button-border: none;
   --dgv-nav-button-background: transparent;
-  --dgv-nav-button-padding: 10px;
-  --dgv-nav-button-min-width: 35px;
+  --dgv-nav-button-padding: 0.6rem;
+  --dgv-nav-button-min-width: 2.2rem;
 
   --dgv-nav-button-disabled-opacity: 0.4;
 
@@ -64,27 +64,27 @@
 
 
   --dgv-button-text-color: var(--dgv-accent);
-  --dgv-button-border: 2px solid var(--dgv-accent);
-  --dgv-button-padding: 5px;
+  --dgv-button-border: 0.1rem solid var(--dgv-accent);
+  --dgv-button-padding: 0.4rem;
   --dgv-button-background-color: transparent;
 
   --dgv-button-hover-text-color: var(--dgv-black);
   --dgv-button-hover-background-color: var(--dgv-accent);
 
 
-  --dgv-action-text-font-size: 16px;
+  --dgv-action-text-font-size: 1rem;
   --dgv-action-text-font-weight: normal;
   --dgv-action-text-color: var(--dgv-opaque-1);
 
   --dgv-action-text-hover-color: var(--dgv-accent);
 
 
-  --dgv-input-padding: 5px;
-  --dgv-input-border: 2px solid var(--dgv-opaque-1);
+  --dgv-input-padding: 0.4rem;
+  --dgv-input-border: 0.1rem solid var(--dgv-opaque-1);
   --dgv-input-text-color: var(--black);
   --dgv-input-background: var(--opaque-1);
 
-  --dgv-input-focus-border: 2px solid var(--dgv-accent);
+  --dgv-input-focus-border: 0.1rem solid var(--dgv-accent);
 
 
   --dgv-filter-operator-item-color: var(--dgv-black);
@@ -131,7 +131,7 @@
 
   .dgv-data-grid-header-row svg {
     height: var(--dgv-header-icon-size);
-    width: calc(var(--dgv-header-icon-size) * 2);
+    width: calc(var(--dgv-header-icon-size) * 3);
     stroke: var(--dgv-header-icon-color);
     stroke-width: 4;
     fill: none;
@@ -186,7 +186,7 @@
   .dgv-page-navigation {
     display: flex;
     flex-direction: row;
-    gap: 3px;
+    gap: 0.2rem;
   }
 
   .dgv-page-navigation button {
@@ -251,7 +251,7 @@
   display: flex;
   flex-direction: row;
   justify-content: end;
-  margin-bottom: 5px;
+  margin-bottom: 0.4rem;
 }
 
 
@@ -296,8 +296,8 @@
   .dgv-filter-operator-select {
     display: flex;
     flex-direction: row;
-    gap: 5px;
-    margin-bottom: 3px;
+    gap: 0.4rem;
+    margin-bottom: 0.2rem;
   }
 
   .dgv-filter-operator-item {

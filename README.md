@@ -51,6 +51,7 @@ Customizable native Vue3 data grid with no additional dependencies.
    * properly specify location of types in package
  * v0.0.3-alpha
    * fix css variable names
+   * use rems
 ________________________________________
 
 ## Build Package
