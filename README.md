@@ -43,6 +43,14 @@ Customizable native Vue3 data grid with no additional dependencies.
   </template>
 </DataGridVue>
 ```
+
+## Release Notes
+ * v0.0.1-alpha
+   * initial release
+ * v0.0.2-alpha
+   * properly specify location of types in package
+ * v0.0.3-alpha
+   * fix css variable names
 ________________________________________
 
 ## Build Package

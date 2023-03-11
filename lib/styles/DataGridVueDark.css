@@ -1,52 +1,52 @@
 :root {
   /* Theme assumes a dark background */
 
-  --white: rgb(255, 255, 255);
-  --black: rgb(0, 0, 0);
-  --opaque-1: rgba(255, 255, 255, 0.5);
-  --opaque-2: rgba(255, 255, 255, 0.3);
-  --opaque-3: rgba(255, 255, 255, 0.2);
-  --accent: rgb(255, 166, 0);
+  --dgv-white: rgb(255, 255, 255);
+  --dgv-black: rgb(0, 0, 0);
+  --dgv-opaque-1: rgba(255, 255, 255, 0.5);
+  --dgv-opaque-2: rgba(255, 255, 255, 0.3);
+  --dgv-opaque-3: rgba(255, 255, 255, 0.2);
+  --dgv-accent: rgb(255, 166, 0);
 
 
   --dgv-font-family: Verdana, Arial, Helvetica, sans-serif;
 
 
-  --dgv-header-text-color: var(--white);
+  --dgv-header-text-color: var(--dgv-white);
   --dgv-header-background: transparent;
   --dgv-header-padding: 12px;
   --dgv-header-font-size: 18px;
   --dgv-header-font-weight: bold;
-  --dgv-header-border-top: 3px solid var(--opaque-1);
-  --dgv-header-border-bottom: 3px solid var(--opaque-1);
+  --dgv-header-border-top: 3px solid var(--dgv-opaque-1);
+  --dgv-header-border-bottom: 3px solid var(--dgv-opaque-1);
   --dgv-header-icon-size: 12px;
-  --dgv-header-icon-color: var(--accent);
+  --dgv-header-icon-color: var(--dgv-accent);
 
   
-  --dgv-filter-options-background-color: var(--opaque-2);
-  --dgv-filter-options-border-bottom: 3px solid var(--opaque-1);
+  --dgv-filter-options-background-color: var(--dgv-opaque-2);
+  --dgv-filter-options-border-bottom: 3px solid var(--dgv-opaque-1);
 
 
   --dgv-cell-text-color: rgb(255, 255, 255);
   --dgv-cell-padding: 15px 12px;
   --dgv-cell-border: none;
   --dgv-cell-font-size: 16px;
-  --dgv-cell-background: var(--opaque-3);
+  --dgv-cell-background: var(--dgv-opaque-3);
   
-  --dgv-cell-alt-background: var(--opaque-2);
+  --dgv-cell-alt-background: var(--dgv-opaque-2);
 
 
-  --dgv-footer-text-color: var(--white);
+  --dgv-footer-text-color: var(--dgv-white);
   --dgv-footer-background: transparent;
   --dgv-footer-padding: 6px 12px;
   --dgv-footer-font-size: 18px;
   --dgv-footer-icon-size: 10px;
   --dgv-footer-font-weight: normal;
-  --dgv-footer-border-top: 3px solid var(--opaque-1);
-  --dgv-footer-border-bottom: 3px solid var(--opaque-1);
+  --dgv-footer-border-top: 3px solid var(--dgv-opaque-1);
+  --dgv-footer-border-bottom: 3px solid var(--dgv-opaque-1);
 
   
-  --dgv-nav-button-text-color: var(--white);
+  --dgv-nav-button-text-color: var(--dgv-white);
   --dgv-nav-button-border: none;
   --dgv-nav-button-background: transparent;
   --dgv-nav-button-padding: 10px;
@@ -54,43 +54,43 @@
 
   --dgv-nav-button-disabled-opacity: 0.4;
 
-  --dgv-nav-button-active-color: var(--accent);
+  --dgv-nav-button-active-color: var(--dgv-accent);
   --dgv-nav-button-active-border: none;
   --dgv-nav-button-active-background: transparent;
 
-  --dgv-nav-button-hover-color: var(--black);
+  --dgv-nav-button-hover-color: var(--dgv-black);
   --dgv-nav-button-hover-border: none;
-  --dgv-nav-button-hover-background: var(--accent);
+  --dgv-nav-button-hover-background: var(--dgv-accent);
 
 
-  --dgv-button-text-color: var(--accent);
-  --dgv-button-border: 2px solid var(--accent);
+  --dgv-button-text-color: var(--dgv-accent);
+  --dgv-button-border: 2px solid var(--dgv-accent);
   --dgv-button-padding: 5px;
   --dgv-button-background-color: transparent;
 
-  --dgv-button-hover-text-color: var(--black);
-  --dgv-button-hover-background-color: var(--accent);
+  --dgv-button-hover-text-color: var(--dgv-black);
+  --dgv-button-hover-background-color: var(--dgv-accent);
 
 
   --dgv-action-text-font-size: 16px;
   --dgv-action-text-font-weight: normal;
-  --dgv-action-text-color: var(--opaque-1);
+  --dgv-action-text-color: var(--dgv-opaque-1);
 
-  --dgv-action-text-hover-color: var(--accent);
+  --dgv-action-text-hover-color: var(--dgv-accent);
 
 
   --dgv-input-padding: 5px;
-  --dgv-input-border: 2px solid var(--opaque-1);
+  --dgv-input-border: 2px solid var(--dgv-opaque-1);
   --dgv-input-text-color: var(--black);
   --dgv-input-background: var(--opaque-1);
 
-  --dgv-input-focus-border: 2px solid var(--accent);
+  --dgv-input-focus-border: 2px solid var(--dgv-accent);
 
 
-  --dgv-filter-operator-item-color: var(--black);
+  --dgv-filter-operator-item-color: var(--dgv-black);
   --dgv-filter-operator-item-opacity: 0.7;
 
-  --dgv-filter-operator-item-hover-background-color: var(--accent);
+  --dgv-filter-operator-item-hover-background-color: var(--dgv-accent);
   --dgv-filter-operator-item-hover-opacity: 1;
 }
 
@@ -98,7 +98,7 @@
 /**** Data Grid ****/
 .dgv-data-grid {
   border-collapse: collapse;
-  font-family: var(--dbv-font-family);
+  font-family: var(--dgv-font-family);
   height: fit-content;
 }
 
@@ -115,7 +115,7 @@
   padding: var(--dgv-header-padding);
   background-color: var(--dgv-header-background);
   font-weight: var(--dgv-header-font-weight);
-  font-size: var(--header-font-size);
+  font-size: var(--dgv-header-font-size);
   border-top: var(--dgv-header-border-top);
   border-bottom: var(--dgv-header-border-bottom);
 }
@@ -148,7 +148,7 @@
 .dgv-data-grid td {
   color: var(--dgv-cell-text-color);
   padding: var(--dgv-cell-padding);
-  font-size: var(--dgv-font-size);
+  font-size: var(--dgv-cell-font-size);
   border: var(--dgv-cell-border);
 }
 
@@ -166,7 +166,7 @@
   padding: var(--dgv-footer-padding);
   background-color: var(--dgv-footer-background);
   font-weight: var(--dgv-footer-font-weight);
-  font-size: var(--footer-font-size);
+  font-size: var(--dgv-footer-font-size);
   border-top: var(--dgv-footer-border-top);
   border-bottom: var(--dgv-footer-border-bottom);
   display: flex;
