@@ -85,6 +85,7 @@ interface Data {
   sort: Sort[],
   filters: FilterCondition[],
   filterOptionsShown: boolean,
+  externalFilter: Filter | undefined,
 }
 
 export default defineComponent({
@@ -150,6 +151,7 @@ export default defineComponent({
       sort: [],
       filters: [],
       filterOptionsShown: false,
+      externalFilter: undefined,
     }
   },
   computed: {
@@ -157,6 +159,9 @@ export default defineComponent({
       return !!this.columns.find(c => c.filterable)
     },
     filter(): Filter | undefined {
+      if (this.externalFilter) {
+        return this.externalFilter
+      }
       if (!this?.filters.length) {
         return undefined
       }
@@ -258,6 +263,10 @@ export default defineComponent({
       }
       this.loadPageData()
     },
+    setFilter(filter: Filter | undefined) {
+      this.filter = filter
+      this.loadPageData()
+    }
   },
 })
 </script>

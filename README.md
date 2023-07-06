@@ -21,6 +21,7 @@ Customizable native Vue3 data grid with no additional dependencies.
   * Enabled per column
   * Default filter input and header cell template
   * Multiple operators
+  * Can be overridden with an externally supplied filter
 
 ## Example
 
@@ -52,6 +53,8 @@ Customizable native Vue3 data grid with no additional dependencies.
  * v0.0.3-alpha
    * fix css variable names
    * use rems
+ * v0.0.4-alpha
+   * add support for externally specifying a filter
 ________________________________________
 
 ## Build Package
