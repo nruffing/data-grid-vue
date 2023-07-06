@@ -55,6 +55,8 @@ Customizable native Vue3 data grid with no additional dependencies.
    * use rems
  * v0.0.4-alpha
    * add support for externally specifying a filter
+ * v0.0.5-alpha
+   * fix external filter
 ________________________________________
 
 ## Build Package

@@ -264,7 +264,7 @@ export default defineComponent({
       this.loadPageData()
     },
     setFilter(filter: Filter | undefined) {
-      this.filter = filter
+      this.externalFilter = filter
       this.loadPageData()
     }
   },
