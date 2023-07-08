@@ -15,7 +15,7 @@
         v-if="filterable"
         class="dgv-action-text"
         tabindex="0"
-        @click="filterOptionsShown = !filterOptionsShown"
+        @click="onToggleFilterOptionsShown"
       >
         <Icon name="filter" />
         <span>{{ filterOptionsShown ? 'Hide' : 'Show' }} Filter Options</span>
@@ -291,6 +291,12 @@ export default defineComponent({
       }
 
       this.loadPageData()
+    },
+    onToggleFilterOptionsShown() {
+      this.filterOptionsShown = !this.filterOptionsShown
+      nextTick(() => {
+        this.calculateDynamicStyles()
+      })
     },
     getFilterCondition(fieldName: string): FilterCondition | undefined {
       return this.filters.find(f => f.fieldName === fieldName)
