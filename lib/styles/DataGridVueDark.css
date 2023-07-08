@@ -114,6 +114,17 @@
     height: 100%;
   }
 
+    .dgv-data-grid-container.dgv-full-height thead,
+    .dgv-data-grid-container.dgv-full-height tbody {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .dgv-data-grid-container.dgv-full-height tbody {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }  
+
     .dgv-data-grid-container.dgv-full-height .dgv-footer {
       margin-top: auto;
     }

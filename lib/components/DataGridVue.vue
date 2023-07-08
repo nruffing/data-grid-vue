@@ -1,12 +1,16 @@
 <template>
-  <div 
+  <div
+    ref="container"
     class="dgv-data-grid-container"
     :class="{ 
       'dgv-full-width': fullWidth,
       'dgv-full-height': fullHeight,
     }"
   >
-    <div class="dgv-options-header">
+    <div 
+      ref="optionsHeader"
+      class="dgv-options-header"
+    >
       <span 
         v-if="filterable"
         class="dgv-action-text"
@@ -17,8 +21,11 @@
         <span>{{ filterOptionsShown ? 'Hide' : 'Show' }} Filter Options</span>
       </span>
     </div>
-    <table class="dgv-data-grid">
-      <thead>
+    <table 
+      ref="table"
+      class="dgv-data-grid"
+    >
+      <thead ref="header">
         <tr class="dgv-data-grid-header-row">
           <HeaderCell
             v-for="column in columns"
@@ -50,7 +57,7 @@
           </td>
         </tr>
       </thead>
-      <tbody>
+      <tbody :style="tbodyStyle">
         <tr v-for="dataItem in displayedData" :key="keyColumn.field.resolveValue(dataItem)" class="dgv-data-grid-row">
           <td v-for="column in columns" :key="column.field.fieldName">
             <slot 
@@ -63,7 +70,10 @@
         </tr>
       </tbody>
     </table>
-    <div class="dgv-footer">
+    <div 
+      ref="footer"  
+      class="dgv-footer"
+    >
       <PageNavigation
         v-if="paged"
         v-model:current-page="currentPage"
@@ -75,15 +85,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, type PropType } from 'vue'
+import { defineComponent, type PropType, nextTick } from 'vue'
+import { debounce } from 'debounce'
 import { DataType, Field, type Column } from '../DataGridVue'
 import { type DataService, StubDataService, ClientSideDataService, type ServerSideDataServiceOptions, ServerSideDataService } from '../DataService'
 import { type Sort, type SortOptions, SortType } from '../Sort'
 import type { Filter, FilterCondition } from '../Filter'
+import { getElementHeight } from '../Html'
 import HeaderCell from './HeaderCell.vue'
 import HeaderFilter from './HeaderFilter.vue'
 import PageNavigation from './PageNavigation.vue'
 import Icon from './Icon.vue'
+
+interface InlineStyle {
+  height?: string,
+}
 
 interface Data {
   keyColumn: Column,
@@ -96,6 +112,8 @@ interface Data {
   filters: FilterCondition[],
   filterOptionsShown: boolean,
   externalFilter: Filter | undefined,
+  windowResizeDebounce?: any,
+  tbodyStyle: InlineStyle,
 }
 
 export default defineComponent({
@@ -167,6 +185,8 @@ export default defineComponent({
       filters: [],
       filterOptionsShown: false,
       externalFilter: undefined,
+      windowResizeDebounce: undefined,
+      tbodyStyle: {},
     }
   },
   computed: {
@@ -193,7 +213,7 @@ export default defineComponent({
       return filter
     },
   },
-  mounted() {
+  async mounted() {
     this.pageSize = this.initialPageSize
 
     if (this.columns.length) {
@@ -217,10 +237,18 @@ export default defineComponent({
     }
 
     if (this.paged) {
-      this.loadPageData()
+      await this.loadPageData()
     } else if (this.data) {
       this.displayedData = this.data
     }
+
+    this.windowResizeDebounce = debounce(this.onWindowResize, 50)
+    window.addEventListener('resize', this.windowResizeDebounce)
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.windowResizeDebounce)
+    this.windowResizeDebounce?.clear()
+    this.windowResizeDebounce = undefined
   },
   watch: {
     currentPage() {
@@ -232,6 +260,9 @@ export default defineComponent({
       const pageData = await this.dataService.getPage(this.currentPage, this.pageSize, this.sort, this.filter)
       this.displayedData = pageData.dataItems
       this.totalItems = pageData.totalItems
+      nextTick(() => {
+        this.calculateDynamicStyles()
+      })        
     },
     sortColumn(column: Column) {
       if (!this.sortOptions?.sortable || !column.sortable) {
@@ -281,6 +312,33 @@ export default defineComponent({
     setFilter(filter: Filter | undefined) {
       this.externalFilter = filter
       this.loadPageData()
+    },
+    onWindowResize() {
+      this.calculateDynamicStyles()
+    },
+    calculateDynamicStyles() {
+      if (!this.fullHeight) {
+        // currently there are only dynamic styles when using full height mode
+        this.tbodyStyle = {}
+        return
+      }
+
+      const container = this.$refs.container as HTMLElement
+      const parent = container?.parentElement
+      const optionsHeader = this.$refs.optionsHeader as HTMLElement
+      const header = this.$refs.header as HTMLElement
+      const footer = this.$refs.footer as HTMLElement
+      if (!container || !parent || !optionsHeader || !header || !footer) {
+        return
+      }
+
+      const parentStyle = getComputedStyle(parent)
+      const padding = Number.parseFloat(parentStyle.paddingBottom) + Number.parseFloat(parentStyle.paddingTop)
+      const margin = Number.parseFloat(parentStyle.marginBottom) + Number.parseFloat(parentStyle.marginTop)
+      const tbodyHeight = parent.clientHeight - padding - margin - getElementHeight(optionsHeader) - header.clientHeight - footer.clientHeight
+      this.tbodyStyle = {
+        height: `${tbodyHeight}px`,
+      } as InlineStyle
     }
   },
 })
