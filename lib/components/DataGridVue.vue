@@ -1,5 +1,11 @@
 <template>
-  <div class="dgv-data-grid-container" :class="{ 'dgv-full-width': fullWidth }">
+  <div 
+    class="dgv-data-grid-container"
+    :class="{ 
+      'dgv-full-width': fullWidth,
+      'dgv-full-height': fullHeight,
+    }"
+  >
     <div class="dgv-options-header">
       <span 
         v-if="filterable"
@@ -135,6 +141,11 @@ export default defineComponent({
       type: Boolean,
       required: false,
       default: true,
+    },
+    fullHeight: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
   },
   data(): Data {

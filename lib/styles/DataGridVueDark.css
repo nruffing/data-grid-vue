@@ -103,11 +103,20 @@
 }
 
   /**** Full Width ****/
-  .dgv-data-grid-container.dgv-full-width {
+  .dgv-data-grid-container.dgv-full-width,
+  .dgv-data-grid-container.dgv-full-height {
     display: flex;
     flex-direction: column;
   }
 
+  /**** Full Height ****/
+  .dgv-data-grid-container.dgv-full-height {
+    height: 100%;
+  }
+
+    .dgv-data-grid-container.dgv-full-height .dgv-footer {
+      margin-top: auto;
+    }
 
 /**** Header ****/
 .dgv-data-grid .dgv-data-grid-header-row td {
