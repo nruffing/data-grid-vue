@@ -18,46 +18,50 @@
       </span>
     </div>
     <table class="dgv-data-grid">
-      <tr class="dgv-data-grid-header-row">
-        <HeaderCell
-          v-for="column in columns"
-          :key="column.field.fieldName"
-          :column="column"
-          :sortable="sortOptions?.sortable"
-          :sort="sort"
-          @onClick="sortColumn"
-        />
-      </tr>
-      <tr 
-        v-if="filterOptionsShown"
-        class="dgv-filter-options-row"
-      >
-        <td v-for="column in columns" :key="column.field.fieldName">
-          <slot
-            :name="`filter-${column.field.fieldName}`"
+      <thead>
+        <tr class="dgv-data-grid-header-row">
+          <HeaderCell
+            v-for="column in columns"
+            :key="column.field.fieldName"
             :column="column"
-            :initialFilterCondition="getFilterCondition(column.field.fieldName)"
-            :onFilterUpdated="onFilterUpdated"
-          >
-            <HeaderFilter
-              v-if="column.filterable"
+            :sortable="sortOptions?.sortable"
+            :sort="sort"
+            @onClick="sortColumn"
+          />
+        </tr>
+        <tr 
+          v-if="filterOptionsShown"
+          class="dgv-filter-options-row"
+        >
+          <td v-for="column in columns" :key="column.field.fieldName">
+            <slot
+              :name="`filter-${column.field.fieldName}`"
               :column="column"
               :initialFilterCondition="getFilterCondition(column.field.fieldName)"
-              @updated="onFilterUpdated"
-            />
-            </slot>
-        </td>
-      </tr>
-      <tr v-for="dataItem in displayedData" :key="keyColumn.field.resolveValue(dataItem)" class="dgv-data-grid-row">
-        <td v-for="column in columns" :key="column.field.fieldName">
-          <slot 
-            :name="`cell-${column.field.fieldName}`"
-            :data-item="dataItem"
-          >
-            {{ column.field.resolveValue(dataItem) }} 
-          </slot>          
-        </td>
-      </tr>
+              :onFilterUpdated="onFilterUpdated"
+            >
+              <HeaderFilter
+                v-if="column.filterable"
+                :column="column"
+                :initialFilterCondition="getFilterCondition(column.field.fieldName)"
+                @updated="onFilterUpdated"
+              />
+              </slot>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="dataItem in displayedData" :key="keyColumn.field.resolveValue(dataItem)" class="dgv-data-grid-row">
+          <td v-for="column in columns" :key="column.field.fieldName">
+            <slot 
+              :name="`cell-${column.field.fieldName}`"
+              :data-item="dataItem"
+            >
+              {{ column.field.resolveValue(dataItem) }} 
+            </slot>          
+          </td>
+        </tr>
+      </tbody>
     </table>
     <div class="dgv-footer">
       <PageNavigation
