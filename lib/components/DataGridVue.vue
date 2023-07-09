@@ -58,7 +58,7 @@
                 :initialFilterCondition="getFilterCondition(column.field.fieldName)"
                 @updated="onFilterUpdated"
               />
-              </slot>
+            </slot>
           </td>
         </tr>
       </thead>

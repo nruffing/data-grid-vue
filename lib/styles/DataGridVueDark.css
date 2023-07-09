@@ -303,6 +303,7 @@
 
   .dgv-filter-options-row td {
     background-color: var(--dgv-filter-options-background-color);
+    padding: var(--dgv-header-padding);
   }
 
 
@@ -344,4 +345,8 @@
   .dgv-data-grid input:focus {
     outline: none;
     border: var(--dgv-input-focus-border);
+  }
+
+  .dgv-filter input {
+    width: calc(100% - var(--dgv-header-padding));
   }
