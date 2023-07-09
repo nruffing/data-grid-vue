@@ -1,6 +1,6 @@
 # data-grid-vue
 
-Customizable native Vue3 data grid with no additional dependencies.
+Customizable native Vue3 data grid with very limited dependencies.
 
 [NPM](https://www.npmjs.com/package/data-grid-vue)
 
@@ -22,6 +22,11 @@ Customizable native Vue3 data grid with no additional dependencies.
   * Default filter input and header cell template
   * Multiple operators
   * Can be overridden with an externally supplied filter
+* Full height option which forces the footer to the bottom of the grids parent and will scroll only the grid rows
+* Column widths can be specified with px, % or *
+  * By default columns without a width specified will take up an equal share of the remaining space
+  * The relative * unit can be used to specify a column to take a relational share of the remaining space
+* Selectable page size with configurable available page sizes
 
 ## Example
 
@@ -36,6 +41,7 @@ Customizable native Vue3 data grid with no additional dependencies.
     sortable: true,
     multiColumn: false,
   }"
+  :full-height="true"
 >
   <template v-slot:filter-phoneNumber="{ column, initialFilterCondition, onFilterUpdated }">
     <div class="custom-filter">
@@ -57,6 +63,11 @@ Customizable native Vue3 data grid with no additional dependencies.
    * add support for externally specifying a filter
  * v0.0.5-alpha
    * fix external filter
+ * v0.1.0-alpha
+   * add full height option which forces the footer to the bottom of the grids parent and will scroll only the grid rows
+   * add thead and tbody elements
+   * add ability to specify column widths with px, % and *
+   * add page size selection with customizable page size options
 ________________________________________
 
 ## Build Package
