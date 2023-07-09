@@ -88,6 +88,17 @@
         v-model:current-page="currentPage"
         v-model:page-size="pageSize"
         :total-items="totalItems" />
+      <select
+        v-if="paged && pageSizes?.length > 1"
+        v-model="pageSize"
+        @change="onPageSizeChanged"
+      >
+        <option
+          v-for="pageSize in pageSizes"
+          :value="pageSize">
+          {{ pageSize }}
+        </option>
+      </select>
       <span class="dgv-total-items">{{ totalItems }} items</span>
     </div>
   </div>
@@ -161,6 +172,11 @@ export default defineComponent({
       type: Number,
       required: false,
       default: 15,
+    },
+    pageSizes: {
+      type: Array<Number>,
+      required: false,
+      default: [15, 25, 50],
     },
     sortOptions: {
       type: Object as PropType<SortOptions>,
@@ -304,6 +320,13 @@ export default defineComponent({
       }
 
       this.loadPageData()
+    },
+    async onPageSizeChanged() {
+      const numPages = Math.ceil(this.totalItems / this.pageSize)
+      if (this.currentPage > numPages) {
+        this.currentPage = numPages
+      }
+      await this.loadPageData()
     },
     onToggleFilterOptionsShown() {
       this.filterOptionsShown = !this.filterOptionsShown
