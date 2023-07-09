@@ -24,6 +24,7 @@ export const TestDataColumns = [
         FilterOperator.greaterThanOrEqualTo,
       ],
     },
+    width: '80px',
   },
   {
     field: new Field('firstName'),
@@ -41,11 +42,13 @@ export const TestDataColumns = [
     dataType: DataType.alphanumeric,
     sortable: true,
     filterable: true,
+    width: '2*',
   },
   {
     field: new Field('email'),
     dataType: DataType.alphanumeric,
     sortable: true,
+    width: '25%',
   },
   {
     field: new Field('gender'),

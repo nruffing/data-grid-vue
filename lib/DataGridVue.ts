@@ -16,6 +16,7 @@ export interface Column {
   sortable?: boolean,
   filterable?: boolean 
   filterOptions?: ColumnFilterOptions,
+  width?: string,
 }
 
 export interface ColumnFilterOptions {
