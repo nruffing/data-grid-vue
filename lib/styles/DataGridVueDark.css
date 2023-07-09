@@ -170,6 +170,7 @@
   padding: var(--dgv-cell-padding);
   font-size: var(--dgv-cell-font-size);
   border: var(--dgv-cell-border);
+  overflow-wrap: anywhere;
 }
 
   .dgv-data-grid tr.dgv-data-grid-row td {

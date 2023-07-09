@@ -33,6 +33,7 @@
             :column="column"
             :sortable="sortOptions?.sortable"
             :sort="sort"
+            :inline-style="{ width: columnWidthMap.get(column.field.fieldName) }"
             @onClick="sortColumn"
           />
         </tr>
@@ -40,7 +41,11 @@
           v-if="filterOptionsShown"
           class="dgv-filter-options-row"
         >
-          <td v-for="column in columns" :key="column.field.fieldName">
+          <td 
+            v-for="column in columns"
+            :key="column.field.fieldName"
+            :style="{ width: columnWidthMap.get(column.field.fieldName) }"
+          >
             <slot
               :name="`filter-${column.field.fieldName}`"
               :column="column"
@@ -59,7 +64,11 @@
       </thead>
       <tbody :style="tbodyStyle">
         <tr v-for="dataItem in displayedData" :key="keyColumn.field.resolveValue(dataItem)" class="dgv-data-grid-row">
-          <td v-for="column in columns" :key="column.field.fieldName">
+          <td 
+            v-for="column in columns"
+            :key="column.field.fieldName"
+            :style="{ width: columnWidthMap.get(column.field.fieldName) }"
+          >
             <slot 
               :name="`cell-${column.field.fieldName}`"
               :data-item="dataItem"
@@ -91,15 +100,13 @@ import { DataType, Field, type Column } from '../DataGridVue'
 import { type DataService, StubDataService, ClientSideDataService, type ServerSideDataServiceOptions, ServerSideDataService } from '../DataService'
 import { type Sort, type SortOptions, SortType } from '../Sort'
 import type { Filter, FilterCondition } from '../Filter'
+import type { InlineStyle } from '../InlineStyle'
 import { getElementHeight } from '../Html'
+import { calculateColumnWidths } from '../ColumnWidth'
 import HeaderCell from './HeaderCell.vue'
 import HeaderFilter from './HeaderFilter.vue'
 import PageNavigation from './PageNavigation.vue'
 import Icon from './Icon.vue'
-
-interface InlineStyle {
-  height?: string,
-}
 
 interface Data {
   keyColumn: Column,
@@ -114,6 +121,7 @@ interface Data {
   externalFilter: Filter | undefined,
   windowResizeDebounce?: any,
   tbodyStyle: InlineStyle,
+  columnWidthMap: Map<string, string>,
 }
 
 export default defineComponent({
@@ -187,6 +195,7 @@ export default defineComponent({
       externalFilter: undefined,
       windowResizeDebounce: undefined,
       tbodyStyle: {},
+      columnWidthMap: new Map<string, string>(),
     }
   },
   computed: {
@@ -244,6 +253,10 @@ export default defineComponent({
 
     this.windowResizeDebounce = debounce(this.onWindowResize, 50)
     window.addEventListener('resize', this.windowResizeDebounce)
+
+    nextTick(() => {
+      this.calculateColumnWidths()
+    })
   },
   beforeUnmount() {
     window.removeEventListener('resize', this.windowResizeDebounce)
@@ -320,7 +333,11 @@ export default defineComponent({
       this.loadPageData()
     },
     onWindowResize() {
+      this.calculateColumnWidths()
       this.calculateDynamicStyles()
+    },
+    calculateColumnWidths() {
+      this.columnWidthMap = calculateColumnWidths(this.columns, this.$refs.table as HTMLElement)
     },
     calculateDynamicStyles() {
       if (!this.fullHeight) {

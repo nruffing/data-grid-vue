@@ -2,6 +2,7 @@
   <td
     :key="column.field.fieldName"
     :class="{ sortable: sortable && column.sortable }"
+    :style="inlineStyle"
   >
     <div class="dgv-header-container">
       <span
@@ -20,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, type PropType } from 'vue'
+import { defineComponent, type PropType, type StyleValue } from 'vue'
 import type { Column } from '../DataGridVue'
 import { type Sort, SortType } from '../Sort'
 import Formatter from '../Formatter'
@@ -46,6 +47,11 @@ export default defineComponent({
       required: false,
       default: undefined,
     },
+    inlineStyle: {
+      type: Object as PropType<StyleValue>,
+      required: false,
+      default: {},
+    }
   },
   computed: {
     formattedTitle(): string {
