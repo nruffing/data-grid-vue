@@ -57,7 +57,6 @@ export function calculateColumnWidths(columns: Column[], table: HTMLElement): Ma
   for (const width of map.values()) {
     total += Number.parseFloat(width)
   }
-  console.log(`${width} ${total}`)
 
   return map
 }
