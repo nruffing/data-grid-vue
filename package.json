@@ -1,6 +1,6 @@
 {
   "name": "data-grid-vue",
-  "version": "0.1.3-alpha",
+  "version": "0.1.4-alpha",
   "description": "Customizable native Vue3 data grid",
   "license": "MIT",
   "author": {
@@ -51,6 +51,8 @@
     "node": ">=14"
   },
   "devDependencies": {
+    "@babel/types": "^7.23.0",
+    "@tsconfig/node18": "^18.2.2",
     "@types/debounce": "^1.2.2",
     "@types/node": "^20.8.4",
     "@vitejs/plugin-vue": "^4.4.0",
