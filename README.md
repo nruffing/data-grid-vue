@@ -70,6 +70,8 @@ Customizable native Vue3 data grid with very limited dependencies.
    * add page size selection with customizable page size options
  * v0.1.1-alpha
    * remove console.log
+ * v0.1.2-alpha
+   * fix import types export
 ________________________________________
 
 ## Build Package
