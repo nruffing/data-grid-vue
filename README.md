@@ -24,7 +24,6 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   * Default filter input and header cell template
   * Multiple operators
   * Can be overridden with an externally supplied filter
-* Full height option which forces the footer to the bottom of the grids parent and will scroll only the grid rows
 * Column widths can be specified with px, % or *
   * By default columns without a width specified will take up an equal share of the remaining space
   * The relative * unit can be used to specify a column to take a relational share of the remaining space
@@ -43,7 +42,6 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
     sortable: true,
     multiColumn: false,
   }"
-  :full-height="true"
 >
   <template v-slot:filter-phoneNumber="{ column, initialFilterCondition, onFilterUpdated }">
     <div class="custom-filter">
@@ -75,6 +73,9 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
  * v0.1.4-alpha
    * fix import types export
    * update dev dependencies
+ * v1.0.0
+   * Table html structure replaced with css grid for better layout control
+   * Full height and full height options removed in favor of css grid to allow for greater layout control in parent application
 ________________________________________
 
 ## Build Package
