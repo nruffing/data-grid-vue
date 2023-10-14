@@ -25,3 +25,7 @@ export function isPxSize(width?: string): boolean {
 export function isPercentageSize(width?: string): boolean {
   return /^\d+%$/.test(width?.trim() ?? '')
 }
+
+export function asPxSize(value: number): string {
+  return `${value.toFixed(3)}px`
+}

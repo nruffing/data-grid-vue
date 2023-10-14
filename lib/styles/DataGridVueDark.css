@@ -14,7 +14,7 @@
 
   --dgv-header-text-color: var(--dgv-white);
   --dgv-header-background: transparent;
-  --dgv-header-padding: 1rem;
+  --dgv-header-padding: 0.6rem;
   --dgv-header-font-size: 1rem;
   --dgv-header-font-weight: bold;
   --dgv-header-border-top: 0.2rem solid var(--dgv-opaque-1);
@@ -96,41 +96,21 @@
 
 
 /**** Data Grid ****/
-.dgv-data-grid {
-  border-collapse: collapse;
-  font-family: var(--dgv-font-family);
-  height: fit-content;
+.dgv-data-grid-container {
+  display: grid;
+  min-height: 0; /* default min-height of auto for a grid is fun */
+  overflow: hidden;
 }
 
-  /**** Full Width ****/
-  .dgv-data-grid-container.dgv-full-width,
-  .dgv-data-grid-container.dgv-full-height {
-    display: flex;
-    flex-direction: column;
+  .dgv-data-grid-container .dgv-data-grid-body {
+    display: grid;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
-
-  /**** Full Height ****/
-  .dgv-data-grid-container.dgv-full-height {
-    height: 100%;
-  }
-
-    .dgv-data-grid-container.dgv-full-height thead,
-    .dgv-data-grid-container.dgv-full-height tbody {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .dgv-data-grid-container.dgv-full-height tbody {
-      overflow-y: auto;
-      overflow-x: hidden;
-    }  
-
-    .dgv-data-grid-container.dgv-full-height .dgv-footer {
-      margin-top: auto;
-    }
 
 /**** Header ****/
-.dgv-data-grid .dgv-data-grid-header-row td {
+.dgv-data-grid-container .dgv-header-cell {
   color: var(--dgv-header-text-color);
   padding: var(--dgv-header-padding);
   background-color: var(--dgv-header-background);
@@ -140,16 +120,11 @@
   border-bottom: var(--dgv-header-border-bottom);
 }
 
-.dgv-data-grid-header-row > td.sortable {
+.dgv-header-cell.sortable {
   cursor: pointer;
 }
 
-  .dgv-data-grid-header-row .dgv-header-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .dgv-data-grid-header-row svg {
+  .dgv-header-cell svg {
     height: var(--dgv-header-icon-size);
     width: calc(var(--dgv-header-icon-size) * 3);
     stroke: var(--dgv-header-icon-color);
@@ -157,7 +132,7 @@
     fill: none;
   }
 
-    .dgv-data-grid-header-row svg text {
+    .dgv-header-cell svg text {
       font-size: calc(var(--dgv-header-icon-size) * 2);
       fill: var(--dgv-header-icon-color);
       stroke: none;
@@ -165,19 +140,21 @@
 
 
 /**** Cell ****/
-.dgv-data-grid td {
+.dgv-data-grid-container .dgv-data-grid-cell {
   color: var(--dgv-cell-text-color);
   padding: var(--dgv-cell-padding);
   font-size: var(--dgv-cell-font-size);
   border: var(--dgv-cell-border);
   overflow-wrap: anywhere;
+  display: flex;
+  align-items: center;
 }
 
-  .dgv-data-grid tr.dgv-data-grid-row td {
+  .dgv-data-grid-container .dgv-data-grid-cell {
     background-color: var(--dgv-cell-background);
   }
 
-  .dgv-data-grid tr.dgv-data-grid-row:nth-child(even) td {
+  .dgv-data-grid-container .dgv-data-grid-cell.dgv-data-grid-row-alt {
     background-color: var(--dgv-cell-alt-background);
   }
 
@@ -255,7 +232,7 @@
 
 
 /**** Buttons ****/
-.dgv-data-grid button {
+.dgv-data-grid-cell button {
   cursor: pointer;
   color: var(--dgv-button-text-color);
   border: var(--dgv-button-border);
@@ -263,8 +240,8 @@
   background-color: var(--dgv-button-background-color);
 }
 
-  .dgv-data-grid button:hover,
-  .dgv-data-grid button:focus {
+  .dgv-data-grid-cell button:hover,
+  .dgv-data-grid-cell button:focus {
     color: var(--dgv-button-hover-text-color);
     background-color: var(--dgv-button-hover-background-color);
     outline: none;
@@ -300,13 +277,13 @@
 
 
 /**** Filter Options Row ***/
-.dgv-filter-options-row {
+.dgv-filter-options-cell {
+  display: flex;
   border-bottom: var(--dgv-filter-options-border-bottom);
-  height: 100%;
+  background-color: var(--dgv-filter-options-background-color);
 }
 
-  .dgv-filter-options-row td {
-    background-color: var(--dgv-filter-options-background-color);
+  .dgv-filter-options-cell .dgv-filter {
     padding: var(--dgv-header-padding);
   }
 
@@ -316,7 +293,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  align-items: stretch;
 }
 
   .dgv-filter-operator-select {
@@ -339,14 +316,14 @@
     }
 
 /**** Input ****/
-.dgv-data-grid input {
+.dgv-data-grid-container input {
   padding: var(--dgv-input-padding);
   border: var(--dgv-input-border);
   color: var(--dgv-input-text-color);
   background-color: var(--dgv-input-background);
 }
 
-  .dgv-data-grid input:focus {
+  .dgv-data-grid-container input:focus {
     outline: none;
     border: var(--dgv-input-focus-border);
   }

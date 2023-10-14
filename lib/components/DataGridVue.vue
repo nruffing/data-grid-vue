@@ -2,14 +2,17 @@
   <div
     ref="container"
     class="dgv-data-grid-container"
-    :class="{ 
-      'dgv-full-width': fullWidth,
-      'dgv-full-height': fullHeight,
+    :style="{
+      gridTemplateColumns: gridTemplateColumns,
+      gridTemplateRows: gridTemplateRows,
     }"
   >
+    <!-- OPTIONS HEADER -->
     <div 
-      ref="optionsHeader"
       class="dgv-options-header"
+      :style="{
+        gridColumnEnd: cssColumnSpanValue
+      }"
     >
       <span 
         v-if="filterable"
@@ -21,67 +24,74 @@
         <span>{{ filterOptionsShown ? 'Hide' : 'Show' }} Filter Options</span>
       </span>
     </div>
-    <table 
-      ref="table"
-      class="dgv-data-grid"
+
+    <!-- HEADER CELLS -->
+    <HeaderCell
+      v-for="column in columns"
+      :key="column.field.fieldName"
+      :column="column"
+      :sortable="sortOptions?.sortable"
+      :sort="sort"
+      @onClick="sortColumn"
+    />
+
+    <!-- HEADER FILTERS -->
+    <div
+      v-if="filterOptionsShown"
+      v-for="column in columns"
+      :key="column.field.fieldName"
+      class="dgv-filter-options-cell"
     >
-      <thead ref="header">
-        <tr class="dgv-data-grid-header-row">
-          <HeaderCell
-            v-for="column in columns"
-            :key="column.field.fieldName"
-            :column="column"
-            :sortable="sortOptions?.sortable"
-            :sort="sort"
-            :inline-style="{ width: columnWidthMap.get(column.field.fieldName) }"
-            @onClick="sortColumn"
-          />
-        </tr>
-        <tr 
-          v-if="filterOptionsShown"
-          class="dgv-filter-options-row"
-        >
-          <td 
-            v-for="column in columns"
-            :key="column.field.fieldName"
-            :style="{ width: columnWidthMap.get(column.field.fieldName) }"
-          >
-            <slot
-              :name="`filter-${column.field.fieldName}`"
-              :column="column"
-              :initialFilterCondition="getFilterCondition(column.field.fieldName)"
-              :onFilterUpdated="onFilterUpdated"
-            >
-              <HeaderFilter
-                v-if="column.filterable"
-                :column="column"
-                :initialFilterCondition="getFilterCondition(column.field.fieldName)"
-                @updated="onFilterUpdated"
-              />
-            </slot>
-          </td>
-        </tr>
-      </thead>
-      <tbody :style="tbodyStyle">
-        <tr v-for="dataItem in displayedData" :key="keyColumn.field.resolveValue(dataItem)" class="dgv-data-grid-row">
-          <td 
-            v-for="column in columns"
-            :key="column.field.fieldName"
-            :style="{ width: columnWidthMap.get(column.field.fieldName) }"
-          >
-            <slot 
-              :name="`cell-${column.field.fieldName}`"
-              :data-item="dataItem"
-            >
-              {{ column.field.resolveValue(dataItem) }} 
-            </slot>          
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      <slot
+        :name="`filter-${column.field.fieldName}`"
+        :column="column"
+        :initialFilterCondition="getFilterCondition(column.field.fieldName)"
+        :onFilterUpdated="onFilterUpdated"
+      >
+        <HeaderFilter
+          :column="column"
+          :initialFilterCondition="getFilterCondition(column.field.fieldName)"
+          @updated="onFilterUpdated"
+        />
+      </slot>
+    </div>
+
+    <!-- DATA CELLS -->
     <div 
-      ref="footer"  
+      class="dgv-data-grid-body"
+      :style="{
+        gridColumnEnd: cssColumnSpanValue,
+        gridTemplateColumns: gridTemplateColumns,
+      }"  
+    >
+      <template
+        v-for="(dataItem, index) in displayedData"
+        :key="keyColumn.field.resolveValue(dataItem)"
+      >
+        <div 
+          v-for="column in columns"
+          :key="column.field.fieldName"
+          class="dgv-data-grid-cell"
+          :class="{
+            'dgv-data-grid-row-alt': index % 2 === 0,
+          }"
+        >
+          <slot 
+            :name="`cell-${column.field.fieldName}`"
+            :data-item="dataItem"
+          >
+            {{ column.field.resolveValue(dataItem) }} 
+          </slot>          
+        </div>
+      </template>
+    </div>
+
+    <!-- FOOTER -->
+    <div
       class="dgv-footer"
+      :style="{
+        gridColumnEnd: cssColumnSpanValue
+      }"
     >
       <PageNavigation
         v-if="paged"
@@ -100,7 +110,7 @@
         </option>
       </select>
       <span class="dgv-total-items">{{ totalItems }} items</span>
-    </div>
+    </div>    
   </div>
 </template>
 
@@ -111,8 +121,6 @@ import { DataType, Field, type Column } from '../DataGridVue'
 import { type DataService, StubDataService, ClientSideDataService, type ServerSideDataServiceOptions, ServerSideDataService } from '../DataService'
 import { type Sort, type SortOptions, SortType } from '../Sort'
 import type { Filter, FilterCondition } from '../Filter'
-import type { InlineStyle } from '../InlineStyle'
-import { getElementHeight } from '../Html'
 import { calculateColumnWidths } from '../ColumnWidth'
 import HeaderCell from './HeaderCell.vue'
 import HeaderFilter from './HeaderFilter.vue'
@@ -131,8 +139,7 @@ interface Data {
   filterOptionsShown: boolean,
   externalFilter: Filter | undefined,
   windowResizeDebounce?: any,
-  tbodyStyle: InlineStyle,
-  columnWidthMap: Map<string, string>,
+  columnWidths: string[],
 }
 
 export default defineComponent({
@@ -183,16 +190,6 @@ export default defineComponent({
       required: false,
       default: undefined,
     },
-    fullWidth: {
-      type: Boolean,
-      required: false,
-      default: true,
-    },
-    fullHeight: {
-      type: Boolean,
-      required: false,
-      default: false,
-    },
   },
   data(): Data {
     return {
@@ -210,8 +207,7 @@ export default defineComponent({
       filterOptionsShown: false,
       externalFilter: undefined,
       windowResizeDebounce: undefined,
-      tbodyStyle: {},
-      columnWidthMap: new Map<string, string>(),
+      columnWidths: [],
     }
   },
   computed: {
@@ -236,6 +232,17 @@ export default defineComponent({
         }
       }
       return filter
+    },
+    gridTemplateColumns(): string {
+      return this.columnWidths.join(' ')
+    },
+    gridTemplateRows(): string {
+      return this.filterOptionsShown
+        ? 'auto auto 1fr auto' // dgv-options-header dgv-header-cell dgv-data-grid-body dgv-footer
+        : 'auto auto auto 1fr auto' // dgv-options-header dgv-header-cell dgv-filter dgv-data-grid-body dgv-footer
+    },
+    cssColumnSpanValue(): string {
+      return `span ${this.columns.length}`
     },
   },
   async mounted() {
@@ -288,10 +295,7 @@ export default defineComponent({
     async loadPageData() {
       const pageData = await this.dataService.getPage(this.currentPage, this.pageSize, this.sort, this.filter)
       this.displayedData = pageData.dataItems
-      this.totalItems = pageData.totalItems
-      nextTick(() => {
-        this.calculateDynamicStyles()
-      })        
+      this.totalItems = pageData.totalItems      
     },
     sortColumn(column: Column) {
       if (!this.sortOptions?.sortable || !column.sortable) {
@@ -330,9 +334,6 @@ export default defineComponent({
     },
     onToggleFilterOptionsShown() {
       this.filterOptionsShown = !this.filterOptionsShown
-      nextTick(() => {
-        this.calculateDynamicStyles()
-      })
     },
     getFilterCondition(fieldName: string): FilterCondition | undefined {
       return this.filters.find(f => f.fieldName === fieldName)
@@ -357,35 +358,10 @@ export default defineComponent({
     },
     onWindowResize() {
       this.calculateColumnWidths()
-      this.calculateDynamicStyles()
     },
     calculateColumnWidths() {
-      this.columnWidthMap = calculateColumnWidths(this.columns, this.$refs.table as HTMLElement)
+      this.columnWidths = calculateColumnWidths(this.columns, this.$refs.container as HTMLElement)
     },
-    calculateDynamicStyles() {
-      if (!this.fullHeight) {
-        // currently there are only dynamic styles when using full height mode
-        this.tbodyStyle = {}
-        return
-      }
-
-      const container = this.$refs.container as HTMLElement
-      const parent = container?.parentElement
-      const optionsHeader = this.$refs.optionsHeader as HTMLElement
-      const header = this.$refs.header as HTMLElement
-      const footer = this.$refs.footer as HTMLElement
-      if (!container || !parent || !optionsHeader || !header || !footer) {
-        return
-      }
-
-      const parentStyle = getComputedStyle(parent)
-      const padding = Number.parseFloat(parentStyle.paddingBottom) + Number.parseFloat(parentStyle.paddingTop)
-      const margin = Number.parseFloat(parentStyle.marginBottom) + Number.parseFloat(parentStyle.marginTop)
-      const tbodyHeight = parent.clientHeight - padding - margin - getElementHeight(optionsHeader) - header.clientHeight - footer.clientHeight
-      this.tbodyStyle = {
-        height: `${tbodyHeight}px`,
-      } as InlineStyle
-    }
   },
 })
 </script>

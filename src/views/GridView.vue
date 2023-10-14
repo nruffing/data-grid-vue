@@ -1,5 +1,14 @@
 <template>
-  <main>
+  <main :class="{
+    flex: isFlex,
+    grid: !isFlex
+  }">
+    <div>
+      <label>
+        <input type="checkbox" v-model="isFlex" />
+        Grid Unchecked / Flex Checked
+      </label>
+    </div>
     <DataGridVue
       :data="mockData"
       :columns="testDataColumns"
@@ -7,7 +16,6 @@
         sortable: true,
         multiColumn: true,
       }"
-      :full-height="true"
     >
       <template v-slot:cell-actions="{ dataItem }">
         <button>Custom {{ dataItem.id }}</button>
@@ -23,16 +31,26 @@ import DataGridVue from '../../lib/components/DataGridVue.vue'
 import { type Column } from '../../lib/DataGridVue'
 
 import { TestDataColumns, type TestDataItem } from '../test-data/test-data'
+import { TestDataColumns2 } from '../test-data/test-data-2';
 import MOCK_DATA from '../test-data/MOCK_DATA'
 
+interface Data {
+  isFlex: boolean,
+}
+
 export default defineComponent({
-  name: 'FullHeightView',
+  name: 'GridView',
   components: {
     DataGridVue,
   },
+  data(): Data {
+    return {
+      isFlex: false,
+    }
+  },
   computed: {
     testDataColumns(): Column[] {
-      return TestDataColumns
+      return TestDataColumns2
     },
     mockData(): TestDataItem[] {
       return MOCK_DATA
@@ -42,7 +60,13 @@ export default defineComponent({
 </script>
 
 <style scoped>
-main {
-  height: calc(100vh - 40px);
+main.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+main.grid {
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 </style>

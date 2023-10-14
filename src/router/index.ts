@@ -1,20 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import FullHeightView from '../Views/FullHeightView.vue'
+import GridView from '../Views/GridView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
     },
     {
-      path: '/full-height',
-      name: 'full-height',
-      component: FullHeightView
-    },
+      path: '/grid',
+      name: 'grid',
+      component: GridView,
+    }
   ]
 })
 

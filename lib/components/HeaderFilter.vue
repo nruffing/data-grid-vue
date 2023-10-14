@@ -1,11 +1,13 @@
 <template>
   <div class="dgv-filter">
     <FilterOperatorSelect
+      v-if="column.filterable"
       v-model="operator"
       :operators="column.filterOptions?.operators ?? []"
       @update:modelValue="onFilterValueUpdated"
     />
     <input
+      v-if="column.filterable"
       ref="input"
       :type="inputType"  
       @input="onFilterValueUpdated"

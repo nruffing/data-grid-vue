@@ -1,11 +1,11 @@
 import type { Column } from "./DataGridVue"
-import { getElementWidth, isPercentageSize, isPxSize } from "./Html"
+import { asPxSize, getElementWidth, isPercentageSize, isPxSize } from "./Html"
 
 export function isRelativeSize(width?: string): boolean {
   return /^\d+\*$/.test(width?.trim() ?? '')
 }
 
-export function calculateColumnWidths(columns: Column[], table: HTMLElement): Map<string, string> {
+export function calculateColumnWidths(columns: Column[], table: HTMLElement): string[] {
   var map = new Map<string, string>()
   var width = getElementWidth(table)
   let trackedWidth = 0;
@@ -27,7 +27,7 @@ export function calculateColumnWidths(columns: Column[], table: HTMLElement): Ma
     if (isPercentageSize(column.width)) {
       const calculated = (Number.parseFloat(column.width) / 100) * width
       trackedWidth += calculated
-      map.set(column.field.fieldName, `${calculated}px`)
+      map.set(column.field.fieldName, asPxSize(calculated))
       continue
     }
 
@@ -50,13 +50,12 @@ export function calculateColumnWidths(columns: Column[], table: HTMLElement): Ma
     const weight = isRelativeSize(column.width)
       ? Number.parseInt(column.width ?? '')
       : 1
-    map.set(column.field.fieldName, `${equalWidth * weight}px`)
+    map.set(column.field.fieldName, asPxSize(equalWidth * weight))
   }
 
-  let total = 0
-  for (const width of map.values()) {
-    total += Number.parseFloat(width)
+  const widths = [] as string[]
+  for (const column of columns) {
+    widths.push(map.get(column.field.fieldName) ?? '')
   }
-
-  return map
+  return widths
 }

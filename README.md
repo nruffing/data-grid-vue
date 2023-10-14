@@ -1,6 +1,8 @@
+<img src="./public/favicon.svg" width="200" style="margin: 15px 0;" />
+
 # data-grid-vue
 
-Customizable native Vue3 data grid with very limited dependencies.
+Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control.
 
 [NPM](https://www.npmjs.com/package/data-grid-vue)
 

@@ -1,5 +1,6 @@
 <template>
-  <td
+  <div
+    class="dgv-header-cell"
     :key="column.field.fieldName"
     :class="{ sortable: sortable && column.sortable }"
     :style="inlineStyle"
@@ -17,7 +18,7 @@
         />
       </span>
     </div>
-  </td>
+  </div>
 </template>
 
 <script lang="ts">

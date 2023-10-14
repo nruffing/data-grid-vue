@@ -16,11 +16,18 @@ body, html {
   background-color: rgb(40, 69, 97);
 }
 
+body, html, main, #app {
+  height: 100vh;
+  min-height: 0;
+  overflow: hidden;
+}
+
 main {
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 60px;
+  height: calc(100% - 40px);
 }
 
 .custom-filter {
