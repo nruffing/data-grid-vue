@@ -62,6 +62,7 @@
       :style="{
         gridColumnEnd: cssColumnSpanValue,
         gridTemplateColumns: gridTemplateColumns,
+        gridTemplateRows: gridBodyTemplateRows,
       }"  
     >
       <template
@@ -238,8 +239,11 @@ export default defineComponent({
     },
     gridTemplateRows(): string {
       return this.filterOptionsShown
-        ? 'auto auto 1fr auto' // dgv-options-header dgv-header-cell dgv-data-grid-body dgv-footer
-        : 'auto auto auto 1fr auto' // dgv-options-header dgv-header-cell dgv-filter dgv-data-grid-body dgv-footer
+        ? 'auto auto auto 1fr auto' // dgv-options-header dgv-header-cell dgv-data-grid-body dgv-footer
+        : 'auto auto 1fr auto' // dgv-options-header dgv-header-cell dgv-filter dgv-data-grid-body dgv-footer
+    },
+    gridBodyTemplateRows(): string {
+      return 'auto '.repeat(this.pageSize)
     },
     cssColumnSpanValue(): string {
       return `span ${this.columns.length}`
