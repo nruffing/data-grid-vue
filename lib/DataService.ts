@@ -22,18 +22,19 @@ export class ClientSideDataService implements DataService {
   constructor(dataItems: any[]) {
     this.dataItems = dataItems
     this.previousSortJson = ''
-    this.sorted = [...dataItems]
+    this.filtered = [...dataItems]
+    this.sorted = [...this.filtered]
     this.previousFilterJson = ''
-    this.filtered = [...this.sorted]
   }
 
   sort(sort: Sort[]) {
+    this.sorted = [...this.filtered]
+
     if (!sort?.length && this.previousSortJson === '[]') {
       return
     }
-
+    
     if (!sort?.length) {
-      this.sorted = [...this.dataItems]
       this.previousSortJson = '[]'
     } else {
       const sortJson = JSON.stringify(sort)
@@ -42,8 +43,6 @@ export class ClientSideDataService implements DataService {
         this.previousSortJson = sortJson
       }
     }
-
-    this.filtered = [...this.sorted]
   }
 
   filter(filter: Filter | undefined) {
@@ -52,7 +51,7 @@ export class ClientSideDataService implements DataService {
     }
 
     if (!filter && this.previousFilterJson) {
-      this.filtered = [...this.sorted]
+      this.filtered = [...this.dataItems]
       this.previousFilterJson = ''
       return
     }
@@ -62,7 +61,7 @@ export class ClientSideDataService implements DataService {
       return
     }
 
-    this.filtered = ClientSideFilter.filter(filter as Filter, this.sorted)
+    this.filtered = ClientSideFilter.filter(filter as Filter, this.dataItems)
     this.previousFilterJson = filterJson
   }
 
@@ -75,8 +74,8 @@ export class ClientSideDataService implements DataService {
       return Promise.resolve(EmptyPageData)
     }
 
-    this.sort(sort)
     this.filter(filter)
+    this.sort(sort)
 
     const startIndex = pageSize * (pageNum - 1)
     const endIndex = startIndex + pageSize
@@ -88,7 +87,7 @@ export class ClientSideDataService implements DataService {
 
     return Promise.resolve({
       totalItems: this.filtered.length,
-      dataItems: this.filtered.slice(startIndex, endIndex),
+      dataItems: this.sorted.slice(startIndex, endIndex),
     })
   }
 }
