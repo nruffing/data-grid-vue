@@ -76,6 +76,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
  * v1.0.0
    * Table html structure replaced with css grid for better layout control
    * Full height and full height options removed in favor of css grid to allow for greater layout control in parent application
+   * fix order of sorting and filtering in default client data service
 ________________________________________
 
 ## Build Package
