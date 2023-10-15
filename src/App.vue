@@ -15,9 +15,17 @@ export default defineComponent({
 </script>
 
 <style>
+:root {
+  --base-900: #111111;
+  --base-800: #222222;
+  --base-700: #3a3a3a;
+  --base-100: #eeeeee;
+}
+
 body, html {
   margin: 0;
-  background-color: rgb(113, 115, 118);
+  background-color: var(--base-700);
+  color: var(--base-100);
 }
 
 body, html, main, #app {
@@ -28,13 +36,18 @@ body, html, main, #app {
 
 #app {
   display: grid;
-  grid-template-columns: 50px auto;
+  grid-template-columns: auto 1fr;
 }
 
 nav {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  background-color: var(--base-800);
+  padding: 0.5rem;
+  align-items: center;
+  border-right: var(--base-900) solid 1px;
+  box-shadow: -3px 0px 20px 0 rgba(255, 255, 255, 0.2);
 }
 
 main {
@@ -50,5 +63,14 @@ main {
   flex-direction: column;
   justify-content: end;
   height: 100%;
+}
+
+a, a:visited {
+  color: var(--base-100);
+}
+
+input[type=checkbox],
+label:has(input[type=checkbox]) {
+  cursor: pointer;
 }
 </style>
