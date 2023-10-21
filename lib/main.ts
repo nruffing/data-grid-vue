@@ -5,45 +5,24 @@ import HeaderFilter from './components/HeaderFilter.vue'
 import Icon from './components/Icon.vue'
 import PageNavigation from './components/PageNavigation.vue'
 
-import { 
-  DataType,
-  type Column, 
-  type ColumnFilterOptions,
-  type FieldValueGetter,
-  Field,
-  type PageData,
-  EmptyPageData
-} from './DataGridVue'
+import { DataType, type Column, type ColumnFilterOptions, type FieldValueGetter, Field, type PageData, EmptyPageData } from './DataGridVue'
 
-import { 
+import {
   type DataService,
   StubDataService,
   ClientSideDataService,
-  type PageDataRequest, 
+  type PageDataRequest,
   type BeforeRequestHandler,
   type ResponseHandler,
   type ServerSideDataServiceOptions,
-  ServerSideDataService
+  ServerSideDataService,
 } from './DataService'
 
-import { 
-  type FilterOptions,
-  FilterOperator,
-  ValidOperatorsMap,
-  type FilterCondition,
-  type Filter, 
-  ClientSideFilter
-} from './Filter'
+import { type FilterOptions, FilterOperator, ValidOperatorsMap, type FilterCondition, type Filter, ClientSideFilter } from './Filter'
 
-import { 
-  type SortOptions, 
-  SortType, 
-  type Sort, 
-  ClientSideSort
-} from './Sort'
+import { type SortOptions, SortType, type Sort, ClientSideSort } from './Sort'
 
 import Formatter from './Formatter'
-
 
 export {
   DataGridVue,

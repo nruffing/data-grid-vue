@@ -1,7 +1,7 @@
 import { DataType } from './DataGridVue'
 
 export interface FilterOptions {
-  filterable: boolean,
+  filterable: boolean
 }
 
 export enum FilterOperator {
@@ -17,19 +17,10 @@ export enum FilterOperator {
 }
 
 export const ValidOperatorsMap = new Map<DataType, Set<FilterOperator>>([
-  [
-    DataType.none,
-    new Set(),
-  ],
+  [DataType.none, new Set()],
   [
     DataType.alphanumeric,
-    new Set([
-      FilterOperator.equals,
-      FilterOperator.notEquals,
-      FilterOperator.contains,
-      FilterOperator.startsWith,
-      FilterOperator.endsWith,
-    ]),
+    new Set([FilterOperator.equals, FilterOperator.notEquals, FilterOperator.contains, FilterOperator.startsWith, FilterOperator.endsWith]),
   ],
   [
     DataType.number,
@@ -67,15 +58,15 @@ export const ValidOperatorsMap = new Map<DataType, Set<FilterOperator>>([
 ])
 
 export interface FilterCondition {
-  fieldName: string,
-  operator: FilterOperator,
-  dataType: DataType,
-  value: string | undefined,
+  fieldName: string
+  operator: FilterOperator
+  dataType: DataType
+  value: string | undefined
 }
 
 export interface Filter {
-  or: FilterCondition[],
-  and: Filter | undefined,
+  or: FilterCondition[]
+  and: Filter | undefined
 }
 
 export const ClientSideFilter = {
@@ -89,7 +80,7 @@ export const ClientSideFilter = {
     }
 
     return dataItems.filter(d => {
-      return this.evaluateFilter(filter, d)   
+      return this.evaluateFilter(filter, d)
     })
   },
   evaluateFilter(filter: Filter, dataItem: any): boolean {
@@ -110,7 +101,7 @@ export const ClientSideFilter = {
     const value = dataItem[condition.fieldName]
 
     if (condition.operator === FilterOperator.notEquals) {
-      return !this.evaluateCondition({...condition, operator: FilterOperator.equals}, dataItem)
+      return !this.evaluateCondition({ ...condition, operator: FilterOperator.equals }, dataItem)
     }
 
     switch (condition.dataType) {
@@ -127,7 +118,7 @@ export const ClientSideFilter = {
     if (!value) {
       return false
     }
-    
+
     switch (operator) {
       case FilterOperator.equals:
         return value.localeCompare(conditionValue, 'en', { sensitivity: 'base' }) === 0
@@ -146,7 +137,7 @@ export const ClientSideFilter = {
     if (!value) {
       return false
     }
-    
+
     switch (operator) {
       case FilterOperator.equals:
         return value === conditionValue

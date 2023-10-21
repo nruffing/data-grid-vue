@@ -10,7 +10,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'App',  
+  name: 'App',
 })
 </script>
 
@@ -22,13 +22,17 @@ export default defineComponent({
   --base-100: #eeeeee;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   background-color: var(--base-700);
   color: var(--base-100);
 }
 
-body, html, main, #app {
+body,
+html,
+main,
+#app {
   height: 100vh;
   min-height: 0;
   overflow: hidden;
@@ -65,12 +69,13 @@ main {
   height: 100%;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--base-100);
 }
 
-input[type=checkbox],
-label:has(input[type=checkbox]) {
+input[type='checkbox'],
+label:has(input[type='checkbox']) {
   cursor: pointer;
 }
 </style>

@@ -4,45 +4,50 @@
       class="dgv-button-first-page"
       @click="setCurrentPage(1)"
       :disabled="currentPage === 1"
-      title="First page">      
+      title="First page"
+    >
       <Icon name="first-page" />
     </button>
-    <button 
+    <button
       class="dgv-button-previous-page"
       @click="setCurrentPage(currentPage - 1)"
       :disabled="currentPage === 1"
-      title="Previous page">
+      title="Previous page"
+    >
       <Icon name="previous-page" />
     </button>
-    <button 
+    <button
       class="dgv-button-page"
       :class="{ 'dgv-selected-page': page === currentPage }"
       v-for="page in displayedPages"
       :key="page"
       @click="setCurrentPage(page)"
-      :title="'Page ' + page">
+      :title="'Page ' + page"
+    >
       {{ page }}
     </button>
-    <button 
+    <button
       class="dgv-button-next-page"
       @click="setCurrentPage(currentPage + 1)"
       :disabled="currentPage === numPages"
-      title="Next page">
+      title="Next page"
+    >
       <Icon name="next-page" />
     </button>
-    <button 
+    <button
       class="dgv-button-last-page"
       @click="setCurrentPage(numPages)"
       :disabled="currentPage === numPages"
-      title="Last page">
+      title="Last page"
+    >
       <Icon name="last-page" />
     </button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import Icon from './Icon.vue';
+import { defineComponent } from 'vue'
+import Icon from './Icon.vue'
 
 export default defineComponent({
   name: 'PageNavigation',
@@ -52,8 +57,8 @@ export default defineComponent({
   props: {
     pageSize: {
       type: Number,
-      required: true
-    },      
+      required: true,
+    },
     currentPage: {
       type: Number,
       required: true,
@@ -70,9 +75,9 @@ export default defineComponent({
     displayedPages(): number[] {
       const maxPages = 4
       const halfMax = maxPages / 2
-      
+
       if (this.numPages <= maxPages) {
-        return [...Array(this.numPages).keys()].map(i => i+1)
+        return [...Array(this.numPages).keys()].map(i => i + 1)
       }
 
       let start = this.currentPage - halfMax + 1

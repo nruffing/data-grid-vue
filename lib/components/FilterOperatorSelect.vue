@@ -1,13 +1,13 @@
 <template>
   <div class="dgv-filter-operator-select">
-    <span 
+    <span
       v-if="operators.length > 1"
       v-for="operator in operators"
       :key="operator"
       tabindex="0"
       class="dgv-filter-operator-item"
       :class="{
-        'dgv-selected-filter-operator': operator === modelValue
+        'dgv-selected-filter-operator': operator === modelValue,
       }"
       :title="getTitle(operator)"
       @click="onClick(operator)"
@@ -20,14 +20,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { FilterOperator } from '../Filter';
-import Formatter from '../Formatter';
-import Icon from './Icon.vue';
+import { defineComponent } from 'vue'
+import { FilterOperator } from '../Filter'
+import Formatter from '../Formatter'
+import Icon from './Icon.vue'
 
 export default defineComponent({
-  name: "FilterOperatorSelect",
-  components: { 
+  name: 'FilterOperatorSelect',
+  components: {
     Icon,
   },
   props: {

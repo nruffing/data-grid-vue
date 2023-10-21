@@ -1,4 +1,4 @@
-import type { FilterOperator } from "./Filter"
+import type { FilterOperator } from './Filter'
 
 export enum DataType {
   none = 0,
@@ -9,18 +9,18 @@ export enum DataType {
 }
 
 export interface Column {
-  title?: string,
-  dataType: DataType,
-  field: Field,
-  isKey?: boolean,
-  sortable?: boolean,
-  filterable?: boolean 
-  filterOptions?: ColumnFilterOptions,
-  width?: string,
+  title?: string
+  dataType: DataType
+  field: Field
+  isKey?: boolean
+  sortable?: boolean
+  filterable?: boolean
+  filterOptions?: ColumnFilterOptions
+  width?: string
 }
 
 export interface ColumnFilterOptions {
-  operators?: FilterOperator[],
+  operators?: FilterOperator[]
 }
 
 export type FieldValueGetter = ((dataItem: any) => any) | undefined
@@ -39,13 +39,13 @@ export class Field {
       return this.valueGetter(dataItem)
     }
 
-    return dataItem[this.fieldName]    
+    return dataItem[this.fieldName]
   }
 }
 
 export interface PageData {
- totalItems: number,
- dataItems: any[], 
+  totalItems: number
+  dataItems: any[]
 }
 
 export const EmptyPageData = {

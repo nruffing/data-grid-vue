@@ -10,7 +10,7 @@ export function getElementHeight(element: HTMLElement): number {
 
 export function getElementWidth(element: HTMLElement): number {
   if (!element) {
-    return 0 
+    return 0
   }
   const style = getComputedStyle(element)
   const padding = Number.parseFloat(style.paddingLeft) + Number.parseFloat(style.paddingRight)

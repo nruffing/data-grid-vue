@@ -11,9 +11,9 @@
         @click.prevent="$emit('onClick', column)"
       >
         {{ formattedTitle }}
-        <Icon 
-          v-if="sortable" 
-          :name="iconName" 
+        <Icon
+          v-if="sortable"
+          :name="iconName"
           :text="iconText"
         />
       </span>
@@ -52,7 +52,7 @@ export default defineComponent({
       type: Object as PropType<StyleValue>,
       required: false,
       default: {},
-    }
+    },
   },
   computed: {
     formattedTitle(): string {

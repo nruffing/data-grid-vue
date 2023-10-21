@@ -13,7 +13,11 @@
     >
       <template v-slot:filter-phoneNumber="{ column, initialFilterCondition, onFilterUpdated }">
         <div class="custom-filter">
-          <input type="tel" :value="formatPhoneNumber(initialFilterCondition?.value)" @input="onPhoneNumberFilterInput($event, onFilterUpdated)" />
+          <input
+            type="tel"
+            :value="formatPhoneNumber(initialFilterCondition?.value)"
+            @input="onPhoneNumberFilterInput($event, onFilterUpdated)"
+          />
         </div>
       </template>
     </DataGridVue>
@@ -34,7 +38,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 
 import DataGridVue from '../../lib/components/DataGridVue.vue'
 import { DataType, type Column } from '../../lib/DataGridVue'
@@ -72,15 +76,15 @@ export default defineComponent({
     onPhoneNumberFilterInput(event: Event, onFilterUpdated: (o: FilterCondition) => void) {
       const input = event.target as HTMLInputElement
       const rawValue = input.value
-      const strippedValue = rawValue.replace(/\D/g,'');
+      const strippedValue = rawValue.replace(/\D/g, '')
 
-      onFilterUpdated({ 
+      onFilterUpdated({
         fieldName: 'phoneNumber',
         operator: FilterOperator.equals,
         dataType: DataType.number,
         value: strippedValue,
       })
-    }
+    },
   },
 })
 </script>

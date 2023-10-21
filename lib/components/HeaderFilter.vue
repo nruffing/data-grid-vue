@@ -9,20 +9,20 @@
     <input
       v-if="column.filterable"
       ref="input"
-      :type="inputType"  
+      :type="inputType"
       @input="onFilterValueUpdated"
     />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, type PropType } from 'vue';
+import { defineComponent, type PropType } from 'vue'
 import { DataType, type Column } from '../DataGridVue'
-import { FilterOperator, ValidOperatorsMap, type FilterCondition } from '../Filter';
-import FilterOperatorSelect from './FilterOperatorSelect.vue';
+import { FilterOperator, ValidOperatorsMap, type FilterCondition } from '../Filter'
+import FilterOperatorSelect from './FilterOperatorSelect.vue'
 
 interface Data {
-  operator: FilterOperator,
+  operator: FilterOperator
 }
 
 export default defineComponent({
@@ -49,10 +49,10 @@ export default defineComponent({
   computed: {
     inputType(): string {
       if (this.column.dataType === DataType.number) {
-        return "number"
+        return 'number'
       }
-      return "text"
-    }, 
+      return 'text'
+    },
   },
   mounted() {
     if (this.initialFilterCondition) {

@@ -8,13 +8,13 @@
     }"
   >
     <!-- OPTIONS HEADER -->
-    <div 
+    <div
       class="dgv-options-header"
       :style="{
-        gridColumnEnd: cssColumnSpanValue
+        gridColumnEnd: cssColumnSpanValue,
       }"
     >
-      <span 
+      <span
         v-if="filterable"
         class="dgv-action-text"
         tabindex="0"
@@ -57,19 +57,19 @@
     </div>
 
     <!-- DATA CELLS -->
-    <div 
+    <div
       class="dgv-data-grid-body"
       :style="{
         gridColumnEnd: cssColumnSpanValue,
         gridTemplateColumns: gridTemplateColumns,
         gridTemplateRows: gridBodyTemplateRows,
-      }"  
+      }"
     >
       <template
         v-for="(dataItem, index) in displayedData"
         :key="keyColumn.field.resolveValue(dataItem)"
       >
-        <div 
+        <div
           v-for="column in columns"
           :key="column.field.fieldName"
           class="dgv-data-grid-cell"
@@ -77,12 +77,12 @@
             'dgv-data-grid-row-alt': index % 2 === 0,
           }"
         >
-          <slot 
+          <slot
             :name="`cell-${column.field.fieldName}`"
             :data-item="dataItem"
           >
-            {{ column.field.resolveValue(dataItem) }} 
-          </slot>          
+            {{ column.field.resolveValue(dataItem) }}
+          </slot>
         </div>
       </template>
     </div>
@@ -91,14 +91,15 @@
     <div
       class="dgv-footer"
       :style="{
-        gridColumnEnd: cssColumnSpanValue
+        gridColumnEnd: cssColumnSpanValue,
       }"
     >
       <PageNavigation
         v-if="paged"
         v-model:current-page="currentPage"
         v-model:page-size="pageSize"
-        :total-items="totalItems" />
+        :total-items="totalItems"
+      />
       <select
         v-if="paged && pageSizes?.length > 1"
         v-model="pageSize"
@@ -106,12 +107,13 @@
       >
         <option
           v-for="pageSize in pageSizes"
-          :value="pageSize">
+          :value="pageSize"
+        >
           {{ pageSize }}
         </option>
       </select>
       <span class="dgv-total-items">{{ totalItems }} items</span>
-    </div>    
+    </div>
   </div>
 </template>
 
@@ -129,18 +131,18 @@ import PageNavigation from './PageNavigation.vue'
 import Icon from './Icon.vue'
 
 interface Data {
-  keyColumn: Column,
-  displayedData: any[],
-  totalItems: number,
-  dataService: DataService,
-  pageSize: number,
-  currentPage: number,
-  sort: Sort[],
-  filters: FilterCondition[],
-  filterOptionsShown: boolean,
-  externalFilter: Filter | undefined,
-  windowResizeDebounce?: any,
-  columnWidths: string[],
+  keyColumn: Column
+  displayedData: any[]
+  totalItems: number
+  dataService: DataService
+  pageSize: number
+  currentPage: number
+  sort: Sort[]
+  filters: FilterCondition[]
+  filterOptionsShown: boolean
+  externalFilter: Filter | undefined
+  windowResizeDebounce?: any
+  columnWidths: string[]
 }
 
 export default defineComponent({
@@ -153,9 +155,9 @@ export default defineComponent({
   },
   props: {
     data: {
-     type: Array,
-     required: false,
-     default: undefined,
+      type: Array,
+      required: false,
+      default: undefined,
     },
     serverSideOptions: {
       type: Object as PropType<ServerSideDataServiceOptions>,
@@ -267,7 +269,7 @@ export default defineComponent({
     } else if (this.serverSideOptions) {
       this.dataService = new ServerSideDataService(this.serverSideOptions)
     } else if (this.data) {
-      this.dataService = new ClientSideDataService(this.data) 
+      this.dataService = new ClientSideDataService(this.data)
     } else {
       console.error('data, serverSideOptions, or customDataService prop needs to be set to populate the grid with data')
     }
@@ -299,7 +301,7 @@ export default defineComponent({
     async loadPageData() {
       const pageData = await this.dataService.getPage(this.currentPage, this.pageSize, this.sort, this.filter)
       this.displayedData = pageData.dataItems
-      this.totalItems = pageData.totalItems      
+      this.totalItems = pageData.totalItems
     },
     sortColumn(column: Column) {
       if (!this.sortOptions?.sortable || !column.sortable) {

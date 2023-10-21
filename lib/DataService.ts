@@ -1,15 +1,15 @@
-import { type PageData, EmptyPageData } from "./DataGridVue"
-import { type Sort, ClientSideSort } from "./Sort"
-import { type Filter, ClientSideFilter } from "./Filter"
+import { type PageData, EmptyPageData } from './DataGridVue'
+import { type Sort, ClientSideSort } from './Sort'
+import { type Filter, ClientSideFilter } from './Filter'
 
 export interface DataService {
-  getPage: (pageNum: number, pageSize: number, sort: Sort[], filter: Filter | undefined) => Promise<PageData>,
+  getPage: (pageNum: number, pageSize: number, sort: Sort[], filter: Filter | undefined) => Promise<PageData>
 }
 
 export const StubDataService = {
   getPage(pageNum: number, pageSize: number, sort: Sort[], filter: Filter | undefined): Promise<PageData> {
     return Promise.resolve(EmptyPageData)
-  }
+  },
 } as DataService
 
 export class ClientSideDataService implements DataService {
@@ -33,7 +33,7 @@ export class ClientSideDataService implements DataService {
     if (!sort?.length && this.previousSortJson === '[]') {
       return
     }
-    
+
     if (!sort?.length) {
       this.previousSortJson = '[]'
     } else {
@@ -93,18 +93,18 @@ export class ClientSideDataService implements DataService {
 }
 
 export interface PageDataRequest {
-  pageNum: number,
-  pageSize: number,
-  sort: Sort[],
-  filter: Filter | undefined,
+  pageNum: number
+  pageSize: number
+  sort: Sort[]
+  filter: Filter | undefined
 }
 
 export type BeforeRequestHandler = (request: Request, body: PageDataRequest) => Promise<Request>
 export type ResponseHandler = (response: Response) => Promise<PageData>
 export interface ServerSideDataServiceOptions {
-  postRoute?: string | URL,
-  beforeRequest?: BeforeRequestHandler,
-  responseHandler?: ResponseHandler,
+  postRoute?: string | URL
+  beforeRequest?: BeforeRequestHandler
+  responseHandler?: ResponseHandler
 }
 
 export class ServerSideDataService implements DataService {
@@ -124,21 +124,23 @@ export class ServerSideDataService implements DataService {
 
     let request = new Request(this.options.postRoute ?? '', {
       method: 'POST',
-      headers: new Headers({ 
-        'Accept': 'application/json',
+      headers: new Headers({
+        Accept: 'application/json',
         'Content-Type': 'application/json',
       }),
       mode: 'cors',
       cache: 'no-cache',
-      body: JSON.stringify(body)
+      body: JSON.stringify(body),
     })
-    
+
     if (this.options.beforeRequest) {
       request = await this.options.beforeRequest(request, body)
     }
 
     if (!request.url) {
-      console.error('A request url for the page data request has to be set either by supplying it directly or setting it as part of beforeRequest handler.')
+      console.error(
+        'A request url for the page data request has to be set either by supplying it directly or setting it as part of beforeRequest handler.',
+      )
       return EmptyPageData
     }
 

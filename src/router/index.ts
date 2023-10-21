@@ -14,8 +14,8 @@ const router = createRouter({
       path: '/grid',
       name: 'grid',
       component: GridView,
-    }
-  ]
+    },
+  ],
 })
 
 export default router

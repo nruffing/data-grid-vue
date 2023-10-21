@@ -1,5 +1,5 @@
-import type { Column } from "./DataGridVue"
-import { asPxSize, getElementWidth, isPercentageSize, isPxSize } from "./Html"
+import type { Column } from './DataGridVue'
+import { asPxSize, getElementWidth, isPercentageSize, isPxSize } from './Html'
 
 export function isRelativeSize(width?: string): boolean {
   return /^\d+\*$/.test(width?.trim() ?? '')
@@ -8,7 +8,7 @@ export function isRelativeSize(width?: string): boolean {
 export function calculateColumnWidths(columns: Column[], table: HTMLElement): string[] {
   var map = new Map<string, string>()
   var width = getElementWidth(table)
-  let trackedWidth = 0;
+  let trackedWidth = 0
 
   // first set columns set with absolute px and % to know how much width is remaining
   var remainingColumns = [] as Column[]
@@ -47,9 +47,7 @@ export function calculateColumnWidths(columns: Column[], table: HTMLElement): st
   // set remaining columns to fill remaining space with weighted equal width
   var equalWidth = (width - trackedWidth) / weightedColumnNum
   for (const column of remainingColumns) {
-    const weight = isRelativeSize(column.width)
-      ? Number.parseInt(column.width ?? '')
-      : 1
+    const weight = isRelativeSize(column.width) ? Number.parseInt(column.width ?? '') : 1
     map.set(column.field.fieldName, asPxSize(equalWidth * weight))
   }
 

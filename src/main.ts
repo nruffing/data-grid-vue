@@ -4,6 +4,4 @@ import router from './router'
 
 import '../lib/styles/DataGridVueDark.css'
 
-createApp(App)
-  .use(router)
-  .mount('#app')
+createApp(App).use(router).mount('#app')

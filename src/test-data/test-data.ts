@@ -4,12 +4,12 @@ import { FilterOperator } from '../../lib/Filter'
 import { DataType, Field, type Column } from '../../lib/DataGridVue'
 
 export interface TestDataItem {
-  id: number,
-  firstName: string,
-  lastName: string,
-  email?: string,
-  gender?: string,
-  ipAddress?: string,
+  id: number
+  firstName: string
+  lastName: string
+  email?: string
+  gender?: string
+  ipAddress?: string
 }
 
 export const TestDataColumns = [
@@ -20,9 +20,7 @@ export const TestDataColumns = [
     sortable: true,
     filterable: true,
     filterOptions: {
-      operators: [
-        FilterOperator.greaterThanOrEqualTo,
-      ],
+      operators: [FilterOperator.greaterThanOrEqualTo],
     },
     width: '80px',
   },
@@ -32,9 +30,7 @@ export const TestDataColumns = [
     sortable: true,
     filterable: true,
     filterOptions: {
-      operators: [
-        FilterOperator.contains,
-      ],
+      operators: [FilterOperator.contains],
     },
   },
   {

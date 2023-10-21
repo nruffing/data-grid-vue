@@ -1,11 +1,16 @@
 <template>
-  <main :class="{
-    flex: isFlex,
-    grid: !isFlex
-  }">
+  <main
+    :class="{
+      flex: isFlex,
+      grid: !isFlex,
+    }"
+  >
     <div>
       <label>
-        <input type="checkbox" v-model="isFlex" />
+        <input
+          type="checkbox"
+          v-model="isFlex"
+        />
         Grid Unchecked / Flex Checked
       </label>
     </div>
@@ -25,17 +30,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 
 import DataGridVue from '../../lib/components/DataGridVue.vue'
 import { type Column } from '../../lib/DataGridVue'
 
 import { TestDataColumns, type TestDataItem } from '../test-data/test-data'
-import { TestDataColumns2 } from '../test-data/test-data-2';
+import { TestDataColumns2 } from '../test-data/test-data-2'
 import MOCK_DATA from '../test-data/MOCK_DATA'
 
 interface Data {
-  isFlex: boolean,
+  isFlex: boolean
 }
 
 export default defineComponent({

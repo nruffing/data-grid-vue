@@ -1,8 +1,8 @@
 import { DataType } from './DataGridVue'
 
 export interface SortOptions {
-  sortable: boolean,
-  multiColumn: boolean,
+  sortable: boolean
+  multiColumn: boolean
 }
 
 export enum SortType {
@@ -11,9 +11,9 @@ export enum SortType {
 }
 
 export interface Sort {
-  fieldName: string,
-  dataType: DataType,
-  type: SortType,
+  fieldName: string
+  dataType: DataType
+  type: SortType
 }
 
 export const ClientSideSort = {
@@ -25,10 +25,8 @@ export const ClientSideSort = {
     dataItems.sort((a: any, b: any): number => {
       for (const sortField of sort) {
         const compare = this.sortField(sortField, a, b)
-        if (compare !== 0) { 
-          return sortField.type === SortType.descending
-            ? compare * -1
-            : compare
+        if (compare !== 0) {
+          return sortField.type === SortType.descending ? compare * -1 : compare
         }
       }
       return 0
@@ -37,7 +35,7 @@ export const ClientSideSort = {
   sortField(sort: Sort, a: any, b: any): number {
     const aValue = a[sort.fieldName]
     const bValue = b[sort.fieldName]
-    
+
     switch (sort.dataType) {
       case DataType.alphanumeric:
         return this.compareAlphanumeric(aValue as string, bValue as string)
@@ -48,7 +46,7 @@ export const ClientSideSort = {
       case DataType.dateTime:
         return this.compareDateTime(new Date(aValue), new Date(bValue))
     }
-    
+
     console.warn(`Unknown data type detected while sorting: ${DataType[sort.dataType]}`)
     return 0
   },

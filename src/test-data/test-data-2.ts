@@ -4,13 +4,13 @@ import { FilterOperator } from '../../lib/Filter'
 import { DataType, Field, type Column } from '../../lib/DataGridVue'
 
 export interface TestDataItem2 {
-  id: number,
-  firstName: string,
-  lastName: string,
-  email?: string,
-  phoneNumber?: number,
-  dateOfBirth: Date,
-  created: Date,
+  id: number
+  firstName: string
+  lastName: string
+  email?: string
+  phoneNumber?: number
+  dateOfBirth: Date
+  created: Date
 }
 
 export const TestDataColumns2 = [
@@ -37,13 +37,7 @@ export const TestDataColumns2 = [
     sortable: true,
     filterable: true,
     filterOptions: {
-      operators: [
-        FilterOperator.contains,
-        FilterOperator.startsWith,
-        FilterOperator.endsWith,
-        FilterOperator.notEquals,
-        FilterOperator.equals,
-      ],
+      operators: [FilterOperator.contains, FilterOperator.startsWith, FilterOperator.endsWith, FilterOperator.notEquals, FilterOperator.equals],
     },
   },
   {
@@ -63,9 +57,7 @@ export const TestDataColumns2 = [
     sortable: true,
     filterable: true,
     filterOptions: {
-      operators: [
-        FilterOperator.equals,
-      ],
+      operators: [FilterOperator.equals],
     },
   },
   {
@@ -96,7 +88,7 @@ function formatDate(date: Date | string | undefined): string {
     return ''
   }
   const d = new Date(date)
-  const locale = 'en-US';       
+  const locale = 'en-US'
   return `${d.toLocaleDateString(locale, { month: '2-digit' })}/${d.toLocaleDateString(locale, { day: '2-digit' })}/${d.getFullYear()}`
 }
 
