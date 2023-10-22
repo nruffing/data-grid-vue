@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import del from 'rollup-plugin-delete'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -24,6 +25,7 @@ export default defineConfig({
           vue: 'Vue',
         },
       },
+      plugins: [del({ targets: ['dist/favicon.png', 'dist/favicon.svg'], hook: 'generateBundle' })],
     },
   },
 })
