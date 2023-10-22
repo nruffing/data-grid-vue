@@ -53,7 +53,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
     "format": "npx prettier --write \"./**/*.{ts,json,vue,css}\"",
-    "upgrade-all": "ncu --upgrade"
+    "upgrade-all": "ncu --upgrade",
+    "prepare": "husky install"
   },
   "peerDependencies": {
     "vue": ">=3.2.0"
@@ -65,9 +66,11 @@
     "@babel/types": "^7.23.0",
     "@tsconfig/node18": "^18.2.2",
     "@types/debounce": "^1.2.3",
-    "@types/node": "^20.8.7",
+    "@types/node": "^18.11.9",
     "@vitejs/plugin-vue": "^4.4.0",
     "@vue/tsconfig": "^0.4.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
     "npm-check-updates": "^16.14.6",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.3",
@@ -80,5 +83,8 @@
   },
   "dependencies": {
     "debounce": "^1.2.1"
+  },
+  "lint-staged": {
+    "*.{ts,json,vue,css}": "prettier --write"
   }
 }
