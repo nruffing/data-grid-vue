@@ -173,6 +173,11 @@ export default defineComponent({
       type: Array<Column>,
       required: true,
     },
+    allowColumnReorder: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     paged: {
       type: Boolean,
       required: false,

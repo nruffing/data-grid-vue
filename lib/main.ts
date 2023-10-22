@@ -1,4 +1,4 @@
-import DataGridVue from './components/DataGridVue.vue'
+import DataGridVueGrid from './components/DataGridVue.vue'
 import FilterOperatorSelect from './components/FilterOperatorSelect.vue'
 import HeaderCell from './components/HeaderCell.vue'
 import HeaderFilter from './components/HeaderFilter.vue'
@@ -6,6 +6,8 @@ import Icon from './components/Icon.vue'
 import PageNavigation from './components/PageNavigation.vue'
 
 import { DataType, type Column, type ColumnFilterOptions, type FieldValueGetter, Field, type PageData, EmptyPageData } from './DataGridVue'
+
+import { DataGridVue, type DataGridVueOptions } from './Plugin'
 
 import {
   type DataService,
@@ -26,6 +28,8 @@ import Formatter from './Formatter'
 
 export {
   DataGridVue,
+  type DataGridVueOptions,
+  DataGridVueGrid,
   FilterOperatorSelect,
   HeaderCell,
   HeaderFilter,

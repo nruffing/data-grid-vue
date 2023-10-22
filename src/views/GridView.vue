@@ -14,7 +14,7 @@
         Grid Unchecked / Flex Checked
       </label>
     </div>
-    <DataGridVue
+    <dgv-data-grid
       :data="mockData"
       :columns="testDataColumns"
       :sort-options="{
@@ -25,14 +25,13 @@
       <template v-slot:cell-actions="{ dataItem }">
         <button>Custom {{ dataItem.id }}</button>
       </template>
-    </DataGridVue>
+    </dgv-data-grid>
   </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import DataGridVue from '../../lib/components/DataGridVue.vue'
 import { type Column } from '../../lib/DataGridVue'
 
 import { TestDataColumns, type TestDataItem } from '../test-data/test-data'
@@ -45,9 +44,6 @@ interface Data {
 
 export default defineComponent({
   name: 'GridView',
-  components: {
-    DataGridVue,
-  },
   data(): Data {
     return {
       isFlex: false,

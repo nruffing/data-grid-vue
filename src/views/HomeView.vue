@@ -1,6 +1,6 @@
 <template>
   <main>
-    <DataGridVue
+    <dgv-data-grid
       :server-side-options="{
         postRoute: 'https://localhost:7179/DataGridVue',
         beforeRequest: onBeforeRequest,
@@ -20,9 +20,9 @@
           />
         </div>
       </template>
-    </DataGridVue>
+    </dgv-data-grid>
 
-    <DataGridVue
+    <dgv-data-grid
       :data="mockData"
       :columns="testDataColumns"
       :sort-options="{
@@ -33,14 +33,13 @@
       <template v-slot:cell-actions="{ dataItem }">
         <button>Custom {{ dataItem.id }}</button>
       </template>
-    </DataGridVue>
+    </dgv-data-grid>
   </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import DataGridVue from '../../lib/components/DataGridVue.vue'
 import { DataType, type Column } from '../../lib/DataGridVue'
 import { FilterOperator, type FilterCondition } from '../../lib/Filter'
 
@@ -51,9 +50,6 @@ import { TestDataColumns2, formatPhoneNumber } from '../test-data/test-data-2'
 
 export default defineComponent({
   name: 'HomeView',
-  components: {
-    DataGridVue,
-  },
   computed: {
     testDataColumns(): Column[] {
       return TestDataColumns
