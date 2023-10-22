@@ -25,7 +25,7 @@ export default defineConfig({
           vue: 'Vue',
         },
       },
-      plugins: [del({ targets: ['dist/favicon.png', 'dist/favicon.svg'], hook: 'generateBundle' })],
+      plugins: [del({ targets: ['dist/favicon.svg', 'dist/favicon.ico'], hook: 'generateBundle' })],
     },
   },
 })
