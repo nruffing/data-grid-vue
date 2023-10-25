@@ -19,6 +19,7 @@
   --dgv-header-border-bottom: 0.2rem solid var(--dgv-opaque-1);
   --dgv-header-icon-size: 0.8rem;
   --dgv-header-icon-color: var(--dgv-accent);
+  --dgv-header-drop-border-color: var(--dgv-accent);
 
   --dgv-filter-options-background-color: var(--dgv-opaque-2);
   --dgv-filter-options-border-bottom: 0.2rem solid var(--dgv-opaque-1);
@@ -107,6 +108,19 @@
   font-size: var(--dgv-header-font-size);
   border-top: var(--dgv-header-border-top);
   border-bottom: var(--dgv-header-border-bottom);
+}
+
+.dgv-data-grid-container .dgv-header-cell.ddv-dragging-over {
+  border-color: var(--dgv-header-drop-border-color);
+}
+
+.dgv-data-grid-container .dgv-header-container {
+  display: flex;
+}
+
+.dgv-data-grid-container .ddv-draggable .dgv-drag-area {
+  flex: 1;
+  cursor: move;
 }
 
 .dgv-header-cell.sortable {

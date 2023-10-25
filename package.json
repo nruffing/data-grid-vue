@@ -84,7 +84,7 @@
   },
   "dependencies": {
     "debounce": "^1.2.1",
-    "dragon-drop-vue": "^0.0.1"
+    "dragon-drop-vue": "^0.0.4"
   },
   "lint-staged": {
     "*.{ts,json,vue,css}": "prettier --write"

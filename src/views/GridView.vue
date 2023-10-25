@@ -5,7 +5,7 @@
       grid: !isFlex,
     }"
   >
-    <div>
+    <div class="options">
       <label>
         <input
           type="checkbox"
@@ -13,14 +13,22 @@
         />
         Grid Unchecked / Flex Checked
       </label>
+      <label>
+        <input
+          type="checkbox"
+          v-model="allowColumnReorder"
+        />
+        Column Reorder
+      </label>
     </div>
     <dgv-data-grid
       :data="mockData"
-      :columns="testDataColumns"
+      v-model:columns="columns"
       :sort-options="{
         sortable: true,
         multiColumn: true,
       }"
+      :allowColumnReorder="allowColumnReorder"
     >
       <template v-slot:cell-actions="{ dataItem }">
         <button>Custom {{ dataItem.id }}</button>
@@ -35,11 +43,12 @@ import { defineComponent } from 'vue'
 import { type Column } from '../../lib/DataGridVue'
 
 import { TestDataColumns, type TestDataItem } from '../test-data/test-data'
-import { TestDataColumns2 } from '../test-data/test-data-2'
 import MOCK_DATA from '../test-data/MOCK_DATA'
 
 interface Data {
   isFlex: boolean
+  allowColumnReorder: boolean
+  columns: Column[]
 }
 
 export default defineComponent({
@@ -47,12 +56,11 @@ export default defineComponent({
   data(): Data {
     return {
       isFlex: false,
+      allowColumnReorder: true,
+      columns: [...TestDataColumns],
     }
   },
   computed: {
-    testDataColumns(): Column[] {
-      return TestDataColumns2
-    },
     mockData(): TestDataItem[] {
       return MOCK_DATA
     },
@@ -69,5 +77,11 @@ main.flex {
 main.grid {
   display: grid;
   grid-template-rows: auto 1fr;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
 }
 </style>

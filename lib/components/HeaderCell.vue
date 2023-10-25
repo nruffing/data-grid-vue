@@ -17,6 +17,7 @@
           :text="iconText"
         />
       </span>
+      <span class="dgv-drag-area"></span>
     </div>
   </div>
 </template>

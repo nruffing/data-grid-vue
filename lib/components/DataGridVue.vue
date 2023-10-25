@@ -33,6 +33,8 @@
       :sortable="sortOptions?.sortable"
       :sort="sort"
       @onClick="sortColumn"
+      v-drag="allowColumnReorder ? { dragData: column, dropEffect: 'move', onDragStart } : false"
+      v-drop="allowColumnReorder ? { dragData: column, dropEffect: 'move', onDragEnter, onDrop } : false"
     />
 
     <!-- HEADER FILTERS -->
@@ -129,6 +131,7 @@ import HeaderCell from './HeaderCell.vue'
 import HeaderFilter from './HeaderFilter.vue'
 import PageNavigation from './PageNavigation.vue'
 import Icon from './Icon.vue'
+import type { DragonDropVueDragOptions, DragonDropVueOptions } from 'dragon-drop-vue'
 
 interface Data {
   keyColumn: Column
@@ -141,8 +144,9 @@ interface Data {
   filters: FilterCondition[]
   filterOptionsShown: boolean
   externalFilter: Filter | undefined
-  windowResizeDebounce?: any
+  windowResizeDebounce: any | undefined
   columnWidths: string[]
+  draggingColumn: Column | undefined
 }
 
 export default defineComponent({
@@ -216,6 +220,7 @@ export default defineComponent({
       externalFilter: undefined,
       windowResizeDebounce: undefined,
       columnWidths: [],
+      draggingColumn: undefined,
     }
   },
   computed: {
@@ -301,6 +306,11 @@ export default defineComponent({
     currentPage() {
       this.loadPageData()
     },
+    columns() {
+      nextTick(() => {
+        this.calculateColumnWidths()
+      })
+    },
   },
   methods: {
     async loadPageData() {
@@ -372,6 +382,59 @@ export default defineComponent({
     },
     calculateColumnWidths() {
       this.columnWidths = calculateColumnWidths(this.columns, this.$refs.container as HTMLElement)
+    },
+    onDragStart(domEl: HTMLElement, dragEvent: DragEvent, dragOptions: DragonDropVueDragOptions<Column>, options: DragonDropVueOptions) {
+      this.draggingColumn = dragOptions.dragData
+    },
+    onDragEnter(domEl: HTMLElement, dragEvent: DragEvent, dragOptions: DragonDropVueDragOptions<Column>, options: DragonDropVueOptions) {
+      // do not allow dropping column onto itself
+      return this.draggingColumn?.field.fieldName !== dragOptions.dragData?.field.fieldName
+    },
+    onDrop(domEl: HTMLElement, dragEvent: DragEvent, dragOptions: DragonDropVueDragOptions<Column>, options: DragonDropVueOptions) {
+      // do not allow dropping column onto itself
+      const dropFieldName = dragOptions.dragData?.field.fieldName
+      const dragFieldName = this.draggingColumn?.field.fieldName
+
+      if (!dropFieldName || !dragFieldName || dragFieldName === dropFieldName) {
+        return false
+      }
+
+      const newColumnOrder = [] as Column[]
+      let dragFound = false
+      for (const column of this.columns) {
+        /*
+         * if we are at the column being dropped on (i.e. shifted right)
+         */
+        if (column.field.fieldName === dropFieldName) {
+          /*
+           * If the column is being dragged forward insert the drop column before the drag column
+           */
+          if (dragFound) {
+            newColumnOrder.push(column)
+          }
+          newColumnOrder.push(this.draggingColumn!)
+          /*
+           * Otherwise, insert the drag column first
+           */
+          if (!dragFound) {
+            newColumnOrder.push(column)
+          }
+        } else {
+          /*
+           * If this is drag column, ignore it and track that we found it.
+           */
+          if (column.field.fieldName === dragFieldName) {
+            dragFound = true
+          } else {
+          /*
+           * Else, just add the current column
+           */
+            newColumnOrder.push(column)
+          }
+        }
+      }
+
+      this.$emit('update:columns', newColumnOrder)
     },
   },
 })
