@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, type PropType, watch, defineEmits } from 'vue'
+import { ref, type PropType, watch } from 'vue'
 import { useColumn } from '../composables/Column'
 import type { Column } from '../DataGridVue'
 

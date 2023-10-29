@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, computed, type PropType } from 'vue'
+import { computed, type PropType } from 'vue'
 import type { Column } from '../DataGridVue'
 import { type Sort, SortType } from '../Sort'
 import Icon from './Icon.vue'
