@@ -7,6 +7,7 @@
   --dgv-opaque-2: rgba(255, 255, 255, 0.3);
   --dgv-opaque-3: rgba(255, 255, 255, 0.2);
   --dgv-accent: rgb(255, 166, 0);
+  --dgv-base: #aaaaaa;
 
   --dgv-font-family: Verdana, Arial, Helvetica, sans-serif;
 
@@ -73,8 +74,8 @@
 
   --dgv-input-padding: 0.4rem;
   --dgv-input-border: 0.1rem solid var(--dgv-opaque-1);
-  --dgv-input-text-color: var(--black);
-  --dgv-input-background: var(--opaque-1);
+  --dgv-input-text-color: var(--dgv-black);
+  --dgv-input-background: var(--dgv-opaque-1);
 
   --dgv-input-focus-border: 0.1rem solid var(--dgv-accent);
 
@@ -83,6 +84,19 @@
 
   --dgv-filter-operator-item-hover-background-color: var(--dgv-accent);
   --dgv-filter-operator-item-hover-opacity: 1;
+
+  --dgv-popup-border: 0.1rem solid var(--dgv-accent);
+  --dgv-popup-background: var(--dgv-base);
+  --dgv-popup-text-color: var(--dgv-black);
+  --dgv-popup-padding: 1rem;
+  --dgv-popup-z-index: 9999;
+  --dgv-popup-font-size: 1.1rem;
+
+  --dgv-toggle-size: 1.1rem;
+  --dgv-toggle-background: var(--dgv-white);
+  --dgv-toggle-color: var(--dgv-accent);
+  --dgv-toggle-slider-color: var(--dgv-opaque-1);
+  --dgv-toggle-padding: 0.3rem;
 }
 
 /**** Data Grid ****/
@@ -254,6 +268,8 @@
   flex-direction: row;
   justify-content: end;
   margin-bottom: 0.4rem;
+  gap: 1rem;
+  user-select: none;
 }
 
 /**** Action Text (e.g. Show Filter Options) ****/
@@ -326,4 +342,79 @@
 
 .dgv-filter input {
   width: calc(100% - var(--dgv-header-padding));
+}
+
+/**** Popup ****/
+.dgv-popup {
+  position: fixed;
+  border: var(--dgv-popup-border);
+  background: var(--dgv-popup-background);
+  color: var(--dgv-popup-text-color);
+  z-index: var(--dgv-popup-z-index);
+  padding: var(--dgv-popup-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  user-select: none;
+  font-size: var(--dgv-popup-font-size);
+}
+
+/*** Toggle ****/
+.dgv-toggle-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+}
+
+.dgv-toggle {
+  position: relative;
+  display: inline-block;
+  width: calc(var(--dgv-toggle-size) * 2);
+  height: var(--dgv-toggle-size);
+}
+
+.dgv-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.dgv-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--dgv-toggle-slider-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.dgv-toggle-slider:before {
+  position: absolute;
+  content: '';
+  height: calc(var(--dgv-toggle-size) - var(--dgv-toggle-padding));
+  width: calc(var(--dgv-toggle-size) - var(--dgv-toggle-padding));
+  left: var(--dgv-toggle-padding);
+  bottom: calc(var(--dgv-toggle-padding) / 2);
+  background: var(--dgv-toggle-background);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .dgv-toggle-slider {
+  background: var(--dgv-toggle-color);
+}
+
+input:focus + .dgv-toggle-slider {
+  box-shadow: 0 0 1px var(--dgv-toggle-color);
+}
+
+input:checked + .dgv-toggle-slider:before {
+  -webkit-transform: translateX(calc(var(--dgv-toggle-size) - var(--dgv-toggle-padding)));
+  -ms-transform: translateX(calc(var(--dgv-toggle-size) - var(--dgv-toggle-padding)));
+  transform: translateX(calc(var(--dgv-toggle-size) - var(--dgv-toggle-padding)));
 }

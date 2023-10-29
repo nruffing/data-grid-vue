@@ -28,16 +28,18 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   * By default columns without a width specified will take up an equal share of the remaining space
   * The relative * unit can be used to specify a column to take a relational share of the remaining space
 * Selectable page size with configurable available page sizes
+* Optional drag and drop column reorder
+* Optional add/remove columns from with column selection menu
 
 ## Example
 
 ```vue
-<DataGridVue
+<dgv-data-grid
   :server-side-options="{
     postRoute: 'https://localhost:7179/DataGridVue',
     beforeRequest: onBeforeRequest,
   }"
-  :columns="testDataColumns2"
+  v-model:columns="testDataColumns2"
   :sort-options="{
     sortable: true,
     multiColumn: false,
@@ -48,7 +50,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
       <input type="tel" :value="formatPhoneNumber(initialFilterCondition?.value)" @input="onPhoneNumberFilterInput($event, onFilterUpdated)"></input>
     </div>
   </template>
-</DataGridVue>
+</dgv-data-grid>
 ```
 
 ## Release Notes
@@ -78,10 +80,9 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
    * Full height and full height options removed in favor of css grid to allow for greater layout control in parent application
    * fix order of sorting and filtering in default client data service
  * v2.0.0
-   * BREAKING: DataGridVue component renamed to DataGridVueGrid to not conflict with plugin name. Using the plugin is recommended.
-   * Can now be included in application via a vue plugin called DataGridVue. Plugin registers DataGridVueGrid component globally as dgv-data-grid.
-   * Column reordering via drag-and-drop can be enabled on the grid with the allowColumnReorder property.
-   * Drag and drop is powered by [dragon-drop-vue](https://www.npmjs.com/package/dragon-drop-vue) and dragon drop global options can be set on the plugin options. If not using the plugin then the dragon drop plugin needs to be instantiated manually.
+   * BREAKING: DataGridVue component is no longer exported in favor of using a new plugin to ensure proper setup. Plugin registers DataGridVueGrid component globally as dgv-data-grid.
+   * Column reordering via drag-and-drop can be enabled on the grid with the allowColumnReorder property. Drag and drop is powered by [dragon-drop-vue](https://www.npmjs.com/package/dragon-drop-vue) and dragon drop global options can be set on the plugin options.
+   * Hidden columns are now supported. A popup for users to add/remove columns from the view can be enabled with the showColumnSelection property.
 ________________________________________
 
 ## Build Package

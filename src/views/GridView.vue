@@ -29,6 +29,7 @@
         multiColumn: true,
       }"
       :allowColumnReorder="allowColumnReorder"
+      :showColumnSelection="true"
     >
       <template v-slot:cell-actions="{ dataItem }">
         <button>Custom {{ dataItem.id }}</button>

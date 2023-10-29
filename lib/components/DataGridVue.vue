@@ -14,33 +14,58 @@
         gridColumnEnd: cssColumnSpanValue,
       }"
     >
-      <span
-        v-if="filterable"
-        class="dgv-action-text"
-        tabindex="0"
-        @click="onToggleFilterOptionsShown"
+      <slot
+        name="options-header"
+        :toggleFilterOptionsShown="toggleFilterOptionsShown"
+        :toggleColumnSelectionShown="toggleColumnSelectionShown"
       >
-        <Icon name="filter" />
-        <span>{{ filterOptionsShown ? 'Hide' : 'Show' }} Filter Options</span>
-      </span>
+        <slot
+          name="options-header-filter-options-shown"
+          :toggleFilterOptionsShown="toggleFilterOptionsShown"
+        >
+          <span
+            v-if="filterable"
+            class="dgv-action-text"
+            tabindex="0"
+            @click="toggleFilterOptionsShown"
+          >
+            <Icon name="filter" />
+            <span>{{ filterOptionsShown ? 'Hide' : 'Show' }} Filter Options</span>
+          </span>
+        </slot>
+        <slot
+          name="options-header-column-selection-shown"
+          :toggleColumnSelectionShown="toggleColumnSelectionShown"
+        >
+          <span
+            v-if="showColumnSelection"
+            class="dgv-action-text"
+            tabindex="0"
+            @click="toggleColumnSelectionShown($event)"
+          >
+            <Icon name="filter" />
+            <span>Add/Remove Columns</span>
+          </span>
+        </slot>
+      </slot>
     </div>
 
     <!-- HEADER CELLS -->
     <HeaderCell
-      v-for="column in columns"
+      v-for="column in displayedColumns"
       :key="column.field.fieldName"
       :column="column"
       :sortable="sortOptions?.sortable"
       :sort="sort"
       @onClick="sortColumn"
-      v-drag="allowColumnReorder ? { dragData: column, dropEffect: 'move', onDragStart } : false"
-      v-drop="allowColumnReorder ? { dragData: column, dropEffect: 'move', onDragEnter, onDrop } : false"
+      v-dgv-drag="allowColumnReorder ? { dragData: column, dropEffect: 'move', onDragStart } : false"
+      v-dgv-drop="allowColumnReorder ? { dragData: column, dropEffect: 'move', onDragEnter, onDrop } : false"
     />
 
     <!-- HEADER FILTERS -->
     <div
       v-if="filterOptionsShown"
-      v-for="column in columns"
+      v-for="column in displayedColumns"
       :key="column.field.fieldName"
       class="dgv-filter-options-cell"
     >
@@ -72,7 +97,7 @@
         :key="keyColumn.field.resolveValue(dataItem)"
       >
         <div
-          v-for="column in columns"
+          v-for="column in displayedColumns"
           :key="column.field.fieldName"
           class="dgv-data-grid-cell"
           :class="{
@@ -116,6 +141,27 @@
       </select>
       <span class="dgv-total-items">{{ totalItems }} items</span>
     </div>
+
+    <!-- Column Selection Popup -->
+    <div
+      class="dgv-popup"
+      v-if="popupOptions"
+      :style="popupOptions"
+      v-dgv-click-outside="() => (popupOptions = undefined)"
+    >
+      <slot
+        name="column-selection-popup"
+        :columns="columns"
+        :hiddenUpdated="hiddenUpdated"
+      >
+        <ColumnSelectionItem
+          v-for="column in columns"
+          :key="column.field.fieldName"
+          :column="column"
+          @hidden-updated="hiddenUpdated(column, $event)"
+        />
+      </slot>
+    </div>
   </div>
 </template>
 
@@ -131,7 +177,9 @@ import HeaderCell from './HeaderCell.vue'
 import HeaderFilter from './HeaderFilter.vue'
 import PageNavigation from './PageNavigation.vue'
 import Icon from './Icon.vue'
+import ColumnSelectionItem from './ColumnSelectionItem.vue'
 import type { DragonDropVueDragOptions, DragonDropVueOptions } from 'dragon-drop-vue'
+import { asPxSize } from '../Html'
 
 interface Data {
   keyColumn: Column
@@ -147,6 +195,12 @@ interface Data {
   windowResizeDebounce: any | undefined
   columnWidths: string[]
   draggingColumn: Column | undefined
+  popupOptions:
+    | {
+        top: string
+        right: string
+      }
+    | undefined
 }
 
 export default defineComponent({
@@ -156,6 +210,7 @@ export default defineComponent({
     HeaderFilter,
     PageNavigation,
     Icon,
+    ColumnSelectionItem,
   },
   props: {
     data: {
@@ -202,6 +257,11 @@ export default defineComponent({
       required: false,
       default: undefined,
     },
+    showColumnSelection: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
   data(): Data {
     return {
@@ -221,9 +281,13 @@ export default defineComponent({
       windowResizeDebounce: undefined,
       columnWidths: [],
       draggingColumn: undefined,
+      popupOptions: undefined,
     }
   },
   computed: {
+    displayedColumns(): Column[] {
+      return this.columns.filter(c => !c.hidden)
+    },
     filterable(): boolean {
       return !!this.columns.find(c => c.filterable)
     },
@@ -353,8 +417,21 @@ export default defineComponent({
       }
       await this.loadPageData()
     },
-    onToggleFilterOptionsShown() {
+    toggleFilterOptionsShown() {
       this.filterOptionsShown = !this.filterOptionsShown
+    },
+    toggleColumnSelectionShown(event: MouseEvent) {
+      if (this.popupOptions) {
+        this.popupOptions = undefined
+        return
+      }
+
+      const element = event.target as HTMLElement
+      const elementRect = element.getBoundingClientRect()
+      this.popupOptions = {
+        top: asPxSize(elementRect.bottom + 5),
+        right: asPxSize(window.innerWidth - elementRect.right),
+      }
     },
     getFilterCondition(fieldName: string): FilterCondition | undefined {
       return this.filters.find(f => f.fieldName === fieldName)
@@ -426,15 +503,26 @@ export default defineComponent({
           if (column.field.fieldName === dragFieldName) {
             dragFound = true
           } else {
-          /*
-           * Else, just add the current column
-           */
+            /*
+             * Else, just add the current column
+             */
             newColumnOrder.push(column)
           }
         }
       }
 
       this.$emit('update:columns', newColumnOrder)
+    },
+    hiddenUpdated(column: Column, hidden: boolean) {
+      const columns = []
+      for (const col of this.columns) {
+        const newColumn = { ...col }
+        if (col.field.fieldName === column.field.fieldName) {
+          newColumn.hidden = hidden
+        }
+        columns.push(newColumn)
+      }
+      this.$emit('update:columns', columns)
     },
   },
 })

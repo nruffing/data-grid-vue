@@ -3,7 +3,6 @@
     class="dgv-header-cell"
     :key="column.field.fieldName"
     :class="{ sortable: sortable && column.sortable }"
-    :style="inlineStyle"
   >
     <div class="dgv-header-container">
       <span
@@ -22,61 +21,49 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, type PropType, type StyleValue } from 'vue'
+<script lang="ts" setup>
+import { defineProps, computed, type PropType } from 'vue'
 import type { Column } from '../DataGridVue'
 import { type Sort, SortType } from '../Sort'
-import Formatter from '../Formatter'
 import Icon from './Icon.vue'
+import { useColumn } from '../composables/Column'
 
-export default defineComponent({
-  name: 'HeaderCell',
-  components: {
-    Icon,
+const props = defineProps({
+  column: {
+    type: Object as PropType<Column>,
+    required: true,
   },
-  props: {
-    column: {
-      type: Object as PropType<Column>,
-      required: true,
-    },
-    sortable: {
-      type: Boolean,
-      required: false,
-      default: false,
-    },
-    sort: {
-      type: Object as PropType<Sort[]>,
-      required: false,
-      default: undefined,
-    },
-    inlineStyle: {
-      type: Object as PropType<StyleValue>,
-      required: false,
-      default: {},
-    },
+  sortable: {
+    type: Boolean,
+    required: false,
+    default: false,
   },
-  computed: {
-    formattedTitle(): string {
-      return this.column.title ?? Formatter.fromCamelCase(this.column.field.fieldName)
-    },
-    iconName(): string {
-      const sort = this.sort?.find(s => s.fieldName === this.column.field.fieldName)
-      if (!sort) {
-        return ''
-      }
+  sort: {
+    type: Object as PropType<Sort[]>,
+    required: false,
+    default: undefined,
+  },
+})
 
-      if (sort.type === SortType.ascending) {
-        return 'sort-ascending'
-      }
+const { formattedTitle } = useColumn(props.column)
 
-      return 'sort-descending'
-    },
-    iconText(): string | undefined {
-      if (!this.iconName || !this.sort || this.sort.length < 2) {
-        return undefined
-      }
-      return (this.sort.findIndex(s => s.fieldName === this.column.field.fieldName) + 1).toString()
-    },
-  },
+const iconName = computed(() => {
+  const sort = props.sort?.find(s => s.fieldName === props.column.field.fieldName)
+  if (!sort) {
+    return ''
+  }
+
+  if (sort.type === SortType.ascending) {
+    return 'sort-ascending'
+  }
+
+  return 'sort-descending'
+})
+
+const iconText = computed(() => {
+  if (!iconName || !props.sort || props.sort.length < 2) {
+    return undefined
+  }
+  return (props.sort.findIndex(s => s.fieldName === props.column.field.fieldName) + 1).toString()
 })
 </script>

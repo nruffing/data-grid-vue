@@ -13,6 +13,10 @@ export function calculateColumnWidths(columns: Column[], table: HTMLElement): st
   // first set columns set with absolute px and % to know how much width is remaining
   var remainingColumns = [] as Column[]
   for (const column of columns) {
+    if (column.hidden) {
+      continue
+    }
+
     if (!column.width) {
       remainingColumns.push(column)
       continue
@@ -53,7 +57,9 @@ export function calculateColumnWidths(columns: Column[], table: HTMLElement): st
 
   const widths = [] as string[]
   for (const column of columns) {
-    widths.push(map.get(column.field.fieldName) ?? '')
+    if (!column.hidden) {
+      widths.push(map.get(column.field.fieldName) ?? '')
+    }
   }
   return widths
 }

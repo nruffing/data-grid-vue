@@ -5,7 +5,4 @@ import { DataGridVue, type DataGridVueOptions } from '../lib/main'
 
 import '../lib/styles/DataGridVueDark.css'
 
-createApp(App)
-  .use(router)
-  .use(DataGridVue, {} as DataGridVueOptions)
-  .mount('#app')
+createApp(App).use(router).use(DataGridVue).mount('#app')

@@ -17,6 +17,7 @@ export interface Column {
   filterable?: boolean
   filterOptions?: ColumnFilterOptions
   width?: string
+  hidden?: boolean
 }
 
 export interface ColumnFilterOptions {
