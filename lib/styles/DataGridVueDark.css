@@ -284,6 +284,10 @@
   fill: var(--dgv-action-text-color);
 }
 
+.dgv-action-text * {
+  pointer-events: none;
+}
+
 .dgv-action-text:hover {
   color: var(--dgv-action-text-hover-color);
   fill: var(--dgv-action-text-hover-color);
@@ -359,7 +363,7 @@
   font-size: var(--dgv-popup-font-size);
 }
 
-/*** Toggle ****/
+/**** Toggle ****/
 .dgv-toggle-container {
   display: flex;
   flex-direction: row;
@@ -417,4 +421,15 @@ input:checked + .dgv-toggle-slider:before {
   -webkit-transform: translateX(calc(var(--dgv-toggle-size) - var(--dgv-toggle-padding)));
   -ms-transform: translateX(calc(var(--dgv-toggle-size) - var(--dgv-toggle-padding)));
   transform: translateX(calc(var(--dgv-toggle-size) - var(--dgv-toggle-padding)));
+}
+
+/**** Transitions ****/
+.dgv-fade-enter-active,
+.dgv-fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.dgv-fade-enter-from,
+.dgv-fade-leave-to {
+  opacity: 0;
 }

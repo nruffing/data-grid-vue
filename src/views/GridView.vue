@@ -10,6 +10,7 @@
         <input
           type="checkbox"
           v-model="isFlex"
+          name="is-grid"
         />
         Grid Unchecked / Flex Checked
       </label>
@@ -17,6 +18,7 @@
         <input
           type="checkbox"
           v-model="allowColumnReorder"
+          name="allow-column-reorder"
         />
         Column Reorder
       </label>

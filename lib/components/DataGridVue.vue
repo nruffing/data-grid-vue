@@ -39,6 +39,7 @@
         >
           <span
             v-if="showColumnSelection"
+            id="dgv-id-add-remove-columns"
             class="dgv-action-text"
             tabindex="0"
             @click="toggleColumnSelectionShown($event)"
@@ -130,6 +131,7 @@
       <select
         v-if="paged && pageSizes?.length > 1"
         v-model="pageSize"
+        name="dgv-page-size-select"
         @change="onPageSizeChanged"
       >
         <option
@@ -143,25 +145,30 @@
     </div>
 
     <!-- Column Selection Popup -->
-    <div
-      class="dgv-popup"
-      v-if="popupOptions"
-      :style="popupOptions"
-      v-dgv-click-outside="() => (popupOptions = undefined)"
-    >
-      <slot
-        name="column-selection-popup"
-        :columns="columns"
-        :hiddenUpdated="hiddenUpdated"
+    <Transition name="dgv-fade">
+      <div
+        class="dgv-popup"
+        v-if="popupOptions"
+        :style="popupOptions"
+        v-dgv-click-outside="{
+          handler: () => (popupOptions = undefined),
+          ignoreSelectors: '#dgv-id-add-remove-columns',
+        }"
       >
-        <ColumnSelectionItem
-          v-for="column in columns"
-          :key="column.field.fieldName"
-          :column="column"
-          @hidden-updated="hiddenUpdated(column, $event)"
-        />
-      </slot>
-    </div>
+        <slot
+          name="column-selection-popup"
+          :columns="columns"
+          :hiddenUpdated="hiddenUpdated"
+        >
+          <ColumnSelectionItem
+            v-for="column in columns"
+            :key="column.field.fieldName"
+            :column="column"
+            @hidden-updated="hiddenUpdated(column, $event)"
+          />
+        </slot>
+      </div>
+    </Transition>
   </div>
 </template>
 

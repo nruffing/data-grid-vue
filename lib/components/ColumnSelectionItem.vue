@@ -4,6 +4,8 @@
       <input
         type="checkbox"
         v-model="shown"
+        :name="column.field.fieldName"
+        autocomplete="off"
       />
       <span class="dgv-toggle-slider"></span>
     </span>
