@@ -86,6 +86,12 @@ export default defineComponent({
         value: this.getInput().value,
       } as FilterCondition)
     },
+    clearFilter() {
+      const input = this.getInput()
+      if (input) {
+        input.value = ''
+      }
+    },
   },
 })
 </script>

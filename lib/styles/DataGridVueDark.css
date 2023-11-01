@@ -293,6 +293,15 @@
   fill: var(--dgv-action-text-hover-color);
 }
 
+.dgv-action-text .dgv-icon-invert {
+  fill: none;
+  stroke: var(--dgv-action-text-color);
+}
+
+.dgv-action-text:hover .dgv-icon-invert {
+  stroke: var(--dgv-action-text-hover-color);
+}
+
 /**** Filter Options Row ***/
 .dgv-filter-options-cell {
   display: flex;

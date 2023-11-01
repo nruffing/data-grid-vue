@@ -34,6 +34,20 @@
           </span>
         </slot>
         <slot
+          name="options-header-clear-filters"
+          :clearFilters="clearFilters"
+        >
+          <span
+            v-if="filterable"
+            class="dgv-action-text"
+            tabindex="0"
+            @click="clearFilters"
+          >
+            <Icon name="clear-filter" />
+            <span>Clear Filters</span>
+          </span>
+        </slot>
+        <slot
           name="options-header-column-selection-shown"
           :toggleColumnSelectionShown="toggleColumnSelectionShown"
         >
@@ -44,7 +58,7 @@
             tabindex="0"
             @click="toggleColumnSelectionShown($event)"
           >
-            <Icon name="filter" />
+            <Icon name="add-column" />
             <span>Add/Remove Columns</span>
           </span>
         </slot>
@@ -77,6 +91,7 @@
         :onFilterUpdated="onFilterUpdated"
       >
         <HeaderFilter
+          ref="headerFilter"
           :column="column"
           :initialFilterCondition="getFilterCondition(column.field.fieldName)"
           @updated="onFilterUpdated"
@@ -329,7 +344,7 @@ export default defineComponent({
       return 'auto '.repeat(this.pageSize)
     },
     cssColumnSpanValue(): string {
-      return `span ${this.columns.length}`
+      return `span ${this.displayedColumns.length}`
     },
   },
   async mounted() {
@@ -426,6 +441,16 @@ export default defineComponent({
     },
     toggleFilterOptionsShown() {
       this.filterOptionsShown = !this.filterOptionsShown
+    },
+    clearFilters() {
+      if (this.filters.length || this.externalFilter) {
+        this.filters = []
+        this.externalFilter = undefined
+        for (const headerFilter of this.$refs.headerFilter as (typeof HeaderFilter)[]) {
+          headerFilter.clearFilter()
+        }
+        this.loadPageData()
+      }
     },
     toggleColumnSelectionShown(event: MouseEvent) {
       if (this.popupOptions) {

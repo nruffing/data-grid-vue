@@ -84,6 +84,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
    * Column reordering via drag-and-drop can be enabled on the grid with the allowColumnReorder property. Drag and drop is powered by [dragon-drop-vue](https://www.npmjs.com/package/dragon-drop-vue) and dragon drop global options can be set on the plugin options.
    * Hidden columns are now supported. A popup for users to add/remove columns from the view can be enabled with the showColumnSelection property.
    * Improved page size select styling.
+   * Clear filters action
 ________________________________________
 
 ## Build Package
