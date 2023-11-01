@@ -35,10 +35,6 @@
       "types": "./dist/types/main.d.ts",
       "import": "./dist/data-grid-vue.js",
       "require": "./dist/data-grid-vue.umd.cjs"
-    },
-    "./dist/main.css": {
-      "import": "./lib/styles/DataGridVueDark.css",
-      "require": "./lib/styles/DataGridVueDark.css"
     }
   },
   "types": "./dist/types/main.d.ts",
@@ -46,7 +42,7 @@
   "module": "dist/data-grid-vue.mjs",
   "browser": "dist/data-grid-vue.umd.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run build; vite",
     "build": "run-p type-check build-types build-only",
     "build-types": "vue-tsc --declaration --emitDeclarationOnly",
     "preview": "vite preview",

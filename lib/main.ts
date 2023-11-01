@@ -19,6 +19,14 @@ import { type SortOptions, SortType, type Sort, ClientSideSort } from './Sort'
 
 import Formatter from './Formatter'
 
+import DataGridVueGrid from './components/DataGridVue.vue'
+import ColumnSelectionItem from './components/ColumnSelectionItem.vue'
+import FilterOperatorSelect from './components/FilterOperatorSelect.vue'
+import HeaderCell from './components/HeaderCell.vue'
+import HeaderFilter from './components/HeaderFilter.vue'
+import Icon from './components/Icon.vue'
+import PageNavigation from './components/PageNavigation.vue'
+
 export {
   DataGridVue,
   type DataGridVueOptions,
@@ -48,4 +56,10 @@ export {
   type SortType,
   type Sort,
   ClientSideSort,
+  DataGridVueGrid,
+  ColumnSelectionItem,
+  FilterOperatorSelect,
+  HeaderCell,
+  Icon,
+  PageNavigation,
 }

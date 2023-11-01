@@ -534,3 +534,7 @@ export default defineComponent({
   },
 })
 </script>
+
+<style>
+@import '../styles/DataGridVueDark.css';
+</style>

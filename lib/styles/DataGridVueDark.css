@@ -75,7 +75,7 @@
   --dgv-input-padding: 0.4rem;
   --dgv-input-border: 0.1rem solid var(--dgv-opaque-1);
   --dgv-input-text-color: var(--dgv-black);
-  --dgv-input-background: var(--dgv-opaque-1);
+  --dgv-input-background: var(--dgv-white);
 
   --dgv-input-focus-border: 0.1rem solid var(--dgv-accent);
 
@@ -332,14 +332,15 @@
 }
 
 /**** Input ****/
-.dgv-data-grid-container input {
+.dgv-data-grid-container input,
+.dgv-data-grid-container select {
   padding: var(--dgv-input-padding);
   border: var(--dgv-input-border);
   color: var(--dgv-input-text-color);
   background-color: var(--dgv-input-background);
 }
 
-.dgv-data-grid-container input:focus {
+.dgv-data-grid-container input:focus .dgv-data-grid-container select:focus {
   outline: none;
   border: var(--dgv-input-focus-border);
 }
