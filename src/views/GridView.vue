@@ -32,6 +32,8 @@
       }"
       :allowColumnReorder="allowColumnReorder"
       :showColumnSelection="true"
+      storageKey="dgv-session-state"
+      :localStorageType="1"
     >
       <template v-slot:cell-actions="{ dataItem }">
         <button>Custom {{ dataItem.id }}</button>

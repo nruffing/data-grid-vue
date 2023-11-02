@@ -64,6 +64,10 @@ const iconText = computed(() => {
   if (!iconName || !props.sort || props.sort.length < 2) {
     return undefined
   }
-  return (props.sort.findIndex(s => s.fieldName === props.column.field.fieldName) + 1).toString()
+  const index = props.sort.findIndex(s => s.fieldName === props.column.field.fieldName)
+  if (index === -1) {
+    return undefined
+  }
+  return (index + 1).toString()
 })
 </script>

@@ -13,6 +13,23 @@ import {
   ServerSideDataService,
 } from './DataService'
 
+import {
+  type LocalStorageType,
+  type GridState,
+  type StorageService,
+  StubStorageService,
+  LocalStorageService,
+  SessionStorageService,
+  type GetGridStateRequest,
+  type SetGridStateRequest,
+  type BeforeGetRequestHandler,
+  type GetResponseHandler,
+  type BeforeSetRequestHandler,
+  type SetResponseHandler,
+  type ServerSideStorageServiceOptions,
+  ServerSideStorageService,
+} from './Storage'
+
 import { type FilterOptions, FilterOperator, ValidOperatorsMap, type FilterCondition, type Filter, ClientSideFilter } from './Filter'
 
 import { type SortOptions, SortType, type Sort, ClientSideSort } from './Sort'
@@ -60,6 +77,21 @@ export {
   ColumnSelectionItem,
   FilterOperatorSelect,
   HeaderCell,
+  HeaderFilter,
   Icon,
   PageNavigation,
+  type LocalStorageType,
+  type GridState,
+  type StorageService,
+  StubStorageService,
+  LocalStorageService,
+  SessionStorageService,
+  type GetGridStateRequest,
+  type SetGridStateRequest,
+  type BeforeGetRequestHandler,
+  type GetResponseHandler,
+  type BeforeSetRequestHandler,
+  type SetResponseHandler,
+  type ServerSideStorageServiceOptions,
+  ServerSideStorageService,
 }

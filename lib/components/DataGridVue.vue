@@ -202,6 +202,16 @@ import Icon from './Icon.vue'
 import ColumnSelectionItem from './ColumnSelectionItem.vue'
 import type { DragonDropVueDragOptions, DragonDropVueOptions } from 'dragon-drop-vue'
 import { asPxSize } from '../Html'
+import {
+  type ServerSideStorageServiceOptions,
+  type StorageService,
+  StubStorageService,
+  SessionStorageService,
+  LocalStorageService,
+  LocalStorageType,
+  ServerSideStorageService,
+  type GridState,
+} from '../Storage'
 
 interface Data {
   keyColumn: Column
@@ -223,6 +233,7 @@ interface Data {
         right: string
       }
     | undefined
+  storageService: StorageService
 }
 
 export default defineComponent({
@@ -284,6 +295,26 @@ export default defineComponent({
       required: false,
       default: false,
     },
+    localStorageType: {
+      type: Number,
+      required: false,
+      default: LocalStorageType.sessionStorage,
+    },
+    storageKey: {
+      type: String,
+      required: false,
+      default: '',
+    },
+    serverSideStorageOptions: {
+      type: Object as PropType<ServerSideStorageServiceOptions>,
+      required: false,
+      default: undefined,
+    },
+    customStorageService: {
+      type: Object as PropType<StorageService>,
+      required: false,
+      default: undefined,
+    },
   },
   data(): Data {
     return {
@@ -304,6 +335,7 @@ export default defineComponent({
       columnWidths: [],
       draggingColumn: undefined,
       popupOptions: undefined,
+      storageService: StubStorageService,
     }
   },
   computed: {
@@ -346,6 +378,16 @@ export default defineComponent({
     cssColumnSpanValue(): string {
       return `span ${this.displayedColumns.length}`
     },
+    gridState(): GridState {
+      return {
+        pageSize: this.pageSize,
+        hiddenFields: this.columns.filter(c => c.hidden).map(c => c.field.fieldName),
+        sort: this.sort,
+        filters: this.filters,
+        externalFilter: this.externalFilter,
+        columnOrder: this.columns.map(c => c.field.fieldName),
+      }
+    },
   },
   async mounted() {
     this.pageSize = this.initialPageSize
@@ -368,6 +410,22 @@ export default defineComponent({
       this.dataService = new ClientSideDataService(this.data)
     } else {
       console.error('data, serverSideOptions, or customDataService prop needs to be set to populate the grid with data')
+    }
+
+    if (this.customStorageService) {
+      this.storageService = this.customStorageService
+    } else if (this.serverSideStorageOptions) {
+      this.storageService = new ServerSideStorageService(this.serverSideStorageOptions)
+    } else if (this.storageKey) {
+      this.storageService =
+        this.localStorageType === LocalStorageType.localStorage
+          ? new LocalStorageService(this.storageKey)
+          : new SessionStorageService(this.storageKey)
+    }
+
+    const gridState = await this.storageService.getGridState()
+    if (gridState) {
+      this.setGridState(gridState)
     }
 
     if (this.paged) {
@@ -404,6 +462,48 @@ export default defineComponent({
       this.displayedData = pageData.dataItems
       this.totalItems = pageData.totalItems
     },
+    setGridState(gridState: GridState) {
+      const columnSet = new Set<string>(this.columns.map(c => c.field.fieldName))
+
+      this.pageSize = gridState.pageSize
+      this.externalFilter = gridState.externalFilter
+
+      for (const sort of gridState.sort) {
+        if (columnSet.has(sort.fieldName)) {
+          this.sort.push(sort)
+        }
+      }
+
+      for (const filter of gridState.filters) {
+        if (columnSet.has(filter.fieldName)) {
+          this.filters.push(filter)
+        }
+      }
+
+      if (gridState.hiddenFields.length || gridState.columnOrder.length) {
+        let clones = this.columns.map(c => {
+          return { ...c }
+        })
+        const columns = [] as Column[]
+        for (const fieldName of gridState.columnOrder) {
+          const clone = clones.find(c => c.field.fieldName === fieldName)
+          if (clone) {
+            columns.push(clone)
+            clones = clones.filter(c => c.field.fieldName !== fieldName)
+          }
+        }
+        for (const clone of clones) {
+          columns.push(clone)
+        }
+        for (const fieldName of gridState.hiddenFields) {
+          const col = columns.find(c => c.field.fieldName === fieldName)
+          if (col) {
+            col.hidden = true
+          }
+        }
+        this.$emit('update:columns', columns)
+      }
+    },
     sortColumn(column: Column) {
       if (!this.sortOptions?.sortable || !column.sortable) {
         return
@@ -431,6 +531,7 @@ export default defineComponent({
       }
 
       this.loadPageData()
+      this.saveGridState()
     },
     async onPageSizeChanged() {
       const numPages = Math.ceil(this.totalItems / this.pageSize)
@@ -438,6 +539,7 @@ export default defineComponent({
         this.currentPage = numPages
       }
       await this.loadPageData()
+      this.saveGridState()
     },
     toggleFilterOptionsShown() {
       this.filterOptionsShown = !this.filterOptionsShown
@@ -450,6 +552,7 @@ export default defineComponent({
           headerFilter.clearFilter()
         }
         this.loadPageData()
+        this.saveGridState()
       }
     },
     toggleColumnSelectionShown(event: MouseEvent) {
@@ -481,6 +584,7 @@ export default defineComponent({
         }
       }
       this.loadPageData()
+      this.saveGridState()
     },
     setFilter(filter: Filter | undefined) {
       this.externalFilter = filter
@@ -544,6 +648,7 @@ export default defineComponent({
       }
 
       this.$emit('update:columns', newColumnOrder)
+      this.saveGridState()
     },
     hiddenUpdated(column: Column, hidden: boolean) {
       const columns = []
@@ -555,6 +660,12 @@ export default defineComponent({
         columns.push(newColumn)
       }
       this.$emit('update:columns', columns)
+      this.saveGridState()
+    },
+    saveGridState() {
+      nextTick(() => {
+        this.storageService.setGridState(this.gridState)
+      })
     },
   },
 })

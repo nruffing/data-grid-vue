@@ -30,6 +30,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 * Selectable page size with configurable available page sizes
 * Optional drag and drop column reorder
 * Optional add/remove columns from with column selection menu
+* Built-in support for storing grid state in local storage, session storage or server-side with HTTP support similar to using the server-side data service
 
 ## Example
 
@@ -79,12 +80,14 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
    * Table html structure replaced with css grid for better layout control
    * Full height and full height options removed in favor of css grid to allow for greater layout control in parent application
    * fix order of sorting and filtering in default client data service
- * v2.0.0
+ * v2.0.0-beta
    * BREAKING: DataGridVue component is now exported as DataGridVueGrid in favor of using a new plugin to ensure proper setup. Plugin registers DataGridVueGrid component globally as dgv-data-grid.
    * Column reordering via drag-and-drop can be enabled on the grid with the allowColumnReorder property. Drag and drop is powered by [dragon-drop-vue](https://www.npmjs.com/package/dragon-drop-vue) and dragon drop global options can be set on the plugin options.
    * Hidden columns are now supported. A popup for users to add/remove columns from the view can be enabled with the showColumnSelection property.
    * Improved page size select styling.
    * Clear filters action
+   * Add support for storing grid state in local storage, session storage or server-side with HTTP support similar to using the server-side data service
+   * Bugfix for sort index display when more then one column is sorted
 ________________________________________
 
 ## Build Package
