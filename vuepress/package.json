@@ -1,0 +1,23 @@
+{
+  "name": "data-grid-vue-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nruffing/data-grid-vue.git"
+  },
+  "author": "Nicholas Ruffing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nruffing/data-grid-vue/issues"
+  },
+  "homepage": "https://github.com/nruffing/data-grid-vue#readme",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.67"
+  }
+}

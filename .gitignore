@@ -24,3 +24,8 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+
+# vuepress
+.temp
+.cache
