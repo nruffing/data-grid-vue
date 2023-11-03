@@ -2,7 +2,14 @@
 
 Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control.
 
-[![npm](https://img.shields.io/npm/v/data-grid-vue?logo=npm)](https://www.npmjs.com/package/data-grid-vue)
+<div class="badges">
+  <a href="https://www.npmjs.com/package/data-grid-vue" target="_blank" aria-label="npm">
+    <img alt="npm" src="https://img.shields.io/npm/v/data-grid-vue?logo=npm" />
+  </a>
+  <a href="https://github.com/nruffing/data-grid-vue/blob/main/LICENSE" target="_blank" aria-label="MIT License">
+    <img alt="GitHub" src="https://img.shields.io/github/license/nruffing/data-grid-vue" />
+  </a>
+</div>
 
 ## Current Features
 

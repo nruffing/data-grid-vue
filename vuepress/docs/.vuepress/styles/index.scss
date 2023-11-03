@@ -1,7 +1,14 @@
 :root {
   --c-brand: #e57f41;
+  --spacer: 10px;
 }
 
 html.dark {
   --c-brand: #e57f41;
+}
+
+.badges {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacer);
 }
