@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '**/vuepress/**'
 
 jobs:
   build_and_deploy_job:
