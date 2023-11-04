@@ -1,0 +1,20 @@
+:root {
+  --dgv-accent: var(--color-primary);
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --dgv-header-font-size: 0.7rem;
+    --dgv-header-icon-size: 0.5rem;
+    --dgv-header-padding: 0.3rem;
+    --dgv-action-text-font-size: 0.6rem;
+    --dgv-cell-padding: 0.5rem;
+    --dgv-cell-font-size: 0.7rem;
+    --dgv-nav-button-padding: 0.3rem;
+    --dgv-nav-button-min-width: 1.4rem;
+    --dgv-footer-padding: 0.5rem;
+    --dgv-footer-font-size: 0.7rem;
+    --dgv-footer-icon-size: 0.5rem;
+    --dgv-input-padding: 0.2rem;
+  }
+}

@@ -19,7 +19,7 @@ const columns = [
     filterOptions: {
       operators: [FilterOperator.greaterThanOrEqualTo],
     },
-    width: '80px',
+    width: '50px',
   },
   {
     field: new Field('firstName'),

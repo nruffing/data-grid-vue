@@ -3,15 +3,19 @@ import { fs, getDirname, path } from '@vuepress/utils'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 import markdownItInclude from 'markdown-it-include'
 
-const __dirname = getDirname(import.meta.url)
-console.log(__dirname)
+const __dirname = getDirname(import.meta.url) // @/vuepress/docs/.vuepress
+const dgvStyleContents = await fs.readFile(path.resolve(__dirname, '../../node_modules/data-grid-vue/dist/style.css'), 'utf8')
+const dgvStyleOverrideContents = await fs.readFile(path.resolve(__dirname, '../dgv-overrides.css'), 'utf8')
 
 export default defineUserConfig({
   lang: 'en-US',
   title: 'Date Grid Vue',
   description:
     'Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control.',
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['style', { type: 'text/css' }, dgvStyleContents + '\n\n' + dgvStyleOverrideContents],
+  ],
   theme: defaultTheme({
     logo: '/favicon.svg',
     repo: 'https://github.com/nruffing/data-grid-vue',
@@ -69,10 +73,6 @@ export default defineUserConfig({
     md.use(markdownItInclude, {
       root: path.resolve(__dirname, '../shared'),
     })
-  },
-  async onPrepared(app) {
-    const contents = await fs.readFile(path.resolve(__dirname, '../../node_modules/data-grid-vue/dist/style.css'), 'utf8')
-    await app.writeTemp('data-grid-vue-style.css', contents)
   },
   plugins: [
     shikiPlugin({

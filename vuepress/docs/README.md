@@ -42,7 +42,6 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 ```
 
 <script lang="ts" setup>
-import '@temp/data-grid-vue-style.css'
 import { inject, ref } from 'vue'
 
 const DEMO = inject('demo')
