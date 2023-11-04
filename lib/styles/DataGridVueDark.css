@@ -76,7 +76,7 @@
   --dgv-input-border: 0.1rem solid var(--dgv-opaque-1);
   --dgv-input-text-color: var(--dgv-black);
   --dgv-input-background: var(--dgv-white);
-
+  --dgv-input-font-size: 1rem;
   --dgv-input-focus-border: 0.1rem solid var(--dgv-accent);
 
   --dgv-filter-operator-item-color: var(--dgv-black);
@@ -347,6 +347,7 @@
   border: var(--dgv-input-border);
   color: var(--dgv-input-text-color);
   background-color: var(--dgv-input-background);
+  font-size: var(--dgv-input-font-size);
 }
 
 .dgv-data-grid-container input:focus .dgv-data-grid-container select:focus {

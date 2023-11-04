@@ -67,18 +67,3 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   <a href="https://yarnpkg.com/package?name=data-grid-vue" target="_blank">Yarn</a>
 </div>
 <hr />
-
-<style>
-.badges, .example-image-container, .links {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  width: 100%;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.example-image-container {
-  padding; 20px;
-}
-</style>

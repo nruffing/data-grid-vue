@@ -35,3 +35,5 @@
   - Clear filters action
   - Add support for storing grid state in local storage, session storage or server-side with HTTP support similar to using the server-side data service
   - Bugfix for sort index display when more then one column is sorted
+- v2.1.0
+  - Add css variable for input/select font size

@@ -1,6 +1,6 @@
 {
   "name": "data-grid-vue",
-  "version": "2.0.0-beta",
+  "version": "2.1.0",
   "description": "Customizable native Vue3 data grid",
   "license": "MIT",
   "author": {
