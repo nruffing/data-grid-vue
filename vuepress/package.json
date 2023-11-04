@@ -19,6 +19,7 @@
   "homepage": "https://github.com/nruffing/data-grid-vue#readme",
   "devDependencies": {
     "@vuepress/plugin-shiki": "^2.0.0-beta.67",
+    "markdown-it-include": "^2.0.0",
     "vuepress": "^2.0.0-beta.67"
   },
   "dependencies": {
