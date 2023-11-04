@@ -11,7 +11,58 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   </a>
 </div>
 
-## Current Features
+## Example
+
+<div class="grid-container">
+  <dgv-data-grid
+    v-model:columns="columns"
+    :data="DEMO.data"
+    :sort-options="{
+      sortable: true,
+      multiColumn: false,
+    }"
+    :allow-column-reorder="true"
+    :show-column-selection="true"
+  >
+  </dgv-data-grid>
+</div>
+
+```vue
+<dgv-data-grid
+  v-model:columns="columns"
+  :data="DEMO.data"
+  :sort-options="{
+    sortable: true,
+    multiColumn: false,
+  }"
+  :allow-column-reorder="true"
+  :show-column-selection="true"
+>
+</dgv-data-grid>
+```
+
+<script lang="ts" setup>
+import '@temp/data-grid-vue-style.css'
+import { inject, ref } from 'vue'
+
+const DEMO = inject('demo')
+
+const columns = ref([...DEMO.columns])
+</script>
+
+<style scoped>
+.grid-container {
+  margin: calc(var(--spacer) * 3) 0;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+</style>
+
+
+
+## Features
 
 * Cell render templates
 * Supply arrow function to get column's value
@@ -36,25 +87,3 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 * Optional drag and drop column reorder
 * Optional add/remove columns from with column selection menu
 * Built-in support for storing grid state in local storage, session storage or server-side with HTTP support similar to using the server-side data service
-
-## Example
-
-```vue
-<dgv-data-grid
-  :server-side-options="{
-    postRoute: 'https://localhost:7179/DataGridVue',
-    beforeRequest: onBeforeRequest,
-  }"
-  v-model:columns="testDataColumns2"
-  :sort-options="{
-    sortable: true,
-    multiColumn: false,
-  }"
->
-  <template v-slot:filter-phoneNumber="{ column, initialFilterCondition, onFilterUpdated }">
-    <div class="custom-filter">
-      <input type="tel" :value="formatPhoneNumber(initialFilterCondition?.value)" @input="onPhoneNumberFilterInput($event, onFilterUpdated)"></input>
-    </div>
-  </template>
-</dgv-data-grid>
-```

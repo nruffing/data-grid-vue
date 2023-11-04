@@ -1,4 +1,9 @@
 import { defineUserConfig, defaultTheme } from 'vuepress'
+import { fs, getDirname, path } from '@vuepress/utils'
+import { shikiPlugin } from '@vuepress/plugin-shiki'
+
+const __dirname = getDirname(import.meta.url)
+console.log(__dirname)
 
 export default defineUserConfig({
   lang: 'en-US',
@@ -9,6 +14,8 @@ export default defineUserConfig({
   theme: defaultTheme({
     logo: '/favicon.svg',
     repo: 'https://github.com/nruffing/data-grid-vue',
+    colorModeSwitch: false,
+    colorMode: 'dark',
     navbar: [
       {
         text: 'Home',
@@ -40,4 +47,14 @@ export default defineUserConfig({
       ],
     },
   }),
+  async onPrepared(app) {
+    const contents = await fs.readFile(path.resolve(__dirname, '../../node_modules/data-grid-vue/dist/style.css'), 'utf8')
+    await app.writeTemp('data-grid-vue-style.css', contents)
+  },
+  plugins: [
+    shikiPlugin({
+      theme: 'css-variables',
+      langs: ['vue'],
+    }),
+  ],
 })
