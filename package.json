@@ -51,7 +51,8 @@
     "format": "npx prettier --write \"./**/*.{ts,json,vue,css}\"",
     "upgrade-all": "ncu --upgrade",
     "prepare": "husky install",
-    "compile-readme": "./node_modules/markdown-include/bin/cli.js markdown.json"
+    "compile-readme": "./node_modules/markdown-include/bin/cli.js markdown.json",
+    "typedoc": "npx typedoc --options typedoc.json"
   },
   "peerDependencies": {
     "vue": ">=3.2.0"
@@ -74,6 +75,9 @@
     "prettier": "^3.0.3",
     "rollup-plugin-delete": "^2.0.0",
     "tslib": "^2.6.2",
+    "typedoc": "^0.25.3",
+    "typedoc-plugin-markdown": "^3.17.0",
+    "typedoc-plugin-vue": "^1.1.0",
     "typescript": "~5.2.2",
     "vite": "^4.5.0",
     "vue": "^3.3.6",

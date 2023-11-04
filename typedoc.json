@@ -1,0 +1,11 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "tsconfig": "./tsconfig.typedoc.json",
+  "name": "Documentation",
+  "cleanOutputDir": true,
+  "entryPoints": ["./dist/types/main.d.ts"],
+  "out": "./vuepress/docs/generated",
+  "plugin": ["typedoc-plugin-vue", "typedoc-plugin-markdown"],
+  "readme": "none",
+  "hideBreadcrumbs": true
+}

@@ -31,6 +31,10 @@ export default defineUserConfig({
         link: '/guide/',
       },
       {
+        text: 'Documentation',
+        link: '/generated/',
+      },
+      {
         text: 'NPM',
         link: 'https://www.npmjs.com/package/data-grid-vue',
       },
@@ -60,14 +64,7 @@ export default defineUserConfig({
         ],
       },
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          text: 'Guide',
-          children: ['/guide/README.md', '/guide/sorting.md'],
-        },
-      ],
-    },
+    sidebar: 'auto',
   }),
   extendsMarkdown(md) {
     md.use(markdownItInclude, {
