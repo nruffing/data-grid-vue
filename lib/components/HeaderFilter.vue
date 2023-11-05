@@ -25,6 +25,7 @@ interface Data {
   operator: FilterOperator
 }
 
+/** @group Components */
 export default defineComponent({
   name: 'HeaderFilter',
   components: {

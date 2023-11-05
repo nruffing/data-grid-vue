@@ -49,6 +49,7 @@
 import { defineComponent } from 'vue'
 import Icon from './Icon.vue'
 
+/** @group Components */
 export default defineComponent({
   name: 'PageNavigation',
   components: {

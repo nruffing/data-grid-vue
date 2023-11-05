@@ -5,7 +5,7 @@
   "cleanOutputDir": true,
   "entryPoints": ["./dist/types/main.d.ts"],
   "out": "./vuepress/docs/generated",
-  "plugin": ["typedoc-plugin-vue", "typedoc-plugin-markdown"],
+  "plugin": ["./typedoc-vue.js", "typedoc-plugin-markdown"],
   "readme": "none",
   "hideBreadcrumbs": true
 }

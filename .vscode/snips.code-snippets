@@ -20,5 +20,10 @@
 		"scope": "javascript,typescript,vue"
     "prefix": ["block", "/*", "comment"],
     "body": ["/*"," * $1"," */"],
-  }
+  },
+	"Component group tag": {
+		"scope": ["vue"],
+		"prefix": ["group", "component", "typedoc"],
+		"body": "/** @group Components */"
+	},
 }

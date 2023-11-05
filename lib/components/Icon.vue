@@ -233,6 +233,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
+/** @group Components */
 export default defineComponent({
   name: 'Icon',
   props: {

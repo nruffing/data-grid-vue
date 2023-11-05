@@ -52,7 +52,9 @@
     "upgrade-all": "ncu --upgrade",
     "prepare": "husky install",
     "compile-readme": "./node_modules/markdown-include/bin/cli.js markdown.json",
-    "typedoc": "npx typedoc --options typedoc.json"
+    "typedoc-compile-plugin": "npx tsc --project tsconfig.typedoc-vue.json",
+    "typedoc-gen": "npx typedoc --options typedoc.json",
+    "typedoc": "run-s build typedoc-compile-plugin typedoc-gen"
   },
   "peerDependencies": {
     "vue": ">=3.2.0"

@@ -2,9 +2,15 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "chrome",
+      "command": "npm run typedoc",
+      "name": "Debug typedoc",
       "request": "launch",
-      "name": "Launch attached to chrome",
+      "type": "node-terminal"
+    },
+    {
+      "type": "chrome",
+      "request": "attach",
+      "name": "Chrome: Dev App",
       "url": "http://127.0.0.1:5173/"
     }
   ]

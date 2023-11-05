@@ -13,22 +13,32 @@
   </label>
 </template>
 
-<script lang="ts" setup>
-import { ref, type PropType, watch } from 'vue'
-import { useColumn } from '../composables/Column'
+<script lang="ts">
+import { type PropType, defineComponent } from 'vue'
 import type { Column } from '../DataGridVue'
+import Formatter from '../Formatter'
 
-const props = defineProps({
-  column: {
-    type: Object as PropType<Column>,
-    required: true,
+/**@group Components */
+export default defineComponent({
+  name: 'ColumnSelectionItem',
+  props: {
+    column: {
+      type: Object as PropType<Column>,
+      required: true,
+    },
+  },
+  computed: {
+    shown(): boolean {
+      return this.column.hidden ?? false
+    },
+    formattedTitle(): string {
+      return Formatter.columnTitle(this.column)
+    },
+  },
+  watch: {
+    shown(newValue: boolean) {
+      this.$emit('hidden-updated', !newValue)
+    },
   },
 })
-
-const emit = defineEmits(['hidden-updated'])
-
-const { formattedTitle } = useColumn(props.column)
-
-const shown = ref(!props.column.hidden)
-watch(shown, newValue => emit('hidden-updated', !newValue))
 </script>

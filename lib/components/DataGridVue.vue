@@ -236,6 +236,7 @@ interface Data {
   storageService: StorageService
 }
 
+/** @group Components */
 export default defineComponent({
   name: 'DataGridVue',
   components: {
@@ -246,6 +247,7 @@ export default defineComponent({
     ColumnSelectionItem,
   },
   props: {
+    /** @param data test */
     data: {
       type: Array,
       required: false,

@@ -29,3 +29,5 @@ coverage
 # vuepress
 .temp
 .cache
+
+typedoc-vue.js

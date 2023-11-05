@@ -25,6 +25,7 @@ import { FilterOperator } from '../Filter'
 import Formatter from '../Formatter'
 import Icon from './Icon.vue'
 
+/** @group Components */
 export default defineComponent({
   name: 'FilterOperatorSelect',
   components: {

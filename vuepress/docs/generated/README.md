@@ -52,19 +52,22 @@
 
 - [ClientSideFilter](README.md#clientsidefilter)
 - [ClientSideSort](README.md#clientsidesort)
-- [ColumnSelectionItem](README.md#columnselectionitem)
 - [DataGridVue](README.md#datagridvue)
-- [DataGridVueGrid](README.md#datagridvuegrid)
 - [EmptyPageData](README.md#emptypagedata)
-- [FilterOperatorSelect](README.md#filteroperatorselect)
 - [Formatter](README.md#formatter)
-- [HeaderCell](README.md#headercell)
-- [HeaderFilter](README.md#headerfilter)
-- [Icon](README.md#icon)
-- [PageNavigation](README.md#pagenavigation)
 - [StubDataService](README.md#stubdataservice)
 - [StubStorageService](README.md#stubstorageservice)
 - [ValidOperatorsMap](README.md#validoperatorsmap)
+
+### Components
+
+- [ColumnSelectionItem](modules/ColumnSelectionItem.md)
+- [DataGridVueGrid](modules/DataGridVueGrid.md)
+- [FilterOperatorSelect](modules/FilterOperatorSelect.md)
+- [HeaderCell](modules/HeaderCell.md)
+- [HeaderFilter](modules/HeaderFilter.md)
+- [Icon](modules/Icon.md)
+- [PageNavigation](modules/PageNavigation.md)
 
 ## Type Aliases
 
@@ -267,16 +270,6 @@ Sort.d.ts:15
 
 ___
 
-### ColumnSelectionItem
-
-• `Const` **ColumnSelectionItem**: `DefineComponent`
-
-#### Defined in
-
-components/ColumnSelectionItem.vue.d.ts:3
-
-___
-
 ### DataGridVue
 
 • `Const` **DataGridVue**: `Object`
@@ -293,16 +286,6 @@ Plugin.d.ts:6
 
 ___
 
-### DataGridVueGrid
-
-• `Const` **DataGridVueGrid**: `DefineComponent`
-
-#### Defined in
-
-components/DataGridVue.vue.d.ts:28
-
-___
-
 ### EmptyPageData
 
 • `Const` **EmptyPageData**: [`PageData`](interfaces/PageData.md)
@@ -310,16 +293,6 @@ ___
 #### Defined in
 
 DataGridVue.d.ts:34
-
-___
-
-### FilterOperatorSelect
-
-• `Const` **FilterOperatorSelect**: `DefineComponent`
-
-#### Defined in
-
-components/FilterOperatorSelect.vue.d.ts:2
 
 ___
 
@@ -331,51 +304,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
+| `columnTitle` | (`column`: [`Column`](interfaces/Column.md)) => `string` |
 | `fromCamelCase` | (`value`: `string`) => `string` |
 
 #### Defined in
 
-Formatter.d.ts:1
-
-___
-
-### HeaderCell
-
-• `Const` **HeaderCell**: `DefineComponent`
-
-#### Defined in
-
-components/HeaderCell.vue.d.ts:4
-
-___
-
-### HeaderFilter
-
-• `Const` **HeaderFilter**: `DefineComponent`
-
-#### Defined in
-
-components/HeaderFilter.vue.d.ts:7
-
-___
-
-### Icon
-
-• `Const` **Icon**: `DefineComponent`
-
-#### Defined in
-
-components/Icon.vue.d.ts:1
-
-___
-
-### PageNavigation
-
-• `Const` **PageNavigation**: `DefineComponent`
-
-#### Defined in
-
-components/PageNavigation.vue.d.ts:1
+Formatter.d.ts:2
 
 ___
 
