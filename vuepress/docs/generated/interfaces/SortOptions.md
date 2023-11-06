@@ -4,25 +4,17 @@
 
 ### Properties
 
-- [multiColumn](SortOptions.md#multicolumn)
 - [sortable](SortOptions.md#sortable)
+- [multiColumn](SortOptions.md#multicolumn)
 
 ## Properties
-
-### multiColumn
-
-• **multiColumn**: `boolean`
-
-#### Defined in
-
-Sort.d.ts:4
-
-___
 
 ### sortable
 
 • **sortable**: `boolean`
 
-#### Defined in
+___
 
-Sort.d.ts:3
+### multiColumn
+
+• **multiColumn**: `boolean`

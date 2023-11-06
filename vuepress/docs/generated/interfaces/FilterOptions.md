@@ -11,7 +11,3 @@
 ### filterable
 
 • **filterable**: `boolean`
-
-#### Defined in
-
-Filter.d.ts:3

@@ -4,25 +4,17 @@
 
 ### Properties
 
-- [dataItems](PageData.md#dataitems)
 - [totalItems](PageData.md#totalitems)
+- [dataItems](PageData.md#dataitems)
 
 ## Properties
-
-### dataItems
-
-• **dataItems**: `any`[]
-
-#### Defined in
-
-DataGridVue.d.ts:32
-
-___
 
 ### totalItems
 
 • **totalItems**: `number`
 
-#### Defined in
+___
 
-DataGridVue.d.ts:31
+### dataItems
+
+• **dataItems**: `any`[]

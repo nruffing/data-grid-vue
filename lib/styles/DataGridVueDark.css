@@ -122,6 +122,9 @@
   font-size: var(--dgv-header-font-size);
   border-top: var(--dgv-header-border-top);
   border-bottom: var(--dgv-header-border-bottom);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .dgv-data-grid-container .dgv-header-cell.ddv-dragging-over {

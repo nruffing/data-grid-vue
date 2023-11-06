@@ -33,7 +33,3 @@
 ##### Returns
 
 `Promise`\<[`PageData`](PageData.md)\>
-
-#### Defined in
-
-DataService.d.ts:5

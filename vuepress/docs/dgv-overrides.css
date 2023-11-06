@@ -2,7 +2,7 @@
   --dgv-accent: var(--color-primary);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1180px) {
   :root {
     --dgv-header-font-size: 0.7rem;
     --dgv-header-icon-size: 0.5rem;

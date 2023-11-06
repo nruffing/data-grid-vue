@@ -4,33 +4,19 @@
 
 ### Properties
 
-- [beforeGetRequest](ServerSideStorageServiceOptions.md#beforegetrequest)
-- [beforeSetRequest](ServerSideStorageServiceOptions.md#beforesetrequest)
+- [userId](ServerSideStorageServiceOptions.md#userid)
 - [getPostRoute](ServerSideStorageServiceOptions.md#getpostroute)
+- [beforeGetRequest](ServerSideStorageServiceOptions.md#beforegetrequest)
 - [getResponseHandler](ServerSideStorageServiceOptions.md#getresponsehandler)
 - [setPostRoute](ServerSideStorageServiceOptions.md#setpostroute)
+- [beforeSetRequest](ServerSideStorageServiceOptions.md#beforesetrequest)
 - [setResponseHandler](ServerSideStorageServiceOptions.md#setresponsehandler)
-- [userId](ServerSideStorageServiceOptions.md#userid)
 
 ## Properties
 
-### beforeGetRequest
+### userId
 
-• `Optional` **beforeGetRequest**: [`BeforeGetRequestHandler`](../README.md#beforegetrequesthandler)
-
-#### Defined in
-
-Storage.d.ts:46
-
-___
-
-### beforeSetRequest
-
-• `Optional` **beforeSetRequest**: [`BeforeGetRequestHandler`](../README.md#beforegetrequesthandler)
-
-#### Defined in
-
-Storage.d.ts:49
+• **userId**: `string` \| `number`
 
 ___
 
@@ -38,9 +24,11 @@ ___
 
 • `Optional` **getPostRoute**: `string` \| `URL`
 
-#### Defined in
+___
 
-Storage.d.ts:45
+### beforeGetRequest
+
+• `Optional` **beforeGetRequest**: [`BeforeGetRequestHandler`](../README.md#beforegetrequesthandler)
 
 ___
 
@@ -48,36 +36,20 @@ ___
 
 • `Optional` **getResponseHandler**: [`GetResponseHandler`](../README.md#getresponsehandler)
 
-#### Defined in
-
-Storage.d.ts:47
-
 ___
 
 ### setPostRoute
 
 • `Optional` **setPostRoute**: `string` \| `URL`
 
-#### Defined in
+___
 
-Storage.d.ts:48
+### beforeSetRequest
+
+• `Optional` **beforeSetRequest**: [`BeforeGetRequestHandler`](../README.md#beforegetrequesthandler)
 
 ___
 
 ### setResponseHandler
 
 • `Optional` **setResponseHandler**: [`GetResponseHandler`](../README.md#getresponsehandler)
-
-#### Defined in
-
-Storage.d.ts:50
-
-___
-
-### userId
-
-• **userId**: `string` \| `number`
-
-#### Defined in
-
-Storage.d.ts:44

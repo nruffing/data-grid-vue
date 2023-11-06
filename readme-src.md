@@ -2,7 +2,7 @@
 
 # Data Grid Vue
 
-Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control.
+#include "./vuepress/docs/shared/summary.md"
 
 <div class="badges">
   <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/ci.yml">

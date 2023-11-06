@@ -10,19 +10,19 @@
 
 - [constructor](ClientSideDataService.md#constructor)
 
+### Methods
+
+- [sort](ClientSideDataService.md#sort)
+- [filter](ClientSideDataService.md#filter)
+- [getPage](ClientSideDataService.md#getpage)
+
 ### Properties
 
 - [dataItems](ClientSideDataService.md#dataitems)
-- [filtered](ClientSideDataService.md#filtered)
-- [previousFilterJson](ClientSideDataService.md#previousfilterjson)
 - [previousSortJson](ClientSideDataService.md#previoussortjson)
 - [sorted](ClientSideDataService.md#sorted)
-
-### Methods
-
-- [filter](ClientSideDataService.md#filter)
-- [getPage](ClientSideDataService.md#getpage)
-- [sort](ClientSideDataService.md#sort)
+- [previousFilterJson](ClientSideDataService.md#previousfilterjson)
+- [filtered](ClientSideDataService.md#filtered)
 
 ## Constructors
 
@@ -40,61 +40,23 @@
 
 [`ClientSideDataService`](ClientSideDataService.md)
 
-#### Defined in
-
-DataService.d.ts:14
-
-## Properties
-
-### dataItems
-
-• **dataItems**: `any`[]
-
-#### Defined in
-
-DataService.d.ts:9
-
-___
-
-### filtered
-
-• **filtered**: `any`[]
-
-#### Defined in
-
-DataService.d.ts:13
-
-___
-
-### previousFilterJson
-
-• **previousFilterJson**: `string`
-
-#### Defined in
-
-DataService.d.ts:12
-
-___
-
-### previousSortJson
-
-• **previousSortJson**: `string`
-
-#### Defined in
-
-DataService.d.ts:10
-
-___
-
-### sorted
-
-• **sorted**: `any`[]
-
-#### Defined in
-
-DataService.d.ts:11
-
 ## Methods
+
+### sort
+
+▸ **sort**(`sort`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `sort` | [`Sort`](../interfaces/Sort.md)[] |
+
+#### Returns
+
+`void`
+
+___
 
 ### filter
 
@@ -109,10 +71,6 @@ DataService.d.ts:11
 #### Returns
 
 `void`
-
-#### Defined in
-
-DataService.d.ts:16
 
 ___
 
@@ -137,26 +95,32 @@ ___
 
 [DataService](../interfaces/DataService.md).[getPage](../interfaces/DataService.md#getpage)
 
-#### Defined in
+## Properties
 
-DataService.d.ts:17
+### dataItems
+
+• **dataItems**: `any`[]
 
 ___
 
-### sort
+### previousSortJson
 
-▸ **sort**(`sort`): `void`
+• **previousSortJson**: `string`
 
-#### Parameters
+___
 
-| Name | Type |
-| :------ | :------ |
-| `sort` | [`Sort`](../interfaces/Sort.md)[] |
+### sorted
 
-#### Returns
+• **sorted**: `any`[]
 
-`void`
+___
 
-#### Defined in
+### previousFilterJson
 
-DataService.d.ts:15
+• **previousFilterJson**: `string`
+
+___
+
+### filtered
+
+• **filtered**: `any`[]

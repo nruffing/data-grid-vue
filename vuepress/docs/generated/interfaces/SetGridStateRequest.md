@@ -4,25 +4,17 @@
 
 ### Properties
 
-- [gridState](SetGridStateRequest.md#gridstate)
 - [userId](SetGridStateRequest.md#userid)
+- [gridState](SetGridStateRequest.md#gridstate)
 
 ## Properties
-
-### gridState
-
-• **gridState**: [`GridState`](GridState.md)
-
-#### Defined in
-
-Storage.d.ts:37
-
-___
 
 ### userId
 
 • **userId**: `string` \| `number`
 
-#### Defined in
+___
 
-Storage.d.ts:36
+### gridState
+
+• **gridState**: [`GridState`](GridState.md)

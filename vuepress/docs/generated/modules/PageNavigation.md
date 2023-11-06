@@ -4,28 +4,11 @@
 
 ### Properties
 
-- [currentPage](undefined)
 - [pageSize](undefined)
+- [currentPage](undefined)
 - [totalItems](undefined)
 
 ## Properties
-
-### currentPage
-
-• **currentPage**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `required` | ``true`` |
-| `type` | `NumberConstructor` |
-
-#### Defined in
-
-components/PageNavigation.vue.d.ts:7
-
-___
 
 ### pageSize
 
@@ -35,12 +18,21 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `required` | ``true`` |
 | `type` | `NumberConstructor` |
+| `required` | ``true`` |
 
-#### Defined in
+___
 
-components/PageNavigation.vue.d.ts:3
+### currentPage
+
+• **currentPage**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `NumberConstructor` |
+| `required` | ``true`` |
 
 ___
 
@@ -52,9 +44,5 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `required` | ``true`` |
 | `type` | `NumberConstructor` |
-
-#### Defined in
-
-components/PageNavigation.vue.d.ts:11
+| `required` | ``true`` |

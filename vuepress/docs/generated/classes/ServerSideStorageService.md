@@ -10,14 +10,14 @@
 
 - [constructor](ServerSideStorageService.md#constructor)
 
-### Properties
-
-- [options](ServerSideStorageService.md#options)
-
 ### Methods
 
 - [getGridState](ServerSideStorageService.md#getgridstate)
 - [setGridState](ServerSideStorageService.md#setgridstate)
+
+### Properties
+
+- [options](ServerSideStorageService.md#options)
 
 ## Constructors
 
@@ -35,20 +35,6 @@
 
 [`ServerSideStorageService`](ServerSideStorageService.md)
 
-#### Defined in
-
-Storage.d.ts:54
-
-## Properties
-
-### options
-
-• **options**: [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)
-
-#### Defined in
-
-Storage.d.ts:53
-
 ## Methods
 
 ### getGridState
@@ -62,10 +48,6 @@ Storage.d.ts:53
 #### Implementation of
 
 [StorageService](../interfaces/StorageService.md).[getGridState](../interfaces/StorageService.md#getgridstate)
-
-#### Defined in
-
-Storage.d.ts:55
 
 ___
 
@@ -87,6 +69,8 @@ ___
 
 [StorageService](../interfaces/StorageService.md).[setGridState](../interfaces/StorageService.md#setgridstate)
 
-#### Defined in
+## Properties
 
-Storage.d.ts:56
+### options
+
+• **options**: [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)

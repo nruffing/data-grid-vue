@@ -17,12 +17,8 @@
 
 | Name | Type |
 | :------ | :------ |
-| `required` | ``true`` |
 | `type` | `PropType`\<[`Column`](../interfaces/Column.md)\> |
-
-#### Defined in
-
-components/HeaderFilter.vue.d.ts:9
+| `required` | ``true`` |
 
 ___
 
@@ -34,10 +30,6 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `default` | `undefined` |
-| `required` | ``false`` |
 | `type` | `PropType`\<[`FilterCondition`](../interfaces/FilterCondition.md)\> |
-
-#### Defined in
-
-components/HeaderFilter.vue.d.ts:13
+| `required` | ``false`` |
+| `default` | `undefined` |

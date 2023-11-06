@@ -11,7 +11,3 @@
 ### dragonDropVueOptions
 
 • **dragonDropVueOptions**: `undefined` \| `DragonDropVueOptions`
-
-#### Defined in
-
-Plugin.d.ts:4

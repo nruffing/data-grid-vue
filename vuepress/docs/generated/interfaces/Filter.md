@@ -4,25 +4,17 @@
 
 ### Properties
 
-- [and](Filter.md#and)
 - [or](Filter.md#or)
+- [and](Filter.md#and)
 
 ## Properties
-
-### and
-
-• **and**: `undefined` \| [`Filter`](Filter.md)
-
-#### Defined in
-
-Filter.d.ts:25
-
-___
 
 ### or
 
 • **or**: [`FilterCondition`](FilterCondition.md)[]
 
-#### Defined in
+___
 
-Filter.d.ts:24
+### and
+
+• **and**: `undefined` \| [`Filter`](Filter.md)

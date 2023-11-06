@@ -236,7 +236,7 @@ interface Data {
   storageService: StorageService
 }
 
-/** @group Components */
+/** @group Data Grid Component */
 export default defineComponent({
   name: 'DataGridVue',
   components: {

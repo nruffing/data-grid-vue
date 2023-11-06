@@ -4,42 +4,18 @@
 
 ### Properties
 
-- [columnOrder](GridState.md#columnorder)
-- [externalFilter](GridState.md#externalfilter)
-- [filters](GridState.md#filters)
-- [hiddenFields](GridState.md#hiddenfields)
 - [pageSize](GridState.md#pagesize)
+- [hiddenFields](GridState.md#hiddenfields)
 - [sort](GridState.md#sort)
+- [filters](GridState.md#filters)
+- [externalFilter](GridState.md#externalfilter)
+- [columnOrder](GridState.md#columnorder)
 
 ## Properties
 
-### columnOrder
+### pageSize
 
-• **columnOrder**: `string`[]
-
-#### Defined in
-
-Storage.d.ts:13
-
-___
-
-### externalFilter
-
-• **externalFilter**: `undefined` \| [`Filter`](Filter.md)
-
-#### Defined in
-
-Storage.d.ts:12
-
-___
-
-### filters
-
-• **filters**: [`FilterCondition`](FilterCondition.md)[]
-
-#### Defined in
-
-Storage.d.ts:11
+• **pageSize**: `number`
 
 ___
 
@@ -47,26 +23,26 @@ ___
 
 • **hiddenFields**: `string`[]
 
-#### Defined in
-
-Storage.d.ts:9
-
-___
-
-### pageSize
-
-• **pageSize**: `number`
-
-#### Defined in
-
-Storage.d.ts:8
-
 ___
 
 ### sort
 
 • **sort**: [`Sort`](Sort.md)[]
 
-#### Defined in
+___
 
-Storage.d.ts:10
+### filters
+
+• **filters**: [`FilterCondition`](FilterCondition.md)[]
+
+___
+
+### externalFilter
+
+• **externalFilter**: `undefined` \| [`Filter`](Filter.md)
+
+___
+
+### columnOrder
+
+• **columnOrder**: `string`[]

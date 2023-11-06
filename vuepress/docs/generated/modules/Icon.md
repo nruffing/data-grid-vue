@@ -17,12 +17,8 @@
 
 | Name | Type |
 | :------ | :------ |
-| `required` | ``true`` |
 | `type` | `StringConstructor` |
-
-#### Defined in
-
-components/Icon.vue.d.ts:3
+| `required` | ``true`` |
 
 ___
 
@@ -34,10 +30,6 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `default` | `undefined` |
-| `required` | ``false`` |
 | `type` | `StringConstructor` |
-
-#### Defined in
-
-components/Icon.vue.d.ts:7
+| `required` | ``false`` |
+| `default` | `undefined` |

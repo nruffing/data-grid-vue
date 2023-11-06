@@ -4,98 +4,22 @@
 
 ### Properties
 
-- [allowColumnReorder](undefined)
-- [columns](undefined)
-- [customDataService](undefined)
-- [customStorageService](undefined)
 - [data](undefined)
-- [initialPageSize](undefined)
-- [localStorageType](undefined)
-- [pageSizes](undefined)
-- [paged](undefined)
 - [serverSideOptions](undefined)
-- [serverSideStorageOptions](undefined)
-- [showColumnSelection](undefined)
+- [customDataService](undefined)
+- [columns](undefined)
+- [allowColumnReorder](undefined)
+- [paged](undefined)
+- [initialPageSize](undefined)
+- [pageSizes](undefined)
 - [sortOptions](undefined)
+- [showColumnSelection](undefined)
+- [localStorageType](undefined)
 - [storageKey](undefined)
+- [serverSideStorageOptions](undefined)
+- [customStorageService](undefined)
 
 ## Properties
-
-### allowColumnReorder
-
-• **allowColumnReorder**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `default` | `boolean` |
-| `required` | ``false`` |
-| `type` | `BooleanConstructor` |
-
-#### Defined in
-
-components/DataGridVue.vue.d.ts:63
-
-___
-
-### columns
-
-• **columns**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `required` | ``true`` |
-| `type` | (`arrayLength`: `number`) => [`Column`](../interfaces/Column.md)[](...`items`: [`Column`](../interfaces/Column.md)[]) => [`Column`](../interfaces/Column.md)[](`arrayLength`: `number`) => [`Column`](../interfaces/Column.md)[](...`items`: [`Column`](../interfaces/Column.md)[]) => [`Column`](../interfaces/Column.md)[] |
-| `type.[species]` | `ArrayConstructor` |
-| `type.prototype` | `any`[] |
-| `type.from` | [object Object] |
-| `type.isArray` | [object Object] |
-| `type.of` | [object Object] |
-
-#### Defined in
-
-components/DataGridVue.vue.d.ts:46
-
-___
-
-### customDataService
-
-• **customDataService**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `default` | `undefined` |
-| `required` | ``false`` |
-| `type` | `PropType`\<[`DataService`](../interfaces/DataService.md)\> |
-
-#### Defined in
-
-components/DataGridVue.vue.d.ts:41
-
-___
-
-### customStorageService
-
-• **customStorageService**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `default` | `undefined` |
-| `required` | ``false`` |
-| `type` | `PropType`\<[`StorageService`](../interfaces/StorageService.md)\> |
-
-#### Defined in
-
-components/DataGridVue.vue.d.ts:121
-
-___
 
 ### data
 
@@ -109,90 +33,9 @@ test
 
 | Name | Type |
 | :------ | :------ |
-| `default` | `undefined` |
-| `required` | ``false`` |
 | `type` | `ArrayConstructor` |
-
-#### Defined in
-
-components/DataGridVue.vue.d.ts:31
-
-___
-
-### initialPageSize
-
-• **initialPageSize**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `default` | `number` |
 | `required` | ``false`` |
-| `type` | `NumberConstructor` |
-
-#### Defined in
-
-components/DataGridVue.vue.d.ts:73
-
-___
-
-### localStorageType
-
-• **localStorageType**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `default` | [`LocalStorageType`](../enums/LocalStorageType.md) |
-| `required` | ``false`` |
-| `type` | `NumberConstructor` |
-
-#### Defined in
-
-components/DataGridVue.vue.d.ts:106
-
-___
-
-### pageSizes
-
-• **pageSizes**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `default` | `number`[] |
-| `required` | ``false`` |
-| `type` | (`arrayLength`: `number`) => `Number`[](...`items`: `Number`[]) => `Number`[](`arrayLength`: `number`) => `Number`[](...`items`: `Number`[]) => `Number`[] |
-| `type.[species]` | `ArrayConstructor` |
-| `type.prototype` | `any`[] |
-| `type.from` | [object Object] |
-| `type.isArray` | [object Object] |
-| `type.of` | [object Object] |
-
-#### Defined in
-
-components/DataGridVue.vue.d.ts:78
-
-___
-
-### paged
-
-• **paged**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `default` | `boolean` |
-| `required` | ``false`` |
-| `type` | `BooleanConstructor` |
-
-#### Defined in
-
-components/DataGridVue.vue.d.ts:68
+| `default` | `undefined` |
 
 ___
 
@@ -204,49 +47,102 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `default` | `undefined` |
-| `required` | ``false`` |
 | `type` | `PropType`\<[`ServerSideDataServiceOptions`](../interfaces/ServerSideDataServiceOptions.md)\> |
-
-#### Defined in
-
-components/DataGridVue.vue.d.ts:36
-
-___
-
-### serverSideStorageOptions
-
-• **serverSideStorageOptions**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
+| `required` | ``false`` |
 | `default` | `undefined` |
-| `required` | ``false`` |
-| `type` | `PropType`\<[`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)\> |
-
-#### Defined in
-
-components/DataGridVue.vue.d.ts:116
 
 ___
 
-### showColumnSelection
+### customDataService
 
-• **showColumnSelection**: `Object`
+• **customDataService**: `Object`
 
 #### Type declaration
 
 | Name | Type |
 | :------ | :------ |
-| `default` | `boolean` |
+| `type` | `PropType`\<[`DataService`](../interfaces/DataService.md)\> |
 | `required` | ``false`` |
+| `default` | `undefined` |
+
+___
+
+### columns
+
+• **columns**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `type` | (`arrayLength`: `number`) => [`Column`](../interfaces/Column.md)[](...`items`: [`Column`](../interfaces/Column.md)[]) => [`Column`](../interfaces/Column.md)[](`arrayLength`: `number`) => [`Column`](../interfaces/Column.md)[](...`items`: [`Column`](../interfaces/Column.md)[]) => [`Column`](../interfaces/Column.md)[] |
+| `type.isArray` | [object Object] |
+| `type.prototype` | `any`[] |
+| `type.from` | [object Object] |
+| `type.of` | [object Object] |
+| `type.[species]` | `ArrayConstructor` |
+| `required` | ``true`` |
+
+___
+
+### allowColumnReorder
+
+• **allowColumnReorder**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
 | `type` | `BooleanConstructor` |
+| `required` | ``false`` |
+| `default` | `boolean` |
 
-#### Defined in
+___
 
-components/DataGridVue.vue.d.ts:101
+### paged
+
+• **paged**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `BooleanConstructor` |
+| `required` | ``false`` |
+| `default` | `boolean` |
+
+___
+
+### initialPageSize
+
+• **initialPageSize**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `NumberConstructor` |
+| `required` | ``false`` |
+| `default` | `number` |
+
+___
+
+### pageSizes
+
+• **pageSizes**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `type` | (`arrayLength`: `number`) => `Number`[](...`items`: `Number`[]) => `Number`[](`arrayLength`: `number`) => `Number`[](...`items`: `Number`[]) => `Number`[] |
+| `type.isArray` | [object Object] |
+| `type.prototype` | `any`[] |
+| `type.from` | [object Object] |
+| `type.of` | [object Object] |
+| `type.[species]` | `ArrayConstructor` |
+| `required` | ``false`` |
+| `default` | `number`[] |
 
 ___
 
@@ -258,13 +154,37 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `default` | `undefined` |
-| `required` | ``false`` |
 | `type` | `PropType`\<[`SortOptions`](../interfaces/SortOptions.md)\> |
+| `required` | ``false`` |
+| `default` | `undefined` |
 
-#### Defined in
+___
 
-components/DataGridVue.vue.d.ts:96
+### showColumnSelection
+
+• **showColumnSelection**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `BooleanConstructor` |
+| `required` | ``false`` |
+| `default` | `boolean` |
+
+___
+
+### localStorageType
+
+• **localStorageType**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `NumberConstructor` |
+| `required` | ``false`` |
+| `default` | [`LocalStorageType`](../enums/LocalStorageType.md) |
 
 ___
 
@@ -276,10 +196,34 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `default` | `string` |
-| `required` | ``false`` |
 | `type` | `StringConstructor` |
+| `required` | ``false`` |
+| `default` | `string` |
 
-#### Defined in
+___
 
-components/DataGridVue.vue.d.ts:111
+### serverSideStorageOptions
+
+• **serverSideStorageOptions**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)\> |
+| `required` | ``false`` |
+| `default` | `undefined` |
+
+___
+
+### customStorageService
+
+• **customStorageService**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`StorageService`](../interfaces/StorageService.md)\> |
+| `required` | ``false`` |
+| `default` | `undefined` |

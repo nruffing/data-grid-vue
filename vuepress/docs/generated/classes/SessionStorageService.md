@@ -10,14 +10,14 @@
 
 - [constructor](SessionStorageService.md#constructor)
 
-### Properties
-
-- [key](SessionStorageService.md#key)
-
 ### Methods
 
 - [getGridState](SessionStorageService.md#getgridstate)
 - [setGridState](SessionStorageService.md#setgridstate)
+
+### Properties
+
+- [key](SessionStorageService.md#key)
 
 ## Constructors
 
@@ -35,20 +35,6 @@
 
 [`SessionStorageService`](SessionStorageService.md)
 
-#### Defined in
-
-Storage.d.ts:22
-
-## Properties
-
-### key
-
-• **key**: `string`
-
-#### Defined in
-
-Storage.d.ts:21
-
 ## Methods
 
 ### getGridState
@@ -62,10 +48,6 @@ Storage.d.ts:21
 #### Implementation of
 
 [StorageService](../interfaces/StorageService.md).[getGridState](../interfaces/StorageService.md#getgridstate)
-
-#### Defined in
-
-Storage.d.ts:23
 
 ___
 
@@ -87,6 +69,8 @@ ___
 
 [StorageService](../interfaces/StorageService.md).[setGridState](../interfaces/StorageService.md#setgridstate)
 
-#### Defined in
+## Properties
 
-Storage.d.ts:24
+### key
+
+• **key**: `string`

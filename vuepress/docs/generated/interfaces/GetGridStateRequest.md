@@ -11,7 +11,3 @@
 ### userId
 
 • **userId**: `string` \| `number`
-
-#### Defined in
-
-Storage.d.ts:33

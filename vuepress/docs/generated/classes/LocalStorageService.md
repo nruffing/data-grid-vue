@@ -10,14 +10,14 @@
 
 - [constructor](LocalStorageService.md#constructor)
 
-### Properties
-
-- [key](LocalStorageService.md#key)
-
 ### Methods
 
 - [getGridState](LocalStorageService.md#getgridstate)
 - [setGridState](LocalStorageService.md#setgridstate)
+
+### Properties
+
+- [key](LocalStorageService.md#key)
 
 ## Constructors
 
@@ -35,20 +35,6 @@
 
 [`LocalStorageService`](LocalStorageService.md)
 
-#### Defined in
-
-Storage.d.ts:28
-
-## Properties
-
-### key
-
-• **key**: `string`
-
-#### Defined in
-
-Storage.d.ts:27
-
 ## Methods
 
 ### getGridState
@@ -62,10 +48,6 @@ Storage.d.ts:27
 #### Implementation of
 
 [StorageService](../interfaces/StorageService.md).[getGridState](../interfaces/StorageService.md#getgridstate)
-
-#### Defined in
-
-Storage.d.ts:29
 
 ___
 
@@ -87,6 +69,8 @@ ___
 
 [StorageService](../interfaces/StorageService.md).[setGridState](../interfaces/StorageService.md#setgridstate)
 
-#### Defined in
+## Properties
 
-Storage.d.ts:30
+### key
+
+• **key**: `string`

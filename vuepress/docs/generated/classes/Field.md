@@ -6,14 +6,14 @@
 
 - [constructor](Field.md#constructor)
 
+### Methods
+
+- [resolveValue](Field.md#resolvevalue)
+
 ### Properties
 
 - [fieldName](Field.md#fieldname)
 - [valueGetter](Field.md#valuegetter)
-
-### Methods
-
-- [resolveValue](Field.md#resolvevalue)
 
 ## Constructors
 
@@ -32,30 +32,6 @@
 
 [`Field`](Field.md)
 
-#### Defined in
-
-DataGridVue.d.ts:27
-
-## Properties
-
-### fieldName
-
-• **fieldName**: `string`
-
-#### Defined in
-
-DataGridVue.d.ts:25
-
-___
-
-### valueGetter
-
-• `Optional` **valueGetter**: [`FieldValueGetter`](../README.md#fieldvaluegetter)
-
-#### Defined in
-
-DataGridVue.d.ts:26
-
 ## Methods
 
 ### resolveValue
@@ -72,6 +48,14 @@ DataGridVue.d.ts:26
 
 `any`
 
-#### Defined in
+## Properties
 
-DataGridVue.d.ts:28
+### fieldName
+
+• **fieldName**: `string`
+
+___
+
+### valueGetter
+
+• `Optional` **valueGetter**: [`FieldValueGetter`](../README.md#fieldvaluegetter)

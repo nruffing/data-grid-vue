@@ -10,13 +10,13 @@
 
 - [constructor](ServerSideDataService.md#constructor)
 
-### Properties
-
-- [options](ServerSideDataService.md#options)
-
 ### Methods
 
 - [getPage](ServerSideDataService.md#getpage)
+
+### Properties
+
+- [options](ServerSideDataService.md#options)
 
 ## Constructors
 
@@ -33,20 +33,6 @@
 #### Returns
 
 [`ServerSideDataService`](ServerSideDataService.md)
-
-#### Defined in
-
-DataService.d.ts:34
-
-## Properties
-
-### options
-
-• **options**: [`ServerSideDataServiceOptions`](../interfaces/ServerSideDataServiceOptions.md)
-
-#### Defined in
-
-DataService.d.ts:33
 
 ## Methods
 
@@ -71,6 +57,8 @@ DataService.d.ts:33
 
 [DataService](../interfaces/DataService.md).[getPage](../interfaces/DataService.md#getpage)
 
-#### Defined in
+## Properties
 
-DataService.d.ts:35
+### options
+
+• **options**: [`ServerSideDataServiceOptions`](../interfaces/ServerSideDataServiceOptions.md)

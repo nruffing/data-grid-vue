@@ -4,36 +4,24 @@
 
 ### Properties
 
-- [dataType](Sort.md#datatype)
 - [fieldName](Sort.md#fieldname)
+- [dataType](Sort.md#datatype)
 - [type](Sort.md#type)
 
 ## Properties
-
-### dataType
-
-• **dataType**: [`DataType`](../enums/DataType.md)
-
-#### Defined in
-
-Sort.d.ts:12
-
-___
 
 ### fieldName
 
 • **fieldName**: `string`
 
-#### Defined in
+___
 
-Sort.d.ts:11
+### dataType
+
+• **dataType**: [`DataType`](../enums/DataType.md)
 
 ___
 
 ### type
 
 • **type**: [`SortType`](../enums/SortType.md)
-
-#### Defined in
-
-Sort.d.ts:13

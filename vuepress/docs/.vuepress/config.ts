@@ -9,7 +9,7 @@ const dgvStyleOverrideContents = await fs.readFile(path.resolve(__dirname, '../d
 
 export default defineUserConfig({
   lang: 'en-US',
-  title: 'Date Grid Vue',
+  title: 'Data Grid Vue',
   description:
     'Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control.',
   head: [
@@ -47,7 +47,7 @@ export default defineUserConfig({
         link: 'https://github.com/nruffing/data-grid-vue/releases',
       },
       {
-        text: 'Support',
+        text: 'Help',
         children: [
           {
             text: 'Report bug',

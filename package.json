@@ -1,18 +1,18 @@
 {
   "name": "data-grid-vue",
-  "version": "2.1.0",
-  "description": "Customizable native Vue3 data grid",
+  "version": "2.1.1",
+  "description": "Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control.",
   "license": "MIT",
   "author": {
     "name": "Nicholas Ruffing",
     "email": "nicholasruffing70@gmail.com"
   },
-  "homepage": "http://datagridvue.com",
+  "homepage": "https://datagridvue.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nruffing/data-grid-vue.git"
   },
-  "bugs": "https://github.com/nruffing/data-grid-vue/issues",
+  "bugs": "https://github.com/nruffing/data-grid-vue/issues/new?assignees=nruffing&labels=bug&projects=&template=bug_report.md&title=%5Bbug%5D",
   "keywords": [
     "datagrid",
     "data grid",

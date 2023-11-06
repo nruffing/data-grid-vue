@@ -23,10 +23,6 @@
 
 `Promise`\<`undefined` \| [`GridState`](GridState.md)\>
 
-#### Defined in
-
-Storage.d.ts:16
-
 ___
 
 ### setGridState
@@ -42,7 +38,3 @@ ___
 #### Returns
 
 `Promise`\<`void`\>
-
-#### Defined in
-
-Storage.d.ts:17

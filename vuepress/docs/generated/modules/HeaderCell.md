@@ -5,8 +5,8 @@
 ### Properties
 
 - [column](undefined)
-- [sort](undefined)
 - [sortable](undefined)
+- [sort](undefined)
 
 ## Properties
 
@@ -18,30 +18,8 @@
 
 | Name | Type |
 | :------ | :------ |
-| `required` | ``true`` |
 | `type` | `PropType`\<[`Column`](../interfaces/Column.md)\> |
-
-#### Defined in
-
-components/HeaderCell.vue.d.ts:6
-
-___
-
-### sort
-
-• **sort**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `default` | `undefined` |
-| `required` | ``false`` |
-| `type` | `PropType`\<[`Sort`](../interfaces/Sort.md)[]\> |
-
-#### Defined in
-
-components/HeaderCell.vue.d.ts:15
+| `required` | ``true`` |
 
 ___
 
@@ -53,10 +31,20 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `default` | `boolean` |
-| `required` | ``false`` |
 | `type` | `BooleanConstructor` |
+| `required` | ``false`` |
+| `default` | `boolean` |
 
-#### Defined in
+___
 
-components/HeaderCell.vue.d.ts:10
+### sort
+
+• **sort**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`Sort`](../interfaces/Sort.md)[]\> |
+| `required` | ``false`` |
+| `default` | `undefined` |

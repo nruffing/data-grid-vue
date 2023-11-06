@@ -16,9 +16,5 @@
 
 | Name | Type |
 | :------ | :------ |
-| `required` | ``true`` |
 | `type` | `PropType`\<[`Column`](../interfaces/Column.md)\> |
-
-#### Defined in
-
-components/ColumnSelectionItem.vue.d.ts:5
+| `required` | ``true`` |

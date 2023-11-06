@@ -4,51 +4,23 @@
 
 ### Enumeration Members
 
+- [none](DataType.md#none)
 - [alphanumeric](DataType.md#alphanumeric)
+- [number](DataType.md#number)
 - [date](DataType.md#date)
 - [dateTime](DataType.md#datetime)
-- [none](DataType.md#none)
-- [number](DataType.md#number)
 
 ## Enumeration Members
-
-### alphanumeric
-
-• **alphanumeric** = ``1``
-
-#### Defined in
-
-DataGridVue.d.ts:4
-
-___
-
-### date
-
-• **date** = ``3``
-
-#### Defined in
-
-DataGridVue.d.ts:6
-
-___
-
-### dateTime
-
-• **dateTime** = ``4``
-
-#### Defined in
-
-DataGridVue.d.ts:7
-
-___
 
 ### none
 
 • **none** = ``0``
 
-#### Defined in
+___
 
-DataGridVue.d.ts:3
+### alphanumeric
+
+• **alphanumeric** = ``1``
 
 ___
 
@@ -56,6 +28,14 @@ ___
 
 • **number** = ``2``
 
-#### Defined in
+___
 
-DataGridVue.d.ts:5
+### date
+
+• **date** = ``3``
+
+___
+
+### dateTime
+
+• **dateTime** = ``4``

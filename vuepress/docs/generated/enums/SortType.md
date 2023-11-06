@@ -13,16 +13,8 @@
 
 • **ascending** = ``0``
 
-#### Defined in
-
-Sort.d.ts:7
-
 ___
 
 ### descending
 
 • **descending** = ``1``
-
-#### Defined in
-
-Sort.d.ts:8

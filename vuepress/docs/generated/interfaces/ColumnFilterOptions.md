@@ -11,7 +11,3 @@
 ### operators
 
 • `Optional` **operators**: [`FilterOperator`](../enums/FilterOperator.md)[]
-
-#### Defined in
-
-DataGridVue.d.ts:21
