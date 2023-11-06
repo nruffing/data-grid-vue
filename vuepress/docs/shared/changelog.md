@@ -38,5 +38,5 @@
 - v2.1.0
   - Add css variable for input/select font size
 - v2.1.1
- - Readme/documentation improvements
- - CSS improvements
+  - Readme/documentation improvements
+  - CSS improvements
