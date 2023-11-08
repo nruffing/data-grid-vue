@@ -1,33 +1,31 @@
 # Class: ServerSideStorageService
 
+## Contents
+
+- [Implements](ServerSideStorageService.md#implements)
+- [Constructors](ServerSideStorageService.md#constructors)
+  - [new ServerSideStorageService(options)](ServerSideStorageService.md#new-serversidestorageserviceoptions)
+- [Methods](ServerSideStorageService.md#methods)
+  - [getGridState()](ServerSideStorageService.md#getgridstate)
+  - [setGridState()](ServerSideStorageService.md#setgridstate)
+- [Properties](ServerSideStorageService.md#properties)
+  - [options](ServerSideStorageService.md#options)
+
 ## Implements
 
 - [`StorageService`](../interfaces/StorageService.md)
 
-## Table of contents
-
-### Constructors
-
-- [constructor](ServerSideStorageService.md#constructor)
-
-### Methods
-
-- [getGridState](ServerSideStorageService.md#getgridstate)
-- [setGridState](ServerSideStorageService.md#setgridstate)
-
-### Properties
-
-- [options](ServerSideStorageService.md#options)
-
 ## Constructors
 
-### constructor
+### new ServerSideStorageService(options)
 
-• **new ServerSideStorageService**(`options`): [`ServerSideStorageService`](ServerSideStorageService.md)
+```ts
+new ServerSideStorageService(options): ServerSideStorageService
+```
 
 #### Parameters
 
-| Name | Type |
+| Parameter | Type |
 | :------ | :------ |
 | `options` | [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md) |
 
@@ -37,40 +35,50 @@
 
 ## Methods
 
-### getGridState
+### getGridState()
 
-▸ **getGridState**(): `Promise`\<`undefined` \| [`GridState`](../interfaces/GridState.md)\>
+```ts
+getGridState(): Promise<undefined | GridState>
+```
 
 #### Returns
 
-`Promise`\<`undefined` \| [`GridState`](../interfaces/GridState.md)\>
+[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`undefined` \| [`GridState`](../interfaces/GridState.md)\>
 
 #### Implementation of
 
-[StorageService](../interfaces/StorageService.md).[getGridState](../interfaces/StorageService.md#getgridstate)
+[`StorageService`](../interfaces/StorageService.md).[`getGridState`](../interfaces/StorageService.md#getgridstate)
 
-___
+***
 
-### setGridState
+### setGridState()
 
-▸ **setGridState**(`gridState`): `Promise`\<`void`\>
+```ts
+setGridState(gridState): Promise<void>
+```
 
 #### Parameters
 
-| Name | Type |
+| Parameter | Type |
 | :------ | :------ |
 | `gridState` | [`GridState`](../interfaces/GridState.md) |
 
 #### Returns
 
-`Promise`\<`void`\>
+[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`void`\>
 
 #### Implementation of
 
-[StorageService](../interfaces/StorageService.md).[setGridState](../interfaces/StorageService.md#setgridstate)
+[`StorageService`](../interfaces/StorageService.md).[`setGridState`](../interfaces/StorageService.md#setgridstate)
 
 ## Properties
 
 ### options
 
-• **options**: [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)
+```ts
+options: ServerSideStorageServiceOptions;
+```
+
+***
+
+Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

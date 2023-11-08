@@ -25,7 +25,10 @@ interface Data {
   operator: FilterOperator
 }
 
-/** @group Components */
+/**
+ * @group Components
+ * @description The filter for a column.
+ */
 export default defineComponent({
   name: 'HeaderFilter',
   components: {
@@ -37,10 +40,17 @@ export default defineComponent({
     }
   },
   props: {
+    /**
+     * @description The {@link Column} currently being rendered.
+     */
     column: {
       type: Object as PropType<Column>,
       required: true,
     },
+    /**
+     * @description The {@link FilterCondition} for the current column.
+     * @defaultValue undefined
+     */
     initialFilterCondition: {
       type: Object as PropType<FilterCondition>,
       required: false,

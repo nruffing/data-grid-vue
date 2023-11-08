@@ -1,13 +1,18 @@
 # Interface: FilterOptions
 
-## Table of contents
+## Contents
 
-### Properties
-
-- [filterable](FilterOptions.md#filterable)
+- [Properties](FilterOptions.md#properties)
+  - [filterable](FilterOptions.md#filterable)
 
 ## Properties
 
 ### filterable
 
-• **filterable**: `boolean`
+```ts
+filterable: boolean;
+```
+
+***
+
+Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

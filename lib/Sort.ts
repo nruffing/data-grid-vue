@@ -1,18 +1,47 @@
 import { DataType } from './DataGridVue'
 
+/**
+ * @description Grid-level sort options. The grid must be set as sortable for any
+ *  column level sort options to take effect.
+ */
 export interface SortOptions {
+  /**
+   * @description Whether the grid should be sortable.
+   */
   sortable: boolean
+
+  /**
+   * @description Whether more then one column can be sorted at once.
+   */
   multiColumn: boolean
 }
 
+/**
+ * @description Whether a sort is ascending or descending.
+ */
 export enum SortType {
   ascending = 0,
   descending = 1,
 }
 
+/**
+ * @description Column sort definition.
+ */
 export interface Sort {
+  /**
+   * @description The {@link Column}.{@link Field.fieldName} that the data is being sorted by.
+   */
   fieldName: string
+
+  /**
+   * @description The {@link Column.dataType} for the column being sorted.
+   * @see {@link DataType}
+   */
   dataType: DataType
+
+  /**
+   * @description The {@link SortType} for the sort (i.e. ascending or descending).
+   */
   type: SortType
 }
 

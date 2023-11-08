@@ -40,3 +40,7 @@
 - v2.1.1
   - Readme/documentation improvements
   - CSS improvements
+- v2.1.2
+  - Fix for sorting and filtering not working when the data grid is not configured to be paged.
+  - Fix Icon component import in HeaderCell
+  - Documentation improvements

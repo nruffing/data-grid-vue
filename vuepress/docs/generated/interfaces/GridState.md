@@ -1,48 +1,63 @@
 # Interface: GridState
 
-## Table of contents
+## Contents
 
-### Properties
-
-- [pageSize](GridState.md#pagesize)
-- [hiddenFields](GridState.md#hiddenfields)
-- [sort](GridState.md#sort)
-- [filters](GridState.md#filters)
-- [externalFilter](GridState.md#externalfilter)
-- [columnOrder](GridState.md#columnorder)
+- [Properties](GridState.md#properties)
+  - [pageSize](GridState.md#pagesize)
+  - [hiddenFields](GridState.md#hiddenfields)
+  - [sort](GridState.md#sort)
+  - [filters](GridState.md#filters)
+  - [externalFilter](GridState.md#externalfilter)
+  - [columnOrder](GridState.md#columnorder)
 
 ## Properties
 
 ### pageSize
 
-• **pageSize**: `number`
+```ts
+pageSize: number;
+```
 
-___
+***
 
 ### hiddenFields
 
-• **hiddenFields**: `string`[]
+```ts
+hiddenFields: string[];
+```
 
-___
+***
 
 ### sort
 
-• **sort**: [`Sort`](Sort.md)[]
+```ts
+sort: Sort[];
+```
 
-___
+***
 
 ### filters
 
-• **filters**: [`FilterCondition`](FilterCondition.md)[]
+```ts
+filters: FilterCondition[];
+```
 
-___
+***
 
 ### externalFilter
 
-• **externalFilter**: `undefined` \| [`Filter`](Filter.md)
+```ts
+externalFilter: undefined | Filter;
+```
 
-___
+***
 
 ### columnOrder
 
-• **columnOrder**: `string`[]
+```ts
+columnOrder: string[];
+```
+
+***
+
+Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

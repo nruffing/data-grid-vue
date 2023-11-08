@@ -1,40 +1,41 @@
 # Interface: StorageService
 
-## Implemented by
+## Contents
 
-- [`LocalStorageService`](../classes/LocalStorageService.md)
-- [`ServerSideStorageService`](../classes/ServerSideStorageService.md)
-- [`SessionStorageService`](../classes/SessionStorageService.md)
-
-## Table of contents
-
-### Methods
-
-- [getGridState](StorageService.md#getgridstate)
-- [setGridState](StorageService.md#setgridstate)
+- [Methods](StorageService.md#methods)
+  - [getGridState()](StorageService.md#getgridstate)
+  - [setGridState()](StorageService.md#setgridstate)
 
 ## Methods
 
-### getGridState
+### getGridState()
 
-▸ **getGridState**(): `Promise`\<`undefined` \| [`GridState`](GridState.md)\>
+```ts
+getGridState(): Promise<undefined | GridState>
+```
 
 #### Returns
 
-`Promise`\<`undefined` \| [`GridState`](GridState.md)\>
+[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`undefined` \| [`GridState`](GridState.md)\>
 
-___
+***
 
-### setGridState
+### setGridState()
 
-▸ **setGridState**(`gridState`): `Promise`\<`void`\>
+```ts
+setGridState(gridState): Promise<void>
+```
 
 #### Parameters
 
-| Name | Type |
+| Parameter | Type |
 | :------ | :------ |
 | `gridState` | [`GridState`](GridState.md) |
 
 #### Returns
 
-`Promise`\<`void`\>
+[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`void`\>
+
+***
+
+Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

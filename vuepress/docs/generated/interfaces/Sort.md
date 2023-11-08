@@ -1,27 +1,57 @@
 # Interface: Sort
 
-## Table of contents
+## Contents
 
-### Properties
+- [Description](Sort.md#description)
+- [Properties](Sort.md#properties)
+  - [fieldName](Sort.md#fieldname)
+  - [dataType](Sort.md#datatype)
+  - [type](Sort.md#type)
 
-- [fieldName](Sort.md#fieldname)
-- [dataType](Sort.md#datatype)
-- [type](Sort.md#type)
+## Description
+
+Column sort definition.
 
 ## Properties
 
 ### fieldName
 
-• **fieldName**: `string`
+```ts
+fieldName: string;
+```
 
-___
+#### Description
+
+The [Column](Column.md).[Field.fieldName](../classes/Field.md#fieldname) that the data is being sorted by.
+
+***
 
 ### dataType
 
-• **dataType**: [`DataType`](../enums/DataType.md)
+```ts
+dataType: DataType;
+```
 
-___
+#### Description
+
+The [Column.dataType](Column.md#datatype) for the column being sorted.
+
+#### See
+
+[DataType](../enumerations/DataType.md)
+
+***
 
 ### type
 
-• **type**: [`SortType`](../enums/SortType.md)
+```ts
+type: SortType;
+```
+
+#### Description
+
+The [SortType](../enumerations/SortType.md) for the sort (i.e. ascending or descending).
+
+***
+
+Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

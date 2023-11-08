@@ -49,21 +49,36 @@
 import { defineComponent } from 'vue'
 import Icon from './Icon.vue'
 
-/** @group Components */
+/**
+ * @group Components
+ * @description The page navigation in the grids footer.
+ */
 export default defineComponent({
   name: 'PageNavigation',
   components: {
     Icon,
   },
   props: {
+    /**
+     * @description The current page size.
+     */
     pageSize: {
       type: Number,
       required: true,
     },
+
+    /**
+     * @description The current page number starting with `1` for the first page.
+     */
     currentPage: {
       type: Number,
       required: true,
     },
+
+    /**
+     * @description The total number of items in the grid after all filter conditions
+     * have been applied.
+     */
     totalItems: {
       type: Number,
       required: true,

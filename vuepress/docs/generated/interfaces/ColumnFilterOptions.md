@@ -1,13 +1,18 @@
 # Interface: ColumnFilterOptions
 
-## Table of contents
+## Contents
 
-### Properties
-
-- [operators](ColumnFilterOptions.md#operators)
+- [Properties](ColumnFilterOptions.md#properties)
+  - [operators](ColumnFilterOptions.md#operators)
 
 ## Properties
 
 ### operators
 
-• `Optional` **operators**: [`FilterOperator`](../enums/FilterOperator.md)[]
+```ts
+operators?: FilterOperator[];
+```
+
+***
+
+Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

@@ -1,32 +1,29 @@
 # Class: Field
 
-## Table of contents
+## Contents
 
-### Constructors
-
-- [constructor](Field.md#constructor)
-
-### Methods
-
-- [resolveValue](Field.md#resolvevalue)
-
-### Properties
-
-- [fieldName](Field.md#fieldname)
-- [valueGetter](Field.md#valuegetter)
+- [Constructors](Field.md#constructors)
+  - [new Field(fieldName, valueGetter)](Field.md#new-fieldfieldname-valuegetter)
+- [Methods](Field.md#methods)
+  - [resolveValue()](Field.md#resolvevalue)
+- [Properties](Field.md#properties)
+  - [fieldName](Field.md#fieldname)
+  - [valueGetter](Field.md#valuegetter)
 
 ## Constructors
 
-### constructor
+### new Field(fieldName, valueGetter)
 
-• **new Field**(`fieldName`, `valueGetter?`): [`Field`](Field.md)
+```ts
+new Field(fieldName, valueGetter?): Field
+```
 
 #### Parameters
 
-| Name | Type |
+| Parameter | Type |
 | :------ | :------ |
 | `fieldName` | `string` |
-| `valueGetter?` | [`FieldValueGetter`](../README.md#fieldvaluegetter) |
+| `valueGetter`? | [`FieldValueGetter`](../type-aliases/FieldValueGetter.md) |
 
 #### Returns
 
@@ -34,13 +31,15 @@
 
 ## Methods
 
-### resolveValue
+### resolveValue()
 
-▸ **resolveValue**(`dataItem`): `any`
+```ts
+resolveValue(dataItem): any
+```
 
 #### Parameters
 
-| Name | Type |
+| Parameter | Type |
 | :------ | :------ |
 | `dataItem` | `any` |
 
@@ -52,10 +51,18 @@
 
 ### fieldName
 
-• **fieldName**: `string`
+```ts
+fieldName: string;
+```
 
-___
+***
 
 ### valueGetter
 
-• `Optional` **valueGetter**: [`FieldValueGetter`](../README.md#fieldvaluegetter)
+```ts
+valueGetter?: FieldValueGetter;
+```
+
+***
+
+Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

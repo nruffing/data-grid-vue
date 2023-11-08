@@ -1,20 +1,27 @@
 # Interface: PageData
 
-## Table of contents
+## Contents
 
-### Properties
-
-- [totalItems](PageData.md#totalitems)
-- [dataItems](PageData.md#dataitems)
+- [Properties](PageData.md#properties)
+  - [totalItems](PageData.md#totalitems)
+  - [dataItems](PageData.md#dataitems)
 
 ## Properties
 
 ### totalItems
 
-• **totalItems**: `number`
+```ts
+totalItems: number;
+```
 
-___
+***
 
 ### dataItems
 
-• **dataItems**: `any`[]
+```ts
+dataItems: any[];
+```
+
+***
+
+Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

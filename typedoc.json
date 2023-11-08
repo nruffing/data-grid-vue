@@ -5,10 +5,15 @@
   "cleanOutputDir": true,
   "entryPoints": ["./dist/types/main.d.ts"],
   "out": "./vuepress/docs/generated",
-  "plugin": ["./typedoc-vue.js", "typedoc-plugin-markdown"],
+  "plugin": ["./typedoc-vue.js", "typedoc-plugin-markdown", "typedoc-plugin-mdn-links"],
   "readme": "none",
   "hideBreadcrumbs": true,
   "groupOrder": ["Data Grid Component", "Components", "*"],
   "sort": ["source-order"],
+  "useCodeBlocks": true,
+  "expandObjects": true,
+  "parametersFormat": "table",
+  "hidePageHeader": true,
+  "typeDeclarationFormat": "table",
   "disableSources": true
 }

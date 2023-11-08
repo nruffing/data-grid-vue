@@ -1,20 +1,27 @@
 # Interface: SetGridStateRequest
 
-## Table of contents
+## Contents
 
-### Properties
-
-- [userId](SetGridStateRequest.md#userid)
-- [gridState](SetGridStateRequest.md#gridstate)
+- [Properties](SetGridStateRequest.md#properties)
+  - [userId](SetGridStateRequest.md#userid)
+  - [gridState](SetGridStateRequest.md#gridstate)
 
 ## Properties
 
 ### userId
 
-• **userId**: `string` \| `number`
+```ts
+userId: string | number;
+```
 
-___
+***
 
 ### gridState
 
-• **gridState**: [`GridState`](GridState.md)
+```ts
+gridState: GridState;
+```
+
+***
+
+Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

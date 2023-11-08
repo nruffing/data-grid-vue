@@ -1,33 +1,31 @@
 # Class: SessionStorageService
 
+## Contents
+
+- [Implements](SessionStorageService.md#implements)
+- [Constructors](SessionStorageService.md#constructors)
+  - [new SessionStorageService(key)](SessionStorageService.md#new-sessionstorageservicekey)
+- [Methods](SessionStorageService.md#methods)
+  - [getGridState()](SessionStorageService.md#getgridstate)
+  - [setGridState()](SessionStorageService.md#setgridstate)
+- [Properties](SessionStorageService.md#properties)
+  - [key](SessionStorageService.md#key)
+
 ## Implements
 
 - [`StorageService`](../interfaces/StorageService.md)
 
-## Table of contents
-
-### Constructors
-
-- [constructor](SessionStorageService.md#constructor)
-
-### Methods
-
-- [getGridState](SessionStorageService.md#getgridstate)
-- [setGridState](SessionStorageService.md#setgridstate)
-
-### Properties
-
-- [key](SessionStorageService.md#key)
-
 ## Constructors
 
-### constructor
+### new SessionStorageService(key)
 
-• **new SessionStorageService**(`key`): [`SessionStorageService`](SessionStorageService.md)
+```ts
+new SessionStorageService(key): SessionStorageService
+```
 
 #### Parameters
 
-| Name | Type |
+| Parameter | Type |
 | :------ | :------ |
 | `key` | `string` |
 
@@ -37,40 +35,50 @@
 
 ## Methods
 
-### getGridState
+### getGridState()
 
-▸ **getGridState**(): `Promise`\<`undefined` \| [`GridState`](../interfaces/GridState.md)\>
+```ts
+getGridState(): Promise<undefined | GridState>
+```
 
 #### Returns
 
-`Promise`\<`undefined` \| [`GridState`](../interfaces/GridState.md)\>
+[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`undefined` \| [`GridState`](../interfaces/GridState.md)\>
 
 #### Implementation of
 
-[StorageService](../interfaces/StorageService.md).[getGridState](../interfaces/StorageService.md#getgridstate)
+[`StorageService`](../interfaces/StorageService.md).[`getGridState`](../interfaces/StorageService.md#getgridstate)
 
-___
+***
 
-### setGridState
+### setGridState()
 
-▸ **setGridState**(`gridState`): `Promise`\<`void`\>
+```ts
+setGridState(gridState): Promise<void>
+```
 
 #### Parameters
 
-| Name | Type |
+| Parameter | Type |
 | :------ | :------ |
 | `gridState` | [`GridState`](../interfaces/GridState.md) |
 
 #### Returns
 
-`Promise`\<`void`\>
+[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`void`\>
 
 #### Implementation of
 
-[StorageService](../interfaces/StorageService.md).[setGridState](../interfaces/StorageService.md#setgridstate)
+[`StorageService`](../interfaces/StorageService.md).[`setGridState`](../interfaces/StorageService.md#setgridstate)
 
 ## Properties
 
 ### key
 
-• **key**: `string`
+```ts
+key: string;
+```
+
+***
+
+Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

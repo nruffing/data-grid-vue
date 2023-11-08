@@ -1,20 +1,27 @@
 # Interface: Filter
 
-## Table of contents
+## Contents
 
-### Properties
-
-- [or](Filter.md#or)
-- [and](Filter.md#and)
+- [Properties](Filter.md#properties)
+  - [or](Filter.md#or)
+  - [and](Filter.md#and)
 
 ## Properties
 
 ### or
 
-• **or**: [`FilterCondition`](FilterCondition.md)[]
+```ts
+or: FilterCondition[];
+```
 
-___
+***
 
 ### and
 
-• **and**: `undefined` \| [`Filter`](Filter.md)
+```ts
+and: undefined | Filter;
+```
+
+***
+
+Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

@@ -1,13 +1,18 @@
 # Interface: GetGridStateRequest
 
-## Table of contents
+## Contents
 
-### Properties
-
-- [userId](GetGridStateRequest.md#userid)
+- [Properties](GetGridStateRequest.md#properties)
+  - [userId](GetGridStateRequest.md#userid)
 
 ## Properties
 
 ### userId
 
-• **userId**: `string` \| `number`
+```ts
+userId: string | number;
+```
+
+***
+
+Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

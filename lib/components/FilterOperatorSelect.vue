@@ -20,24 +20,40 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 import { FilterOperator } from '../Filter'
 import Formatter from '../Formatter'
 import Icon from './Icon.vue'
 
-/** @group Components */
+/**
+ * @group Components
+ * @description The filter operator select control that is displayed when a column
+ * is configured with more then one filter operator.
+ * @see {@link Column.filterable}
+ * @see {@link Column.filterOptions}
+ * @see {@link FilterOperator}
+ */
 export default defineComponent({
   name: 'FilterOperatorSelect',
   components: {
     Icon,
   },
   props: {
+    /**
+     * @description The {@link FilterOperator} values configured on the {@link Column}.
+     */
     operators: {
-      type: Array<FilterOperator>,
+      type: Array as PropType<FilterOperator[]>,
       required: true,
     },
+    /**
+     * @description The selected {@link FilterOperator}.
+     * @defaultValue FilterOperator.equals
+     */
     modelValue: {
-      type: Number,
+      type: Number as PropType<FilterOperator>,
+      required: false,
+      default: FilterOperator.equals,
     },
   },
   methods: {

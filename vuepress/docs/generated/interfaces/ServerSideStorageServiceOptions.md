@@ -1,55 +1,72 @@
 # Interface: ServerSideStorageServiceOptions
 
-## Table of contents
+## Contents
 
-### Properties
-
-- [userId](ServerSideStorageServiceOptions.md#userid)
-- [getPostRoute](ServerSideStorageServiceOptions.md#getpostroute)
-- [beforeGetRequest](ServerSideStorageServiceOptions.md#beforegetrequest)
-- [getResponseHandler](ServerSideStorageServiceOptions.md#getresponsehandler)
-- [setPostRoute](ServerSideStorageServiceOptions.md#setpostroute)
-- [beforeSetRequest](ServerSideStorageServiceOptions.md#beforesetrequest)
-- [setResponseHandler](ServerSideStorageServiceOptions.md#setresponsehandler)
+- [Properties](ServerSideStorageServiceOptions.md#properties)
+  - [userId](ServerSideStorageServiceOptions.md#userid)
+  - [getPostRoute](ServerSideStorageServiceOptions.md#getpostroute)
+  - [beforeGetRequest](ServerSideStorageServiceOptions.md#beforegetrequest)
+  - [getResponseHandler](ServerSideStorageServiceOptions.md#getresponsehandler)
+  - [setPostRoute](ServerSideStorageServiceOptions.md#setpostroute)
+  - [beforeSetRequest](ServerSideStorageServiceOptions.md#beforesetrequest)
+  - [setResponseHandler](ServerSideStorageServiceOptions.md#setresponsehandler)
 
 ## Properties
 
 ### userId
 
-• **userId**: `string` \| `number`
+```ts
+userId: string | number;
+```
 
-___
+***
 
 ### getPostRoute
 
-• `Optional` **getPostRoute**: `string` \| `URL`
+```ts
+getPostRoute?: string | URL;
+```
 
-___
+***
 
 ### beforeGetRequest
 
-• `Optional` **beforeGetRequest**: [`BeforeGetRequestHandler`](../README.md#beforegetrequesthandler)
+```ts
+beforeGetRequest?: BeforeGetRequestHandler;
+```
 
-___
+***
 
 ### getResponseHandler
 
-• `Optional` **getResponseHandler**: [`GetResponseHandler`](../README.md#getresponsehandler)
+```ts
+getResponseHandler?: GetResponseHandler;
+```
 
-___
+***
 
 ### setPostRoute
 
-• `Optional` **setPostRoute**: `string` \| `URL`
+```ts
+setPostRoute?: string | URL;
+```
 
-___
+***
 
 ### beforeSetRequest
 
-• `Optional` **beforeSetRequest**: [`BeforeGetRequestHandler`](../README.md#beforegetrequesthandler)
+```ts
+beforeSetRequest?: BeforeGetRequestHandler;
+```
 
-___
+***
 
 ### setResponseHandler
 
-• `Optional` **setResponseHandler**: [`GetResponseHandler`](../README.md#getresponsehandler)
+```ts
+setResponseHandler?: GetResponseHandler;
+```
+
+***
+
+Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

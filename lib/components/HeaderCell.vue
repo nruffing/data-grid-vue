@@ -28,19 +28,36 @@ import { type Sort, SortType } from '../Sort'
 import Icon from './Icon.vue'
 import Formatter from '../Formatter'
 
-/** @group Components */
+/**
+ * @group Components
+ * @description The header cell for each column.
+ */
 export default defineComponent({
   name: 'HeaderCell',
+  components: {
+    Icon,
+  },
   props: {
+    /**
+     * @description The {@link Column} being rendered.
+     */
     column: {
       type: Object as PropType<Column>,
       required: true,
     },
+    /**
+     * @description Whether sorting is enabled at the grid-level.
+     * @defaultValue false
+     */
     sortable: {
       type: Boolean,
       required: false,
       default: false,
     },
+    /**
+     * @description The current sort for the column or `undefined` if the column is not sorted.
+     * @defaultValue undefined
+     */
     sort: {
       type: Object as PropType<Sort[]>,
       required: false,

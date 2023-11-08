@@ -1,34 +1,45 @@
 # Interface: FilterCondition
 
-## Table of contents
+## Contents
 
-### Properties
-
-- [fieldName](FilterCondition.md#fieldname)
-- [operator](FilterCondition.md#operator)
-- [dataType](FilterCondition.md#datatype)
-- [value](FilterCondition.md#value)
+- [Properties](FilterCondition.md#properties)
+  - [fieldName](FilterCondition.md#fieldname)
+  - [operator](FilterCondition.md#operator)
+  - [dataType](FilterCondition.md#datatype)
+  - [value](FilterCondition.md#value)
 
 ## Properties
 
 ### fieldName
 
-• **fieldName**: `string`
+```ts
+fieldName: string;
+```
 
-___
+***
 
 ### operator
 
-• **operator**: [`FilterOperator`](../enums/FilterOperator.md)
+```ts
+operator: FilterOperator;
+```
 
-___
+***
 
 ### dataType
 
-• **dataType**: [`DataType`](../enums/DataType.md)
+```ts
+dataType: DataType;
+```
 
-___
+***
 
 ### value
 
-• **value**: `undefined` \| `string`
+```ts
+value: undefined | string;
+```
+
+***
+
+Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

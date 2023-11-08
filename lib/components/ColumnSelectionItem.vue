@@ -18,10 +18,17 @@ import { type PropType, defineComponent } from 'vue'
 import type { Column } from '../DataGridVue'
 import Formatter from '../Formatter'
 
-/**@group Components */
+/**
+ * @group Components
+ * @description Column toggle item displayed in the column selected menu.
+ * @see {@link DataGridVueGrid.showColumnSelection}
+ */
 export default defineComponent({
   name: 'ColumnSelectionItem',
   props: {
+    /**
+     * @description The {@link Column} to show or hide.
+     */
     column: {
       type: Object as PropType<Column>,
       required: true,

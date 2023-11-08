@@ -236,7 +236,10 @@ interface Data {
   storageService: StorageService
 }
 
-/** @group Data Grid Component */
+/**
+ * @group Data Grid Component
+ * @description Main entrypoint component to render a data grid.
+ */
 export default defineComponent({
   name: 'DataGridVue',
   components: {
@@ -247,71 +250,176 @@ export default defineComponent({
     ColumnSelectionItem,
   },
   props: {
-    /** @param data test */
+    /**
+     * @description Array of objects to display in the data grid when using the built-in {@link ClientSideDataService}.
+     * This prop is required unless serverSideOptions or customDataService is supplied. The order of precedence
+     * is {@link customDataService}, {@link serverSideOptions}, and then {@link data}.
+     * The data grid will not react and rerender when this property changes. If that functionaly is needed it is recommended
+     * to leverage `v-if` to force a new component instance to render.
+     * @defaultValue undefined
+     */
     data: {
-      type: Array,
+      type: Array as PropType<any[]>,
       required: false,
       default: undefined,
     },
+
+    /**
+     * @description Options to configure the built-in server-side data service including the POST url and optional
+     * callbacks to alter the data format of the request and response allowing. This allows the built-in data service
+     * to handle the data contract of any server. {@link ServerSideDataService} is used unless {@link customDataService}
+     * is also specified.
+     * @see {@link https://www.nuget.org/packages/DataGridVueDotnet/0.0.1-alpha | dotnet IQueryable helpers}
+     * @defaultValue undefined
+     */
     serverSideOptions: {
       type: Object as PropType<ServerSideDataServiceOptions>,
       required: false,
       default: undefined,
     },
+
+    /**
+     * @description Custom implementation of {@link DataService} to supply the grid's data. When this is specified
+     * {@link data} and {@link serverSideOptions} are ignored.
+     * @defaultValue undefined
+     */
     customDataService: {
       type: Object as PropType<DataService>,
       required: false,
       default: undefined,
     },
+
+    /**
+     * @description {@link Column} definitions to configure data grid columns including header title, column width, custom data getter,
+     * and column specific filtering and sorting options. It is recommended to supply an array of objects with `v-model:columns` since
+     * that is required for column reordering and allowing users to show/hide specific columns to rerender the columns.
+     * {@link Column} objects will not be mutated but a new array will be emitted with the `update:columns` event and that needs to trigger
+     * this property to get an updated value. The grid will react to any change to this prop which can be leveraged to implement custom
+     * functionality to do things like allowing users to add/remove columns.
+     */
     columns: {
-      type: Array<Column>,
+      type: Array as PropType<Column[]>,
       required: true,
     },
+
+    /**
+     * @description Whether to allow columns to be reordered using drag-and-drop
+     * powered by {@link https://www.npmjs.com/package/dragon-drop-vue | drag-drop-vue}.
+     * In order for columns to rerender after dropping {@link columns} should be passed using `v-model:columns`.
+     * @defaultValue false
+     */
     allowColumnReorder: {
       type: Boolean,
       required: false,
       default: false,
     },
+
+    /**
+     * @description Whether the data grid should be paged. When this is `false` {@link PageDataRequest.pageNum} and
+     * {@link PageDataRequest.pageSize} will be -1.
+     * @defaultValue true
+     */
     paged: {
       type: Boolean,
       required: false,
       default: true,
     },
+
+    /**
+     * @description The page size to use when the grid initially loads.
+     * @defaultValue 15
+     */
     initialPageSize: {
       type: Number,
       required: false,
       default: 15,
     },
+
+    /**
+     * @description The page sizes to allow the user to select between. The page size select
+     * will only be displayed if this array contains more then one value.
+     * @defaultValue [15, 25, 50]
+     */
     pageSizes: {
-      type: Array<Number>,
+      type: Array as PropType<number[]>,
       required: false,
       default: [15, 25, 50],
     },
+
+    /**
+     * @description Grid-level {@link SortOptions} including whether to allow sorting and if more then
+     * one column can be sorted at a time. The grid must be set as sortable for any column level sort
+     * options to take effect.
+     * @defaultValue undefined
+     */
     sortOptions: {
       type: Object as PropType<SortOptions>,
       required: false,
       default: undefined,
     },
+
+    /**
+     * @description Whether to display the `Add/Remove Columns` menu in the options header. Column selection
+     * can be set externally using the {@link Column.hidden} property. For this functionality to work correctly
+     * {@link columns} should be passed using `v-model:columns`.
+     * @defaultValue false
+     */
     showColumnSelection: {
       type: Boolean,
       required: false,
       default: false,
     },
-    localStorageType: {
-      type: Number,
-      required: false,
-      default: LocalStorageType.sessionStorage,
-    },
+
+    /**
+     * @description A key to use to save grid state in {@link https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage | localStorage}
+     * or {@link https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage | sessionStorage}.
+     * sessionStorage is used unless {@link localStorageType} is specified. The data
+     * that is saved as part of the grid state is defined in {@link GridState}.
+     * This is ignored if {@link serverSideStorageOptions} or {@link customStorageService} is specified.
+     * @see {@link SessionStorageService}
+     * @see {@link LocalStorageService}
+     * @defaultValue ''
+     */
     storageKey: {
       type: String,
       required: false,
       default: '',
     },
+
+    /**
+     * @description Whether grid state is stored in {@link https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage | localStorage}
+     * or {@link https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage | sessionStorage}.
+     * To save grid state {@link storageKey} must be specified.The data
+     * that is saved as part of the grid state is defined in {@link GridState}.
+     * This is ignored if {@link serverSideStorageOptions} or {@link customStorageService} is specified.
+     * @see {@link SessionStorageService}
+     * @see {@link LocalStorageService}
+     * @defaultValue LocalStorageType.sessionStorage
+     */
+    localStorageType: {
+      type: Number,
+      required: false,
+      default: LocalStorageType.sessionStorage,
+    },
+
+    /**
+     * @description Options to specify to use {@link ServerSideStorageService} to retrieve and store {@link GridState}
+     * {@link storageKey} and {@link localStorageType} are ignored if this is specified. This is ignored if
+     * {@link customStorageService} is specified.
+     * @see {@link ServerSideStorageServiceOptions}
+     * @defaultValue undefined
+     */
     serverSideStorageOptions: {
       type: Object as PropType<ServerSideStorageServiceOptions>,
       required: false,
       default: undefined,
     },
+
+    /**
+     * @description Custom implementation of {@link StorageService} to optionally retrieve/store {@link GridState}.
+     * When this is specified {@link storageKey}, {@link localStorageType}, and {@link serverSideStorageOptions} are ignored.
+     * @defaultValue undefined
+     */
     customStorageService: {
       type: Object as PropType<StorageService>,
       required: false,
@@ -430,11 +538,7 @@ export default defineComponent({
       this.setGridState(gridState)
     }
 
-    if (this.paged) {
-      await this.loadPageData()
-    } else if (this.data) {
-      this.displayedData = this.data
-    }
+    await this.loadPageData()
 
     this.windowResizeDebounce = debounce(this.onWindowResize, 50)
     window.addEventListener('resize', this.windowResizeDebounce)
@@ -460,7 +564,7 @@ export default defineComponent({
   },
   methods: {
     async loadPageData() {
-      const pageData = await this.dataService.getPage(this.currentPage, this.pageSize, this.sort, this.filter)
+      const pageData = await this.dataService.getPage(this.paged ? this.currentPage : -1, this.paged ? this.pageSize : -1, this.sort, this.filter)
       this.displayedData = pageData.dataItems
       this.totalItems = pageData.totalItems
     },

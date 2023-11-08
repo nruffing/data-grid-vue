@@ -1,5 +1,5 @@
 import { Application, DeclarationReflection, Converter, Context, ReflectionKind, ReflectionFlag, ReflectionType } from 'typedoc'
-import type { Identifier, ImportTypeNode, TypeLiteralNode } from 'typescript'
+import type { Identifier, ImportTypeNode, LiteralType, TypeLiteralNode } from 'typescript'
 import pkg from 'typescript'
 const { SyntaxKind } = pkg
 
@@ -48,6 +48,7 @@ export function load(app: Application) {
 
     for (const prop of someType?.declaration?.children ?? []) {
       reflection.children.push(prop)
+      prop.parent = reflection
     }
   })
 }
