@@ -130,3 +130,4 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 - v2.2.0
   - Add clear filters callback to options-header slot.
   - Define slot types and add to documentation.
+  - Fix column shown state in ColumnSelectionItem.

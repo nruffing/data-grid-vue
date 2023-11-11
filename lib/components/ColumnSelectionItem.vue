@@ -18,6 +18,10 @@ import { type PropType, defineComponent } from 'vue'
 import type { Column } from '../DataGridVue'
 import Formatter from '../Formatter'
 
+interface Data {
+  shown: boolean
+}
+
 /**
  * @group Components
  * @description Column toggle item displayed in the column selected menu.
@@ -34,10 +38,15 @@ export default defineComponent({
       required: true,
     },
   },
+  data(): Data {
+    return {
+      shown: false,
+    }
+  },
+  mounted() {
+    this.shown = !(this.column.hidden ?? false)
+  },
   computed: {
-    shown(): boolean {
-      return this.column.hidden ?? false
-    },
     formattedTitle(): string {
       return Formatter.columnTitle(this.column)
     },
