@@ -2,10 +2,20 @@ import { defineUserConfig, defaultTheme } from 'vuepress'
 import { fs, getDirname, path } from '@vuepress/utils'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 import markdownItInclude from 'markdown-it-include'
+import postcss from 'postcss'
 
 const __dirname = getDirname(import.meta.url) // @/vuepress/docs/.vuepress
 const dgvStyleContents = await fs.readFile(path.resolve(__dirname, '../../node_modules/data-grid-vue/dist/style.css'), 'utf8')
 const dgvStyleOverrideContents = await fs.readFile(path.resolve(__dirname, '../dgv-overrides.css'), 'utf8')
+
+const rootNode = postcss.parse(dgvStyleContents)
+const variables = [] as string[]
+rootNode.walk(node => {
+  if (node.type === 'decl' && node.prop?.startsWith('--dgv')) {
+    variables.push(`${node.prop}: ${node.value};`)
+  }
+})
+const cssVariables = `:root {\n${variables.join('\n')}\n}`
 
 export default defineUserConfig({
   lang: 'en-US',
@@ -16,6 +26,9 @@ export default defineUserConfig({
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['style', { type: 'text/css' }, dgvStyleContents + '\n\n' + dgvStyleOverrideContents],
   ],
+  async onPrepared(app) {
+    await app.writeTemp('dgvCssVariables.css', cssVariables)
+  },
   theme: defaultTheme({
     logo: '/favicon.svg',
     repo: 'https://github.com/nruffing/data-grid-vue',
@@ -31,8 +44,12 @@ export default defineUserConfig({
         link: '/guide/',
       },
       {
-        text: 'Documentation',
+        text: 'API',
         link: '/generated/',
+      },
+      {
+        text: 'Theme',
+        link: '/theme/',
       },
       {
         text: 'NPM',
@@ -70,6 +87,11 @@ export default defineUserConfig({
     md.use(markdownItInclude, {
       root: path.resolve(__dirname, '../shared'),
     })
+  },
+  markdown: {
+    code: {
+      lineNumbers: true,
+    },
   },
   plugins: [
     shikiPlugin({
