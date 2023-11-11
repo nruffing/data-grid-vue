@@ -1,22 +1,5 @@
 # Class: ClientSideDataService
 
-## Contents
-
-- [Description](ClientSideDataService.md#description)
-- [Implements](ClientSideDataService.md#implements)
-- [Constructors](ClientSideDataService.md#constructors)
-  - [new ClientSideDataService(dataItems)](ClientSideDataService.md#new-clientsidedataservicedataitems)
-- [Methods](ClientSideDataService.md#methods)
-  - [sort()](ClientSideDataService.md#sort)
-  - [filter()](ClientSideDataService.md#filter)
-  - [getPage()](ClientSideDataService.md#getpage)
-- [Properties](ClientSideDataService.md#properties)
-  - [dataItems](ClientSideDataService.md#dataitems)
-  - [previousSortJson](ClientSideDataService.md#previoussortjson)
-  - [sorted](ClientSideDataService.md#sorted)
-  - [previousFilterJson](ClientSideDataService.md#previousfilterjson)
-  - [filtered](ClientSideDataService.md#filtered)
-
 ## Description
 
 The client-side [DataService](../interfaces/DataService.md) used when [DataGridVueGrid.data](../DataGridVueGrid/README.md#data) is specified.

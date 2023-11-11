@@ -1,13 +1,5 @@
 # Interface: Sort
 
-## Contents
-
-- [Description](Sort.md#description)
-- [Properties](Sort.md#properties)
-  - [fieldName](Sort.md#fieldname)
-  - [dataType](Sort.md#datatype)
-  - [type](Sort.md#type)
-
 ## Description
 
 Column sort definition.

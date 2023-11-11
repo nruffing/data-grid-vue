@@ -1,11 +1,5 @@
 # Interface: DataService
 
-## Contents
-
-- [Description](DataService.md#description)
-- [Properties](DataService.md#properties)
-  - [getPage](DataService.md#getpage)
-
 ## Description
 
 Interface to implement to define a data service to retrieve grid data.

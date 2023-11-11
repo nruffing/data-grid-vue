@@ -1,17 +1,10 @@
 # HeaderFilter
 
-## Contents
-
-- [Description](README.md#description)
-- [Properties](README.md#properties)
-  - [column](README.md#column)
-  - [initialFilterCondition](README.md#initialfiltercondition)
-
 ## Description
 
 The filter for a column.
 
-## Properties
+## props
 
 ### column
 

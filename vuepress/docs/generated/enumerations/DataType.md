@@ -1,15 +1,5 @@
 # Enumeration: DataType
 
-## Contents
-
-- [Description](DataType.md#description)
-- [Enumeration Members](DataType.md#enumeration-members)
-  - [none](DataType.md#none)
-  - [alphanumeric](DataType.md#alphanumeric)
-  - [number](DataType.md#number)
-  - [date](DataType.md#date)
-  - [dateTime](DataType.md#datetime)
-
 ## Description
 
 Supported data types for a column.

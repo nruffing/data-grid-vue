@@ -127,3 +127,6 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   - Fix for sorting and filtering not working when the data grid is not configured to be paged.
   - Fix Icon component import in HeaderCell
   - Documentation improvements
+- v2.2.0
+  - Add clear filters callback to options-header slot.
+  - Define slot types and add to documentation.

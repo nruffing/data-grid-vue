@@ -1,12 +1,6 @@
 # Icon
 
-## Contents
-
-- [Properties](README.md#properties)
-  - [name](README.md#name)
-  - [text](README.md#text)
-
-## Properties
+## props
 
 ### name
 

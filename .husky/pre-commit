@@ -5,3 +5,4 @@ npx lint-staged
 npm run compile-readme
 git add README.md
 npm run typedoc
+git add typedoc-out.json

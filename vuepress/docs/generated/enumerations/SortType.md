@@ -1,12 +1,5 @@
 # Enumeration: SortType
 
-## Contents
-
-- [Description](SortType.md#description)
-- [Enumeration Members](SortType.md#enumeration-members)
-  - [ascending](SortType.md#ascending)
-  - [descending](SortType.md#descending)
-
 ## Description
 
 Whether a sort is ascending or descending.

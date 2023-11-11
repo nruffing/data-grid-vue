@@ -1,16 +1,5 @@
 # Class: ServerSideStorageService
 
-## Contents
-
-- [Implements](ServerSideStorageService.md#implements)
-- [Constructors](ServerSideStorageService.md#constructors)
-  - [new ServerSideStorageService(options)](ServerSideStorageService.md#new-serversidestorageserviceoptions)
-- [Methods](ServerSideStorageService.md#methods)
-  - [getGridState()](ServerSideStorageService.md#getgridstate)
-  - [setGridState()](ServerSideStorageService.md#setgridstate)
-- [Properties](ServerSideStorageService.md#properties)
-  - [options](ServerSideStorageService.md#options)
-
 ## Implements
 
 - [`StorageService`](../interfaces/StorageService.md)

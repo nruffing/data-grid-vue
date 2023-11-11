@@ -15,5 +15,7 @@
   "parametersFormat": "table",
   "hidePageHeader": true,
   "typeDeclarationFormat": "table",
-  "disableSources": true
+  "disableSources": true,
+  "hideInPageTOC": true,
+  "json": "typedoc-out.json"
 }

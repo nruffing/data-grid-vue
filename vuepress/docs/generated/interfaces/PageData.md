@@ -1,11 +1,5 @@
 # Interface: PageData
 
-## Contents
-
-- [Properties](PageData.md#properties)
-  - [totalItems](PageData.md#totalitems)
-  - [dataItems](PageData.md#dataitems)
-
 ## Properties
 
 ### totalItems

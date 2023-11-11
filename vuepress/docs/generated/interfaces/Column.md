@@ -1,19 +1,5 @@
 # Interface: Column
 
-## Contents
-
-- [Description](Column.md#description)
-- [Properties](Column.md#properties)
-  - [title](Column.md#title)
-  - [dataType](Column.md#datatype)
-  - [field](Column.md#field)
-  - [isKey](Column.md#iskey)
-  - [sortable](Column.md#sortable)
-  - [filterable](Column.md#filterable)
-  - [filterOptions](Column.md#filteroptions)
-  - [width](Column.md#width)
-  - [hidden](Column.md#hidden)
-
 ## Description
 
 Column definition

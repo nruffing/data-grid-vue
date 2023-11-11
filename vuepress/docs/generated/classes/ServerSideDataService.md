@@ -1,16 +1,5 @@
 # Class: ServerSideDataService
 
-## Contents
-
-- [Description](ServerSideDataService.md#description)
-- [Implements](ServerSideDataService.md#implements)
-- [Constructors](ServerSideDataService.md#constructors)
-  - [new ServerSideDataService(options)](ServerSideDataService.md#new-serversidedataserviceoptions)
-- [Methods](ServerSideDataService.md#methods)
-  - [getPage()](ServerSideDataService.md#getpage)
-- [Properties](ServerSideDataService.md#properties)
-  - [options](ServerSideDataService.md#options)
-
 ## Description
 
 The server-side [DataService](../interfaces/DataService.md) used when [DataGridVueGrid.serverSideOptions](../DataGridVueGrid/README.md#serversideoptions) is specified.

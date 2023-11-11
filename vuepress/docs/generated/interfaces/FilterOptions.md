@@ -1,10 +1,5 @@
 # Interface: FilterOptions
 
-## Contents
-
-- [Properties](FilterOptions.md#properties)
-  - [filterable](FilterOptions.md#filterable)
-
 ## Properties
 
 ### filterable

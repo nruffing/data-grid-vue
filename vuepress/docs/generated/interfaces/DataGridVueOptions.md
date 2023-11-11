@@ -1,10 +1,5 @@
 # Interface: DataGridVueOptions
 
-## Contents
-
-- [Properties](DataGridVueOptions.md#properties)
-  - [dragonDropVueOptions](DataGridVueOptions.md#dragondropvueoptions)
-
 ## Properties
 
 ### dragonDropVueOptions

@@ -1,18 +1,10 @@
 # PageNavigation
 
-## Contents
-
-- [Description](README.md#description)
-- [Properties](README.md#properties)
-  - [pageSize](README.md#pagesize)
-  - [currentPage](README.md#currentpage)
-  - [totalItems](README.md#totalitems)
-
 ## Description
 
 The page navigation in the grids footer.
 
-## Properties
+## props
 
 ### pageSize
 

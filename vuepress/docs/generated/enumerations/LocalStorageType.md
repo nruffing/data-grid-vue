@@ -1,11 +1,5 @@
 # Enumeration: LocalStorageType
 
-## Contents
-
-- [Enumeration Members](LocalStorageType.md#enumeration-members)
-  - [sessionStorage](LocalStorageType.md#sessionstorage)
-  - [localStorage](LocalStorageType.md#localstorage)
-
 ## Enumeration Members
 
 ### sessionStorage

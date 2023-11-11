@@ -1,15 +1,5 @@
 # Interface: GridState
 
-## Contents
-
-- [Properties](GridState.md#properties)
-  - [pageSize](GridState.md#pagesize)
-  - [hiddenFields](GridState.md#hiddenfields)
-  - [sort](GridState.md#sort)
-  - [filters](GridState.md#filters)
-  - [externalFilter](GridState.md#externalfilter)
-  - [columnOrder](GridState.md#columnorder)
-
 ## Properties
 
 ### pageSize

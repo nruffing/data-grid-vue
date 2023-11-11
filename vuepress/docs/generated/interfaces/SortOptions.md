@@ -1,12 +1,5 @@
 # Interface: SortOptions
 
-## Contents
-
-- [Description](SortOptions.md#description)
-- [Properties](SortOptions.md#properties)
-  - [sortable](SortOptions.md#sortable)
-  - [multiColumn](SortOptions.md#multicolumn)
-
 ## Description
 
 Grid-level sort options. The grid must be set as sortable for any

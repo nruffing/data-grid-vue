@@ -1,10 +1,5 @@
 # Interface: ColumnFilterOptions
 
-## Contents
-
-- [Properties](ColumnFilterOptions.md#properties)
-  - [operators](ColumnFilterOptions.md#operators)
-
 ## Properties
 
 ### operators

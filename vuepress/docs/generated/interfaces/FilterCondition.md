@@ -1,13 +1,5 @@
 # Interface: FilterCondition
 
-## Contents
-
-- [Properties](FilterCondition.md#properties)
-  - [fieldName](FilterCondition.md#fieldname)
-  - [operator](FilterCondition.md#operator)
-  - [dataType](FilterCondition.md#datatype)
-  - [value](FilterCondition.md#value)
-
 ## Properties
 
 ### fieldName

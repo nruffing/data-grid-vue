@@ -1,15 +1,5 @@
 # Class: Field
 
-## Contents
-
-- [Constructors](Field.md#constructors)
-  - [new Field(fieldName, valueGetter)](Field.md#new-fieldfieldname-valuegetter)
-- [Methods](Field.md#methods)
-  - [resolveValue()](Field.md#resolvevalue)
-- [Properties](Field.md#properties)
-  - [fieldName](Field.md#fieldname)
-  - [valueGetter](Field.md#valuegetter)
-
 ## Constructors
 
 ### new Field(fieldName, valueGetter)

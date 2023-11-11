@@ -1,16 +1,5 @@
 # Class: LocalStorageService
 
-## Contents
-
-- [Implements](LocalStorageService.md#implements)
-- [Constructors](LocalStorageService.md#constructors)
-  - [new LocalStorageService(key)](LocalStorageService.md#new-localstorageservicekey)
-- [Methods](LocalStorageService.md#methods)
-  - [getGridState()](LocalStorageService.md#getgridstate)
-  - [setGridState()](LocalStorageService.md#setgridstate)
-- [Properties](LocalStorageService.md#properties)
-  - [key](LocalStorageService.md#key)
-
 ## Implements
 
 - [`StorageService`](../interfaces/StorageService.md)

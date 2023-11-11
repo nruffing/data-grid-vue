@@ -1,29 +1,10 @@
 # DataGridVueGrid
 
-## Contents
-
-- [Description](README.md#description)
-- [Properties](README.md#properties)
-  - [data](README.md#data)
-  - [serverSideOptions](README.md#serversideoptions)
-  - [customDataService](README.md#customdataservice)
-  - [columns](README.md#columns)
-  - [allowColumnReorder](README.md#allowcolumnreorder)
-  - [paged](README.md#paged)
-  - [initialPageSize](README.md#initialpagesize)
-  - [pageSizes](README.md#pagesizes)
-  - [sortOptions](README.md#sortoptions)
-  - [showColumnSelection](README.md#showcolumnselection)
-  - [storageKey](README.md#storagekey)
-  - [localStorageType](README.md#localstoragetype)
-  - [serverSideStorageOptions](README.md#serversidestorageoptions)
-  - [customStorageService](README.md#customstorageservice)
-
 ## Description
 
 Main entrypoint component to render a data grid.
 
-## Properties
+## props
 
 ### data
 
@@ -484,6 +465,156 @@ undefined
 | `type` | `PropType`\<[`StorageService`](../interfaces/StorageService.md)\> | - |
 | `required` | `false` | - |
 | `default` | `undefined` | - |
+
+## slots
+
+### filter-$\{column.field.fieldName}
+
+```ts
+filter-${column.field.fieldName}: {
+  column: Column;
+  initialFilterCondition: FilterCondition;
+  onFilterUpdated: (condition) => any;
+};
+```
+
+#### Description
+
+Slot to override the filter for the specified column. For example, the slot name `filter-id` would override the filter for the column with a field with the name `id`.
+
+#### Type declaration
+
+| Member | Type | Description |
+| :------ | :------ | :------ |
+| `column` | [`Column`](../interfaces/Column.md) | The current [Column](../interfaces/Column.md). |
+| `initialFilterCondition` | [`FilterCondition`](../interfaces/FilterCondition.md) | The current [FilterCondition](../interfaces/FilterCondition.md) applied to the column. |
+| `onFilterUpdated` | `(condition) => any` | Function to call when the filter condition has been updated to trigger the grid state to update. The function has a [FilterCondition](../interfaces/FilterCondition.md) parameter to pass the new condition. |
+
+***
+
+### cell-$\{column.field.fieldName}
+
+```ts
+cell-${column.field.fieldName}: {
+  dataItem: any;
+};
+```
+
+#### Description
+
+Slot to override the cell for the specified column. For example, the slot name `cell-id` would override the cell for the column with a field with the name `id`.
+
+#### Type declaration
+
+| Member | Type | Description |
+| :------ | :------ | :------ |
+| `dataItem` | `any` | The entire data item for the current row. |
+
+***
+
+### options-header
+
+```ts
+options-header: {
+  toggleFilterOptionsShown: () => any;
+  toggleColumnSelectionShown: (event) => any;
+  clearFilters: () => any;
+};
+```
+
+#### Description
+
+Slot to override what is rendered in the options header above the data grid.
+
+#### Type declaration
+
+| Member | Type | Description |
+| :------ | :------ | :------ |
+| `toggleFilterOptionsShown` | `() => any` | Function to call to toggle whether to display the filter row below the data grid's header. |
+| `toggleColumnSelectionShown` | `(event) => any` | Function to call to toggle whether to display the column selection menu. The function has a single MouseEvent parameter. |
+| `clearFilters` | `() => any` | Function to call to clear all current filter state. |
+
+***
+
+### options-header-filter-options-shown
+
+```ts
+options-header-filter-options-shown: {
+  toggleFilterOptionsShown: () => any;
+};
+```
+
+#### Description
+
+Slot to override just the toggle column filters area of the options header above the grid.
+
+#### Type declaration
+
+| Member | Type | Description |
+| :------ | :------ | :------ |
+| `toggleFilterOptionsShown` | `() => any` | Function to call to toggle whether to display the filter row below the data grid's header. |
+
+***
+
+### options-header-clear-filters
+
+```ts
+options-header-clear-filters: {
+  clearFilters: () => any;
+};
+```
+
+#### Description
+
+Slot to override just the clear filters area of the options header above the grid.
+
+#### Type declaration
+
+| Member | Type | Description |
+| :------ | :------ | :------ |
+| `clearFilters` | `() => any` | Function to call to clear all current filter state. |
+
+***
+
+### options-header-column-selection-shown
+
+```ts
+options-header-column-selection-shown: {
+  toggleColumnSelectionShown: (event) => any;
+};
+```
+
+#### Description
+
+Slot to override just the add/remove columns area of the options header above the grid.
+
+#### Type declaration
+
+| Member | Type | Description |
+| :------ | :------ | :------ |
+| `toggleColumnSelectionShown` | `(event) => any` | Function to call to toggle whether to display the column selection menu. The function has a single MouseEvent parameter. |
+
+***
+
+### column-selection-popup
+
+```ts
+column-selection-popup: {
+  columns: Column[];
+  hiddenUpdated: (column, hidden) => any;
+};
+```
+
+#### Description
+
+Slot to override what is rendered in the add/remove columns menu.
+
+#### Type declaration
+
+| Member | Type | Description |
+| :------ | :------ | :------ |
+| `columns` | [`Column`](../interfaces/Column.md)[] | All current column state. |
+| `hiddenUpdated` | `(column, hidden) => any` | Function to call when the hidden state of a column should be changed. The function has a [Column](../interfaces/Column.md) parameter and a boolean hidden parameter. |
 
 ***
 

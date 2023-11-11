@@ -1,10 +1,5 @@
 # Interface: GetGridStateRequest
 
-## Contents
-
-- [Properties](GetGridStateRequest.md#properties)
-  - [userId](GetGridStateRequest.md#userid)
-
 ## Properties
 
 ### userId

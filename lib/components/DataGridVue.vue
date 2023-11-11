@@ -18,6 +18,7 @@
         name="options-header"
         :toggleFilterOptionsShown="toggleFilterOptionsShown"
         :toggleColumnSelectionShown="toggleColumnSelectionShown"
+        :clearFilters="clearFilters"
       >
         <slot
           name="options-header-filter-options-shown"
@@ -188,7 +189,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, type PropType, nextTick } from 'vue'
+import { defineComponent, type PropType, nextTick, type SlotsType } from 'vue'
 import { debounce } from 'debounce'
 import { DataType, Field, type Column } from '../DataGridVue'
 import { type DataService, StubDataService, ClientSideDataService, type ServerSideDataServiceOptions, ServerSideDataService } from '../DataService'
@@ -249,6 +250,97 @@ export default defineComponent({
     Icon,
     ColumnSelectionItem,
   },
+  slots: Object as SlotsType<{
+    /**
+     * @description Slot to override the filter for the specified column. For example, the slot name `filter-id` would override the filter for the column with a field with the name `id`.
+     */
+    'filter-${column.field.fieldName}': (props: {
+      /**
+       * The current {@link Column}.
+       */
+      column: Column
+      /**
+       * The current {@link FilterCondition} applied to the column.
+       */
+      initialFilterCondition: FilterCondition
+      /**
+       * Function to call when the filter condition has been updated to trigger the grid state to update. The function has a {@link FilterCondition} parameter to pass the new condition.
+       */
+      onFilterUpdated: (condition: FilterCondition) => void
+    }) => any
+
+    /**
+     * @description Slot to override the cell for the specified column. For example, the slot name `cell-id` would override the cell for the column with a field with the name `id`.
+     */
+    'cell-${column.field.fieldName}': (props: {
+      /**
+       * The entire data item for the current row.
+       */
+      dataItem: any
+    }) => any
+
+    /**
+     * @description Slot to override what is rendered in the options header above the data grid.
+     */
+    'options-header'?: (props: {
+      /**
+       * Function to call to toggle whether to display the filter row below the data grid's header.
+       */
+      toggleFilterOptionsShown: () => void
+      /**
+       * Function to call to toggle whether to display the column selection menu. The function has a single MouseEvent parameter.
+       */
+      toggleColumnSelectionShown: (event: MouseEvent) => void
+      /**
+       * Function to call to clear all current filter state.
+       */
+      clearFilters: () => void
+    }) => any
+
+    /**
+     * @description Slot to override just the toggle column filters area of the options header above the grid.
+     */
+    'options-header-filter-options-shown'?: (props: {
+      /**
+       * Function to call to toggle whether to display the filter row below the data grid's header.
+       */
+      toggleFilterOptionsShown: () => void
+    }) => any
+
+    /**
+     * @description Slot to override just the clear filters area of the options header above the grid.
+     */
+    'options-header-clear-filters'?: (props: {
+      /**
+       * Function to call to clear all current filter state.
+       */
+      clearFilters: () => void
+    }) => any
+
+    /**
+     * @description Slot to override just the add/remove columns area of the options header above the grid.
+     */
+    'options-header-column-selection-shown'?: (props: {
+      /**
+       * Function to call to toggle whether to display the column selection menu. The function has a single MouseEvent parameter.
+       */
+      toggleColumnSelectionShown: (event: MouseEvent) => void
+    }) => any
+
+    /**
+     * @description Slot to override what is rendered in the add/remove columns menu.
+     */
+    'column-selection-popup': (props: {
+      /**
+       * All current column state.
+       */
+      columns: Column[]
+      /**
+       * Function to call when the hidden state of a column should be changed. The function has a {@link Column} parameter and a boolean hidden parameter.
+       */
+      hiddenUpdated: (column: Column, hidden: boolean) => void
+    }) => any
+  }>,
   props: {
     /**
      * @description Array of objects to display in the data grid when using the built-in {@link ClientSideDataService}.

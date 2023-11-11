@@ -1,11 +1,5 @@
 # Interface: StorageService
 
-## Contents
-
-- [Methods](StorageService.md#methods)
-  - [getGridState()](StorageService.md#getgridstate)
-  - [setGridState()](StorageService.md#setgridstate)
-
 ## Methods
 
 ### getGridState()

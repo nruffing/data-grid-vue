@@ -1,16 +1,5 @@
 # Class: SessionStorageService
 
-## Contents
-
-- [Implements](SessionStorageService.md#implements)
-- [Constructors](SessionStorageService.md#constructors)
-  - [new SessionStorageService(key)](SessionStorageService.md#new-sessionstorageservicekey)
-- [Methods](SessionStorageService.md#methods)
-  - [getGridState()](SessionStorageService.md#getgridstate)
-  - [setGridState()](SessionStorageService.md#setgridstate)
-- [Properties](SessionStorageService.md#properties)
-  - [key](SessionStorageService.md#key)
-
 ## Implements
 
 - [`StorageService`](../interfaces/StorageService.md)

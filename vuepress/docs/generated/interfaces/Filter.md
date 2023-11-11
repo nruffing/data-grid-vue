@@ -1,11 +1,5 @@
 # Interface: Filter
 
-## Contents
-
-- [Properties](Filter.md#properties)
-  - [or](Filter.md#or)
-  - [and](Filter.md#and)
-
 ## Properties
 
 ### or

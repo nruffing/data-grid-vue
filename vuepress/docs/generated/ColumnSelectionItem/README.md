@@ -1,12 +1,5 @@
 # ColumnSelectionItem
 
-## Contents
-
-- [Description](README.md#description)
-- [See](README.md#see)
-- [Properties](README.md#properties)
-  - [column](README.md#column)
-
 ## Description
 
 Column toggle item displayed in the column selected menu.
@@ -15,7 +8,7 @@ Column toggle item displayed in the column selected menu.
 
 [DataGridVueGrid.showColumnSelection](../DataGridVueGrid/README.md#showcolumnselection)
 
-## Properties
+## props
 
 ### column
 

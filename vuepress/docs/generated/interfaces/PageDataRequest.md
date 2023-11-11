@@ -1,15 +1,5 @@
 # Interface: PageDataRequest
 
-## Contents
-
-- [Description](PageDataRequest.md#description)
-- [See](PageDataRequest.md#see)
-- [Properties](PageDataRequest.md#properties)
-  - [pageNum](PageDataRequest.md#pagenum)
-  - [pageSize](PageDataRequest.md#pagesize)
-  - [sort](PageDataRequest.md#sort)
-  - [filter](PageDataRequest.md#filter)
-
 ## Description
 
 Request data interface sent by the [ServerSideDataService](../classes/ServerSideDataService.md). This can be modified before

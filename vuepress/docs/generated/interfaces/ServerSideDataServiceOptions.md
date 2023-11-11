@@ -1,14 +1,5 @@
 # Interface: ServerSideDataServiceOptions
 
-## Contents
-
-- [Description](ServerSideDataServiceOptions.md#description)
-- [See](ServerSideDataServiceOptions.md#see)
-- [Properties](ServerSideDataServiceOptions.md#properties)
-  - [postRoute](ServerSideDataServiceOptions.md#postroute)
-  - [beforeRequest](ServerSideDataServiceOptions.md#beforerequest)
-  - [responseHandler](ServerSideDataServiceOptions.md#responsehandler)
-
 ## Description
 
 Options to configure the built-in server-side data service including the POST url and optional

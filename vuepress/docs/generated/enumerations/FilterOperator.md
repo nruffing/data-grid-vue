@@ -1,18 +1,5 @@
 # Enumeration: FilterOperator
 
-## Contents
-
-- [Enumeration Members](FilterOperator.md#enumeration-members)
-  - [equals](FilterOperator.md#equals)
-  - [notEquals](FilterOperator.md#notequals)
-  - [contains](FilterOperator.md#contains)
-  - [startsWith](FilterOperator.md#startswith)
-  - [endsWith](FilterOperator.md#endswith)
-  - [greaterThan](FilterOperator.md#greaterthan)
-  - [lessThan](FilterOperator.md#lessthan)
-  - [greaterThanOrEqualTo](FilterOperator.md#greaterthanorequalto)
-  - [lessThanOrEqualTo](FilterOperator.md#lessthanorequalto)
-
 ## Enumeration Members
 
 ### equals

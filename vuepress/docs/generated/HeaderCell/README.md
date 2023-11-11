@@ -1,18 +1,10 @@
 # HeaderCell
 
-## Contents
-
-- [Description](README.md#description)
-- [Properties](README.md#properties)
-  - [column](README.md#column)
-  - [sortable](README.md#sortable)
-  - [sort](README.md#sort)
-
 ## Description
 
 The header cell for each column.
 
-## Properties
+## props
 
 ### column
 
