@@ -84,6 +84,16 @@ export default defineComponent({
       required: true,
     },
   },
+  emits: {
+    /**
+     * @group emits
+     * @description Event emitted when the page changes.
+     * @param page The new page number.
+     */
+    'update:currentPage'(page: number): boolean {
+      return true
+    },
+  },
   computed: {
     numPages(): number {
       return Math.ceil(this.totalItems / this.pageSize)

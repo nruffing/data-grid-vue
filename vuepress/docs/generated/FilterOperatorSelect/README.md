@@ -63,6 +63,28 @@ FilterOperator.equals
 | `required` | `false` | - |
 | `default` | [`FilterOperator`](../enumerations/FilterOperator.md) | - |
 
+## emits
+
+### update:modelValue()
+
+```ts
+update:modelValue(operator): boolean
+```
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `operator` | [`FilterOperator`](../enumerations/FilterOperator.md) | The new [FilterOperator](../enumerations/FilterOperator.md) state. |
+
+#### Returns
+
+`boolean`
+
+#### Description
+
+Event emitted when the [FilterOperator](../enumerations/FilterOperator.md) state has been updated.
+
 ***
 
 Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

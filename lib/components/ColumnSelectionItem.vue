@@ -38,6 +38,16 @@ export default defineComponent({
       required: true,
     },
   },
+  emits: {
+    /**
+     * @group emits
+     * @description Event emitted when the shown/hidden state of the column has been updated.
+     * @param hidden The new hidden state of the column.
+     */
+    'hidden-updated'(hidden: boolean): boolean {
+      return true
+    },
+  },
   data(): Data {
     return {
       shown: false,

@@ -71,6 +71,28 @@ have been applied.
 | `type` | `NumberConstructor` | - |
 | `required` | `true` | - |
 
+## emits
+
+### update:currentPage()
+
+```ts
+update:currentPage(page): boolean
+```
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `page` | `number` | The new page number. |
+
+#### Returns
+
+`boolean`
+
+#### Description
+
+Event emitted when the page changes.
+
 ***
 
 Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

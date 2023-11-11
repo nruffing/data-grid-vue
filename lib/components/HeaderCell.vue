@@ -64,6 +64,16 @@ export default defineComponent({
       default: undefined,
     },
   },
+  emits: {
+    /**
+     * @group emits
+     * @description Event emitted when the header cell is clicked.
+     * @param column The {@link Column} that was clicked.
+     */
+    onClick(column: Column): boolean {
+      return true
+    },
+  },
   computed: {
     formattedTitle(): string {
       return Formatter.columnTitle(this.column)

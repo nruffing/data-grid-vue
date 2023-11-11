@@ -466,6 +466,30 @@ undefined
 | `required` | `false` | - |
 | `default` | `undefined` | - |
 
+## emits
+
+### update:columns()
+
+```ts
+update:columns(columns): boolean
+```
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `columns` | [`Column`](../interfaces/Column.md)[] | A clone of the new column state. |
+
+#### Returns
+
+`boolean`
+
+#### Description
+
+Event emitted when [Column](../interfaces/Column.md) state is updated. This includes the column's hidden state and column order.
+[Column](../interfaces/Column.md) objects will not be mutated but a new array will be emitted with this event and that needs to trigger
+the columns prop to update. Leveraging `v-model:columns` is recommended.
+
 ## slots
 
 ### filter-$\{column.field.fieldName}

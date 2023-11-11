@@ -56,6 +56,16 @@ export default defineComponent({
       default: FilterOperator.equals,
     },
   },
+  emits: {
+    /**
+     * @group emits
+     * @description Event emitted when the {@link FilterOperator} state has been updated.
+     * @param operator The new {@link FilterOperator} state.
+     */
+    'update:modelValue'(operator: FilterOperator): boolean {
+      return true
+    },
+  },
   methods: {
     getOperatorName(operator: FilterOperator): string {
       return FilterOperator[operator]

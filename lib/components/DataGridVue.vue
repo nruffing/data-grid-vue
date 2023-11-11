@@ -341,6 +341,18 @@ export default defineComponent({
       hiddenUpdated: (column: Column, hidden: boolean) => void
     }) => any
   }>,
+  emits: {
+    /**
+     * @group emits
+     * @description Event emitted when {@link Column} state is updated. This includes the column's hidden state and column order.
+     * {@link Column} objects will not be mutated but a new array will be emitted with this event and that needs to trigger
+     * the columns prop to update. Leveraging `v-model:columns` is recommended.
+     * @param columns A clone of the new column state.
+     */
+    'update:columns'(columns: Column[]): boolean {
+      return true
+    },
+  },
   props: {
     /**
      * @description Array of objects to display in the data grid when using the built-in {@link ClientSideDataService}.

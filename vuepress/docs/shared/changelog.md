@@ -46,5 +46,6 @@
   - Documentation improvements
 - v2.2.0
   - Add clear filters callback to options-header slot.
-  - Define slot types and add to documentation.
   - Fix column shown state in ColumnSelectionItem.
+  - Define slot types and add to documentation.
+  - Define emit types and add to documentation.

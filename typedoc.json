@@ -8,7 +8,7 @@
   "plugin": ["./typedoc-vue.js", "typedoc-plugin-markdown", "typedoc-plugin-mdn-links"],
   "readme": "none",
   "hideBreadcrumbs": true,
-  "groupOrder": ["Data Grid Component", "Components", "*"],
+  "groupOrder": ["Data Grid Component", "Components", "props", "emits", "slots", "*"],
   "sort": ["source-order"],
   "useCodeBlocks": true,
   "expandObjects": true,

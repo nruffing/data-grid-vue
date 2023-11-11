@@ -57,6 +57,16 @@ export default defineComponent({
       default: undefined,
     },
   },
+  emits: {
+    /**
+     * @group emits
+     * @description Event emitted when the {@link FilterCondition} is updated.
+     * @param condition The updated {@link FilterCondition}
+     */
+    updated(condition: FilterCondition): boolean {
+      return true
+    },
+  },
   computed: {
     inputType(): string {
       if (this.column.dataType === DataType.number) {

@@ -56,6 +56,28 @@ undefined
 | `required` | `false` | - |
 | `default` | `undefined` | - |
 
+## emits
+
+### updated()
+
+```ts
+updated(condition): boolean
+```
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `condition` | [`FilterCondition`](../interfaces/FilterCondition.md) | The updated [FilterCondition](../interfaces/FilterCondition.md) |
+
+#### Returns
+
+`boolean`
+
+#### Description
+
+Event emitted when the [FilterCondition](../interfaces/FilterCondition.md) is updated.
+
 ***
 
 Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

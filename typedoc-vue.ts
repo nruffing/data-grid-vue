@@ -93,9 +93,27 @@ function processSlots(context: DefineComponentContext) {
   processTypeLiteral(slotsType, context, 'slots')
 }
 
-function processEmits(context: DefineComponentContext) {}
+function processEmits(context: DefineComponentContext) {
+  const emitsTypeLiteral = context.importType.typeArguments?.find(a => {
+    if (a.kind === SyntaxKind.TypeLiteral) {
+      const literal = a as TypeLiteralNode
+      if (literal.members?.length) {
+        const first = literal.members[0]
+        if (first.kind === SyntaxKind.MethodSignature) {
+          return first.getFullText().includes('@group emits')
+        }
+      }
+    }
+  }) as TypeLiteralNode | undefined
 
-function processTypeLiteral(typeLiteral: TypeLiteralNode, context: DefineComponentContext, group: string) {
+  if (!emitsTypeLiteral) {
+    return
+  }
+
+  processTypeLiteral(emitsTypeLiteral, context)
+}
+
+function processTypeLiteral(typeLiteral: TypeLiteralNode, context: DefineComponentContext, group: string = '') {
   // set the properties of the props type as children of the the now module declaration
   const scope = context.context.withScope(context.reflection)
   const someType = context.context.converter.convertType(scope, typeLiteral) as ReflectionType
@@ -104,10 +122,16 @@ function processTypeLiteral(typeLiteral: TypeLiteralNode, context: DefineCompone
     context.reflection.children = []
   }
 
+  if (!context.reflection.signatures) {
+    context.reflection.signatures = []
+  }
+
   for (const prop of someType?.declaration?.children ?? []) {
-    const tags = prop.comment?.blockTags ?? ([] as CommentTag[])
-    tags.push(new CommentTag(`@group`, [{ text: group, kind: 'text' }]))
-    prop.comment = new Comment(prop.comment?.summary, tags, prop.comment?.modifierTags)
+    if (group) {
+      const tags = prop.comment?.blockTags ?? ([] as CommentTag[])
+      tags.push(new CommentTag(`@group`, [{ text: group, kind: 'text' }]))
+      prop.comment = new Comment(prop.comment?.summary, tags, prop.comment?.modifierTags)
+    }
 
     let toAdd = prop as DeclarationReflection | undefined
     if (group === 'slots') {
@@ -121,6 +145,11 @@ function processTypeLiteral(typeLiteral: TypeLiteralNode, context: DefineCompone
     context.reflection.children.push(toAdd)
     toAdd.parent = context.reflection
     toAdd.comment = prop.comment
+  }
+
+  for (const signature of someType?.declaration?.signatures ?? []) {
+    context.reflection.signatures?.push(signature)
+    signature.parent = context.reflection
   }
 }
 

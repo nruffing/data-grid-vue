@@ -86,6 +86,28 @@ undefined
 | `required` | `false` | - |
 | `default` | `undefined` | - |
 
+## emits
+
+### onClick()
+
+```ts
+onClick(column): boolean
+```
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `column` | [`Column`](../interfaces/Column.md) | The [Column](../interfaces/Column.md) that was clicked. |
+
+#### Returns
+
+`boolean`
+
+#### Description
+
+Event emitted when the header cell is clicked.
+
 ***
 
 Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)
