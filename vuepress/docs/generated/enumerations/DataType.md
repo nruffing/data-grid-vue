@@ -6,43 +6,13 @@ Supported data types for a column.
 
 ## Enumeration Members
 
-### none
-
-```ts
-none: 0;
-```
-
-***
-
-### alphanumeric
-
-```ts
-alphanumeric: 1;
-```
-
-***
-
-### number
-
-```ts
-number: 2;
-```
-
-***
-
-### date
-
-```ts
-date: 3;
-```
-
-***
-
-### dateTime
-
-```ts
-dateTime: 4;
-```
+| Member | Value |
+| :------ | :------ |
+| `none` | `0` |
+| `alphanumeric` | `1` |
+| `number` | `2` |
+| `date` | `3` |
+| `dateTime` | `4` |
 
 ***
 

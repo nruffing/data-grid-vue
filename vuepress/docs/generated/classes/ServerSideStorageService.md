@@ -4,6 +4,12 @@
 
 - [`StorageService`](../interfaces/StorageService.md)
 
+## Properties
+
+| Property | Type | Description |
+| :------ | :------ | :------ |
+| `options` | [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md) | - |
+
 ## Constructors
 
 ### new ServerSideStorageService(options)
@@ -38,6 +44,10 @@ getGridState(): Promise<undefined | GridState>
 
 [`StorageService`](../interfaces/StorageService.md).[`getGridState`](../interfaces/StorageService.md#getgridstate)
 
+#### Description
+
+Retrieves the saved grid state. This is called once when the data grid component is mounted.
+
 ***
 
 ### setGridState()
@@ -48,9 +58,9 @@ setGridState(gridState): Promise<void>
 
 #### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `gridState` | [`GridState`](../interfaces/GridState.md) |
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `gridState` | [`GridState`](../interfaces/GridState.md) | The grid state to save |
 
 #### Returns
 
@@ -60,13 +70,9 @@ setGridState(gridState): Promise<void>
 
 [`StorageService`](../interfaces/StorageService.md).[`setGridState`](../interfaces/StorageService.md#setgridstate)
 
-## Properties
+#### Description
 
-### options
-
-```ts
-options: ServerSideStorageServiceOptions;
-```
+Saves a new version of the grid state. This called everytime data in the grid state changes.
 
 ***
 

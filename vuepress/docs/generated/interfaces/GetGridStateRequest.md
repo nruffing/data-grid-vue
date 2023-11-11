@@ -1,12 +1,14 @@
 # Interface: GetGridStateRequest
 
+## Description
+
+Request data interface sent by the [ServerSideStorageService](../classes/ServerSideStorageService.md) to get the current grid state.
+
 ## Properties
 
-### userId
-
-```ts
-userId: string | number;
-```
+| Property | Type | Description |
+| :------ | :------ | :------ |
+| `userId` | `string` \| `number` | - |
 
 ***
 

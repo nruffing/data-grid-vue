@@ -128,7 +128,8 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   - Fix Icon component import in HeaderCell
   - Documentation improvements
 - v2.2.0
-  - Add clear filters callback to options-header slot.
-  - Fix column shown state in ColumnSelectionItem.
-  - Define slot types and add to documentation.
-  - Define emit types and add to documentation.
+  - Add clear filters callback to options-header slot
+  - Fix column shown state in ColumnSelectionItem
+  - Define slot types and add to documentation
+  - Define emit types and add to documentation
+  - Even more documentation improvements

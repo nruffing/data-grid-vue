@@ -1,76 +1,22 @@
 # Enumeration: FilterOperator
 
+## Description
+
+Supported filter operators
+
 ## Enumeration Members
 
-### equals
-
-```ts
-equals: 0;
-```
-
-***
-
-### notEquals
-
-```ts
-notEquals: 1;
-```
-
-***
-
-### contains
-
-```ts
-contains: 2;
-```
-
-***
-
-### startsWith
-
-```ts
-startsWith: 3;
-```
-
-***
-
-### endsWith
-
-```ts
-endsWith: 4;
-```
-
-***
-
-### greaterThan
-
-```ts
-greaterThan: 5;
-```
-
-***
-
-### lessThan
-
-```ts
-lessThan: 6;
-```
-
-***
-
-### greaterThanOrEqualTo
-
-```ts
-greaterThanOrEqualTo: 7;
-```
-
-***
-
-### lessThanOrEqualTo
-
-```ts
-lessThanOrEqualTo: 8;
-```
+| Member | Value |
+| :------ | :------ |
+| `equals` | `0` |
+| `notEquals` | `1` |
+| `contains` | `2` |
+| `startsWith` | `3` |
+| `endsWith` | `4` |
+| `greaterThan` | `5` |
+| `lessThan` | `6` |
+| `greaterThanOrEqualTo` | `7` |
+| `lessThanOrEqualTo` | `8` |
 
 ***
 

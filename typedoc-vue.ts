@@ -9,12 +9,13 @@ import {
   Comment,
   CommentTag,
   type SomeType,
-  LiteralType,
   IntrinsicType,
   SignatureReflection,
 } from 'typedoc'
 import type { Identifier, ImportTypeNode, TypeLiteralNode, TypeReferenceNode } from 'typescript'
 import pkg from 'typescript'
+//import { ValidOperatorsMap } from './vuepress/node_modules/data-grid-vue/lib/main'
+
 const { SyntaxKind } = pkg
 
 export function load(app: Application) {
@@ -25,24 +26,38 @@ export function load(app: Application) {
       return
     }
 
-    const declaration = declarations?.find(d => d.kind === SyntaxKind.VariableDeclaration && context.getSymbolAtLocation(d)?.name === '_default')
+    const declaration = declarations?.find(d => d.kind === SyntaxKind.VariableDeclaration)
     if (!declaration) {
       return
     }
 
-    // get ImportType
-    const importType = declaration.getChildren()?.find(n => n.kind === SyntaxKind.ImportType) as ImportTypeNode | undefined
-    if (!importType) {
+    const symbol = context.getSymbolAtLocation(declaration)
+    if (!symbol) {
       return
     }
 
-    // verify this is a DefineComponent declaration
-    const identifier = importType.qualifier as Identifier | undefined
-    if (identifier?.escapedText !== 'DefineComponent') {
-      return
-    }
+    switch (symbol.name) {
+      case '_default':
+        // get ImportType
+        const importType = declaration.getChildren()?.find(n => n.kind === SyntaxKind.ImportType) as ImportTypeNode | undefined
+        if (!importType) {
+          return
+        }
 
-    processDefineComponent({ importType, context, reflection })
+        // verify this is a DefineComponent declaration
+        const identifier = importType.qualifier as Identifier | undefined
+        if (identifier?.escapedText !== 'DefineComponent') {
+          return
+        }
+
+        processDefineComponent({ importType, context, reflection })
+        return
+
+      // case 'ValidOperatorsMap':
+      //   console.log(symbol)
+      //   console.log(declaration)
+      //   console.log(declaration.getSourceFile())
+    }
   })
 }
 
@@ -145,6 +160,7 @@ function processTypeLiteral(typeLiteral: TypeLiteralNode, context: DefineCompone
     context.reflection.children.push(toAdd)
     toAdd.parent = context.reflection
     toAdd.comment = prop.comment
+    toAdd.kind = ReflectionKind.TypeLiteral
   }
 
   for (const signature of someType?.declaration?.signatures ?? []) {

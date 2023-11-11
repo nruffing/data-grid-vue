@@ -1,20 +1,15 @@
 # Interface: SetGridStateRequest
 
+## Description
+
+Request data interface sent by the [ServerSideStorageService](../classes/ServerSideStorageService.md) to save the current grid state.
+
 ## Properties
 
-### userId
-
-```ts
-userId: string | number;
-```
-
-***
-
-### gridState
-
-```ts
-gridState: GridState;
-```
+| Property | Type | Description |
+| :------ | :------ | :------ |
+| `userId` | `string` \| `number` | - |
+| `gridState` | [`GridState`](GridState.md) | - |
 
 ***
 

@@ -1,6 +1,7 @@
 import { DataType } from './DataGridVue'
 
 /**
+ * @group Sort
  * @description Grid-level sort options. The grid must be set as sortable for any
  *  column level sort options to take effect.
  */
@@ -17,6 +18,7 @@ export interface SortOptions {
 }
 
 /**
+ * @group Sort
  * @description Whether a sort is ascending or descending.
  */
 export enum SortType {
@@ -25,6 +27,7 @@ export enum SortType {
 }
 
 /**
+ * @group Sort
  * @description Column sort definition.
  */
 export interface Sort {
@@ -45,6 +48,9 @@ export interface Sort {
   type: SortType
 }
 
+/**
+ * @ignore
+ */
 export const ClientSideSort = {
   sort(sort: Sort[], dataItems: any[]) {
     if (!dataItems?.length) {

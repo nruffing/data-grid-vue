@@ -1,8 +1,18 @@
 # Class: SessionStorageService
 
+## Description
+
+Storage service that saves grid state in [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).
+
 ## Implements
 
 - [`StorageService`](../interfaces/StorageService.md)
+
+## Properties
+
+| Property | Type | Description |
+| :------ | :------ | :------ |
+| `key` | `string` | - |
 
 ## Constructors
 
@@ -38,6 +48,10 @@ getGridState(): Promise<undefined | GridState>
 
 [`StorageService`](../interfaces/StorageService.md).[`getGridState`](../interfaces/StorageService.md#getgridstate)
 
+#### Description
+
+Retrieves the saved grid state. This is called once when the data grid component is mounted.
+
 ***
 
 ### setGridState()
@@ -48,9 +62,9 @@ setGridState(gridState): Promise<void>
 
 #### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `gridState` | [`GridState`](../interfaces/GridState.md) |
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `gridState` | [`GridState`](../interfaces/GridState.md) | The grid state to save |
 
 #### Returns
 
@@ -60,13 +74,9 @@ setGridState(gridState): Promise<void>
 
 [`StorageService`](../interfaces/StorageService.md).[`setGridState`](../interfaces/StorageService.md#setgridstate)
 
-## Properties
+#### Description
 
-### key
-
-```ts
-key: string;
-```
+Saves a new version of the grid state. This called everytime data in the grid state changes.
 
 ***
 

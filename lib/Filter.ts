@@ -1,9 +1,9 @@
 import { DataType } from './DataGridVue'
 
-export interface FilterOptions {
-  filterable: boolean
-}
-
+/**
+ * @group Filter
+ * @description Supported filter operators
+ */
 export enum FilterOperator {
   equals = 0,
   notEquals = 1,
@@ -16,6 +16,17 @@ export enum FilterOperator {
   lessThanOrEqualTo = 8,
 }
 
+/**
+ * @group Filter
+ * @description Map of which {@link FilterOperator}s are valid for each {@link DataType}.
+ * | Data Type | Valid Operators |
+ * | --- | --- |
+ * | none | |
+ * | alphanumeric | equals, notEquals, contains, startsWith, endsWith |
+ * | number | equals, notEquals, greaterThan, lessThan, greaterThanOrEqualTo, lessThanOrEqualTo |
+ * | date | equals, notEquals, greaterThan, lessThan, greaterThanOrEqualTo, lessThanOrEqualTo |
+ * | dateTime | equals, notEquals, greaterThan, lessThan, greaterThanOrEqualTo, lessThanOrEqualTo |
+ */
 export const ValidOperatorsMap = new Map<DataType, Set<FilterOperator>>([
   [DataType.none, new Set()],
   [
@@ -57,18 +68,35 @@ export const ValidOperatorsMap = new Map<DataType, Set<FilterOperator>>([
   ],
 ])
 
+/**
+ * @group Filter
+ * @description Model definition for the current state of a column filter.
+ */
 export interface FilterCondition {
+  /** The name of the field being filtered by. */
   fieldName: string
+  /** The {@link FilterOperator} being applies. */
   operator: FilterOperator
+  /** The {@link DataType} of the column being filtered. */
   dataType: DataType
+  /** The current filter value. */
   value: string | undefined
 }
 
+/**
+ * @group Filter
+ * @description Model definition for the aggregated filter currently being applied to the entire data grid.
+ */
 export interface Filter {
+  /** Collection of {@link FilterCondition}s that will be or-ed together. */
   or: FilterCondition[]
+  /** Optional {@link Filter} to and with the current one. */
   and: Filter | undefined
 }
 
+/**
+ * @ignore
+ */
 export const ClientSideFilter = {
   filter(filter: Filter, dataItems: any[]): any[] {
     if (!dataItems?.length) {

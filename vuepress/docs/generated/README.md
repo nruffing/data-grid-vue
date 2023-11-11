@@ -15,62 +15,68 @@
 - [Icon](Icon/README.md)
 - [PageNavigation](PageNavigation/README.md)
 
-### Classes
-
-- [Field](classes/Field.md)
-- [ClientSideDataService](classes/ClientSideDataService.md)
-- [ServerSideDataService](classes/ServerSideDataService.md)
-- [SessionStorageService](classes/SessionStorageService.md)
-- [LocalStorageService](classes/LocalStorageService.md)
-- [ServerSideStorageService](classes/ServerSideStorageService.md)
-
-### Enumerations
+### Column
 
 - [DataType](enumerations/DataType.md)
-- [FilterOperator](enumerations/FilterOperator.md)
-- [SortType](enumerations/SortType.md)
-- [LocalStorageType](enumerations/LocalStorageType.md)
-
-### Interfaces
-
 - [Column](interfaces/Column.md)
 - [ColumnFilterOptions](interfaces/ColumnFilterOptions.md)
-- [PageData](interfaces/PageData.md)
-- [DataService](interfaces/DataService.md)
-- [PageDataRequest](interfaces/PageDataRequest.md)
-- [ServerSideDataServiceOptions](interfaces/ServerSideDataServiceOptions.md)
-- [FilterOptions](interfaces/FilterOptions.md)
+- [FieldValueGetter](type-aliases/FieldValueGetter.md)
+- [Field](classes/Field.md)
+
+### Filter
+
+- [FilterOperator](enumerations/FilterOperator.md)
+- [ValidOperatorsMap](variables/ValidOperatorsMap.md)
 - [FilterCondition](interfaces/FilterCondition.md)
 - [Filter](interfaces/Filter.md)
-- [DataGridVueOptions](interfaces/DataGridVueOptions.md)
+
+### Sort
+
 - [SortOptions](interfaces/SortOptions.md)
+- [SortType](enumerations/SortType.md)
 - [Sort](interfaces/Sort.md)
-- [GridState](interfaces/GridState.md)
-- [StorageService](interfaces/StorageService.md)
-- [GetGridStateRequest](interfaces/GetGridStateRequest.md)
-- [SetGridStateRequest](interfaces/SetGridStateRequest.md)
-- [ServerSideStorageServiceOptions](interfaces/ServerSideStorageServiceOptions.md)
 
-### Type Aliases
+### Data Service
 
-- [FieldValueGetter](type-aliases/FieldValueGetter.md)
+- [PageData](interfaces/PageData.md)
+- [DataService](interfaces/DataService.md)
+- [StubDataService](variables/StubDataService.md)
+- [ClientSideDataService](classes/ClientSideDataService.md)
+- [PageDataRequest](interfaces/PageDataRequest.md)
 - [BeforeRequestHandler](type-aliases/BeforeRequestHandler.md)
 - [ResponseHandler](type-aliases/ResponseHandler.md)
+- [ServerSideDataServiceOptions](interfaces/ServerSideDataServiceOptions.md)
+- [ServerSideDataService](classes/ServerSideDataService.md)
+
+### Storage Service
+
+- [LocalStorageType](enumerations/LocalStorageType.md)
+- [GridState](interfaces/GridState.md)
+- [StorageService](interfaces/StorageService.md)
+- [StubStorageService](variables/StubStorageService.md)
+- [SessionStorageService](classes/SessionStorageService.md)
+- [LocalStorageService](classes/LocalStorageService.md)
+- [GetGridStateRequest](interfaces/GetGridStateRequest.md)
+- [SetGridStateRequest](interfaces/SetGridStateRequest.md)
 - [BeforeGetRequestHandler](type-aliases/BeforeGetRequestHandler.md)
 - [GetResponseHandler](type-aliases/GetResponseHandler.md)
 - [BeforeSetRequestHandler](type-aliases/BeforeSetRequestHandler.md)
 - [SetResponseHandler](type-aliases/SetResponseHandler.md)
+- [ServerSideStorageServiceOptions](interfaces/ServerSideStorageServiceOptions.md)
 
-### Variables
+### Plugin
 
-- [EmptyPageData](variables/EmptyPageData.md)
-- [StubDataService](variables/StubDataService.md)
-- [ValidOperatorsMap](variables/ValidOperatorsMap.md)
-- [ClientSideFilter](variables/ClientSideFilter.md)
-- [Formatter](variables/Formatter.md)
+- [DataGridVueOptions](interfaces/DataGridVueOptions.md)
 - [DataGridVue](variables/DataGridVue.md)
-- [ClientSideSort](variables/ClientSideSort.md)
-- [StubStorageService](variables/StubStorageService.md)
+
+### Storage Service
+The server-side {@link StorageService} used when {@link DataGridVueGrid.serverSideStorageOptions} is specified.
+
+- [ServerSideStorageService](classes/ServerSideStorageService.md)
+
+### Utilities
+
+- [Formatter](variables/Formatter.md)
 
 ***
 

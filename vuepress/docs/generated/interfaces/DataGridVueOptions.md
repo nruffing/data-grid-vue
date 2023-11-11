@@ -2,11 +2,9 @@
 
 ## Properties
 
-### dragonDropVueOptions
-
-```ts
-dragonDropVueOptions: undefined | DragonDropVueOptions;
-```
+| Property | Type | Description |
+| :------ | :------ | :------ |
+| `dragonDropVueOptions` | `undefined` \| `DragonDropVueOptions` | - |
 
 ***
 

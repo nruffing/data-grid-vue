@@ -271,6 +271,8 @@ export default defineComponent({
 
     /**
      * @description Slot to override the cell for the specified column. For example, the slot name `cell-id` would override the cell for the column with a field with the name `id`.
+     * Any data modifications or formatting done as part of the cell template will not be taken into account for filtering and sorting. If the desired behavior is to also sort and filter
+     * based on the formatted value use {@link Field.valueGetter} instead.
      */
     'cell-${column.field.fieldName}': (props: {
       /**

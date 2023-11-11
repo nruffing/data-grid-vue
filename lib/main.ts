@@ -30,7 +30,7 @@ import {
   ServerSideStorageService,
 } from './Storage'
 
-import { type FilterOptions, FilterOperator, ValidOperatorsMap, type FilterCondition, type Filter, ClientSideFilter } from './Filter'
+import { FilterOperator, ValidOperatorsMap, type FilterCondition, type Filter, ClientSideFilter } from './Filter'
 
 import { type SortOptions, SortType, type Sort, ClientSideSort } from './Sort'
 
@@ -62,7 +62,6 @@ export {
   type ResponseHandler,
   type ServerSideDataServiceOptions,
   ServerSideDataService,
-  type FilterOptions,
   FilterOperator,
   ValidOperatorsMap,
   type FilterCondition,

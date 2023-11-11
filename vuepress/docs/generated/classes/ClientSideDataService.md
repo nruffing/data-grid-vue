@@ -2,11 +2,21 @@
 
 ## Description
 
-The client-side [DataService](../interfaces/DataService.md) used when [DataGridVueGrid.data](../DataGridVueGrid/README.md#data) is specified.
+The client-side [DataService](../interfaces/DataService.md) used when [DataGridVueGrid.data](../DataGridVueGrid/README.md) is specified.
 
 ## Implements
 
 - [`DataService`](../interfaces/DataService.md)
+
+## Properties
+
+| Property | Type | Description |
+| :------ | :------ | :------ |
+| `dataItems` | `any`[] | - |
+| `previousSortJson` | `string` | - |
+| `sorted` | `any`[] | - |
+| `previousFilterJson` | `string` | - |
+| `filtered` | `any`[] | - |
 
 ## Constructors
 
@@ -80,8 +90,8 @@ Called to get data for the currently rendered page.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `pageNum` | `number` | The page number for the page to load starting with `1` for the first page.<br />If the data grid is not set configured to be pageable with the [DataGridVueGrid.paged](../DataGridVueGrid/README.md#paged)<br />prop then this will always be `-1`. |
-| `pageSize` | `number` | The maximum number of data items to display on each page. If the data grid is<br />not set configured to be pageable with the [DataGridVueGrid.paged](../DataGridVueGrid/README.md#paged) prop then this<br />will always be `-1`. |
+| `pageNum` | `number` | The page number for the page to load starting with `1` for the first page.<br />If the data grid is not set configured to be pageable with the [DataGridVueGrid.paged](../DataGridVueGrid/README.md)<br />prop then this will always be `-1`. |
+| `pageSize` | `number` | The maximum number of data items to display on each page. If the data grid is<br />not set configured to be pageable with the [DataGridVueGrid.paged](../DataGridVueGrid/README.md) prop then this<br />will always be `-1`. |
 | `sort` | [`Sort`](../interfaces/Sort.md)[] | The current colomn sort definitions in the order in which they should be applied. |
 | `filter` | `undefined` \| [`Filter`](../interfaces/Filter.md) | The current filter definition or undefined if no filter is set. |
 
@@ -93,47 +103,7 @@ A Promise that returns the [PageData](../interfaces/PageData.md) for the current
 
 #### Implementation of
 
-[`DataService`](../interfaces/DataService.md).[`getPage`](../interfaces/DataService.md#getpage)
-
-## Properties
-
-### dataItems
-
-```ts
-dataItems: any[];
-```
-
-***
-
-### previousSortJson
-
-```ts
-previousSortJson: string;
-```
-
-***
-
-### sorted
-
-```ts
-sorted: any[];
-```
-
-***
-
-### previousFilterJson
-
-```ts
-previousFilterJson: string;
-```
-
-***
-
-### filtered
-
-```ts
-filtered: any[];
-```
+[`DataService`](../interfaces/DataService.md).`getPage`
 
 ***
 

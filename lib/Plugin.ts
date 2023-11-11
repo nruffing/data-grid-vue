@@ -3,10 +3,16 @@ import { DragonDropVue, type DragonDropVueOptions } from 'dragon-drop-vue'
 import DataGridVueComponent from './components/DataGridVue.vue'
 import ClickOutsideDirective from './directives/ClickOutside'
 
+/**
+ * @group Plugin
+ */
 export interface DataGridVueOptions {
   dragonDropVueOptions: DragonDropVueOptions | undefined
 }
 
+/**
+ * @group Plugin
+ */
 export const DataGridVue = {
   install: (app: App, options: DataGridVueOptions | undefined = undefined) => {
     /*

@@ -11,8 +11,8 @@ const Formatter: {
 
 | Member | Type | Description |
 | :------ | :------ | :------ |
-| `fromCamelCase` | `string` | - |
-| `columnTitle` | `string` | - |
+| `fromCamelCase` | `string` | Converts camel-cased field name to be title-cased.<br />For example, firstName -> First Name |
+| `columnTitle` | `string` | Converts column's field name to a column title. |
 
 ***
 

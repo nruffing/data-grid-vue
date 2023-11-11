@@ -6,19 +6,10 @@ Whether a sort is ascending or descending.
 
 ## Enumeration Members
 
-### ascending
-
-```ts
-ascending: 0;
-```
-
-***
-
-### descending
-
-```ts
-descending: 1;
-```
+| Member | Value |
+| :------ | :------ |
+| `ascending` | `0` |
+| `descending` | `1` |
 
 ***
 

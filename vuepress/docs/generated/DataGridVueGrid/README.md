@@ -20,7 +20,7 @@ data: {
 
 Array of objects to display in the data grid when using the built-in [ClientSideDataService](../classes/ClientSideDataService.md).
 This prop is required unless serverSideOptions or customDataService is supplied. The order of precedence
-is [customDataService](README.md#customdataservice), [serverSideOptions](README.md#serversideoptions), and then [data](README.md#data).
+is [customDataService](README.md), [serverSideOptions](README.md), and then [data](README.md).
 The data grid will not react and rerender when this property changes. If that functionaly is needed it is recommended
 to leverage `v-if` to force a new component instance to render.
 
@@ -54,7 +54,7 @@ serverSideOptions: {
 
 Options to configure the built-in server-side data service including the POST url and optional
 callbacks to alter the data format of the request and response allowing. This allows the built-in data service
-to handle the data contract of any server. [ServerSideDataService](../classes/ServerSideDataService.md) is used unless [customDataService](README.md#customdataservice)
+to handle the data contract of any server. [ServerSideDataService](../classes/ServerSideDataService.md) is used unless [customDataService](README.md)
 is also specified.
 
 #### See
@@ -90,7 +90,7 @@ customDataService: {
 #### Description
 
 Custom implementation of [DataService](../interfaces/DataService.md) to supply the grid's data. When this is specified
-[data](README.md#data) and [serverSideOptions](README.md#serversideoptions) are ignored.
+[data](README.md) and [serverSideOptions](README.md) are ignored.
 
 #### Default Value
 
@@ -149,7 +149,7 @@ allowColumnReorder: {
 
 Whether to allow columns to be reordered using drag-and-drop
 powered by [drag-drop-vue](https://www.npmjs.com/package/dragon-drop-vue).
-In order for columns to rerender after dropping [columns](README.md#columns) should be passed using `v-model:columns`.
+In order for columns to rerender after dropping [columns](README.md) should be passed using `v-model:columns`.
 
 #### Default Value
 
@@ -179,8 +179,8 @@ paged: {
 
 #### Description
 
-Whether the data grid should be paged. When this is `false` [PageDataRequest.pageNum](../interfaces/PageDataRequest.md#pagenum) and
-[PageDataRequest.pageSize](../interfaces/PageDataRequest.md#pagesize) will be -1.
+Whether the data grid should be paged. When this is `false` [PageDataRequest.pageNum](../interfaces/PageDataRequest.md) and
+[PageDataRequest.pageSize](../interfaces/PageDataRequest.md) will be -1.
 
 #### Default Value
 
@@ -304,8 +304,8 @@ showColumnSelection: {
 #### Description
 
 Whether to display the `Add/Remove Columns` menu in the options header. Column selection
-can be set externally using the [Column.hidden](../interfaces/Column.md#hidden) property. For this functionality to work correctly
-[columns](README.md#columns) should be passed using `v-model:columns`.
+can be set externally using the [Column.hidden](../interfaces/Column.md) property. For this functionality to work correctly
+[columns](README.md) should be passed using `v-model:columns`.
 
 #### Default Value
 
@@ -337,9 +337,9 @@ storageKey: {
 
 A key to use to save grid state in [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 or [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).
-sessionStorage is used unless [localStorageType](README.md#localstoragetype) is specified. The data
+sessionStorage is used unless [localStorageType](README.md) is specified. The data
 that is saved as part of the grid state is defined in [GridState](../interfaces/GridState.md).
-This is ignored if [serverSideStorageOptions](README.md#serversidestorageoptions) or [customStorageService](README.md#customstorageservice) is specified.
+This is ignored if [serverSideStorageOptions](README.md) or [customStorageService](README.md) is specified.
 
 #### See
 
@@ -376,9 +376,9 @@ localStorageType: {
 
 Whether grid state is stored in [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 or [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).
-To save grid state [storageKey](README.md#storagekey) must be specified.The data
+To save grid state [storageKey](README.md) must be specified.The data
 that is saved as part of the grid state is defined in [GridState](../interfaces/GridState.md).
-This is ignored if [serverSideStorageOptions](README.md#serversidestorageoptions) or [customStorageService](README.md#customstorageservice) is specified.
+This is ignored if [serverSideStorageOptions](README.md) or [customStorageService](README.md) is specified.
 
 #### See
 
@@ -414,8 +414,8 @@ serverSideStorageOptions: {
 #### Description
 
 Options to specify to use [ServerSideStorageService](../classes/ServerSideStorageService.md) to retrieve and store [GridState](../interfaces/GridState.md)
-[storageKey](README.md#storagekey) and [localStorageType](README.md#localstoragetype) are ignored if this is specified. This is ignored if
-[customStorageService](README.md#customstorageservice) is specified.
+[storageKey](README.md) and [localStorageType](README.md) are ignored if this is specified. This is ignored if
+[customStorageService](README.md) is specified.
 
 #### See
 
@@ -450,7 +450,7 @@ customStorageService: {
 #### Description
 
 Custom implementation of [StorageService](../interfaces/StorageService.md) to optionally retrieve/store [GridState](../interfaces/GridState.md).
-When this is specified [storageKey](README.md#storagekey), [localStorageType](README.md#localstoragetype), and [serverSideStorageOptions](README.md#serversidestorageoptions) are ignored.
+When this is specified [storageKey](README.md), [localStorageType](README.md), and [serverSideStorageOptions](README.md) are ignored.
 
 #### Default Value
 
@@ -527,6 +527,8 @@ cell-${column.field.fieldName}: {
 #### Description
 
 Slot to override the cell for the specified column. For example, the slot name `cell-id` would override the cell for the column with a field with the name `id`.
+Any data modifications or formatting done as part of the cell template will not be taken into account for filtering and sorting. If the desired behavior is to also sort and filter
+based on the formatted value use Field.valueGetter instead.
 
 #### Type declaration
 

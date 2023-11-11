@@ -7,8 +7,8 @@ is configured with more then one filter operator.
 
 ## See
 
- - [Column.filterable](../interfaces/Column.md#filterable)
- - [Column.filterOptions](../interfaces/Column.md#filteroptions)
+ - [Column.filterable](../interfaces/Column.md)
+ - [Column.filterOptions](../interfaces/Column.md)
  - [FilterOperator](../enumerations/FilterOperator.md)
 
 ## props

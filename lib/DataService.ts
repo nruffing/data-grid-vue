@@ -3,6 +3,7 @@ import { type Sort, ClientSideSort } from './Sort'
 import { type Filter, ClientSideFilter } from './Filter'
 
 /**
+ * @group Data Service
  * @description Interface to implement to define a data service to retrieve grid data.
  */
 export interface DataService {
@@ -22,7 +23,8 @@ export interface DataService {
 }
 
 /**
- * @description A stub {@link DataService} that will noop the getPage call and return {@link EmptyPageData}.
+ * @group Data Service
+ * @description A stub {@link DataService} that will noop the getPage call and return an empty page data object.
  */
 export const StubDataService = {
   getPage(pageNum: number, pageSize: number, sort: Sort[], filter: Filter | undefined): Promise<PageData> {
@@ -31,6 +33,7 @@ export const StubDataService = {
 } as DataService
 
 /**
+ * @group Data Service
  * @description The client-side {@link DataService} used when {@link DataGridVueGrid.data} is specified.
  */
 export class ClientSideDataService implements DataService {
@@ -115,6 +118,7 @@ export class ClientSideDataService implements DataService {
 }
 
 /**
+ * @group Data Service
  * @description Request data interface sent by the {@link ServerSideDataService}. This can be modified before
  * the HTTP request is sent using the {@link BeforeRequestHandler} callback on {@link ServerSideDataServiceOptions}.
  * @see {@link https://github.com/nruffing/data-grid-vue-dotnet/blob/main/DataGridVueDotnet/PageDataRequest.cs | dotnet model}
@@ -146,7 +150,8 @@ export interface PageDataRequest {
 }
 
 /**
- * Callback type to change the {@link https://developer.mozilla.org/docs/Web/API/Request | Request}
+ * @group Data Service
+ * @description Callback type to change the {@link https://developer.mozilla.org/docs/Web/API/Request | Request}
  * object before it is sent to the server from the built-in server side data service. This is useful
  * when you need to map the {@link PageDataRequest} to a different data contract.
  * @see {@link https://www.nuget.org/packages/DataGridVueDotnet/0.0.1-alpha | dotnet IQueryable helpers}
@@ -154,7 +159,8 @@ export interface PageDataRequest {
 export type BeforeRequestHandler = (request: Request, body: PageDataRequest) => Promise<Request>
 
 /**
- * Callback type to change the {@link https://developer.mozilla.org/docs/Web/API/Response | Response}
+ * @group Data Service
+ * @description Callback type to change the {@link https://developer.mozilla.org/docs/Web/API/Response | Response}
  * object before it is handled by the data grid from the built-in server side data service.
  * This is useful when you need to map the servers response data back to {@link PageData}.
  * @see {@link https://www.nuget.org/packages/DataGridVueDotnet/0.0.1-alpha | dotnet IQueryable helpers}
@@ -162,6 +168,7 @@ export type BeforeRequestHandler = (request: Request, body: PageDataRequest) => 
 export type ResponseHandler = (response: Response) => Promise<PageData>
 
 /**
+ * @group Data Service
  * @description Options to configure the built-in server-side data service including the POST url and optional
  * callbacks to alter the data format of the request and response allowing. This allows the built-in data service
  * to handle the data contract of any server.
@@ -191,6 +198,7 @@ export interface ServerSideDataServiceOptions {
 }
 
 /**
+ * @group Data Service
  * @description The server-side {@link DataService} used when {@link DataGridVueGrid.serverSideOptions} is specified.
  */
 export class ServerSideDataService implements DataService {

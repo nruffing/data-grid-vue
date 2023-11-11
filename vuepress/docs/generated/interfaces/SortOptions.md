@@ -7,27 +7,10 @@ Grid-level sort options. The grid must be set as sortable for any
 
 ## Properties
 
-### sortable
-
-```ts
-sortable: boolean;
-```
-
-#### Description
-
-Whether the grid should be sortable.
-
-***
-
-### multiColumn
-
-```ts
-multiColumn: boolean;
-```
-
-#### Description
-
-Whether more then one column can be sorted at once.
+| Property | Type | Description |
+| :------ | :------ | :------ |
+| `sortable` | `boolean` | **Description**<br /><br />Whether the grid should be sortable. |
+| `multiColumn` | `boolean` | **Description**<br /><br />Whether more then one column can be sorted at once. |
 
 ***
 

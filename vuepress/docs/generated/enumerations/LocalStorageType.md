@@ -1,20 +1,21 @@
 # Enumeration: LocalStorageType
 
+## Description
+
+Whether grid state is stored in [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+or [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).
+
+## See
+
+ - [DataGridVueGrid.localStorageType](../DataGridVueGrid/README.md)
+ - [DataGridVueGrid.storageKey](../DataGridVueGrid/README.md)
+
 ## Enumeration Members
 
-### sessionStorage
-
-```ts
-sessionStorage: 0;
-```
-
-***
-
-### localStorage
-
-```ts
-localStorage: 1;
-```
+| Member | Value |
+| :------ | :------ |
+| `sessionStorage` | `0` |
+| `localStorage` | `1` |
 
 ***
 
