@@ -1,3 +1,0 @@
-# Filtering
-
-## Coming Soon

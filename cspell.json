@@ -2,7 +2,7 @@
   "version": "0.2",
   "language": "en",
   "useGitignore": true,
-  "words": ["pageable", "prismjs", "shiki", "vnode", "vuepress"],
+  "words": ["nruffing", "pageable", "prismjs", "shiki", "vnode", "vuepress"],
   "ignoreWords": ["datagrid"],
   "ignorePaths": ["./src/test-data", "./vuepress/docs/demo-data", "**tsconfig**", "./typedoc-out.json"]
 }
