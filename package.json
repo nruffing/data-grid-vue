@@ -51,7 +51,7 @@
     "format": "npx prettier --write \"./**/*.{ts,json,vue,css}\"",
     "upgrade-all": "ncu --upgrade",
     "prepare": "husky install",
-    "compile-readme": "./node_modules/markdown-include/bin/cli.js markdown.json",
+    "compile-readme": "./markdown-include.cjs",
     "typedoc-compile-plugin": "npx tsc --project tsconfig.typedoc-vue.json",
     "typedoc-gen": "npx typedoc --options typedoc.json",
     "typedoc": "run-s build typedoc-compile-plugin typedoc-gen",

@@ -101,7 +101,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   :heart: <a href="https://github.com/sponsors/nruffing" target="_blank">Sponsor</a> :heart:
   <span>|</span>
   :point_right: <a href="https://datagridvue.com/guide" target="_blank">Quick Start</a> :point_left:
-  <br />
+  <br /><br />
   :beetle: <a href="https://github.com/nruffing/data-grid-vue/issues/new?assignees=nruffing&labels=bug&projects=&template=bug_report.md&title=%5Bbug%5D">Report Bug</a>
   <span>|</span>
   :sparkle: <a href="https://github.com/nruffing/data-grid-vue/issues/new?assignees=nruffing&labels=enhancement&projects=&template=feature_request.md&title=%5Bfeature%5D">Feature Request</a>
@@ -111,7 +111,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   :question: <a href="https://github.com/nruffing/data-grid-vue/issues/new?assignees=nruffing&labels=support&projects=&template=support-request.md&title=%5Bsupport%5D">Questions</a>
   <span>|</span>
   :scroll: <a href="https://datagridvue.com/changelog" target="_blank">Changelog</a>
-  <br/>
+  <br/><br/>
   :package: <a href="https://www.npmjs.com/package/data-grid-vue" target="_blank">NPM</a>
   <span>|</span>
   :package: <a href="https://yarnpkg.com/package?name=data-grid-vue" target="_blank">Yarn</a>
@@ -152,9 +152,9 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   - Add css variable for input/select font size
 
 ### v2.0.0-beta
-  ::: danger BREAKING
+  [!IMPORTANT]
   DataGridVue component is now exported as DataGridVueGrid in favor of using a new plugin to ensure proper setup. Plugin registers DataGridVueGrid component globally as dgv-data-grid.
-  :::
+   
   - Column reordering via drag-and-drop can be enabled on the grid with the allowColumnReorder property. Drag and drop is powered by [dragon-drop-vue](https://www.npmjs.com/package/dragon-drop-vue) and dragon drop global options can be set on the plugin options.
   - Hidden columns are now supported. A popup for users to add/remove columns from the view can be enabled with the showColumnSelection property.
   - Improved page size select styling.
