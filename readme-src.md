@@ -1,6 +1,10 @@
 <img src="./vuepress/docs/.vuepress/public/favicon.svg" width="100" style="margin: 15px 0;" />
 
-# Data Grid Vue
+# Data Grid Vue   
+
+<a href="https://github.com/sponsors/nruffing">
+  <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/nruffing?logo=github&color=%23ffa600">
+</a>
 
 #include "./vuepress/docs/shared/summary.md"
 
@@ -17,30 +21,39 @@
   <a href="https://github.com/nruffing/data-grid-vue/blob/main/LICENSE" aria-label="MIT License">
     <img alt="GitHub" src="https://img.shields.io/github/license/nruffing/data-grid-vue" />
   </a>
-  <iframe src="https://github.com/sponsors/nruffing/button" title="Sponsor nruffing" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
 </div>
 
 <hr />
+:point_right: <a href="https://datagridvue.com/guide" target="_blank">Quick Start</a> :point_left:
 <div class="example-image-container">
   <img src="./vuepress/docs/.vuepress/public/example.png" />
 </div>
+
+#include "./vuepress/docs/shared/examples/simple-example-codeblock.md"
+
 <hr />
 
 #include "./vuepress/docs/shared/features.md"
 
 <hr />
 <div class="links">
-  <a href="https://github.com/nruffing/data-grid-vue/issues/new?assignees=nruffing&labels=bug&projects=&template=bug_report.md&title=%5Bbug%5D">Report Bug</a>
+  :heart: <a href="https://github.com/sponsors/nruffing" target="_blank">Sponsor</a> :heart:
   <span>|</span>
-  <a href="https://github.com/nruffing/data-grid-vue/issues/new?assignees=nruffing&labels=enhancement&projects=&template=feature_request.md&title=%5Bfeature%5D">Feature Request</a>
+  :point_right: <a href="https://datagridvue.com/guide" target="_blank">Quick Start</a> :point_left:
   <span>|</span>
-  <a href="https://datagridvue.com" target="_blank">Documentation</a>
+  :beetle: <a href="https://github.com/nruffing/data-grid-vue/issues/new?assignees=nruffing&labels=bug&projects=&template=bug_report.md&title=%5Bbug%5D">Report Bug</a>
   <span>|</span>
-  <a href="https://github.com/nruffing/data-grid-vue/blob/main/CHANGELOG.md">Changelog</a>
+  :sparkle: <a href="https://github.com/nruffing/data-grid-vue/issues/new?assignees=nruffing&labels=enhancement&projects=&template=feature_request.md&title=%5Bfeature%5D">Feature Request</a>
   <span>|</span>
-  <a href="https://www.npmjs.com/package/data-grid-vue" target="_blank">NPM</a>
+  :books: <a href="https://datagridvue.com" target="_blank">Documentation</a>
   <span>|</span>
-  <a href="https://yarnpkg.com/package?name=data-grid-vue" target="_blank">Yarn</a>
+  :question: <a href="https://github.com/nruffing/data-grid-vue/issues/new?assignees=nruffing&labels=support&projects=&template=support-request.md&title=%5Bsupport%5D">Questions</a>
+  <span>|</span>
+  :scroll: <a href="https://datagridvue.com/changelog" target="_blank">Changelog</a>
+  <span>|</span>
+  :package: <a href="https://www.npmjs.com/package/data-grid-vue" target="_blank">NPM</a>
+  <span>|</span>
+  :package: <a href="https://yarnpkg.com/package?name=data-grid-vue" target="_blank">Yarn</a>
 </div>
 <hr />
 

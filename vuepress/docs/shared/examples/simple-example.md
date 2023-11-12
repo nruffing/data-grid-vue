@@ -12,19 +12,7 @@
   </dgv-data-grid>
 </div>
 
-```vue
-<dgv-data-grid
-  v-model:columns="columns"
-  :data="DEMO.data"
-  :sort-options="{
-    sortable: true,
-    multiColumn: false,
-  }"
-  :allow-column-reorder="true"
-  :show-column-selection="true"
->
-</dgv-data-grid>
-```
+!!!include(examples/simple-example-codeblock.md)!!!
 
 <script lang="ts" setup>
 import { inject, ref } from 'vue'
