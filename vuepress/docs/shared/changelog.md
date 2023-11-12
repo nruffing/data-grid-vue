@@ -10,6 +10,7 @@
   - Quick start guide
   - Fix spelling errors in documentation
   - Fix edit page links in documentation
+  - Readme updates
 
 ### v2.2.0
   - Add clear filters callback to options-header slot

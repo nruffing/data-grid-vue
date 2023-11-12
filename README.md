@@ -2,13 +2,16 @@
 
 # Data Grid Vue   
 
-<a href="https://github.com/sponsors/nruffing">
-  <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/nruffing?logo=github&color=%23ffa600">
-</a>
+<p align="center">
+  <a href="https://github.com/sponsors/nruffing">
+    <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/nruffing?logo=github&color=%23ffa600">
+  </a>
+</p>
+<br />
 
 Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control. Features include numerous slots, paging, sorting, filtering, CSS variables, client and server-data retrieval, client and server-side grid-state storage (i.e. local storage, session storage, etc.), dynamic column widths, selectable page size, drag-and-drop column reorder powered by dragon-drop-vue, and ability for user to add/remove columns.
 
-<div class="badges">
+<p align="center">
   <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/ci.yml">
     <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/ci.yml/badge.svg" />
   </a>
@@ -21,13 +24,19 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   <a href="https://github.com/nruffing/data-grid-vue/blob/main/LICENSE" aria-label="MIT License">
     <img alt="GitHub" src="https://img.shields.io/github/license/nruffing/data-grid-vue" />
   </a>
-</div>
+</p>
 
 <hr />
-:point_right: <a href="https://datagridvue.com/guide" target="_blank">Quick Start</a> :point_left:
+<p align="center">
+  :point_right: <a href="https://datagridvue.com/guide" target="_blank">Quick Start</a> :point_left:
+</p>
+
+<br />
 <div class="example-image-container">
   <img src="./vuepress/docs/.vuepress/public/example.png" />
 </div>
+
+<br />
 
 ```vue
 <dgv-data-grid
@@ -86,7 +95,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   * Data cell per column
 
 <hr />
-<div class="links">
+<p align="center">
   :heart: <a href="https://github.com/sponsors/nruffing" target="_blank">Sponsor</a> :heart:
   <span>|</span>
   :point_right: <a href="https://datagridvue.com/guide" target="_blank">Quick Start</a> :point_left:
@@ -104,7 +113,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   :package: <a href="https://www.npmjs.com/package/data-grid-vue" target="_blank">NPM</a>
   <span>|</span>
   :package: <a href="https://yarnpkg.com/package?name=data-grid-vue" target="_blank">Yarn</a>
-</div>
+</p>
 <hr />
 
 # Data Grid Vue
@@ -119,6 +128,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   - Quick start guide
   - Fix spelling errors in documentation
   - Fix edit page links in documentation
+  - Readme updates
 
 ### v2.2.0
   - Add clear filters callback to options-header slot

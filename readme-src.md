@@ -2,13 +2,16 @@
 
 # Data Grid Vue   
 
-<a href="https://github.com/sponsors/nruffing">
-  <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/nruffing?logo=github&color=%23ffa600">
-</a>
+<p align="center">
+  <a href="https://github.com/sponsors/nruffing">
+    <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/nruffing?logo=github&color=%23ffa600">
+  </a>
+</p>
+<br />
 
 #include "./vuepress/docs/shared/summary.md"
 
-<div class="badges">
+<p align="center">
   <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/ci.yml">
     <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/ci.yml/badge.svg" />
   </a>
@@ -21,13 +24,19 @@
   <a href="https://github.com/nruffing/data-grid-vue/blob/main/LICENSE" aria-label="MIT License">
     <img alt="GitHub" src="https://img.shields.io/github/license/nruffing/data-grid-vue" />
   </a>
-</div>
+</p>
 
 <hr />
-:point_right: <a href="https://datagridvue.com/guide" target="_blank">Quick Start</a> :point_left:
+<p align="center">
+  :point_right: <a href="https://datagridvue.com/guide" target="_blank">Quick Start</a> :point_left:
+</p>
+
+<br />
 <div class="example-image-container">
   <img src="./vuepress/docs/.vuepress/public/example.png" />
 </div>
+
+<br />
 
 #include "./vuepress/docs/shared/examples/simple-example-codeblock.md"
 
@@ -36,7 +45,7 @@
 #include "./vuepress/docs/shared/features.md"
 
 <hr />
-<div class="links">
+<p align="center">
   :heart: <a href="https://github.com/sponsors/nruffing" target="_blank">Sponsor</a> :heart:
   <span>|</span>
   :point_right: <a href="https://datagridvue.com/guide" target="_blank">Quick Start</a> :point_left:
@@ -54,7 +63,7 @@
   :package: <a href="https://www.npmjs.com/package/data-grid-vue" target="_blank">NPM</a>
   <span>|</span>
   :package: <a href="https://yarnpkg.com/package?name=data-grid-vue" target="_blank">Yarn</a>
-</div>
+</p>
 <hr />
 
 #include "./vuepress/docs/shared/changelog.md"
