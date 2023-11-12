@@ -1,6 +1,8 @@
-<img src="./vuepress/docs/.vuepress/public/favicon.svg" width="100" style="margin: 15px 0;" />
+<p align="center">
+  <img src="./vuepress/docs/.vuepress/public/favicon.svg" width="100" style="margin: 15px 0;" />
+</p>
 
-# Data Grid Vue   
+<h1 align="center">Data Grid Vue</h1>
 
 <p align="center">
   <a href="https://github.com/sponsors/nruffing">
