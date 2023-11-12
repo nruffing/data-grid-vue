@@ -12,7 +12,7 @@
   </dgv-data-grid>
 </div>
 
-!!!include(examples/simple-example-codeblock.md)!!!
+!!!include(simple-example-codeblock.md)!!!
 
 <script lang="ts" setup>
 import { inject, ref } from 'vue'

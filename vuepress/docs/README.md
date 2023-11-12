@@ -13,6 +13,6 @@
 
 ## Example
 
-!!!include(examples/simple-example.md)!!!
+!!!include(simple-example.md)!!!
 
 !!!include(features.md)!!!

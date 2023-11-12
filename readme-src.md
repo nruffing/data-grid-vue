@@ -40,7 +40,7 @@
 
 <br />
 
-#include "./vuepress/docs/shared/examples/simple-example-codeblock.md"
+#include "./vuepress/docs/shared/simple-example-codeblock.md"
 
 <hr />
 
