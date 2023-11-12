@@ -1,10 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import { DataGridVue, DataGridVueOptions } from '../lib/main'
+import { DataGridVue } from '../lib/main'
 
-const dataGridVueOptions = {
-  dataGridComponentName: 'custom-data-grid',
-} as DataGridVueOptions
-
-createApp(App).use(router).use(DataGridVue, dataGridVueOptions).mount('#app')
+createApp(App).use(router).use(DataGridVue).mount('#app')

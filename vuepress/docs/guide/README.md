@@ -53,7 +53,7 @@ The styles and variables can be imported from `../node_modules/data-grid-vue/dis
 The `DataGridVue` plugin has additional options that can be specified. These options are specified in <a href="/generated/interfaces/DataGridVueOptions.html" target="_blank">DataGridVueOptions</a>. The default values for the options are going to work in almost all scenarios but in case there are naming collisions the component and directive names can be changed (by default they all include the `dgv` prefix).
 
 ```ts
-import { DataGridVue, DataGridVueOptions } from 'data-grid-vue'
+import { DataGridVue, type DataGridVueOptions } from 'data-grid-vue'
 
 import '../node_modules/data-grid-vue/dist/style.css'
 
@@ -74,7 +74,33 @@ The click-outside directive is only used for the add/remove columns menu (i.e. t
 The drag and drop directives are only used for column reordering (i.e. the <a href="/generated/DataGridVueGrid/#allowColumnReorder" target="_blank">allowColumnReorder</a> is `true`).
 :::
 
+<CodeGroup>
+  <CodeGroupItem title="Options API" active>
+
+```ts
+import { defineComponent } from 'vue'
+import { DataGridVueGrid } from 'data-grid-vue'
+
+export default defineComponent({
+  components: {
+    DataGridVueGrid,
+  }
+})
+```
+
+  </CodeGroupItem>  
+  <CodeGroupItem title="<script setup>">
+
+```ts
+import { DataGridVueGrid } from 'data-grid-vue'
+```
+
+  </CodeGroupItem>
+</CodeGroup>
+
 ## Usage
+
+A simple example populating a data grid with static client-side data is shown below. The `columns` and `data` props are the only required props in this scenario but this example also shows the data grid with sorting, filtering, column reorder and the ability to add/remove columns. These configuration options and other features will be further explained in later sections.
 
 !!!include(simple-example.md)!!!
 
