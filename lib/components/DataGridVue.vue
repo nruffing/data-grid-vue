@@ -360,7 +360,7 @@ export default defineComponent({
      * @description Array of objects to display in the data grid when using the built-in {@link ClientSideDataService}.
      * This prop is required unless serverSideOptions or customDataService is supplied. The order of precedence
      * is {@link customDataService}, {@link serverSideOptions}, and then {@link data}.
-     * The data grid will not react and rerender when this property changes. If that functionaly is needed it is recommended
+     * The data grid will not react and rerender when this property changes. If that functionality is needed it is recommended
      * to leverage `v-if` to force a new component instance to render.
      * @defaultValue undefined
      */

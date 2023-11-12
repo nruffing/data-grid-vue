@@ -60,7 +60,7 @@ export interface Column {
    */
   filterOptions?: ColumnFilterOptions
   /**
-   * @description Optionally specifiy an absolute or relative column width. Column widths can be specified with px, % or *.
+   * @description Optionally specify an absolute or relative column width. Column widths can be specified with px, % or *.
    * By default columns without a width specified will take up an equal share of the remaining space.
    * The relative * unit can be used to specify a column to take a relational share of the remaining space.
    * Column widths automatically regenerate when the window/page size changes.

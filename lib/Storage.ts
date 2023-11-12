@@ -20,7 +20,7 @@ export enum LocalStorageType {
 export interface GridState {
   /** The current page size */
   pageSize: number
-  /** The field names of the hiddne columns */
+  /** The field names of the hidden columns */
   hiddenFields: string[]
   /** The current sort definition */
   sort: Sort[]
@@ -42,7 +42,7 @@ export interface StorageService {
    */
   getGridState(): Promise<GridState | undefined>
   /**
-   * @description Saves a new version of the grid state. This called everytime data in the grid state changes.
+   * @description Saves a new version of the grid state. This called every time data in the grid state changes.
    * @param gridState The grid state to save
    */
   setGridState(gridState: GridState): Promise<void>
@@ -220,7 +220,7 @@ function getDefaultRequestOptions(): RequestInit {
 
 /**
  * @group Storage Service
- * The server-side {@link StorageService} used when {@link DataGridVueGrid.serverSideStorageOptions} is specified.
+ * @description The server-side {@link StorageService} used when {@link DataGridVueGrid.serverSideStorageOptions} is specified.
  */
 export class ServerSideStorageService implements StorageService {
   options: ServerSideStorageServiceOptions

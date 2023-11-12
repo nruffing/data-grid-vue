@@ -9,7 +9,7 @@ The data that is saved as part of the grid state.
 | Property | Type | Description |
 | :------ | :------ | :------ |
 | `pageSize` | `number` | The current page size |
-| `hiddenFields` | `string`[] | The field names of the hiddne columns |
+| `hiddenFields` | `string`[] | The field names of the hidden columns |
 | `sort` | [`Sort`](Sort.md)[] | The current sort definition |
 | `filters` | [`FilterCondition`](FilterCondition.md)[] | The current filter conditions |
 | `externalFilter` | `undefined` \| [`Filter`](Filter.md) | The current external filter if applied |

@@ -11,12 +11,12 @@
   --shiki-token-function: #9CDCFE; // html attributes
   --shiki-color-background: #a21f1f;
   --shiki-token-constant: #569cd6;
-  --shiki-token-string: var(--shiki-color-text:);
-  --shiki-token-comment: var(--shiki-color-text:);
+  --shiki-token-string: var(--shiki-color-text);
+  --shiki-token-comment: var(--shiki-color-text);
   --shiki-token-keyword: var(--shiki-token-constant);
-  --shiki-token-parameter: var(--shiki-color-text:);  
-  --shiki-token-punctuation: var(--shiki-color-text:);
-  --shiki-token-link: var(--shiki-color-text:);
+  --shiki-token-parameter: var(--shiki-color-text);  
+  --shiki-token-punctuation: var(--shiki-color-text);
+  --shiki-token-link: var(--shiki-color-text);
 }
 
 html.dark {

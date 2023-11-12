@@ -63,16 +63,12 @@
 - [BeforeSetRequestHandler](type-aliases/BeforeSetRequestHandler.md)
 - [SetResponseHandler](type-aliases/SetResponseHandler.md)
 - [ServerSideStorageServiceOptions](interfaces/ServerSideStorageServiceOptions.md)
+- [ServerSideStorageService](classes/ServerSideStorageService.md)
 
 ### Plugin
 
 - [DataGridVueOptions](interfaces/DataGridVueOptions.md)
 - [DataGridVue](variables/DataGridVue.md)
-
-### Storage Service
-The server-side {@link StorageService} used when {@link DataGridVueGrid.serverSideStorageOptions} is specified.
-
-- [ServerSideStorageService](classes/ServerSideStorageService.md)
 
 ### Utilities
 

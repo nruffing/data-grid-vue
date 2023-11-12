@@ -40,7 +40,7 @@ setGridState(gridState): Promise<void>
 
 #### Description
 
-Saves a new version of the grid state. This called everytime data in the grid state changes.
+Saves a new version of the grid state. This called every time data in the grid state changes.
 
 ***
 

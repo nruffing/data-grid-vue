@@ -3,6 +3,7 @@ import { fs, getDirname, path } from '@vuepress/utils'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 import markdownItInclude from 'markdown-it-include'
 import postcss from 'postcss'
+import constants from './constants'
 
 const __dirname = getDirname(import.meta.url) // @/vuepress/docs/.vuepress
 const dgvStyleContents = await fs.readFile(path.resolve(__dirname, '../../node_modules/data-grid-vue/dist/style.css'), 'utf8')
@@ -12,7 +13,7 @@ const rootNode = postcss.parse(dgvStyleContents)
 const variables = [] as string[]
 rootNode.walk(node => {
   if (node.type === 'decl' && node.prop?.startsWith('--dgv')) {
-    variables.push(`${node.prop}: ${node.value};`)
+    variables.push(`  ${node.prop}: ${node.value};`)
   }
 })
 const cssVariables = `:root {\n${variables.join('\n')}\n}`
@@ -29,11 +30,18 @@ export default defineUserConfig({
   async onPrepared(app) {
     await app.writeTemp('dgvCssVariables.css', cssVariables)
   },
+  define: constants,
   theme: defaultTheme({
     logo: '/favicon.svg',
     repo: 'https://github.com/nruffing/data-grid-vue',
+    docsBranch: 'main',
+    editLinkPattern: ':repo/edit/:branch/vuepress/docs/:path',
     colorModeSwitch: false,
     colorMode: 'dark',
+    themePlugins: {
+      git: true,
+      prismjs: false,
+    },
     navbar: [
       {
         text: 'Home',
@@ -53,15 +61,15 @@ export default defineUserConfig({
       },
       {
         text: 'NPM',
-        link: 'https://www.npmjs.com/package/data-grid-vue',
+        link: constants.npmUrl,
       },
       {
         text: 'Yarn',
-        link: 'https://yarnpkg.com/package?name=data-grid-vue',
+        link: constants.yarnUrl,
       },
       {
         text: 'Changelog',
-        link: 'https://github.com/nruffing/data-grid-vue/releases',
+        link: '/changelog/',
       },
       {
         text: 'Help',
@@ -81,7 +89,20 @@ export default defineUserConfig({
         ],
       },
     ],
-    sidebar: 'auto',
+    sidebar: {
+      '/guide/': [
+        {
+          text: 'Guide',
+          children: ['/guide/README.md', '/guide/columns.md'],
+        },
+      ],
+      '/generated/': [
+        {
+          text: 'API',
+        },
+      ],
+    },
+    sidebarDepth: 2,
   }),
   extendsMarkdown(md) {
     md.use(markdownItInclude, {
@@ -96,7 +117,7 @@ export default defineUserConfig({
   plugins: [
     shikiPlugin({
       theme: 'css-variables',
-      langs: ['vue'],
+      langs: ['vue', 'css', 'sh'],
     }),
   ],
 })

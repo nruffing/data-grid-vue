@@ -15,7 +15,7 @@ export interface DataService {
    * @param pageSize The maximum number of data items to display on each page. If the data grid is
    * not set configured to be pageable with the {@link DataGridVueGrid.paged} prop then this
    * will always be `-1`.
-   * @param sort The current colomn sort definitions in the order in which they should be applied.
+   * @param sort The current column sort definitions in the order in which they should be applied.
    * @param filter The current filter definition or undefined if no filter is set.
    * @returns A Promise that returns the {@link PageData} for the current page.
    */
@@ -139,7 +139,7 @@ export interface PageDataRequest {
   pageSize: number
 
   /**
-   * @description The current colomn sort definitions in the order in which they should be applied.
+   * @description The current column sort definitions in the order in which they should be applied.
    */
   sort: Sort[]
 
