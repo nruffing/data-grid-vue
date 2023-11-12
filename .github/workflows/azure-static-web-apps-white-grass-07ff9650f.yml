@@ -31,10 +31,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - run: sudo npm i
+      - run: sudo npm run docs:build
       - run: pwd
       - run: ls -l
       - run: sudo ls -l ./docs/.vuepress/.temp
-      - run: sudo npm run docs:build
       - name: Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
