@@ -17,6 +17,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   <a href="https://github.com/nruffing/data-grid-vue/blob/main/LICENSE" aria-label="MIT License">
     <img alt="GitHub" src="https://img.shields.io/github/license/nruffing/data-grid-vue" />
   </a>
+  <iframe src="https://github.com/sponsors/nruffing/button" title="Sponsor nruffing" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
 </div>
 
 <hr />
