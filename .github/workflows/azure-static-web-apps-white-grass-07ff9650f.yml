@@ -1,6 +1,7 @@
 name: Docs CI/CD
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -29,8 +30,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: npm i
-      - run: npm run docs:build
+      - run: sudo npm i
+      - run: sudo npm run docs:build
+      - run: pwd
+      - run: ls -l
+      - run: sudo ls -l ./docs/.vuepress/.temp
       - name: Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
