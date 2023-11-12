@@ -90,7 +90,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   :heart: <a href="https://github.com/sponsors/nruffing" target="_blank">Sponsor</a> :heart:
   <span>|</span>
   :point_right: <a href="https://datagridvue.com/guide" target="_blank">Quick Start</a> :point_left:
-  <span>|</span>
+  <br />
   :beetle: <a href="https://github.com/nruffing/data-grid-vue/issues/new?assignees=nruffing&labels=bug&projects=&template=bug_report.md&title=%5Bbug%5D">Report Bug</a>
   <span>|</span>
   :sparkle: <a href="https://github.com/nruffing/data-grid-vue/issues/new?assignees=nruffing&labels=enhancement&projects=&template=feature_request.md&title=%5Bfeature%5D">Feature Request</a>
@@ -100,7 +100,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   :question: <a href="https://github.com/nruffing/data-grid-vue/issues/new?assignees=nruffing&labels=support&projects=&template=support-request.md&title=%5Bsupport%5D">Questions</a>
   <span>|</span>
   :scroll: <a href="https://datagridvue.com/changelog" target="_blank">Changelog</a>
-  <span>|</span>
+  <br/>
   :package: <a href="https://www.npmjs.com/package/data-grid-vue" target="_blank">NPM</a>
   <span>|</span>
   :package: <a href="https://yarnpkg.com/package?name=data-grid-vue" target="_blank">Yarn</a>
