@@ -67,7 +67,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 * Server-side data service
   * If using the default data contracts (i.e. PageDataRequest and PageData) just a valid POST url is required to be configured
   * Optional hooks for modifying/replacing the Request and converting the returned data to a PageData object
-  * (WIP) If using an ASP.NET Core API with EF Core or any other ORM leveraging IQueryable [this library](https://github.com/nruffing/data-grid-vue-dotnet) can be used to automatically apply the PageDataRequest to an IQueryable.
+  * If using an ASP.NET Core API with EF Core or any other ORM leveraging IQueryable [this library](https://github.com/nruffing/data-grid-vue-dotnet) can be used to automatically apply the PageDataRequest to an IQueryable.
 * Sorting
   * Single and multiple column sorting
   * Enabled per column
