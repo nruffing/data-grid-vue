@@ -30,8 +30,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: sudo npm i
-      - run: sudo npm run docs:build
+      - run: npm i
+      - run: npm run docs:build
       - run: pwd
       - run: ls -l
       - run: sudo ls -l ./docs/.vuepress/.temp
