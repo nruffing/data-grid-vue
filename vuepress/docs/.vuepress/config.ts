@@ -32,9 +32,6 @@ export default defineUserConfig({
   ],
   cache: cacheDir,
   temp: tempDir,
-  async onPrepared(app) {
-    await app.writeTemp('dgvCssVariables.css', cssVariables)
-  },
   define: constants,
   theme: defaultTheme({
     logo: '/favicon.svg',
@@ -109,10 +106,11 @@ export default defineUserConfig({
     },
     sidebarDepth: 2,
   }),
-  extendsMarkdown(md) {
+  async extendsMarkdown(md, app) {
     md.use(markdownItInclude, {
       root: path.resolve(__dirname, '../shared'),
     })
+    await app.writeTemp('dgvCssVariables.css', cssVariables)
   },
   markdown: {
     code: {
