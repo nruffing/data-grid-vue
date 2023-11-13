@@ -18,6 +18,9 @@ rootNode.walk(node => {
 })
 const cssVariables = `:root {\n${variables.join('\n')}\n}`
 
+const cacheDir = path.resolve(__dirname, 'vuepress-cache')
+const tempDir = path.resolve(__dirname, 'vuepress-temp')
+
 export default defineUserConfig({
   lang: 'en-US',
   title: 'Data Grid Vue',
@@ -27,6 +30,8 @@ export default defineUserConfig({
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['style', { type: 'text/css' }, dgvStyleContents + '\n\n' + dgvStyleOverrideContents],
   ],
+  cache: cacheDir,
+  temp: tempDir,
   async onPrepared(app) {
     await app.writeTemp('dgvCssVariables.css', cssVariables)
   },
@@ -114,7 +119,7 @@ export default defineUserConfig({
       lineNumbers: true,
     },
     importCode: {
-      handleImportPath: str => str.replace(/^@temp/, path.resolve(__dirname, '.temp')),
+      handleImportPath: str => str.replace(/^@temp/, tempDir),
     },
   },
   plugins: [
