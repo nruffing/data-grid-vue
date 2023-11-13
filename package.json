@@ -1,6 +1,6 @@
 {
   "name": "data-grid-vue",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control.",
   "license": "MIT",
   "author": {
