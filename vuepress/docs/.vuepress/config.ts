@@ -18,8 +18,8 @@ rootNode.walk(node => {
 })
 const cssVariables = `:root {\n${variables.join('\n')}\n}`
 
-const cacheDir = path.resolve(__dirname, 'vuepress-cache')
-const tempDir = path.resolve(__dirname, 'vuepress-temp')
+const cacheDir = path.resolve(__dirname, '../../vuepress-cache')
+const tempDir = path.resolve(__dirname, '../../vuepress-temp')
 
 export default defineUserConfig({
   lang: 'en-US',
