@@ -1,10 +1,3 @@
-<script setup lang="ts">
-import ParentLayout from '../../../node_modules/@vuepress/theme-default/lib/client/layouts/Layout.vue'
-
-// https://buttons.github.io/
-import GithubButton from 'vue-github-button'
-</script>
-
 <template>
   <ParentLayout>
     <template #navbar-before>
@@ -32,3 +25,10 @@ import GithubButton from 'vue-github-button'
     </template>
   </ParentLayout>
 </template>
+
+<script setup lang="ts">
+import ParentLayout from '../../../node_modules/@vuepress/theme-default/lib/client/layouts/Layout.vue'
+
+// https://buttons.github.io/
+import GithubButton from 'vue-github-button'
+</script>
