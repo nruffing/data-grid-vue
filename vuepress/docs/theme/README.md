@@ -1,3 +1,3 @@
 # CSS Variables
 
-@[code css](../.vuepress/.temp/dgvCssVariables.css)
+@[code css](@temp/dgvCssVariables.css)

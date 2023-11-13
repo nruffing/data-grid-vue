@@ -113,6 +113,9 @@ export default defineUserConfig({
     code: {
       lineNumbers: true,
     },
+    importCode: {
+      handleImportPath: str => str.replace(/^@temp/, path.resolve(__dirname, '.temp')),
+    },
   },
   plugins: [
     shikiPlugin({
