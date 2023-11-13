@@ -32,9 +32,6 @@ jobs:
           cache: 'npm'
       - run: npm i
       - run: npm run docs:build
-      - run: pwd
-      - run: ls -l
-      - run: sudo ls -l ./docs/.vuepress/.temp
       - name: Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
