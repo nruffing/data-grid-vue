@@ -38,8 +38,6 @@ export default defineClientConfig({
 
     if (import.meta.env.MODE === 'production') {
       router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized) => {
-        appInsights.context.telemetryTrace.traceID = generateW3CId()
-        appInsights.context.telemetryTrace.name = to.name as string
         appInsights.startTrackPage(to.fullPath)
       })
       router.afterEach((to: RouteLocationNormalized) => {
