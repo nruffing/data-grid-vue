@@ -36,13 +36,12 @@ export default defineClientConfig({
     app.provide('demo', DEMO)
     app.config.globalProperties.$dgv = constants
 
-    if (import.meta.env.MODE === 'production') {
+    if (import.meta.env.MODE === 'development') {
       router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized) => {
         appInsights.startTrackPage(to.fullPath)
       })
       router.afterEach((to: RouteLocationNormalized) => {
-        const url = location.protocol + '//' + location.host + to.fullPath
-        appInsights.stopTrackPage(to.fullPath, url)
+        appInsights.stopTrackPage(to.fullPath)
         appInsights.flush()
       })
       appInsights.loadAppInsights()
