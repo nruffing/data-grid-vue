@@ -36,7 +36,7 @@ export default defineClientConfig({
     app.provide('demo', DEMO)
     app.config.globalProperties.$dgv = constants
 
-    if (import.meta.env.MODE === 'development') {
+    if (import.meta.env.MODE === 'production') {
       router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized) => {
         appInsights.startTrackPage(to.fullPath)
       })
