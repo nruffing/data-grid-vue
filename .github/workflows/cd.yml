@@ -1,12 +1,21 @@
 name: CD
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - CI
+    branches:
+      - main
+    types:
+      - success
 
 permissions:
   id-token: write
 
 jobs:
   newVersion:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
