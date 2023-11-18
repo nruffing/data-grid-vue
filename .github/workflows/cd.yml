@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: MontyD/package-json-updated-action@1.0.1
         id: version-updated
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     outputs:
       versionUpdated: ${{ steps.version-updated.outputs.has-updated }}
       version: ${{ steps.version-updated.outputs.current-package-version }}
