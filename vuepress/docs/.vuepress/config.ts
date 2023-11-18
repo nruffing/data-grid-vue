@@ -1,9 +1,11 @@
-import { defineUserConfig, defaultTheme } from 'vuepress'
+import { defineUserConfig, defaultTheme, App } from 'vuepress'
 import { fs, getDirname, path } from '@vuepress/utils'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 import markdownItInclude from 'markdown-it-include'
 import postcss from 'postcss'
 import constants from './constants'
+import { SitemapStream, streamToPromise } from 'sitemap'
+import { Readable } from 'stream'
 
 const __dirname = getDirname(import.meta.url) // @/vuepress/docs/.vuepress
 const dgvStyleContents = await fs.readFile(path.resolve(__dirname, '../../node_modules/data-grid-vue/dist/style.css'), 'utf8')
@@ -20,6 +22,7 @@ const cssVariables = `:root {\n${variables.join('\n')}\n}`
 
 const cacheDir = path.resolve(__dirname, '../../vuepress-cache')
 const tempDir = path.resolve(__dirname, '../../vuepress-temp')
+const publicDir = path.resolve(__dirname, 'public')
 
 export default defineUserConfig({
   lang: 'en-US',
@@ -126,4 +129,14 @@ export default defineUserConfig({
       langs: ['vue', 'css', 'sh'],
     }),
   ],
+  async onInitialized(app) {
+    generateSitemap(app)
+  },
 })
+
+async function generateSitemap(app: App) {
+  const sitemap = new SitemapStream({ hostname: 'https://datagridvue.com' })
+  const pages = app.pages.map(p => p.path)
+  const sitemapString = await streamToPromise(Readable.from(pages).pipe(sitemap)).then(data => data.toString())
+  fs.writeFile(path.resolve(publicDir, 'sitemap.xml'), sitemapString)
+}

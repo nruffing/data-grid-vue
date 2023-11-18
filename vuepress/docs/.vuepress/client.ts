@@ -8,7 +8,6 @@ import { useThemeLocaleData } from '../../node_modules/@vuepress/theme-default/l
 import { RouteLocationNormalized, useRouter } from 'vue-router'
 import { ApplicationInsights } from '@microsoft/applicationinsights-web'
 import { ClickAnalyticsPlugin } from '@microsoft/applicationinsights-clickanalytics-js'
-import { generateW3CId } from '@microsoft/applicationinsights-core-js'
 
 let sideBarCache: 'auto' | false | SidebarConfig = false
 
