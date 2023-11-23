@@ -127,6 +127,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   - `ServerSideStorageService.getGridState` and `ServerSideDataService.getPage` will now only try to deserialize the response body as JSON if the status code is `200 OK` and the response `Content-Type` header is `application/json`.
   - Default color values of CSS variables are now defined in hex.
   - Default accent color slightly altered to match documentation site.
+  - Documentation site now includes documentation for [DataGridVueDotnet](https://github.com/nruffing/data-grid-vue-dotnet).
 
 ### v2.3.0
   - Allow dragon-drop-vue directive names to be overridden via the data-grid-vue plugin options

@@ -65,12 +65,8 @@ export default defineUserConfig({
         link: '/theme/',
       },
       {
-        text: 'NPM',
-        link: constants.npmUrl,
-      },
-      {
-        text: 'Yarn',
-        link: constants.yarnUrl,
+        text: '.NET',
+        link: '/dotnet-generated/',
       },
       {
         text: 'Changelog',
@@ -106,6 +102,11 @@ export default defineUserConfig({
           text: 'API',
         },
       ],
+      '/dotnet-generated/': [
+        {
+          text: '.NET',
+        },
+      ],
     },
     sidebarDepth: 2,
   }),
@@ -126,7 +127,7 @@ export default defineUserConfig({
   plugins: [
     shikiPlugin({
       theme: 'css-variables',
-      langs: ['vue', 'css', 'sh'],
+      langs: ['vue', 'css', 'sh', 'csharp'],
     }),
   ],
   async onInitialized(app) {

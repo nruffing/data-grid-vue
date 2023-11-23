@@ -50,11 +50,25 @@ export default defineClientConfig({
     const themeLocale = useThemeLocaleData()
     const router = useRouter()
 
+    function isAutoSidebar(route: RouteLocationNormalized): boolean {
+      return route.fullPath?.startsWith('/generated/') || route.fullPath?.startsWith('/dotnet-generated/')
+    }
+
+    function flipToAutoSidebar() {
+      sideBarCache = themeLocale.value.sidebar
+      themeLocale.value.sidebar = 'auto'
+    }
+
+    if (isAutoSidebar(router.currentRoute.value)) {
+      flipToAutoSidebar()
+    }
+
     router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized) => {
-      if (to.fullPath?.startsWith('/generated/') && !from.fullPath?.startsWith('/generated/')) {
-        sideBarCache = themeLocale.value.sidebar
-        themeLocale.value.sidebar = 'auto'
-      } else if (!to.fullPath?.startsWith('/generated/') && from.fullPath?.startsWith('/generated/')) {
+      const toIsAuto = isAutoSidebar(to)
+      const fromIsAuto = isAutoSidebar(from)
+      if (toIsAuto && !fromIsAuto) {
+        flipToAutoSidebar()
+      } else if (!toIsAuto && fromIsAuto) {
         themeLocale.value.sidebar = sideBarCache
         sideBarCache = false
       }

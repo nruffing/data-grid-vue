@@ -3,5 +3,5 @@
   "compilerOptions": {
     "baseUrl": "./"
   },
-  "include": ["dist/**/*.d.ts"]
+  "include": ["../../dist/**/*.d.ts"]
 }

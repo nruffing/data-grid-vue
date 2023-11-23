@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-var markdownJson = './markdown.json'
-var markdownInclude = require('./node_modules/markdown-include/markdown-include.js')
+var markdownJson = './scripts/readme-compile/markdown.json'
+var markdownInclude = require('markdown-include')
 
 markdownInclude.registerPlugin({
 	pattern: /::: danger BREAKING/gm,

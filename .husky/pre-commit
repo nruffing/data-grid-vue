@@ -5,6 +5,6 @@ npx lint-staged
 npm run compile-readme
 git add README.md
 npm run typedoc
-git add typedoc-out.json
+git add ./scripts/typedoc/typedoc-out.json
 
 exec git diff --cached --name-only | npx cspell --no-summary --no-progress --no-must-find-files --file-list stdin

@@ -51,11 +51,14 @@
     "format": "npx prettier --write \"./**/*.{ts,json,vue,css}\"",
     "upgrade-all": "ncu --upgrade",
     "prepare": "husky install",
-    "compile-readme": "./markdown-include.cjs",
-    "typedoc-compile-plugin": "npx tsc --project tsconfig.typedoc-vue.json",
-    "typedoc-gen": "npx typedoc --options typedoc.json",
+    "compile-readme": "./scripts/readme-compile/markdown-include.cjs",
+    "typedoc-compile-plugin": "npx tsc --project ./scripts/typedoc/tsconfig.typedoc-vue.json",
+    "typedoc-gen": "npx typedoc --options ./scripts/typedoc/typedoc.json",
     "typedoc": "run-s build typedoc-compile-plugin typedoc-gen",
-    "spellcheck": "npx cspell ."
+    "spellcheck": "npx cspell .",
+    "compile-dotnet-doc-download": "npx tsc --project ./scripts/dotnet-doc-download/tsconfig.dotnet-doc-download.json",
+    "dotnet-doc-download": "node ./scripts/dotnet-doc-download/dotnet-doc-download.js",
+    "dotnet-doc": "run-s compile-dotnet-doc-download dotnet-doc-download"
   },
   "peerDependencies": {
     "vue": ">=3.2.0"
@@ -66,10 +69,12 @@
   "devDependencies": {
     "@babel/types": "^7.23.0",
     "@tsconfig/node18": "^18.2.2",
+    "@types/adm-zip": "^0.5.5",
     "@types/debounce": "^1.2.3",
     "@types/node": "^18.11.9",
     "@vitejs/plugin-vue": "^4.4.0",
     "@vue/tsconfig": "^0.4.0",
+    "adm-zip": "^0.5.10",
     "cspell": "^8.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",

@@ -32,5 +32,7 @@ coverage
 vuepress-cache
 vuepress-temp
 
-typedoc-vue.js
+
+/scripts/**/*.js
+
 sitemap.xml
