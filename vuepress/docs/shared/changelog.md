@@ -2,6 +2,12 @@
 
 ## Release Notes
 
+### v2.4.0
+  - `ServerSideStorageService` now has a generic type constraint to allow any type to be used for the user identifier sent in the request to get and set grid state.
+  - `ServerSideStorageService.getGridState` and `ServerSideDataService.getPage` will now only try to deserialize the response body as JSON if the status code is `200 OK` and the response `Content-Type` header is `application/json`.
+  - Default color values of CSS variables are now defined in hex.
+  - Default accent color slightly altered to match documentation site.
+
 ### v2.3.0
   - Allow dragon-drop-vue directive names to be overridden via the data-grid-vue plugin options
   - Allow data-grid-vue component registration name to be overridden via the plugin options

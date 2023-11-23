@@ -3,6 +3,8 @@
 ## Description
 
 The server-side [DataService](../interfaces/DataService.md) used when [DataGridVueGrid.serverSideOptions](../DataGridVueGrid/README.md) is specified.
+This data service will only attempt to deserialize the response body if the HTTP status code is `200 OK` and the
+`Content-Type` response header is `application/json`.
 
 ## Implements
 

@@ -171,7 +171,8 @@ export type ResponseHandler = (response: Response) => Promise<PageData>
  * @group Data Service
  * @description Options to configure the built-in server-side data service including the POST url and optional
  * callbacks to alter the data format of the request and response allowing. This allows the built-in data service
- * to handle the data contract of any server.
+ * to handle the data contract of any server. The server-side data service will only attempt to deserialize the response
+ * body if the HTTP status code is `200 OK` and the `Content-Type` response header is `application/json`.
  * @see {@link ServerSideDataService}
  * @see {@link https://www.nuget.org/packages/DataGridVueDotnet/0.0.1-alpha | dotnet IQueryable helpers}
  */
@@ -200,6 +201,8 @@ export interface ServerSideDataServiceOptions {
 /**
  * @group Data Service
  * @description The server-side {@link DataService} used when {@link DataGridVueGrid.serverSideOptions} is specified.
+ * This data service will only attempt to deserialize the response body if the HTTP status code is `200 OK` and the
+ * `Content-Type` response header is `application/json`.
  */
 export class ServerSideDataService implements DataService {
   options: ServerSideDataServiceOptions
@@ -248,6 +251,11 @@ export class ServerSideDataService implements DataService {
       console.error('Failed to retrieve page data', await response.text(), response)
       return EmptyPageData
     }
-    return response.json()
+
+    if (response.status === 200 && response.headers.get('Content-Type')?.includes('application/json')) {
+      return response.json()
+    }
+
+    return EmptyPageData
   }
 }

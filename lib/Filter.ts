@@ -75,7 +75,7 @@ export const ValidOperatorsMap = new Map<DataType, Set<FilterOperator>>([
 export interface FilterCondition {
   /** The name of the field being filtered by. */
   fieldName: string
-  /** The {@link FilterOperator} being applies. */
+  /** The {@link FilterOperator} being applied. */
   operator: FilterOperator
   /** The {@link DataType} of the column being filtered. */
   dataType: DataType

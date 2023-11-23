@@ -4,7 +4,8 @@
 
 Options to configure the built-in server-side data service including the POST url and optional
 callbacks to alter the data format of the request and response allowing. This allows the built-in data service
-to handle the data contract of any server.
+to handle the data contract of any server. The server-side data service will only attempt to deserialize the response
+body if the HTTP status code is `200 OK` and the `Content-Type` response header is `application/json`.
 
 ## See
 

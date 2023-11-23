@@ -2167,7 +2167,31 @@
 						"content": [
 							{
 								"kind": "text",
-								"text": "Options to configure the built-in server-side data service including the POST url and optional\ncallbacks to alter the data format of the request and response allowing. This allows the built-in data service\nto handle the data contract of any server."
+								"text": "Options to configure the built-in server-side data service including the POST url and optional\ncallbacks to alter the data format of the request and response allowing. This allows the built-in data service\nto handle the data contract of any server. The server-side data service will only attempt to deserialize the response\nbody if the HTTP status code is "
+							},
+							{
+								"kind": "code",
+								"text": "`200 OK`"
+							},
+							{
+								"kind": "text",
+								"text": " and the "
+							},
+							{
+								"kind": "code",
+								"text": "`Content-Type`"
+							},
+							{
+								"kind": "text",
+								"text": " response header is "
+							},
+							{
+								"kind": "code",
+								"text": "`application/json`"
+							},
+							{
+								"kind": "text",
+								"text": "."
 							}
 						]
 					},
@@ -2396,7 +2420,31 @@
 							},
 							{
 								"kind": "text",
-								"text": " is specified."
+								"text": " is specified.\nThis data service will only attempt to deserialize the response body if the HTTP status code is "
+							},
+							{
+								"kind": "code",
+								"text": "`200 OK`"
+							},
+							{
+								"kind": "text",
+								"text": " and the\n"
+							},
+							{
+								"kind": "code",
+								"text": "`Content-Type`"
+							},
+							{
+								"kind": "text",
+								"text": " response header is "
+							},
+							{
+								"kind": "code",
+								"text": "`application/json`"
+							},
+							{
+								"kind": "text",
+								"text": "."
 							}
 						]
 					}
@@ -2975,7 +3023,7 @@
 							},
 							{
 								"kind": "text",
-								"text": " being applies."
+								"text": " being applied."
 							}
 						]
 					},
@@ -3559,7 +3607,7 @@
 						"content": [
 							{
 								"kind": "text",
-								"text": "Grid-level sort options. The grid must be set as sortable for any\n column level sort options to take effect."
+								"text": "Grid-level sort options. The grid must be set as sortable for any\ncolumn level sort options to take effect."
 							}
 						]
 					}
@@ -4295,7 +4343,7 @@
 				},
 				{
 					"type": "reference",
-					"target": 507,
+					"target": 512,
 					"name": "ServerSideStorageService"
 				},
 				{
@@ -4873,7 +4921,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "ServerSideStorageService",
-								"target": 507,
+								"target": 512,
 								"tsLinkText": ""
 							},
 							{
@@ -4891,18 +4939,19 @@
 					"variant": "declaration",
 					"kind": 1024,
 					"flags": {},
-					"type": {
-						"type": "union",
-						"types": [
+					"comment": {
+						"summary": [
 							{
-								"type": "intrinsic",
-								"name": "string"
-							},
-							{
-								"type": "intrinsic",
-								"name": "number"
+								"kind": "text",
+								"text": "The unique identifier for the current user."
 							}
 						]
+					},
+					"type": {
+						"type": "reference",
+						"target": -1,
+						"name": "TUserId",
+						"refersToTypeParameter": true
 					}
 				}
 			],
@@ -4913,10 +4962,27 @@
 						477
 					]
 				}
+			],
+			"typeParameters": [
+				{
+					"id": 478,
+					"name": "TUserId",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of the user identifier."
+							}
+						]
+					}
+				}
 			]
 		},
 		{
-			"id": 478,
+			"id": 479,
 			"name": "SetGridStateRequest",
 			"variant": "declaration",
 			"kind": 256,
@@ -4935,7 +5001,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "ServerSideStorageService",
-								"target": 507,
+								"target": 512,
 								"tsLinkText": ""
 							},
 							{
@@ -4948,31 +5014,40 @@
 			},
 			"children": [
 				{
-					"id": 479,
+					"id": 480,
 					"name": "userId",
 					"variant": "declaration",
 					"kind": 1024,
 					"flags": {},
-					"type": {
-						"type": "union",
-						"types": [
+					"comment": {
+						"summary": [
 							{
-								"type": "intrinsic",
-								"name": "string"
-							},
-							{
-								"type": "intrinsic",
-								"name": "number"
+								"kind": "text",
+								"text": "The unique identifier for the current user."
 							}
 						]
+					},
+					"type": {
+						"type": "reference",
+						"target": -1,
+						"name": "TUserId",
+						"refersToTypeParameter": true
 					}
 				},
 				{
-					"id": 480,
+					"id": 481,
 					"name": "gridState",
 					"variant": "declaration",
 					"kind": 1024,
 					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The current grid state to save."
+							}
+						]
+					},
 					"type": {
 						"type": "reference",
 						"target": 442,
@@ -4985,29 +5060,63 @@
 				{
 					"title": "Properties",
 					"children": [
-						479,
-						480
+						480,
+						481
 					]
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 482,
+					"name": "TUserId",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of the user identifier."
+							}
+						]
+					}
 				}
 			]
 		},
 		{
-			"id": 481,
+			"id": 483,
 			"name": "BeforeGetRequestHandler",
 			"variant": "declaration",
 			"kind": 2097152,
 			"flags": {},
+			"typeParameters": [
+				{
+					"id": 488,
+					"name": "TUserId",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of the user identifier."
+							}
+						]
+					}
+				}
+			],
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 482,
+					"id": 484,
 					"name": "__type",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 483,
+							"id": 485,
 							"name": "__type",
 							"variant": "signature",
 							"kind": 4096,
@@ -5049,7 +5158,7 @@
 							},
 							"parameters": [
 								{
-									"id": 484,
+									"id": 486,
 									"name": "request",
 									"variant": "param",
 									"kind": 32768,
@@ -5066,7 +5175,7 @@
 									}
 								},
 								{
-									"id": 485,
+									"id": 487,
 									"name": "body",
 									"variant": "param",
 									"kind": 32768,
@@ -5074,6 +5183,14 @@
 									"type": {
 										"type": "reference",
 										"target": 476,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": -1,
+												"name": "TUserId",
+												"refersToTypeParameter": true
+											}
+										],
 										"name": "GetGridStateRequest",
 										"package": "data-grid-vue"
 									}
@@ -5107,7 +5224,7 @@
 			}
 		},
 		{
-			"id": 486,
+			"id": 489,
 			"name": "GetResponseHandler",
 			"variant": "declaration",
 			"kind": 2097152,
@@ -5115,14 +5232,14 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 487,
+					"id": 490,
 					"name": "__type",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 488,
+							"id": 491,
 							"name": "__type",
 							"variant": "signature",
 							"kind": 4096,
@@ -5164,7 +5281,7 @@
 							},
 							"parameters": [
 								{
-									"id": 489,
+									"id": 492,
 									"name": "response",
 									"variant": "param",
 									"kind": 32768,
@@ -5205,22 +5322,39 @@
 			}
 		},
 		{
-			"id": 490,
+			"id": 493,
 			"name": "BeforeSetRequestHandler",
 			"variant": "declaration",
 			"kind": 2097152,
 			"flags": {},
+			"typeParameters": [
+				{
+					"id": 498,
+					"name": "TUserId",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of the user identifier."
+							}
+						]
+					}
+				}
+			],
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 491,
+					"id": 494,
 					"name": "__type",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 492,
+							"id": 495,
 							"name": "__type",
 							"variant": "signature",
 							"kind": 4096,
@@ -5249,7 +5383,7 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "SetGridStateRequest",
-												"target": 478,
+												"target": 479,
 												"tsLinkText": ""
 											},
 											{
@@ -5262,7 +5396,7 @@
 							},
 							"parameters": [
 								{
-									"id": 493,
+									"id": 496,
 									"name": "request",
 									"variant": "param",
 									"kind": 32768,
@@ -5279,14 +5413,22 @@
 									}
 								},
 								{
-									"id": 494,
+									"id": 497,
 									"name": "body",
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"target": 478,
+										"target": 479,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": -1,
+												"name": "TUserId",
+												"refersToTypeParameter": true
+											}
+										],
 										"name": "SetGridStateRequest",
 										"package": "data-grid-vue"
 									}
@@ -5320,7 +5462,7 @@
 			}
 		},
 		{
-			"id": 495,
+			"id": 499,
 			"name": "SetResponseHandler",
 			"variant": "declaration",
 			"kind": 2097152,
@@ -5328,14 +5470,14 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 496,
+					"id": 500,
 					"name": "__type",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 497,
+							"id": 501,
 							"name": "__type",
 							"variant": "signature",
 							"kind": 4096,
@@ -5366,7 +5508,7 @@
 							},
 							"parameters": [
 								{
-									"id": 498,
+									"id": 502,
 									"name": "response",
 									"variant": "param",
 									"kind": 32768,
@@ -5405,7 +5547,7 @@
 			}
 		},
 		{
-			"id": 499,
+			"id": 503,
 			"name": "ServerSideStorageServiceOptions",
 			"variant": "declaration",
 			"kind": 256,
@@ -5418,7 +5560,39 @@
 						"content": [
 							{
 								"kind": "text",
-								"text": "Options to configure the built-in server-side storage service."
+								"text": "Options to configure the built-in server-side storage service.\nThe server-side storage service will only attempt to deserialize the response body for "
+							},
+							{
+								"kind": "code",
+								"text": "`getGridState`"
+							},
+							{
+								"kind": "text",
+								"text": "\nif the HTTP status code is "
+							},
+							{
+								"kind": "code",
+								"text": "`200 OK`"
+							},
+							{
+								"kind": "text",
+								"text": " and the "
+							},
+							{
+								"kind": "code",
+								"text": "`Content-Type`"
+							},
+							{
+								"kind": "text",
+								"text": " response header is "
+							},
+							{
+								"kind": "code",
+								"text": "`application/json`"
+							},
+							{
+								"kind": "text",
+								"text": "."
 							}
 						]
 					},
@@ -5429,7 +5603,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "ServerSideStorageService",
-								"target": 507,
+								"target": 512,
 								"tsLinkText": ""
 							}
 						]
@@ -5438,7 +5612,7 @@
 			},
 			"children": [
 				{
-					"id": 500,
+					"id": 504,
 					"name": "userId",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5466,7 +5640,7 @@
 					}
 				},
 				{
-					"id": 501,
+					"id": 505,
 					"name": "getPostRoute",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5487,7 +5661,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "beforeGetRequest",
-										"target": 502,
+										"target": 506,
 										"tsLinkText": ""
 									},
 									{
@@ -5519,7 +5693,7 @@
 					}
 				},
 				{
-					"id": 502,
+					"id": 506,
 					"name": "beforeGetRequest",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5557,13 +5731,21 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 481,
+						"target": 483,
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": -1,
+								"name": "TUserId",
+								"refersToTypeParameter": true
+							}
+						],
 						"name": "BeforeGetRequestHandler",
 						"package": "data-grid-vue"
 					}
 				},
 				{
-					"id": 503,
+					"id": 507,
 					"name": "getResponseHandler",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5601,13 +5783,13 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 486,
+						"target": 489,
 						"name": "GetResponseHandler",
 						"package": "data-grid-vue"
 					}
 				},
 				{
-					"id": 504,
+					"id": 508,
 					"name": "setPostRoute",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5628,7 +5810,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "beforeSetRequest",
-										"target": 505,
+										"target": 509,
 										"tsLinkText": ""
 									},
 									{
@@ -5660,7 +5842,7 @@
 					}
 				},
 				{
-					"id": 505,
+					"id": 509,
 					"name": "beforeSetRequest",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5687,7 +5869,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "SetGridStateRequest",
-								"target": 478,
+								"target": 479,
 								"tsLinkText": ""
 							},
 							{
@@ -5698,13 +5880,21 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 481,
+						"target": 483,
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": -1,
+								"name": "TUserId",
+								"refersToTypeParameter": true
+							}
+						],
 						"name": "BeforeGetRequestHandler",
 						"package": "data-grid-vue"
 					}
 				},
 				{
-					"id": 506,
+					"id": 510,
 					"name": "setResponseHandler",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5731,7 +5921,7 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 486,
+						"target": 489,
 						"name": "GetResponseHandler",
 						"package": "data-grid-vue"
 					}
@@ -5741,19 +5931,36 @@
 				{
 					"title": "Properties",
 					"children": [
-						500,
-						501,
-						502,
-						503,
 						504,
 						505,
-						506
+						506,
+						507,
+						508,
+						509,
+						510
 					]
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 511,
+					"name": "TUserId",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of the user identifier."
+							}
+						]
+					}
 				}
 			]
 		},
 		{
-			"id": 507,
+			"id": 512,
 			"name": "ServerSideStorageService",
 			"variant": "declaration",
 			"kind": 128,
@@ -5787,7 +5994,39 @@
 							},
 							{
 								"kind": "text",
-								"text": " is specified."
+								"text": " is specified.\nThis storage service will only attempt to deserialize the response body for "
+							},
+							{
+								"kind": "code",
+								"text": "`getGridState`"
+							},
+							{
+								"kind": "text",
+								"text": "\nif the HTTP status code is "
+							},
+							{
+								"kind": "code",
+								"text": "`200 OK`"
+							},
+							{
+								"kind": "text",
+								"text": " and the "
+							},
+							{
+								"kind": "code",
+								"text": "`Content-Type`"
+							},
+							{
+								"kind": "text",
+								"text": " response header is "
+							},
+							{
+								"kind": "code",
+								"text": "`application/json`"
+							},
+							{
+								"kind": "text",
+								"text": "."
 							}
 						]
 					}
@@ -5795,41 +6034,66 @@
 			},
 			"children": [
 				{
-					"id": 511,
+					"id": 517,
 					"name": "options",
 					"variant": "declaration",
 					"kind": 1024,
 					"flags": {},
 					"type": {
 						"type": "reference",
-						"target": 499,
+						"target": 503,
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": -1,
+								"name": "TUserId",
+								"refersToTypeParameter": true
+							}
+						],
 						"name": "ServerSideStorageServiceOptions",
 						"package": "data-grid-vue"
 					}
 				},
 				{
-					"id": 508,
+					"id": 513,
 					"name": "constructor",
 					"variant": "declaration",
 					"kind": 512,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 509,
+							"id": 514,
 							"name": "new ServerSideStorageService",
 							"variant": "signature",
 							"kind": 16384,
 							"flags": {},
+							"typeParameter": [
+								{
+									"id": 515,
+									"name": "TUserId",
+									"variant": "typeParam",
+									"kind": 131072,
+									"flags": {}
+								}
+							],
 							"parameters": [
 								{
-									"id": 510,
+									"id": 516,
 									"name": "options",
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"target": 499,
+										"target": 503,
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": -1,
+												"name": "TUserId",
+												"refersToTypeParameter": true
+											}
+										],
 										"name": "ServerSideStorageServiceOptions",
 										"package": "data-grid-vue"
 									}
@@ -5837,7 +6101,15 @@
 							],
 							"type": {
 								"type": "reference",
-								"target": 507,
+								"target": 512,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": -1,
+										"name": "TUserId",
+										"refersToTypeParameter": true
+									}
+								],
 								"name": "ServerSideStorageService",
 								"package": "data-grid-vue"
 							}
@@ -5845,14 +6117,14 @@
 					]
 				},
 				{
-					"id": 512,
+					"id": 518,
 					"name": "getGridState",
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 513,
+							"id": 519,
 							"name": "getGridState",
 							"variant": "signature",
 							"kind": 4096,
@@ -5912,14 +6184,14 @@
 					}
 				},
 				{
-					"id": 514,
+					"id": 520,
 					"name": "setGridState",
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 515,
+							"id": 521,
 							"name": "setGridState",
 							"variant": "signature",
 							"kind": 4096,
@@ -5940,7 +6212,7 @@
 							},
 							"parameters": [
 								{
-									"id": 516,
+									"id": 522,
 									"name": "gridState",
 									"variant": "param",
 									"kind": 32768,
@@ -5995,21 +6267,30 @@
 				{
 					"title": "Properties",
 					"children": [
-						511
+						517
 					]
 				},
 				{
 					"title": "Constructors",
 					"children": [
-						508
+						513
 					]
 				},
 				{
 					"title": "Methods",
 					"children": [
-						512,
-						514
+						518,
+						520
 					]
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 523,
+					"name": "TUserId",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {}
 				}
 			],
 			"implementedTypes": [
@@ -7815,7 +8096,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "ServerSideStorageService",
-										"target": 507
+										"target": 512
 									},
 									{
 										"kind": "text",
@@ -7871,7 +8152,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "ServerSideStorageServiceOptions",
-										"target": 499,
+										"target": 503,
 										"tsLinkText": ""
 									}
 								]
@@ -7911,7 +8192,13 @@
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": 499,
+												"target": 503,
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "any"
+													}
+												],
 												"name": "ServerSideStorageServiceOptions",
 												"package": "data-grid-vue"
 											}
@@ -10505,13 +10792,13 @@
 				466,
 				456,
 				476,
-				478,
-				481,
-				486,
-				490,
-				495,
+				479,
+				483,
+				489,
+				493,
 				499,
-				507
+				503,
+				512
 			]
 		},
 		{
@@ -12192,55 +12479,55 @@
 		},
 		"478": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetGridStateRequest"
+			"qualifiedName": "GetGridStateRequest.TUserId"
 		},
 		"479": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetGridStateRequest.userId"
+			"qualifiedName": "SetGridStateRequest"
 		},
 		"480": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetGridStateRequest.gridState"
+			"qualifiedName": "SetGridStateRequest.userId"
 		},
 		"481": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "BeforeGetRequestHandler"
+			"qualifiedName": "SetGridStateRequest.gridState"
 		},
 		"482": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "SetGridStateRequest.TUserId"
 		},
 		"483": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "BeforeGetRequestHandler"
 		},
 		"484": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "request"
+			"qualifiedName": "__type"
 		},
 		"485": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "body"
+			"qualifiedName": "__type"
 		},
 		"486": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GetResponseHandler"
+			"qualifiedName": "request"
 		},
 		"487": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "body"
 		},
 		"488": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "TUserId"
 		},
 		"489": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "response"
+			"qualifiedName": "GetResponseHandler"
 		},
 		"490": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "BeforeSetRequestHandler"
+			"qualifiedName": "__type"
 		},
 		"491": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -12248,103 +12535,131 @@
 		},
 		"492": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "response"
 		},
 		"493": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "request"
+			"qualifiedName": "BeforeSetRequestHandler"
 		},
 		"494": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "body"
+			"qualifiedName": "__type"
 		},
 		"495": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetResponseHandler"
+			"qualifiedName": "__type"
 		},
 		"496": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "request"
 		},
 		"497": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "body"
 		},
 		"498": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "response"
+			"qualifiedName": "TUserId"
 		},
 		"499": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions"
+			"qualifiedName": "SetResponseHandler"
 		},
 		"500": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.userId"
+			"qualifiedName": "__type"
 		},
 		"501": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.getPostRoute"
+			"qualifiedName": "__type"
 		},
 		"502": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.beforeGetRequest"
+			"qualifiedName": "response"
 		},
 		"503": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.getResponseHandler"
+			"qualifiedName": "ServerSideStorageServiceOptions"
 		},
 		"504": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.setPostRoute"
+			"qualifiedName": "ServerSideStorageServiceOptions.userId"
 		},
 		"505": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.beforeSetRequest"
+			"qualifiedName": "ServerSideStorageServiceOptions.getPostRoute"
 		},
 		"506": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.setResponseHandler"
+			"qualifiedName": "ServerSideStorageServiceOptions.beforeGetRequest"
 		},
 		"507": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService"
+			"qualifiedName": "ServerSideStorageServiceOptions.getResponseHandler"
 		},
 		"508": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.__constructor"
+			"qualifiedName": "ServerSideStorageServiceOptions.setPostRoute"
 		},
 		"509": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService"
+			"qualifiedName": "ServerSideStorageServiceOptions.beforeSetRequest"
 		},
 		"510": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "options"
+			"qualifiedName": "ServerSideStorageServiceOptions.setResponseHandler"
 		},
 		"511": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.options"
+			"qualifiedName": "ServerSideStorageServiceOptions.TUserId"
 		},
 		"512": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.getGridState"
+			"qualifiedName": "ServerSideStorageService"
 		},
 		"513": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.getGridState"
+			"qualifiedName": "ServerSideStorageService.__constructor"
 		},
 		"514": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.setGridState"
+			"qualifiedName": "ServerSideStorageService"
 		},
 		"515": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.setGridState"
+			"qualifiedName": "ServerSideStorageService.TUserId"
 		},
 		"516": {
 			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "options"
+		},
+		"517": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.options"
+		},
+		"518": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.getGridState"
+		},
+		"519": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.getGridState"
+		},
+		"520": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.setGridState"
+		},
+		"521": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.setGridState"
+		},
+		"522": {
+			"sourceFileName": "dist/types/Storage.d.ts",
 			"qualifiedName": "gridState"
+		},
+		"523": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.TUserId"
 		}
 	}
 }

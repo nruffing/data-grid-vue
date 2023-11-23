@@ -4,9 +4,6 @@ on:
   push:
     branches: [ "**" ]
 
-permissions:
-  id-token: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -39,16 +36,31 @@ jobs:
       
   publish:
     needs: newVersion
-    if: ${{ needs.newVersion.outputs.version-updated }}
+    if: ${{ needs.newVersion.outputs.versionUpdated }}
     runs-on: ubuntu-latest
     steps:
       - run: npm publish --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-  tag:
-    needs: [publish, newVersion]
+ 
+  create_release:
     runs-on: ubuntu-latest
+    needs: [publish, newVersion]
+    permissions:
+      contents: write
+    env:
+      ESCAPED_VERSION: ''
     steps:
-      - run: git tag v${{ needs.newVersion.outputs.version }}
-      - run: git push --tags
+      - uses: actions/checkout@v4
+      - name: Escape version
+        run: echo "ESCAPED_VERSION=$(echo "${{ needs.newVersion.outputs.version }}" | sed 's/[^^]/[&]/g; s/\^/\\^/g')" >> $GITHUB_ENV
+      - name: Parse release notes
+        run: (grep -Pzo '(?<=### v${{ env.ESCAPED_VERSION }}\n)\X+?(?=\n\n)' ./vuepress/docs/shared/changelog.md)) | tr -d '\0' > release_notes.txt
+      - name: Create release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ needs.newVersion.outputs.version }}
+          release_name: v${{ needs.newVersion.outputs.version }}
+          body_path: ${{ github.workspace }}/release_notes.txt

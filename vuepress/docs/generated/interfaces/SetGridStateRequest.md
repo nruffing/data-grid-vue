@@ -1,15 +1,21 @@
-# Interface: SetGridStateRequest
+# Interface: SetGridStateRequest`<TUserId>`
 
 ## Description
 
 Request data interface sent by the [ServerSideStorageService](../classes/ServerSideStorageService.md) to save the current grid state.
 
+## Type parameters
+
+| Parameter | Description |
+| :------ | :------ |
+| `TUserId` | The type of the user identifier. |
+
 ## Properties
 
 | Property | Type | Description |
 | :------ | :------ | :------ |
-| `userId` | `string` \| `number` | - |
-| `gridState` | [`GridState`](GridState.md) | - |
+| `userId` | `TUserId` | The unique identifier for the current user. |
+| `gridState` | [`GridState`](GridState.md) | The current grid state to save. |
 
 ***
 

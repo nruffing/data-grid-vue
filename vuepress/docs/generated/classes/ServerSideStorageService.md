@@ -1,8 +1,16 @@
-# Class: ServerSideStorageService
+# Class: ServerSideStorageService`<TUserId>`
 
 ## Description
 
 The server-side [StorageService](../interfaces/StorageService.md) used when [DataGridVueGrid.serverSideStorageOptions](../DataGridVueGrid/README.md) is specified.
+This storage service will only attempt to deserialize the response body for `getGridState`
+if the HTTP status code is `200 OK` and the `Content-Type` response header is `application/json`.
+
+## Type parameters
+
+| Parameter |
+| :------ |
+| `TUserId` |
 
 ## Implements
 
@@ -12,25 +20,25 @@ The server-side [StorageService](../interfaces/StorageService.md) used when [Dat
 
 | Property | Type | Description |
 | :------ | :------ | :------ |
-| `options` | [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md) | - |
+| `options` | [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)\<`TUserId`\> | - |
 
 ## Constructors
 
 ### new ServerSideStorageService(options)
 
 ```ts
-new ServerSideStorageService(options): ServerSideStorageService
+new ServerSideStorageService<TUserId>(options): ServerSideStorageService<TUserId>
 ```
 
 #### Parameters
 
 | Parameter | Type |
 | :------ | :------ |
-| `options` | [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md) |
+| `options` | [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)\<`TUserId`\> |
 
 #### Returns
 
-[`ServerSideStorageService`](ServerSideStorageService.md)
+[`ServerSideStorageService`](ServerSideStorageService.md)\<`TUserId`\>
 
 ## Methods
 

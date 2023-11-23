@@ -1,12 +1,12 @@
 :root {
   /* Theme assumes a dark background */
 
-  --dgv-white: rgb(255, 255, 255);
-  --dgv-black: rgb(0, 0, 0);
-  --dgv-opaque-1: rgba(255, 255, 255, 0.5);
-  --dgv-opaque-2: rgba(255, 255, 255, 0.3);
-  --dgv-opaque-3: rgba(255, 255, 255, 0.2);
-  --dgv-accent: rgb(255, 166, 0);
+  --dgv-white: #ffffff;
+  --dgv-black: #000000;
+  --dgv-opaque-1: #ffffff80;
+  --dgv-opaque-2: #ffffff4d;
+  --dgv-opaque-3: #ffffff33;
+  --dgv-accent: #e57f41;
   --dgv-base: #aaaaaa;
 
   --dgv-font-family: Verdana, Arial, Helvetica, sans-serif;

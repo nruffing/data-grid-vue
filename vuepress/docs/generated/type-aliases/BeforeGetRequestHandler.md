@@ -1,15 +1,21 @@
-# Type alias: BeforeGetRequestHandler
+# Type alias: BeforeGetRequestHandler`<TUserId>`
 
 ```ts
-type BeforeGetRequestHandler: (request, body) => Promise<Request>;
+type BeforeGetRequestHandler<TUserId>: (request, body) => Promise<Request>;
 ```
+
+## Type parameters
+
+| Parameter | Description |
+| :------ | :------ |
+| `TUserId` | The type of the user identifier. |
 
 ## Parameters
 
 | Parameter | Type |
 | :------ | :------ |
 | `request` | [`Request`]( https://developer.mozilla.org/en-US/docs/Web/API/Request ) |
-| `body` | [`GetGridStateRequest`](../interfaces/GetGridStateRequest.md) |
+| `body` | [`GetGridStateRequest`](../interfaces/GetGridStateRequest.md)\<`TUserId`\> |
 
 ## Returns
 
