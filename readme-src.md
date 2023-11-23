@@ -14,11 +14,11 @@
 #include "./vuepress/docs/shared/summary.md"
 
 <p align="center">
-  <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/ci.yml">
-    <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/ci.yml/badge.svg" />
+  <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/ci_cd.yml">
+    <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/ci_cd.yml/badge.svg" />
   </a>
-  <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/azure-static-web-apps-white-grass-07ff9650f.yml">
-    <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/azure-static-web-apps-white-grass-07ff9650f.yml/badge.svg" />
+  <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/docs_ci_cd.yml">
+    <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/docs_ci_cd.yml/badge.svg" />
   </a>
   <a href="https://www.npmjs.com/package/data-grid-vue" target="_blank" aria-label="npm">
     <img alt="npm" src="https://img.shields.io/npm/v/data-grid-vue?logo=npm" />

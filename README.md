@@ -14,11 +14,11 @@
 Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control. Features include numerous slots, paging, sorting, filtering, CSS variables, client and server-data retrieval, client and server-side grid-state storage (i.e. local storage, session storage, etc.), dynamic column widths, selectable page size, drag-and-drop column reorder powered by dragon-drop-vue, and ability for user to add/remove columns.
 
 <p align="center">
-  <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/ci.yml">
-    <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/ci.yml/badge.svg" />
+  <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/ci_cd.yml">
+    <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/ci_cd.yml/badge.svg" />
   </a>
-  <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/azure-static-web-apps-white-grass-07ff9650f.yml">
-    <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/azure-static-web-apps-white-grass-07ff9650f.yml/badge.svg" />
+  <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/docs_ci_cd.yml">
+    <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/docs_ci_cd.yml/badge.svg" />
   </a>
   <a href="https://www.npmjs.com/package/data-grid-vue" target="_blank" aria-label="npm">
     <img alt="npm" src="https://img.shields.io/npm/v/data-grid-vue?logo=npm" />
