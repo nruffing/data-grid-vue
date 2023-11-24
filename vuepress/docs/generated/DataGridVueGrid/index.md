@@ -1,4 +1,4 @@
-# DataGridVueGrid
+# ~~DataGridVueGrid~~
 
 ## Description
 
@@ -6,7 +6,7 @@ Main entrypoint component to render a data grid.
 
 ## props
 
-### data
+### ~~data~~
 
 ```ts
 data: {
@@ -20,7 +20,7 @@ data: {
 
 Array of objects to display in the data grid when using the built-in [ClientSideDataService](../classes/ClientSideDataService.md).
 This prop is required unless serverSideOptions or customDataService is supplied. The order of precedence
-is [customDataService](README.md), [serverSideOptions](README.md), and then [data](README.md).
+is [customDataService](index.md), [serverSideOptions](index.md), and then [data](index.md).
 The data grid will not react and rerender when this property changes. If that functionality is needed it is recommended
 to leverage `v-if` to force a new component instance to render.
 
@@ -40,7 +40,7 @@ undefined
 
 ***
 
-### serverSideOptions
+### ~~serverSideOptions~~
 
 ```ts
 serverSideOptions: {
@@ -54,7 +54,7 @@ serverSideOptions: {
 
 Options to configure the built-in server-side data service including the POST url and optional
 callbacks to alter the data format of the request and response allowing. This allows the built-in data service
-to handle the data contract of any server. [ServerSideDataService](../classes/ServerSideDataService.md) is used unless [customDataService](README.md)
+to handle the data contract of any server. [ServerSideDataService](../classes/ServerSideDataService.md) is used unless [customDataService](index.md)
 is also specified.
 
 #### See
@@ -77,7 +77,7 @@ undefined
 
 ***
 
-### customDataService
+### ~~customDataService~~
 
 ```ts
 customDataService: {
@@ -90,7 +90,7 @@ customDataService: {
 #### Description
 
 Custom implementation of [DataService](../interfaces/DataService.md) to supply the grid's data. When this is specified
-[data](README.md) and [serverSideOptions](README.md) are ignored.
+[data](index.md) and [serverSideOptions](index.md) are ignored.
 
 #### Default Value
 
@@ -108,7 +108,7 @@ undefined
 
 ***
 
-### columns
+### ~~columns~~
 
 ```ts
 columns: {
@@ -135,7 +135,7 @@ functionality to do things like allowing users to add/remove columns.
 
 ***
 
-### allowColumnReorder
+### ~~allowColumnReorder~~
 
 ```ts
 allowColumnReorder: {
@@ -149,7 +149,7 @@ allowColumnReorder: {
 
 Whether to allow columns to be reordered using drag-and-drop
 powered by [drag-drop-vue](https://www.npmjs.com/package/dragon-drop-vue).
-In order for columns to rerender after dropping [columns](README.md) should be passed using `v-model:columns`.
+In order for columns to rerender after dropping [columns](index.md) should be passed using `v-model:columns`.
 
 #### Default Value
 
@@ -167,7 +167,7 @@ false
 
 ***
 
-### paged
+### ~~paged~~
 
 ```ts
 paged: {
@@ -198,7 +198,7 @@ true
 
 ***
 
-### initialPageSize
+### ~~initialPageSize~~
 
 ```ts
 initialPageSize: {
@@ -228,7 +228,7 @@ The page size to use when the grid initially loads.
 
 ***
 
-### pageSizes
+### ~~pageSizes~~
 
 ```ts
 pageSizes: {
@@ -259,7 +259,7 @@ will only be displayed if this array contains more then one value.
 
 ***
 
-### sortOptions
+### ~~sortOptions~~
 
 ```ts
 sortOptions: {
@@ -291,7 +291,7 @@ undefined
 
 ***
 
-### showColumnSelection
+### ~~showColumnSelection~~
 
 ```ts
 showColumnSelection: {
@@ -305,7 +305,7 @@ showColumnSelection: {
 
 Whether to display the `Add/Remove Columns` menu in the options header. Column selection
 can be set externally using the [Column.hidden](../interfaces/Column.md) property. For this functionality to work correctly
-[columns](README.md) should be passed using `v-model:columns`.
+[columns](index.md) should be passed using `v-model:columns`.
 
 #### Default Value
 
@@ -323,7 +323,7 @@ false
 
 ***
 
-### storageKey
+### ~~storageKey~~
 
 ```ts
 storageKey: {
@@ -337,9 +337,9 @@ storageKey: {
 
 A key to use to save grid state in [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 or [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).
-sessionStorage is used unless [localStorageType](README.md) is specified. The data
+sessionStorage is used unless [localStorageType](index.md) is specified. The data
 that is saved as part of the grid state is defined in [GridState](../interfaces/GridState.md).
-This is ignored if [serverSideStorageOptions](README.md) or [customStorageService](README.md) is specified.
+This is ignored if [serverSideStorageOptions](index.md) or [customStorageService](index.md) is specified.
 
 #### See
 
@@ -362,7 +362,7 @@ This is ignored if [serverSideStorageOptions](README.md) or [customStorageServic
 
 ***
 
-### localStorageType
+### ~~localStorageType~~
 
 ```ts
 localStorageType: {
@@ -376,9 +376,9 @@ localStorageType: {
 
 Whether grid state is stored in [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 or [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).
-To save grid state [storageKey](README.md) must be specified.The data
+To save grid state [storageKey](index.md) must be specified.The data
 that is saved as part of the grid state is defined in [GridState](../interfaces/GridState.md).
-This is ignored if [serverSideStorageOptions](README.md) or [customStorageService](README.md) is specified.
+This is ignored if [serverSideStorageOptions](index.md) or [customStorageService](index.md) is specified.
 
 #### See
 
@@ -401,7 +401,7 @@ LocalStorageType.sessionStorage
 
 ***
 
-### serverSideStorageOptions
+### ~~serverSideStorageOptions~~
 
 ```ts
 serverSideStorageOptions: {
@@ -414,8 +414,8 @@ serverSideStorageOptions: {
 #### Description
 
 Options to specify to use [ServerSideStorageService](../classes/ServerSideStorageService.md) to retrieve and store [GridState](../interfaces/GridState.md)
-[storageKey](README.md) and [localStorageType](README.md) are ignored if this is specified. This is ignored if
-[customStorageService](README.md) is specified.
+[storageKey](index.md) and [localStorageType](index.md) are ignored if this is specified. This is ignored if
+[customStorageService](index.md) is specified.
 
 #### See
 
@@ -437,7 +437,7 @@ undefined
 
 ***
 
-### customStorageService
+### ~~customStorageService~~
 
 ```ts
 customStorageService: {
@@ -450,7 +450,7 @@ customStorageService: {
 #### Description
 
 Custom implementation of [StorageService](../interfaces/StorageService.md) to optionally retrieve/store [GridState](../interfaces/GridState.md).
-When this is specified [storageKey](README.md), [localStorageType](README.md), and [serverSideStorageOptions](README.md) are ignored.
+When this is specified [storageKey](index.md), [localStorageType](index.md), and [serverSideStorageOptions](index.md) are ignored.
 
 #### Default Value
 
@@ -468,7 +468,7 @@ undefined
 
 ## emits
 
-### update:columns()
+### ~~update:columns()~~
 
 ```ts
 update:columns(columns): boolean
@@ -492,7 +492,7 @@ the columns prop to update. Leveraging `v-model:columns` is recommended.
 
 ## slots
 
-### filter-$\{column.field.fieldName}
+### ~~filter-$\{column.field.fieldName}~~
 
 ```ts
 filter-${column.field.fieldName}: {
@@ -516,7 +516,7 @@ Slot to override the filter for the specified column. For example, the slot name
 
 ***
 
-### cell-$\{column.field.fieldName}
+### ~~cell-$\{column.field.fieldName}~~
 
 ```ts
 cell-${column.field.fieldName}: {
@@ -538,7 +538,7 @@ based on the formatted value use Field.valueGetter instead.
 
 ***
 
-### options-header
+### ~~options-header~~
 
 ```ts
 options-header: {
@@ -562,7 +562,7 @@ Slot to override what is rendered in the options header above the data grid.
 
 ***
 
-### options-header-filter-options-shown
+### ~~options-header-filter-options-shown~~
 
 ```ts
 options-header-filter-options-shown: {
@@ -582,7 +582,7 @@ Slot to override just the toggle column filters area of the options header above
 
 ***
 
-### options-header-clear-filters
+### ~~options-header-clear-filters~~
 
 ```ts
 options-header-clear-filters: {
@@ -602,7 +602,7 @@ Slot to override just the clear filters area of the options header above the gri
 
 ***
 
-### options-header-column-selection-shown
+### ~~options-header-column-selection-shown~~
 
 ```ts
 options-header-column-selection-shown: {
@@ -622,7 +622,7 @@ Slot to override just the add/remove columns area of the options header above th
 
 ***
 
-### column-selection-popup
+### ~~column-selection-popup~~
 
 ```ts
 column-selection-popup: {

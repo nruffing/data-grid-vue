@@ -1,0 +1,3 @@
+::: tip Note
+It is recommended to supply an array of <a href="/generated/interfaces/Column.html" target="_blank">Columns</a> with `v-model:columns` since that is required for column reordering and allowing users to add/remove specific columns. `Column` objects will not be mutated but a new array will be emitted with the `update:columns` event and that needs to trigger the `columns` prop to get an updated value. The grid will react to any change to this prop which can be leveraged to implement custom functionality to do things like allowing users to add/remove columns.
+:::

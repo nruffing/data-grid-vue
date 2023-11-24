@@ -1,4 +1,4 @@
-# Type alias: BeforeSetRequestHandler`<TUserId>`
+# Type alias: BeforeSetRequestHandler\<TUserId\>
 
 ```ts
 type BeforeSetRequestHandler<TUserId>: (request, body) => Promise<Request>;
@@ -14,12 +14,12 @@ type BeforeSetRequestHandler<TUserId>: (request, body) => Promise<Request>;
 
 | Parameter | Type |
 | :------ | :------ |
-| `request` | [`Request`]( https://developer.mozilla.org/en-US/docs/Web/API/Request ) |
+| `request` | [`Request`]( https://developer.mozilla.org/docs/Web/API/Request ) |
 | `body` | [`SetGridStateRequest`](../interfaces/SetGridStateRequest.md)\<`TUserId`\> |
 
 ## Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`Request`]( https://developer.mozilla.org/en-US/docs/Web/API/Request )\>
+[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`Request`]( https://developer.mozilla.org/docs/Web/API/Request )\>
 
 ## Description
 

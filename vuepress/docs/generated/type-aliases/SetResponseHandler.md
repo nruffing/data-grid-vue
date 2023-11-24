@@ -8,11 +8,11 @@ type SetResponseHandler: (response) => Promise<boolean>;
 
 | Parameter | Type |
 | :------ | :------ |
-| `response` | [`Response`]( https://developer.mozilla.org/en-US/docs/Web/API/Response ) |
+| `response` | [`Response`]( https://developer.mozilla.org/docs/Web/API/Response ) |
 
 ## Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`boolean`\>
+[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`boolean`\>
 
 ## Description
 

@@ -8,11 +8,11 @@ type GetResponseHandler: (response) => Promise<GridState>;
 
 | Parameter | Type |
 | :------ | :------ |
-| `response` | [`Response`]( https://developer.mozilla.org/en-US/docs/Web/API/Response ) |
+| `response` | [`Response`]( https://developer.mozilla.org/docs/Web/API/Response ) |
 
 ## Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`GridState`](../interfaces/GridState.md)\>
+[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`GridState`](../interfaces/GridState.md)\>
 
 ## Description
 

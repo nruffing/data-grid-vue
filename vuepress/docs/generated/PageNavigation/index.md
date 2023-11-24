@@ -1,4 +1,4 @@
-# PageNavigation
+# ~~PageNavigation~~
 
 ## Description
 
@@ -6,7 +6,7 @@ The page navigation in the grids footer.
 
 ## props
 
-### pageSize
+### ~~pageSize~~
 
 ```ts
 pageSize: {
@@ -28,7 +28,7 @@ The current page size.
 
 ***
 
-### currentPage
+### ~~currentPage~~
 
 ```ts
 currentPage: {
@@ -50,7 +50,7 @@ The current page number starting with `1` for the first page.
 
 ***
 
-### totalItems
+### ~~totalItems~~
 
 ```ts
 totalItems: {
@@ -73,7 +73,7 @@ have been applied.
 
 ## emits
 
-### update:currentPage()
+### ~~update:currentPage()~~
 
 ```ts
 update:currentPage(page): boolean

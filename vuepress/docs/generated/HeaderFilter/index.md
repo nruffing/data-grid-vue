@@ -1,4 +1,4 @@
-# HeaderFilter
+# ~~HeaderFilter~~
 
 ## Description
 
@@ -6,7 +6,7 @@ The filter for a column.
 
 ## props
 
-### column
+### ~~column~~
 
 ```ts
 column: {
@@ -28,7 +28,7 @@ The [Column](../interfaces/Column.md) currently being rendered.
 
 ***
 
-### initialFilterCondition
+### ~~initialFilterCondition~~
 
 ```ts
 initialFilterCondition: {
@@ -58,7 +58,7 @@ undefined
 
 ## emits
 
-### updated()
+### ~~updated()~~
 
 ```ts
 updated(condition): boolean

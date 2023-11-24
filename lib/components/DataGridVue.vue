@@ -190,7 +190,7 @@
 
 <script lang="ts">
 import { defineComponent, type PropType, nextTick, type SlotsType } from 'vue'
-import { debounce } from 'debounce'
+import debounce from 'debounce'
 import { DataType, Field, type Column } from '../DataGridVue'
 import { type DataService, StubDataService, ClientSideDataService, type ServerSideDataServiceOptions, ServerSideDataService } from '../DataService'
 import { type Sort, type SortOptions, SortType } from '../Sort'

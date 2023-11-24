@@ -42,11 +42,11 @@ getGridState(): Promise<undefined | GridState>
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`undefined` \| [`GridState`](../interfaces/GridState.md)\>
+[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`undefined` \| [`GridState`](../interfaces/GridState.md)\>
 
 #### Implementation of
 
-[`StorageService`](../interfaces/StorageService.md).[`getGridState`](../interfaces/StorageService.md#getgridstate)
+[`StorageService.getGridState`](../interfaces/StorageService.md#getgridstate)
 
 #### Description
 
@@ -68,11 +68,11 @@ setGridState(gridState): Promise<void>
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`void`\>
+[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`void`\>
 
 #### Implementation of
 
-[`StorageService`](../interfaces/StorageService.md).[`setGridState`](../interfaces/StorageService.md#setgridstate)
+[`StorageService.setGridState`](../interfaces/StorageService.md#setgridstate)
 
 #### Description
 

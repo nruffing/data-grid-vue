@@ -1,4 +1,4 @@
-# ColumnSelectionItem
+# ~~ColumnSelectionItem~~
 
 ## Description
 
@@ -6,11 +6,11 @@ Column toggle item displayed in the column selected menu.
 
 ## See
 
-[DataGridVueGrid.showColumnSelection](../DataGridVueGrid/README.md)
+[DataGridVueGrid.showColumnSelection](../DataGridVueGrid/index.md)
 
 ## props
 
-### column
+### ~~column~~
 
 ```ts
 column: {
@@ -32,7 +32,7 @@ The [Column](../interfaces/Column.md) to show or hide.
 
 ## emits
 
-### hidden-updated()
+### ~~hidden-updated()~~
 
 ```ts
 hidden-updated(hidden): boolean

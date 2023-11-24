@@ -8,11 +8,11 @@ type ResponseHandler: (response) => Promise<PageData>;
 
 | Parameter | Type |
 | :------ | :------ |
-| `response` | [`Response`]( https://developer.mozilla.org/en-US/docs/Web/API/Response ) |
+| `response` | [`Response`]( https://developer.mozilla.org/docs/Web/API/Response ) |
 
 ## Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`PageData`](../interfaces/PageData.md)\>
+[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`PageData`](../interfaces/PageData.md)\>
 
 ## Description
 

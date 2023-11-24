@@ -6,6 +6,8 @@ import postcss from 'postcss'
 import constants from './constants'
 import { SitemapStream, streamToPromise } from 'sitemap'
 import { Readable } from 'stream'
+import { pwaPlugin } from '@vuepress/plugin-pwa'
+import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
 
 const __dirname = getDirname(import.meta.url) // @/vuepress/docs/.vuepress
 const dgvStyleContents = await fs.readFile(path.resolve(__dirname, '../../node_modules/data-grid-vue/dist/style.css'), 'utf8')
@@ -129,6 +131,8 @@ export default defineUserConfig({
       theme: 'css-variables',
       langs: ['vue', 'css', 'sh', 'csharp'],
     }),
+    // pwaPlugin({
+    // }),
   ],
   async onInitialized(app) {
     generateSitemap(app)

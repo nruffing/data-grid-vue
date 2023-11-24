@@ -1,4 +1,4 @@
-# Interface: SetGridStateRequest`<TUserId>`
+# Interface: SetGridStateRequest\<TUserId\>
 
 ## Description
 

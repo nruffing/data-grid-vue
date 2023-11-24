@@ -2,7 +2,7 @@
   <main>
     <dgv-data-grid
       :server-side-options="{
-        postRoute: 'https://localhost:7179/DataGridVue',
+        postRoute: 'https://data-group-vue-api-example.azurewebsites.net/GridData/GetPageData',
         beforeRequest: onBeforeRequest,
       }"
       :columns="testDataColumns2"
@@ -21,42 +21,20 @@
         </div>
       </template>
     </dgv-data-grid>
-
-    <dgv-data-grid
-      :data="mockData"
-      :columns="testDataColumns"
-      :sort-options="{
-        sortable: true,
-        multiColumn: true,
-      }"
-    >
-      <template v-slot:cell-actions="{ dataItem }">
-        <button>Custom {{ dataItem.id }}</button>
-      </template>
-    </dgv-data-grid>
   </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import { DataType, type Column } from '../../lib/DataGridVue'
-import { FilterOperator, type FilterCondition } from '../../lib/Filter'
-
-import { TestDataColumns, type TestDataItem } from '../test-data/test-data'
-import MOCK_DATA from '../test-data/MOCK_DATA'
+import { DataType, type Column } from '../../../lib/DataGridVue'
+import { FilterOperator, type FilterCondition } from '../../../lib/Filter'
 
 import { TestDataColumns2, formatPhoneNumber } from '../test-data/test-data-2'
 
 export default defineComponent({
   name: 'HomeView',
   computed: {
-    testDataColumns(): Column[] {
-      return TestDataColumns
-    },
-    mockData(): TestDataItem[] {
-      return MOCK_DATA
-    },
     testDataColumns2(): Column[] {
       return TestDataColumns2
     },

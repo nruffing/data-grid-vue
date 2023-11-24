@@ -1,8 +1,8 @@
-# Class: ServerSideStorageService`<TUserId>`
+# Class: ServerSideStorageService\<TUserId\>
 
 ## Description
 
-The server-side [StorageService](../interfaces/StorageService.md) used when [DataGridVueGrid.serverSideStorageOptions](../DataGridVueGrid/README.md) is specified.
+The server-side [StorageService](../interfaces/StorageService.md) used when [DataGridVueGrid.serverSideStorageOptions](../DataGridVueGrid/index.md) is specified.
 This storage service will only attempt to deserialize the response body for `getGridState`
 if the HTTP status code is `200 OK` and the `Content-Type` response header is `application/json`.
 
@@ -50,11 +50,11 @@ getGridState(): Promise<undefined | GridState>
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`undefined` \| [`GridState`](../interfaces/GridState.md)\>
+[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`undefined` \| [`GridState`](../interfaces/GridState.md)\>
 
 #### Implementation of
 
-[`StorageService`](../interfaces/StorageService.md).[`getGridState`](../interfaces/StorageService.md#getgridstate)
+[`StorageService.getGridState`](../interfaces/StorageService.md#getgridstate)
 
 #### Description
 
@@ -76,11 +76,11 @@ setGridState(gridState): Promise<void>
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`void`\>
+[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`void`\>
 
 #### Implementation of
 
-[`StorageService`](../interfaces/StorageService.md).[`setGridState`](../interfaces/StorageService.md#setgridstate)
+[`StorageService.setGridState`](../interfaces/StorageService.md#setgridstate)
 
 #### Description
 

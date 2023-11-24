@@ -45,7 +45,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import { type Column } from '../../lib/DataGridVue'
+import { type Column } from '../../../lib/DataGridVue'
 
 import { TestDataColumns, type TestDataItem } from '../test-data/test-data'
 import MOCK_DATA from '../test-data/MOCK_DATA'

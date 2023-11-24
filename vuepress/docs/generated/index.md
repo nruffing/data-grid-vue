@@ -1,21 +1,19 @@
 # Documentation
 
-## Exports
+## Data Grid Component
 
-### Data Grid Component
+- [DataGridVueGrid](DataGridVueGrid/index.md)
 
-- [DataGridVueGrid](DataGridVueGrid/README.md)
+## Components
 
-### Components
+- [ColumnSelectionItem](ColumnSelectionItem/index.md)
+- [FilterOperatorSelect](FilterOperatorSelect/index.md)
+- [HeaderCell](HeaderCell/index.md)
+- [HeaderFilter](HeaderFilter/index.md)
+- [Icon](Icon/index.md)
+- [PageNavigation](PageNavigation/index.md)
 
-- [ColumnSelectionItem](ColumnSelectionItem/README.md)
-- [FilterOperatorSelect](FilterOperatorSelect/README.md)
-- [HeaderCell](HeaderCell/README.md)
-- [HeaderFilter](HeaderFilter/README.md)
-- [Icon](Icon/README.md)
-- [PageNavigation](PageNavigation/README.md)
-
-### Column
+## Column
 
 - [DataType](enumerations/DataType.md)
 - [Column](interfaces/Column.md)
@@ -23,20 +21,20 @@
 - [FieldValueGetter](type-aliases/FieldValueGetter.md)
 - [Field](classes/Field.md)
 
-### Filter
+## Filter
 
 - [FilterOperator](enumerations/FilterOperator.md)
 - [ValidOperatorsMap](variables/ValidOperatorsMap.md)
 - [FilterCondition](interfaces/FilterCondition.md)
 - [Filter](interfaces/Filter.md)
 
-### Sort
+## Sort
 
 - [SortOptions](interfaces/SortOptions.md)
 - [SortType](enumerations/SortType.md)
 - [Sort](interfaces/Sort.md)
 
-### Data Service
+## Data Service
 
 - [PageData](interfaces/PageData.md)
 - [DataService](interfaces/DataService.md)
@@ -48,7 +46,7 @@
 - [ServerSideDataServiceOptions](interfaces/ServerSideDataServiceOptions.md)
 - [ServerSideDataService](classes/ServerSideDataService.md)
 
-### Storage Service
+## Storage Service
 
 - [LocalStorageType](enumerations/LocalStorageType.md)
 - [GridState](interfaces/GridState.md)
@@ -65,12 +63,12 @@
 - [ServerSideStorageServiceOptions](interfaces/ServerSideStorageServiceOptions.md)
 - [ServerSideStorageService](classes/ServerSideStorageService.md)
 
-### Plugin
+## Plugin
 
 - [DataGridVueOptions](interfaces/DataGridVueOptions.md)
 - [DataGridVue](variables/DataGridVue.md)
 
-### Utilities
+## Utilities
 
 - [Formatter](variables/Formatter.md)
 

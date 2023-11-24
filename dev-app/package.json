@@ -1,0 +1,43 @@
+{
+  "name": "data-grid-vue-dev-app",
+  "version": "1.0.0",
+  "description": "Example app for local development and testing of data-grid-vue",
+  "license": "MIT",
+  "author": {
+    "name": "Nicholas Ruffing",
+    "email": "nicholasruffing70@gmail.com"
+  },
+  "homepage": "https://datagridvue.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nruffing/data-grid-vue.git"
+  },
+  "bugs": "https://github.com/nruffing/data-grid-vue/issues/new?assignees=nruffing&labels=bug&projects=&template=bug_report.md&title=%5Bbug%5D",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm build; vite",
+    "build": "pnpm type-check && pnpm build-only",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.23.4",
+    "@tsconfig/node18": "^18.2.2",
+    "@types/node": "^18.11.9",
+    "@vitejs/plugin-vue": "^4.5.0",
+    "@vue/tsconfig": "^0.4.0",
+    "tslib": "^2.6.2",
+    "typescript": "~5.2.2",
+    "vite": "^5.0.2",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5",
+    "vue-tsc": "^1.8.22"
+  },
+  "dependencies": {
+    "debounce": "^2.0.0",
+    "dragon-drop-vue": "^0.2.0"
+  }
+}

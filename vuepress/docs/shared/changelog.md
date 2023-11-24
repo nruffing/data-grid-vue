@@ -2,12 +2,22 @@
 
 ## Release Notes
 
-### v2.4.0
+### v3.0.0
+  ::: danger BREAKING
+  node v18 is now the minimum supported version. This was previously v14. v18 is the [current oldest lts version of node](https://nodejs.org/en/about/previous-releases).
+  :::
+  ::: danger BREAKING
+  `data-grid-vue` now requires a minimum `vue` version of `3.3.0`. It is also recommended to upgrade to at least version `5.0.2` of `vite`. [Vite v5 migration guide](https://vitejs.dev/guide/migration)
+  :::
+  - Update [`debounce`](https://www.npmjs.com/package/debounce/v/2.0.0) dependency to new major version v2.0.0 which requires node v18 ([current oldest supported version](https://nodejs.org/en/about/previous-releases)).
+  - Update ['dragon-drop-vue'](https://www.npmjs.com/package/dragon-drop-vue) dependency to v0.2.0
   - `ServerSideStorageService` now has a generic type constraint to allow any type to be used for the user identifier sent in the request to get and set grid state.
   - `ServerSideStorageService.getGridState` and `ServerSideDataService.getPage` will now only try to deserialize the response body as JSON if the status code is `200 OK` and the response `Content-Type` header is `application/json`.
   - Default color values of CSS variables are now defined in hex.
   - Default accent color slightly altered to match documentation site.
   - Documentation site now includes documentation for [DataGridVueDotnet](https://github.com/nruffing/data-grid-vue-dotnet).
+  - Repo now uses [`pnpm`](https://pnpm.io/) where the `data-grid-vue` package is build from the root workspace and the documentation site and dev app are nested workspaces.
+  - Now being built with `vite` [v5](https://vitejs.dev/blog/announcing-vite5).
 
 ### v2.3.0
   - Allow dragon-drop-vue directive names to be overridden via the data-grid-vue plugin options
