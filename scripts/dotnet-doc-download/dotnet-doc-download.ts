@@ -3,7 +3,7 @@ import AdmZip from 'adm-zip'
 import * as fs from 'fs'
 import * as path from 'path'
 
-const getMarkdownUrl = 'https://data-group-vue-api-example.azurewebsites.net/Documentation/GetMarkdown'
+const getMarkdownUrl = 'https://example-api.datagridvue.com/Documentation/GetMarkdown'
 const destination = './vuepress/dotnet-generated'
 
 /**

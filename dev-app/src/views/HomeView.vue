@@ -2,7 +2,7 @@
   <main>
     <dgv-data-grid
       :server-side-options="{
-        postRoute: 'https://data-group-vue-api-example.azurewebsites.net/GridData/GetPageData',
+        postRoute: 'https://example-api.datagridvue.com/GridData/GetPageData',
         beforeRequest: onBeforeRequest,
       }"
       :columns="testDataColumns2"
