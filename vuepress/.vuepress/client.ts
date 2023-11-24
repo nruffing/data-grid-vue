@@ -1,15 +1,15 @@
 import { defineClientConfig } from '@vuepress/client'
-import { SidebarConfig } from '@vuepress/theme-default'
+//import { SidebarConfig } from '@vuepress/theme-default'
 import { DataGridVue } from 'data-grid-vue'
 import DEMO from '../demo-data/DEMO_DATA'
 import constants from './constants'
 import Layout from './layouts/Layout.vue'
-import { useThemeLocaleData } from '../../node_modules/@vuepress/theme-default/lib/client'
+import { useThemeLocaleData } from '../node_modules/@vuepress/theme-default/lib/client'
 import { RouteLocationNormalized, useRouter } from 'vue-router'
 import { ApplicationInsights } from '@microsoft/applicationinsights-web'
 import { ClickAnalyticsPlugin } from '@microsoft/applicationinsights-clickanalytics-js'
 
-let sideBarCache: 'auto' | false | SidebarConfig = false
+let sideBarCache: any = false
 
 const clickPluginInstance = new ClickAnalyticsPlugin()
 const clickPluginConfig = {

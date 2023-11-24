@@ -4,7 +4,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 
 const getMarkdownUrl = 'https://data-group-vue-api-example.azurewebsites.net/Documentation/GetMarkdown'
-const destination = './vuepress/docs/dotnet-generated'
+const destination = './vuepress/dotnet-generated'
 
 /**
  * clear destination directory

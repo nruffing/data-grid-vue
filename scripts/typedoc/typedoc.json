@@ -4,7 +4,7 @@
   "name": "Documentation",
   "cleanOutputDir": true,
   "entryPoints": ["../../dist/types/main.d.ts"],
-  "out": "../../vuepress/docs/generated",
+  "out": "../../vuepress/generated",
   "plugin": ["./typedoc-vue.js", "typedoc-plugin-markdown", "typedoc-plugin-mdn-links"],
   "readme": "none",
   "hideBreadcrumbs": true,

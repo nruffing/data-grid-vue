@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./vuepress/docs/.vuepress/public/favicon.svg" width="100" style="margin: 15px 0;" />
+  <img src="./vuepress/.vuepress/public/favicon.svg" width="100" style="margin: 15px 0;" />
 </p>
 
 <h1 align="center">Data Grid Vue</h1>
@@ -35,7 +35,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 
 <br />
 <div class="example-image-container">
-  <img src="./vuepress/docs/.vuepress/public/example.png" />
+  <img src="./vuepress/.vuepress/public/example.png" />
 </div>
 
 <br />

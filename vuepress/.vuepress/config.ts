@@ -10,7 +10,7 @@ import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
 
 const __dirname = getDirname(import.meta.url) // @/vuepress/docs/.vuepress
-const dgvStyleContents = await fs.readFile(path.resolve(__dirname, '../../node_modules/data-grid-vue/dist/style.css'), 'utf8')
+const dgvStyleContents = await fs.readFile(path.resolve(__dirname, '../node_modules/data-grid-vue/dist/style.css'), 'utf8')
 const dgvStyleOverrideContents = await fs.readFile(path.resolve(__dirname, '../dgv-overrides.css'), 'utf8')
 
 const rootNode = postcss.parse(dgvStyleContents)
@@ -22,8 +22,8 @@ rootNode.walk(node => {
 })
 const cssVariables = `:root {\n${variables.join('\n')}\n}`
 
-const cacheDir = path.resolve(__dirname, '../../vuepress-cache')
-const tempDir = path.resolve(__dirname, '../../vuepress-temp')
+const cacheDir = path.resolve(__dirname, '../vuepress-cache')
+const tempDir = path.resolve(__dirname, '../vuepress-temp')
 const publicDir = path.resolve(__dirname, 'public')
 
 export default defineUserConfig({

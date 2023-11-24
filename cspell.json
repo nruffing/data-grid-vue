@@ -4,5 +4,5 @@
   "useGitignore": true,
   "words": ["clickanalytics", "datagridvue", "nruffing", "octicon", "pageable", "prismjs", "shiki", "vnode", "vuepress", "xmldocmd"],
   "ignoreWords": ["datagrid"],
-  "ignorePaths": ["./dev-app/src/test-data", "./vuepress/docs/demo-data", "**tsconfig**", "./typedoc-out.json", "**/pnpm-lock.yaml"]
+  "ignorePaths": ["**/test-data", "**/demo-data", "**tsconfig**", "./typedoc-out.json", "**/pnpm-lock.yaml"]
 }

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./vuepress/docs/.vuepress/public/favicon.svg" width="100" style="margin: 15px 0;" />
+  <img src="./vuepress/.vuepress/public/favicon.svg" width="100" style="margin: 15px 0;" />
 </p>
 
 <h1 align="center">Data Grid Vue</h1>
@@ -11,7 +11,7 @@
 </p>
 <br />
 
-#include "./vuepress/docs/shared/summary.md"
+#include "./vuepress/shared/summary.md"
 
 <p align="center">
   <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/ci_cd.yml">
@@ -35,16 +35,16 @@
 
 <br />
 <div class="example-image-container">
-  <img src="./vuepress/docs/.vuepress/public/example.png" />
+  <img src="./vuepress/.vuepress/public/example.png" />
 </div>
 
 <br />
 
-#include "./vuepress/docs/shared/simple-example-codeblock.md"
+#include "./vuepress/shared/simple-example-codeblock.md"
 
 <hr />
 
-#include "./vuepress/docs/shared/features.md"
+#include "./vuepress/shared/features.md"
 
 <hr />
 <p align="center">
@@ -68,4 +68,4 @@
 </p>
 <hr />
 
-#include "./vuepress/docs/shared/changelog.md"
+#include "./vuepress/shared/changelog.md"
