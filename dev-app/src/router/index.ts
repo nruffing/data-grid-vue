@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import GridView from '../Views/GridView.vue'
+import GridView from '../views/GridView.vue'
 
 const router = createRouter({
   history: createWebHistory(),
