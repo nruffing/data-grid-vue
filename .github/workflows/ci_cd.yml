@@ -12,14 +12,14 @@ jobs:
         node-version: [18.x]
     steps:
     - uses: actions/checkout@v4
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        registry-url: 'https://registry.npmjs.org'
-    - run: npm ci
-    - run: npm run ci
+        cache: 'pnpm'
+    - run: pnpm run ci-all
     
   newVersion:
     needs: build
@@ -38,10 +38,13 @@ jobs:
     needs: newVersion
     if: ${{ needs.newVersion.outputs.versionUpdated }}
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
     steps:
-      - run: npm publish --provenance
+      - run: pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
  
   create_release:
     runs-on: ubuntu-latest
