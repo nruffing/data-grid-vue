@@ -5,7 +5,7 @@ import DEMO from '../demo-data/DEMO_DATA'
 import constants from './constants'
 import Layout from './layouts/Layout.vue'
 import { useThemeLocaleData } from '../node_modules/@vuepress/theme-default/lib/client'
-import { RouteLocationNormalized, useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 import { ApplicationInsights } from '@microsoft/applicationinsights-web'
 import { ClickAnalyticsPlugin } from '@microsoft/applicationinsights-clickanalytics-js'
 

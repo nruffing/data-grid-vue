@@ -37,6 +37,7 @@
     "tsconfig-vuepress": "^4.5.0",
     "vue": "3.3.8",
     "vue-github-button": "^3.1.0",
+    "vue-router": "^4.2.5",
     "vuepress": "^2.0.0-rc.0",
     "vuepress-vite": "2.0.0-rc.0"
   }
