@@ -11,7 +11,7 @@
 </p>
 <br />
 
-Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control. Features include numerous slots, paging, sorting, filtering, CSS variables, client and server-data retrieval, client and server-side grid-state storage (i.e. local storage, session storage, etc.), dynamic column widths, selectable page size, drag-and-drop column reorder powered by dragon-drop-vue, and ability for user to add/remove columns.
+Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control. Features include [numerous slots](https://datagridvue.com/generated/DataGridVueGrid/#slots), paging, sorting, filtering, [CSS variables](https://datagridvue.com/theme), client and server-data retrieval, client and server-side grid-state storage (i.e. local storage, session storage, etc.), dynamic column widths, selectable page size, drag-and-drop column reorder powered by [dragon-drop-vue](https://github.com/nruffing/dragon-drop-vue), and ability for user to add/remove columns.
 
 <p align="center">
   <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/ci_cd.yml">
@@ -59,7 +59,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 ## Features
 
 * Leverages a flat html structure and CSS grid to allow full layout control. This allows versatility in the parent layout (e.g. a full page page, half page, etc.).
-* CSS variables for quick theming
+* [CSS variables](https://datagridvue.com/theme) for quick theming
 * Cell render templates
 * Supply arrow function to get column's value
 * Supply custom data service to provide custom implementation of data retrieval, paging, sorting, and filtering
@@ -88,7 +88,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   * Supply custom storage service to provide custom implementation of storing a user's grid state
   * Saved grid state includes page size, which columns are displayed, current sort, current filters, current external filter, and column order
   * Local and session storage are specified as a prop per grid instance so consumer can have multiple grids with their own state
-* Numerous slots to provide custom render templates including:
+* [Numerous slots](https://datagridvue.com/generated/DataGridVueGrid/#slots) to provide custom render templates including:
   * Entire options header (i.e. Show Filter Options, Clear Filters, etc.)
   * Individual options in the options header
   * Add/Remove columns popup content
