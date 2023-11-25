@@ -6,5 +6,6 @@ pnpm compile-readme
 git add README.md
 pnpm typedoc
 git add ./scripts/typedoc/typedoc-out.json
+git add ./vuepress/generated/*
 
 exec git diff --cached --name-only | pnpm exec cspell --no-summary --no-progress --no-must-find-files --file-list stdin
