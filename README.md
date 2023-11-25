@@ -135,6 +135,8 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   - `ServerSideStorageService.getGridState` and `ServerSideDataService.getPage` will now only try to deserialize the response body as JSON if the status code is `200 OK` and the response `Content-Type` header is `application/json`.
   - Default color values of CSS variables are now defined in hex.
   - Default accent color slightly altered to match documentation site.
+  - Improved default layout styles of custom column filters set using the `filter-{fieldName}` slot.
+  - [#4](https://github.com/nruffing/data-grid-vue/issues/4) accessibility improvements
   - Documentation site now includes documentation for [DataGridVueDotnet](https://github.com/nruffing/data-grid-vue-dotnet).
   - Repo now uses [`pnpm`](https://pnpm.io/) where the `data-grid-vue` package is build from the root workspace and the documentation site and dev app are nested workspaces.
   - Now being built with `vite` [v5](https://vitejs.dev/blog/announcing-vite5).

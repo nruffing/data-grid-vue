@@ -312,15 +312,12 @@
   background-color: var(--dgv-filter-options-background-color);
 }
 
-.dgv-filter-options-cell .dgv-filter {
+.dgv-filter-options-cell .dgv-filter,
+.dgv-filter-options-cell > * {
   padding: var(--dgv-header-padding);
-}
-
-/**** Filter ****/
-.dgv-filter {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: end;
   align-items: stretch;
 }
 

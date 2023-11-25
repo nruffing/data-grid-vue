@@ -1,5 +1,6 @@
 <template>
   <main>
+    <!-- Full page grid directly in main element -->
     <dgv-data-grid
       :server-side-options="{
         postRoute: 'https://example-api.datagridvue.com/GridData/GetPageData',
@@ -9,6 +10,11 @@
       :sort-options="{
         sortable: true,
         multiColumn: false,
+      }"
+      :server-side-storage-options="{
+        userId: 'dev-app-user-1',
+        getPostRoute: 'https://example-api.datagridvue.com/GridState/Get',
+        setPostRoute: 'https://example-api.datagridvue.com/GridState/Set',
       }"
     >
       <template v-slot:filter-phoneNumber="{ column, initialFilterCondition, onFilterUpdated }">
@@ -62,3 +68,9 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+main > div {
+  height: 100%;
+}
+</style>

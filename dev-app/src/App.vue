@@ -62,13 +62,6 @@ main {
   height: calc(100% - 40px);
 }
 
-.custom-filter {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  height: 100%;
-}
-
 a,
 a:visited {
   color: var(--base-100);
