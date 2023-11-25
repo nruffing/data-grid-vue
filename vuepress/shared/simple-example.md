@@ -30,4 +30,8 @@ const columns = ref([...DEMO.columns])
   flex-direction: column;
   justify-content: stretch;
 }
+
+.grid-container > .dgv-data-grid-container {
+  height: 100%;
+}
 </style>

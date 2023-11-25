@@ -138,6 +138,8 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   - Documentation site now includes documentation for [DataGridVueDotnet](https://github.com/nruffing/data-grid-vue-dotnet).
   - Repo now uses [`pnpm`](https://pnpm.io/) where the `data-grid-vue` package is build from the root workspace and the documentation site and dev app are nested workspaces.
   - Now being built with `vite` [v5](https://vitejs.dev/blog/announcing-vite5).
+  - Documentation site theme update
+  - Documentation site is now setup up as a [progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps).
 
 ### v2.3.0
   - Allow dragon-drop-vue directive names to be overridden via the data-grid-vue plugin options

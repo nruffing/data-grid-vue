@@ -33,6 +33,7 @@ export default defineUserConfig({
     'Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control.',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
     ['style', { type: 'text/css' }, dgvStyleContents + '\n\n' + dgvStyleOverrideContents],
   ],
   cache: cacheDir,
@@ -131,8 +132,8 @@ export default defineUserConfig({
       theme: 'css-variables',
       langs: ['vue', 'css', 'sh', 'csharp'],
     }),
-    // pwaPlugin({
-    // }),
+    pwaPlugin(),
+    pwaPopupPlugin(),
   ],
   async onInitialized(app) {
     generateSitemap(app)
