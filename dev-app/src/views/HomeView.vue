@@ -23,6 +23,7 @@
             type="tel"
             :value="formatPhoneNumber(initialFilterCondition?.value)"
             @input="onPhoneNumberFilterInput($event, onFilterUpdated)"
+            aria-label="Filter Phone Number"
           />
         </div>
       </template>

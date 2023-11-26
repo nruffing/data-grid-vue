@@ -545,6 +545,11 @@ options-header: {
   toggleFilterOptionsShown: () => any;
   toggleColumnSelectionShown: (event) => any;
   clearFilters: () => any;
+  filter: Filter | undefined;
+  filterOptionsShown: boolean;
+  filterSummary: string;
+  clearSort: () => any;
+  sort: Sort[];
 };
 ```
 
@@ -557,8 +562,13 @@ Slot to override what is rendered in the options header above the data grid.
 | Member | Type | Description |
 | :------ | :------ | :------ |
 | `toggleFilterOptionsShown` | `() => any` | Function to call to toggle whether to display the filter row below the data grid's header. |
-| `toggleColumnSelectionShown` | `(event) => any` | Function to call to toggle whether to display the column selection menu. The function has a single MouseEvent parameter. |
+| `toggleColumnSelectionShown` | `(event) => any` | Function to call to toggle whether to display the column selection menu.<br />The function has a single Event parameter which is the click  or key event that triggered the toggle. |
 | `clearFilters` | `() => any` | Function to call to clear all current filter state. |
+| `filter` | [`Filter`](../interfaces/Filter.md) \| `undefined` | The current filter state |
+| `filterOptionsShown` | `boolean` | Whether or not the filter row is currently displayed. |
+| `filterSummary` | `string` | A string summary of the current filters applied to the data grid. |
+| `clearSort` | `() => any` | Function to call to clear all current sort state. |
+| `sort` | [`Sort`](../interfaces/Sort.md)[] | The current sort state |
 
 ***
 
@@ -567,6 +577,7 @@ Slot to override what is rendered in the options header above the data grid.
 ```ts
 options-header-filter-options-shown: {
   toggleFilterOptionsShown: () => any;
+  filterOptionsShown: boolean;
 };
 ```
 
@@ -579,6 +590,7 @@ Slot to override just the toggle column filters area of the options header above
 | Member | Type | Description |
 | :------ | :------ | :------ |
 | `toggleFilterOptionsShown` | `() => any` | Function to call to toggle whether to display the filter row below the data grid's header. |
+| `filterOptionsShown` | `boolean` | Whether or not the filter row is currently displayed. |
 
 ***
 
@@ -587,6 +599,10 @@ Slot to override just the toggle column filters area of the options header above
 ```ts
 options-header-clear-filters: {
   clearFilters: () => any;
+  filter: Filter | undefined;
+  filterSummary: string;
+  clearSort: () => any;
+  sort: Sort[];
 };
 ```
 
@@ -599,6 +615,10 @@ Slot to override just the clear filters area of the options header above the gri
 | Member | Type | Description |
 | :------ | :------ | :------ |
 | `clearFilters` | `() => any` | Function to call to clear all current filter state. |
+| `filter` | [`Filter`](../interfaces/Filter.md) \| `undefined` | The current filter state |
+| `filterSummary` | `string` | A string summary of the current filters applied to the data grid. |
+| `clearSort` | `() => any` | Function to call to clear all current sort state. |
+| `sort` | [`Sort`](../interfaces/Sort.md)[] | The current sort state |
 
 ***
 
@@ -618,7 +638,7 @@ Slot to override just the add/remove columns area of the options header above th
 
 | Member | Type | Description |
 | :------ | :------ | :------ |
-| `toggleColumnSelectionShown` | `(event) => any` | Function to call to toggle whether to display the column selection menu. The function has a single MouseEvent parameter. |
+| `toggleColumnSelectionShown` | `(event) => any` | Function to call to toggle whether to display the column selection menu.<br />The function has a single Event parameter which is the click  or key event that triggered the toggle. |
 
 ***
 

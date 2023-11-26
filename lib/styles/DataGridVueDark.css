@@ -21,6 +21,7 @@
   --dgv-header-icon-size: 0.8rem;
   --dgv-header-icon-color: var(--dgv-accent);
   --dgv-header-drop-border-color: var(--dgv-accent);
+  --dgv-header-focus-outline: 0.2rem solid var(--dgv-accent);
 
   --dgv-filter-options-background-color: var(--dgv-opaque-2);
   --dgv-filter-options-border-bottom: 0.2rem solid var(--dgv-opaque-1);
@@ -125,6 +126,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.dgv-data-grid-container .dgv-header-cell:focus-visible {
+  outline: var(--dgv-header-focus-outline);
 }
 
 .dgv-data-grid-container .dgv-header-cell.ddv-dragging-over {
@@ -270,7 +275,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-bottom: 0.4rem;
+  margin: 0.4rem;
   gap: 1rem;
   user-select: none;
 }
@@ -294,6 +299,10 @@
 .dgv-action-text:hover {
   color: var(--dgv-action-text-hover-color);
   fill: var(--dgv-action-text-hover-color);
+}
+
+.dgv-action-text:focus-visible {
+  outline: var(--dgv-header-focus-outline);
 }
 
 .dgv-action-text .dgv-icon-invert {

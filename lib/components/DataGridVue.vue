@@ -19,16 +19,25 @@
         :toggleFilterOptionsShown="toggleFilterOptionsShown"
         :toggleColumnSelectionShown="toggleColumnSelectionShown"
         :clearFilters="clearFilters"
+        :filter="filter"
+        :filterOptionsShown="filterOptionsShown"
+        :filterSummary="filterSummary"
+        :clearSort="clearSort"
+        :sort="sort"
       >
         <slot
           name="options-header-filter-options-shown"
           :toggleFilterOptionsShown="toggleFilterOptionsShown"
+          :filterOptionsShown="filterOptionsShown"
         >
           <span
             v-if="filterable"
             class="dgv-action-text"
             tabindex="0"
             @click="toggleFilterOptionsShown"
+            @keydown.space="toggleFilterOptionsShown"
+            @keydown.enter="toggleFilterOptionsShown"
+            :aria-label="`Filter options are currently ${filterOptionsShown ? 'shown' : 'hidden'}, use space bar to toggle visibility.`"
           >
             <Icon name="filter" />
             <span>{{ filterOptionsShown ? 'Hide' : 'Show' }} Filter Options</span>
@@ -37,12 +46,21 @@
         <slot
           name="options-header-clear-filters"
           :clearFilters="clearFilters"
+          :filter="filter"
+          :filterSummary="filterSummary"
+          :clearSort="clearSort"
+          :sort="sort"
         >
           <span
             v-if="filterable"
             class="dgv-action-text"
             tabindex="0"
             @click="clearFilters"
+            @keydown.space="clearFilters"
+            @keydown.enter="clearFilters"
+            :aria-label="
+              filterSummary ? `Clear all filters. Currently filtering by ${filterSummary}` : `Clear all filters. No filters currently applied.`
+            "
           >
             <Icon name="clear-filter" />
             <span>Clear Filters</span>
@@ -58,6 +76,9 @@
             class="dgv-action-text"
             tabindex="0"
             @click="toggleColumnSelectionShown($event)"
+            @keydown.space="toggleColumnSelectionShown($event)"
+            @keydown.enter="toggleColumnSelectionShown($event)"
+            aria-label="Open the add/remove columns menu."
           >
             <Icon name="add-column" />
             <span>Add/Remove Columns</span>
@@ -68,12 +89,17 @@
 
     <!-- HEADER CELLS -->
     <HeaderCell
-      v-for="column in displayedColumns"
+      v-for="(column, index) in displayedColumns"
       :key="column.field.fieldName"
       :column="column"
       :sortable="sortOptions?.sortable"
       :sort="sort"
+      :allow-column-reorder="allowColumnReorder"
+      :column-index="index"
+      :total-column-count="displayedColumns.length"
       @onClick="sortColumn"
+      @onLeft="moveColumnLeft"
+      @onRight="moveColumnRight"
       v-dgv-drag="allowColumnReorder ? { dragData: column, dropEffect: 'move', onDragStart } : false"
       v-dgv-drop="allowColumnReorder ? { dragData: column, dropEffect: 'move', onDragEnter, onDrop } : false"
     />
@@ -165,6 +191,7 @@
             v-model="pageSize"
             name="dgv-page-size-select"
             @change="async () => await onPageSizeChangedAsync()"
+            aria-label="Select page size"
           >
             <option
               v-for="pageSize in pageSizes"
@@ -218,7 +245,7 @@ import debounce from 'debounce'
 import { DataType, Field, type Column } from '../DataGridVue'
 import { type DataService, StubDataService, ClientSideDataService, type ServerSideDataServiceOptions, ServerSideDataService } from '../DataService'
 import { type Sort, type SortOptions, SortType } from '../Sort'
-import type { Filter, FilterCondition } from '../Filter'
+import { type Filter, type FilterCondition, CompileFilterSummary } from '../Filter'
 import { calculateColumnWidths } from '../ColumnWidth'
 import HeaderCell from './HeaderCell.vue'
 import HeaderFilter from './HeaderFilter.vue'
@@ -303,10 +330,23 @@ export default defineComponent({
     'options-header'?: (props: {
       /** Function to call to toggle whether to display the filter row below the data grid's header. */
       toggleFilterOptionsShown: () => void
-      /** Function to call to toggle whether to display the column selection menu. The function has a single MouseEvent parameter. */
-      toggleColumnSelectionShown: (event: MouseEvent) => void
+      /**
+       * Function to call to toggle whether to display the column selection menu.
+       * The function has a single Event parameter which is the click  or key event that triggered the toggle.
+       */
+      toggleColumnSelectionShown: (event: Event) => void
       /** Function to call to clear all current filter state. */
       clearFilters: () => void
+      /** The current filter state */
+      filter: Filter | undefined
+      /** Whether or not the filter row is currently displayed. */
+      filterOptionsShown: boolean
+      /** A string summary of the current filters applied to the data grid. */
+      filterSummary: string
+      /** Function to call to clear all current sort state. */
+      clearSort: () => void
+      /** The current sort state */
+      sort: Sort[]
     }) => any
 
     /**
@@ -315,6 +355,8 @@ export default defineComponent({
     'options-header-filter-options-shown'?: (props: {
       /** Function to call to toggle whether to display the filter row below the data grid's header. */
       toggleFilterOptionsShown: () => void
+      /** Whether or not the filter row is currently displayed. */
+      filterOptionsShown: boolean
     }) => any
 
     /**
@@ -323,14 +365,25 @@ export default defineComponent({
     'options-header-clear-filters'?: (props: {
       /** Function to call to clear all current filter state. */
       clearFilters: () => void
+      /** The current filter state */
+      filter: Filter | undefined
+      /** A string summary of the current filters applied to the data grid. */
+      filterSummary: string
+      /** Function to call to clear all current sort state. */
+      clearSort: () => void
+      /** The current sort state */
+      sort: Sort[]
     }) => any
 
     /**
      * @description Slot to override just the add/remove columns area of the options header above the grid.
      */
     'options-header-column-selection-shown'?: (props: {
-      /** Function to call to toggle whether to display the column selection menu. The function has a single MouseEvent parameter. */
-      toggleColumnSelectionShown: (event: MouseEvent) => void
+      /**
+       * Function to call to toggle whether to display the column selection menu.
+       * The function has a single Event parameter which is the click  or key event that triggered the toggle.
+       */
+      toggleColumnSelectionShown: (event: Event) => void
     }) => any
 
     /**
@@ -625,6 +678,9 @@ export default defineComponent({
       }
       return filter
     },
+    filterSummary(): string {
+      return CompileFilterSummary(this.filter)
+    },
     gridTemplateColumns(): string {
       return this.columnWidths.join(' ')
     },
@@ -763,7 +819,9 @@ export default defineComponent({
         this.$emit('update:columns', columns)
       }
     },
-    sortColumn(column: Column) {
+    sortColumn(columnIndex: number) {
+      const column = this.displayedColumns[columnIndex]
+
       if (!this.sortOptions?.sortable || !column.sortable) {
         return
       }
@@ -827,7 +885,14 @@ export default defineComponent({
         this.saveGridState()
       }
     },
-    toggleColumnSelectionShown(event: MouseEvent) {
+    clearSort() {
+      if (this.sort.length) {
+        this.sort = []
+        this.loadPageDataAsync()
+        this.saveGridState()
+      }
+    },
+    toggleColumnSelectionShown(event: Event) {
       if (this.popupOptions) {
         this.popupOptions = undefined
         return
@@ -924,6 +989,64 @@ export default defineComponent({
         }
       }
 
+      this.onColumnReorder(newColumnOrder)
+    },
+    moveColumnLeft(columnIndex: number) {
+      if (!this.allowColumnReorder || columnIndex <= 0) {
+        return
+      }
+
+      const newColumnOrder = [] as Column[]
+      for (var i = 0, displayedIndex = 0; i < this.displayedColumns.length; i++) {
+        const column = this.columns[i]
+        if (column.hidden) {
+          newColumnOrder.push(column)
+          continue
+        }
+        if (displayedIndex === columnIndex) {
+          const popped = [] as Column[]
+          let poppedColumn: Column | undefined
+          do {
+            poppedColumn = newColumnOrder.pop()
+            popped.push(poppedColumn!)
+          } while (poppedColumn?.hidden)
+          newColumnOrder.push(column)
+          for (const column of popped.reverse()) {
+            newColumnOrder.push(column)
+          }
+        } else {
+          newColumnOrder.push(column)
+        }
+        displayedIndex++
+      }
+
+      this.onColumnReorder(newColumnOrder)
+    },
+    moveColumnRight(columnIndex: number) {
+      if (!this.allowColumnReorder || columnIndex >= this.displayedColumns.length - 1) {
+        return
+      }
+
+      const newColumnOrder = [] as Column[]
+      for (var i = 0, displayedIndex = 0; i < this.columns.length; i++) {
+        const column = this.columns[i]
+        if (column.hidden) {
+          newColumnOrder.push(column)
+          continue
+        }
+        if (displayedIndex === columnIndex) {
+          newColumnOrder.push(this.columns[i + 1])
+          newColumnOrder.push(column)
+          i++
+        } else {
+          newColumnOrder.push(column)
+        }
+        displayedIndex++
+      }
+
+      this.onColumnReorder(newColumnOrder)
+    },
+    onColumnReorder(newColumnOrder: Column[]) {
       this.$emit('update:columns', newColumnOrder)
       this.saveGridState()
     },

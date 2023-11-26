@@ -63,42 +63,101 @@ false
 ```ts
 sort: {
   type: PropType<Sort[]>;
-  required: false;
-  default: undefined;
+  required: true;
 };
 ```
 
 #### Description
 
-The current sort for the column or `undefined` if the column is not sorted.
-
-#### Default Value
-
-```ts
-undefined
-```
+The current sort for the entire data grid.
 
 #### Type declaration
 
 | Member | Type | Description |
 | :------ | :------ | :------ |
 | `type` | `PropType`\<[`Sort`](../interfaces/Sort.md)[]\> | - |
-| `required` | `false` | - |
-| `default` | `undefined` | - |
+| `required` | `true` | - |
+
+***
+
+### allowColumnReorder
+
+```ts
+allowColumnReorder: {
+  type: BooleanConstructor;
+  required: true;
+};
+```
+
+#### Description
+
+Whether to allow columns to be reordered using drag-and-drop
+powered by [drag-drop-vue](https://www.npmjs.com/package/dragon-drop-vue).
+
+#### Type declaration
+
+| Member | Type | Description |
+| :------ | :------ | :------ |
+| `type` | `BooleanConstructor` | - |
+| `required` | `true` | - |
+
+***
+
+### columnIndex
+
+```ts
+columnIndex: {
+  type: NumberConstructor;
+  required: true;
+};
+```
+
+#### Description
+
+The zero-based index of the column that defines the current column order.
+
+#### Type declaration
+
+| Member | Type | Description |
+| :------ | :------ | :------ |
+| `type` | `NumberConstructor` | - |
+| `required` | `true` | - |
+
+***
+
+### totalColumnCount
+
+```ts
+totalColumnCount: {
+  type: NumberConstructor;
+  required: true;
+};
+```
+
+#### Description
+
+The total number of columns in the grid.
+
+#### Type declaration
+
+| Member | Type | Description |
+| :------ | :------ | :------ |
+| `type` | `NumberConstructor` | - |
+| `required` | `true` | - |
 
 ## emits
 
 ### onClick()
 
 ```ts
-onClick(column): boolean
+onClick(columnIndex): boolean
 ```
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `column` | [`Column`](../interfaces/Column.md) | The [Column](../interfaces/Column.md) that was clicked. |
+| `columnIndex` | `number` | The zero-based index of the column that defines the current column order. |
 
 #### Returns
 
@@ -107,6 +166,51 @@ onClick(column): boolean
 #### Description
 
 Event emitted when the header cell is clicked.
+This is also emitted when the space bar is pressed and the header cell is focused.
+
+***
+
+### onLeft()
+
+```ts
+onLeft(columnIndex): boolean
+```
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `columnIndex` | `number` | The zero-based index of the column that defines the current column order. |
+
+#### Returns
+
+`boolean`
+
+#### Description
+
+Event emitted when the left arrow key is pressed and the header cell is focused.
+
+***
+
+### onRight()
+
+```ts
+onRight(columnIndex): boolean
+```
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `columnIndex` | `number` | The zero-based index of the column that defines the current column order. |
+
+#### Returns
+
+`boolean`
+
+#### Description
+
+Event emitted when the right arrow key is pressed and the header cell is focused.
 
 ***
 
