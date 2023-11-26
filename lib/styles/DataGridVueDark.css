@@ -132,6 +132,7 @@
 
 .dgv-data-grid-container .dgv-header-cell:focus-visible {
   outline: var(--dgv-header-focus-outline);
+  outline-offset: -0.2rem;
 }
 
 .dgv-data-grid-container .dgv-header-cell.ddv-dragging-over {

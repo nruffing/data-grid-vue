@@ -102,6 +102,10 @@
       @onRight="moveColumnRight"
       v-dgv-drag="allowColumnReorder ? { dragData: column, dropEffect: 'move', onDragStart } : false"
       v-dgv-drop="allowColumnReorder ? { dragData: column, dropEffect: 'move', onDragEnter, onDrop } : false"
+      v-dgv-focus="{
+        focusOnUpdate: focusedColumnFieldName === column.field.fieldName,
+        onFocus: () => (focusedColumnFieldName = column.field.fieldName),
+      }"
     />
 
     <!-- HEADER FILTERS -->
@@ -232,7 +236,7 @@
             :key="column.field.fieldName"
             :column="column"
             @hidden-updated="onHiddenUpdated(column, $event)"
-            v-dgv-focus="{ onMount: index === 0 }"
+            v-dgv-focus="{ focusOnMount: index === 0 }"
           />
         </slot>
       </div>
@@ -287,6 +291,7 @@ interface Data {
       }
     | undefined
   storageService: StorageService
+  focusedColumnFieldName: string | undefined
 }
 
 /**
@@ -651,6 +656,7 @@ export default defineComponent({
       draggingColumn: undefined,
       popupOptions: undefined,
       storageService: StubStorageService,
+      focusedColumnFieldName: undefined,
     }
   },
   computed: {
@@ -996,47 +1002,27 @@ export default defineComponent({
       if (!this.allowColumnReorder || columnIndex <= 0) {
         return
       }
-
-      const newColumnOrder = [] as Column[]
-      for (var i = 0, displayedIndex = 0; i < this.displayedColumns.length; i++) {
-        const column = this.columns[i]
-        if (column.hidden) {
-          newColumnOrder.push(column)
-          continue
-        }
-        if (displayedIndex === columnIndex) {
-          const popped = [] as Column[]
-          let poppedColumn: Column | undefined
-          do {
-            poppedColumn = newColumnOrder.pop()
-            popped.push(poppedColumn!)
-          } while (poppedColumn?.hidden)
-          newColumnOrder.push(column)
-          for (const column of popped.reverse()) {
-            newColumnOrder.push(column)
-          }
-        } else {
-          newColumnOrder.push(column)
-        }
-        displayedIndex++
-      }
-
-      this.onColumnReorder(newColumnOrder)
+      this.shiftColumn(columnIndex, true)
     },
     moveColumnRight(columnIndex: number) {
       if (!this.allowColumnReorder || columnIndex >= this.displayedColumns.length - 1) {
         return
       }
-
+      this.shiftColumn(columnIndex, false)
+    },
+    shiftColumn(index: number, reverse: boolean) {
+      const columnIndex = reverse ? this.displayedColumns.length - index - 1 : index
+      const oldColumnOrder = reverse ? [...this.columns].reverse() : [...this.columns]
       const newColumnOrder = [] as Column[]
-      for (var i = 0, displayedIndex = 0; i < this.columns.length; i++) {
-        const column = this.columns[i]
+
+      for (var i = 0, displayedIndex = 0; i < oldColumnOrder.length; i++) {
+        const column = oldColumnOrder[i]
         if (column.hidden) {
           newColumnOrder.push(column)
           continue
         }
         if (displayedIndex === columnIndex) {
-          newColumnOrder.push(this.columns[i + 1])
+          newColumnOrder.push(oldColumnOrder[i + 1])
           newColumnOrder.push(column)
           i++
         } else {
@@ -1045,6 +1031,9 @@ export default defineComponent({
         displayedIndex++
       }
 
+      if (reverse) {
+        newColumnOrder.reverse()
+      }
       this.onColumnReorder(newColumnOrder)
     },
     onColumnReorder(newColumnOrder: Column[]) {
