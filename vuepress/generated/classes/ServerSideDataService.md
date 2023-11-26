@@ -36,10 +36,10 @@ new ServerSideDataService(options): ServerSideDataService
 
 ## Methods
 
-### getPage()
+### getPageAsync()
 
 ```ts
-getPage(
+getPageAsync(
    pageNum, 
    pageSize, 
    sort, 
@@ -65,7 +65,7 @@ A Promise that returns the [PageData](../interfaces/PageData.md) for the current
 
 #### Implementation of
 
-[`DataService.getPage`](../interfaces/DataService.md)
+[`DataService.getPageAsync`](../interfaces/DataService.md)
 
 ***
 

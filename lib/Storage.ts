@@ -39,13 +39,15 @@ export interface GridState {
 export interface StorageService {
   /**
    * @description Retrieves the saved grid state. This is called once when the data grid component is mounted.
+   * @returns A Promise that returns the saved grid state or undefined if no grid state is saved.
    */
-  getGridState(): Promise<GridState | undefined>
+  getGridStateAsync(): Promise<GridState | undefined>
   /**
    * @description Saves a new version of the grid state. This called every time data in the grid state changes.
    * @param gridState The grid state to save
+   * @returns A Promise that returns when the grid state has been saved.
    */
-  setGridState(gridState: GridState): Promise<void>
+  setGridStateAsync(gridState: GridState): Promise<void>
 }
 
 /**
@@ -53,10 +55,10 @@ export interface StorageService {
  * @description A stub {@link StorageService} that will just return empty resolved promises.
  */
 export const StubStorageService = {
-  getGridState(): Promise<GridState | undefined> {
+  getGridStateAsync(): Promise<GridState | undefined> {
     return Promise.resolve(undefined)
   },
-  setGridState(gridState: GridState): Promise<void> {
+  setGridStateAsync(gridState: GridState): Promise<void> {
     return Promise.resolve()
   },
 } as StorageService
@@ -72,7 +74,7 @@ export class SessionStorageService implements StorageService {
     this.key = key
   }
 
-  getGridState(): Promise<GridState | undefined> {
+  getGridStateAsync(): Promise<GridState | undefined> {
     const rawValue = sessionStorage.getItem(this.key)
     let result = undefined as GridState | undefined
     if (rawValue) {
@@ -81,7 +83,7 @@ export class SessionStorageService implements StorageService {
     return Promise.resolve(result)
   }
 
-  setGridState(gridState: GridState): Promise<void> {
+  setGridStateAsync(gridState: GridState): Promise<void> {
     sessionStorage.setItem(this.key, JSON.stringify(gridState))
     return Promise.resolve()
   }
@@ -98,7 +100,7 @@ export class LocalStorageService implements StorageService {
     this.key = key
   }
 
-  getGridState(): Promise<GridState | undefined> {
+  getGridStateAsync(): Promise<GridState | undefined> {
     const rawValue = localStorage.getItem(this.key)
     let result = undefined as GridState | undefined
     if (rawValue) {
@@ -107,7 +109,7 @@ export class LocalStorageService implements StorageService {
     return Promise.resolve(result)
   }
 
-  setGridState(gridState: GridState): Promise<void> {
+  setGridStateAsync(gridState: GridState): Promise<void> {
     localStorage.setItem(this.key, JSON.stringify(gridState))
     return Promise.resolve()
   }
@@ -241,7 +243,7 @@ export class ServerSideStorageService<TUserId> implements StorageService {
     this.options = options
   }
 
-  async getGridState(): Promise<GridState | undefined> {
+  async getGridStateAsync(): Promise<GridState | undefined> {
     const body = {
       userId: this.options.userId,
     } as GetGridStateRequest<TUserId>
@@ -280,7 +282,7 @@ export class ServerSideStorageService<TUserId> implements StorageService {
     return undefined
   }
 
-  async setGridState(gridState: GridState): Promise<void> {
+  async setGridStateAsync(gridState: GridState): Promise<void> {
     const body = {
       userId: this.options.userId,
       gridState,

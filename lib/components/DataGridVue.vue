@@ -138,26 +138,50 @@
         gridColumnEnd: cssColumnSpanValue,
       }"
     >
-      <PageNavigation
-        v-if="paged"
-        v-model:current-page="currentPage"
-        v-model:page-size="pageSize"
-        :total-items="totalItems"
-      />
-      <select
-        v-if="paged && pageSizes?.length > 1"
-        v-model="pageSize"
-        name="dgv-page-size-select"
-        @change="onPageSizeChanged"
+      <slot
+        name="footer"
+        :paged="paged"
+        :currentPage="currentPage"
+        :pageSize="pageSize"
+        :totalItems="totalItems"
+        :onCurrentPageChangedAsync="onCurrentPageChangedAsync"
+        :onPageSizeChangedAsync="onPageSizeChangedAsync"
       >
-        <option
-          v-for="pageSize in pageSizes"
-          :value="pageSize"
+        <PageNavigation
+          v-if="paged"
+          v-model:current-page="currentPage"
+          :page-size="pageSize"
+          :total-items="totalItems"
+          @update:current-page="onCurrentPageChangedAsync"
+        />
+        <slot
+          name="footer-page-size-select"
+          :pageSize="pageSize"
+          :pageSizes="pageSizes"
+          :onPageSizeChangedAsync="onPageSizeChangedAsync"
         >
-          {{ pageSize }}
-        </option>
-      </select>
-      <span class="dgv-total-items">{{ totalItems }} items</span>
+          <select
+            v-if="paged && pageSizes?.length > 1"
+            v-model="pageSize"
+            name="dgv-page-size-select"
+            @change="async () => await onPageSizeChangedAsync()"
+          >
+            <option
+              v-for="pageSize in pageSizes"
+              :value="pageSize"
+            >
+              {{ pageSize }}
+            </option>
+          </select>
+        </slot>
+        <slot name="footer-additional-content" />
+        <slot
+          name="footer-total-items"
+          :totalItems="totalItems"
+        >
+          <span class="dgv-total-items">{{ totalItems }} items</span>
+        </slot>
+      </slot>
     </div>
 
     <!-- Column Selection Popup -->
@@ -174,13 +198,13 @@
         <slot
           name="column-selection-popup"
           :columns="columns"
-          :hiddenUpdated="hiddenUpdated"
+          :onHiddenUpdated="onHiddenUpdated"
         >
           <ColumnSelectionItem
             v-for="column in columns"
             :key="column.field.fieldName"
             :column="column"
-            @hidden-updated="hiddenUpdated(column, $event)"
+            @hidden-updated="onHiddenUpdated(column, $event)"
           />
         </slot>
       </div>
@@ -255,17 +279,11 @@ export default defineComponent({
      * @description Slot to override the filter for the specified column. For example, the slot name `filter-id` would override the filter for the column with a field with the name `id`.
      */
     'filter-${column.field.fieldName}': (props: {
-      /**
-       * The current {@link Column}.
-       */
+      /** The current {@link Column}. */
       column: Column
-      /**
-       * The current {@link FilterCondition} applied to the column.
-       */
+      /** The current {@link FilterCondition} applied to the column. */
       initialFilterCondition: FilterCondition
-      /**
-       * Function to call when the filter condition has been updated to trigger the grid state to update. The function has a {@link FilterCondition} parameter to pass the new condition.
-       */
+      /** Function to call when the filter condition has been updated to trigger the grid state to update. The function has a {@link FilterCondition} parameter to pass the new condition. */
       onFilterUpdated: (condition: FilterCondition) => void
     }) => any
 
@@ -275,9 +293,7 @@ export default defineComponent({
      * based on the formatted value use {@link Field.valueGetter} instead.
      */
     'cell-${column.field.fieldName}': (props: {
-      /**
-       * The entire data item for the current row.
-       */
+      /** The entire data item for the current row. */
       dataItem: any
     }) => any
 
@@ -285,17 +301,11 @@ export default defineComponent({
      * @description Slot to override what is rendered in the options header above the data grid.
      */
     'options-header'?: (props: {
-      /**
-       * Function to call to toggle whether to display the filter row below the data grid's header.
-       */
+      /** Function to call to toggle whether to display the filter row below the data grid's header. */
       toggleFilterOptionsShown: () => void
-      /**
-       * Function to call to toggle whether to display the column selection menu. The function has a single MouseEvent parameter.
-       */
+      /** Function to call to toggle whether to display the column selection menu. The function has a single MouseEvent parameter. */
       toggleColumnSelectionShown: (event: MouseEvent) => void
-      /**
-       * Function to call to clear all current filter state.
-       */
+      /** Function to call to clear all current filter state. */
       clearFilters: () => void
     }) => any
 
@@ -303,9 +313,7 @@ export default defineComponent({
      * @description Slot to override just the toggle column filters area of the options header above the grid.
      */
     'options-header-filter-options-shown'?: (props: {
-      /**
-       * Function to call to toggle whether to display the filter row below the data grid's header.
-       */
+      /** Function to call to toggle whether to display the filter row below the data grid's header. */
       toggleFilterOptionsShown: () => void
     }) => any
 
@@ -313,9 +321,7 @@ export default defineComponent({
      * @description Slot to override just the clear filters area of the options header above the grid.
      */
     'options-header-clear-filters'?: (props: {
-      /**
-       * Function to call to clear all current filter state.
-       */
+      /** Function to call to clear all current filter state. */
       clearFilters: () => void
     }) => any
 
@@ -323,24 +329,63 @@ export default defineComponent({
      * @description Slot to override just the add/remove columns area of the options header above the grid.
      */
     'options-header-column-selection-shown'?: (props: {
-      /**
-       * Function to call to toggle whether to display the column selection menu. The function has a single MouseEvent parameter.
-       */
+      /** Function to call to toggle whether to display the column selection menu. The function has a single MouseEvent parameter. */
       toggleColumnSelectionShown: (event: MouseEvent) => void
     }) => any
 
     /**
      * @description Slot to override what is rendered in the add/remove columns menu.
      */
-    'column-selection-popup': (props: {
-      /**
-       * All current column state.
-       */
+    'column-selection-popup'?: (props: {
+      /** All current column state. */
       columns: Column[]
       /**
        * Function to call when the hidden state of a column should be changed. The function has a {@link Column} parameter and a boolean hidden parameter.
        */
-      hiddenUpdated: (column: Column, hidden: boolean) => void
+      onHiddenUpdated: (column: Column, hidden: boolean) => void
+    }) => any
+
+    /**
+     * @description Slot to override the entire footer of the data grid.
+     */
+    footer?: (props: {
+      /** Whether the grid is paged. */
+      paged: boolean
+      /** The current page number starting with `1` for the first page. */
+      currentPage: number
+      /** The current page size. */
+      pageSize: number
+      /** The total number of items in the grid after all filter conditions have been applied. */
+      totalItems: number
+      /** Function to call when the current page changes. Promise resolves when the new page data is loaded. */
+      onCurrentPageChangedAsync: (page: number) => Promise<void>
+      /** Function to call when the page size has changed. Promise resolves when the new page data is loaded. */
+      onPageSizeChangedAsync: (pageSize: number) => Promise<void>
+    }) => any
+
+    /**
+     * @description Slot to override the page size select in the footer of the data grid.
+     */
+    'footer-page-size-select'?: (props: {
+      /** The current page size. */
+      pageSize: number
+      /** The page sizes to allow the user to select between. */
+      pageSizes: number[]
+      /** Function to call when the page size has changed. Promise resolves when the new page data is loaded. */
+      onPageSizeChangedAsync: (pageSize: number) => Promise<void>
+    }) => any
+
+    /**
+     * @description Slot to add custom content to the footer of the data grid. The content is rendered after the page size select.
+     */
+    'footer-additional-content'?: (props: {}) => any
+
+    /**
+     * @description Slot to override the total items in the footer of the data grid.
+     */
+    'footer-total-items'?: (props: {
+      /** The total number of items in the grid after all filter conditions have been applied. */
+      totalItems: number
     }) => any
   }>,
   emits: {
@@ -639,12 +684,12 @@ export default defineComponent({
           : new SessionStorageService(this.storageKey)
     }
 
-    const gridState = await this.storageService.getGridState()
+    const gridState = await this.storageService.getGridStateAsync()
     if (gridState) {
       this.setGridState(gridState)
     }
 
-    await this.loadPageData()
+    await this.loadPageDataAsync()
 
     this.windowResizeDebounce = debounce(this.onWindowResize, 50)
     window.addEventListener('resize', this.windowResizeDebounce)
@@ -659,9 +704,6 @@ export default defineComponent({
     this.windowResizeDebounce = undefined
   },
   watch: {
-    currentPage() {
-      this.loadPageData()
-    },
     columns() {
       nextTick(() => {
         this.calculateColumnWidths()
@@ -669,8 +711,13 @@ export default defineComponent({
     },
   },
   methods: {
-    async loadPageData() {
-      const pageData = await this.dataService.getPage(this.paged ? this.currentPage : -1, this.paged ? this.pageSize : -1, this.sort, this.filter)
+    async loadPageDataAsync(): Promise<void> {
+      const pageData = await this.dataService.getPageAsync(
+        this.paged ? this.currentPage : -1,
+        this.paged ? this.pageSize : -1,
+        this.sort,
+        this.filter,
+      )
       this.displayedData = pageData.dataItems
       this.totalItems = pageData.totalItems
     },
@@ -742,15 +789,28 @@ export default defineComponent({
         }
       }
 
-      this.loadPageData()
+      this.loadPageDataAsync()
       this.saveGridState()
     },
-    async onPageSizeChanged() {
+    onCurrentPageChangedAsync(page: number): Promise<void> {
+      this.currentPage = page
+      return this.loadPageDataAsync()
+    },
+    /**
+     * @description Function to call when the page size has changed.
+     * @param pageSize The new page size. If not specified the assumptions is the page size
+     * has already been updated via a v-model binding.
+     * @returns A promise that resolves when the page data has been loaded.
+     */
+    async onPageSizeChangedAsync(pageSize: number | undefined = undefined): Promise<void> {
+      if (pageSize) {
+        this.pageSize = pageSize
+      }
       const numPages = Math.ceil(this.totalItems / this.pageSize)
       if (this.currentPage > numPages) {
         this.currentPage = numPages
       }
-      await this.loadPageData()
+      await this.loadPageDataAsync()
       this.saveGridState()
     },
     toggleFilterOptionsShown() {
@@ -763,7 +823,7 @@ export default defineComponent({
         for (const headerFilter of this.$refs.headerFilter as (typeof HeaderFilter)[]) {
           headerFilter.clearFilter()
         }
-        this.loadPageData()
+        this.loadPageDataAsync()
         this.saveGridState()
       }
     },
@@ -795,12 +855,12 @@ export default defineComponent({
           this.filters.push(condition)
         }
       }
-      this.loadPageData()
+      this.loadPageDataAsync()
       this.saveGridState()
     },
     setFilter(filter: Filter | undefined) {
       this.externalFilter = filter
-      this.loadPageData()
+      this.loadPageDataAsync()
     },
     onWindowResize() {
       this.calculateColumnWidths()
@@ -811,11 +871,16 @@ export default defineComponent({
     onDragStart(domEl: HTMLElement, dragEvent: DragEvent, dragOptions: DragonDropVueDragOptions<Column>, options: DragonDropVueOptions) {
       this.draggingColumn = dragOptions.dragData
     },
-    onDragEnter(domEl: HTMLElement, dragEvent: DragEvent, dragOptions: DragonDropVueDragOptions<Column>, options: DragonDropVueOptions) {
+    onDragEnter(domEl: HTMLElement, dragEvent: DragEvent, dragOptions: DragonDropVueDragOptions<Column>, options: DragonDropVueOptions): boolean {
       // do not allow dropping column onto itself
       return this.draggingColumn?.field.fieldName !== dragOptions.dragData?.field.fieldName
     },
-    onDrop(domEl: HTMLElement, dragEvent: DragEvent, dragOptions: DragonDropVueDragOptions<Column>, options: DragonDropVueOptions) {
+    onDrop(
+      domEl: HTMLElement,
+      dragEvent: DragEvent,
+      dragOptions: DragonDropVueDragOptions<Column>,
+      options: DragonDropVueOptions,
+    ): boolean | undefined {
       // do not allow dropping column onto itself
       const dropFieldName = dragOptions.dragData?.field.fieldName
       const dragFieldName = this.draggingColumn?.field.fieldName
@@ -862,7 +927,7 @@ export default defineComponent({
       this.$emit('update:columns', newColumnOrder)
       this.saveGridState()
     },
-    hiddenUpdated(column: Column, hidden: boolean) {
+    onHiddenUpdated(column: Column, hidden: boolean) {
       const columns = []
       for (const col of this.columns) {
         const newColumn = { ...col }
@@ -876,7 +941,7 @@ export default defineComponent({
     },
     saveGridState() {
       nextTick(() => {
-        this.storageService.setGridState(this.gridState)
+        this.storageService.setGridStateAsync(this.gridState)
       })
     },
   },

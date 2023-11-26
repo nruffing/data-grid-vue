@@ -1,4 +1,4 @@
-# ~~HeaderCell~~
+# HeaderCell
 
 ## Description
 
@@ -6,7 +6,7 @@ The header cell for each column.
 
 ## props
 
-### ~~column~~
+### column
 
 ```ts
 column: {
@@ -28,7 +28,7 @@ The [Column](../interfaces/Column.md) being rendered.
 
 ***
 
-### ~~sortable~~
+### sortable
 
 ```ts
 sortable: {
@@ -58,7 +58,7 @@ false
 
 ***
 
-### ~~sort~~
+### sort
 
 ```ts
 sort: {
@@ -88,7 +88,7 @@ undefined
 
 ## emits
 
-### ~~onClick()~~
+### onClick()
 
 ```ts
 onClick(column): boolean

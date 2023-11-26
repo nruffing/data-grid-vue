@@ -12,7 +12,7 @@ import {
   IntrinsicType,
   SignatureReflection,
 } from 'typedoc'
-import type { Identifier, ImportTypeNode, TypeLiteralNode, TypeReferenceNode } from 'typescript'
+import type { FunctionTypeNode, Identifier, ImportTypeNode, TypeLiteralNode, TypeReferenceNode } from 'typescript'
 import pkg from 'typescript'
 //import { ValidOperatorsMap } from './vuepress/node_modules/data-grid-vue/lib/main'
 
@@ -167,6 +167,14 @@ function processTypeLiteral(typeLiteral: TypeLiteralNode, context: DefineCompone
     context.reflection.signatures?.push(signature)
     signature.parent = context.reflection
   }
+
+  /**
+   * https://github.com/TypeStrong/typedoc/issues/2448
+   * https://github.com/TypeStrong/typedoc/blob/aba0ef85a9b57ff9bc8e7fa2f4c19b48bdb3c0ca/src/lib/models/reflections/abstract.ts#L486C30-L487C30
+   */
+  if (context.reflection.signatures?.length === 0) {
+    context.reflection.signatures = undefined
+  }
 }
 
 function createTypeLiteralFromSlotPropertySignature(slot: DeclarationReflection, current: SomeType | undefined): DeclarationReflection | undefined {
@@ -174,17 +182,18 @@ function createTypeLiteralFromSlotPropertySignature(slot: DeclarationReflection,
     return undefined
   }
 
-  if (current.type === 'reflection') {
-    if (current.declaration.signatures?.length && current.declaration.signatures[0].parameters?.length) {
-      return createTypeLiteralFromSlotPropertySignature(slot, current.declaration.signatures[0].parameters[0].type)
-    }
-    if (current.declaration.type) {
-      return createTypeLiteralFromSlotPropertySignature(slot, current.declaration.type)
-    }
-    if (current.declaration.children?.length) {
+  switch (current.type) {
+    case 'reflection':
+      if (current.declaration.signatures?.length && current.declaration.signatures[0].parameters?.length) {
+        return createTypeLiteralFromSlotPropertySignature(slot, current.declaration.signatures[0].parameters[0].type)
+      }
+
+      if (current.declaration.type) {
+        return createTypeLiteralFromSlotPropertySignature(slot, current.declaration.type)
+      }
+
       var slotType = new DeclarationReflection(slot.name, ReflectionKind.TypeLiteral)
       slotType.type = current
-
       for (const child of current.declaration.children ?? []) {
         if (child.type?.type === 'reflection') {
           if (child.type.declaration.signatures?.length) {
@@ -195,14 +204,12 @@ function createTypeLiteralFromSlotPropertySignature(slot: DeclarationReflection,
       }
 
       return slotType
-    }
-  }
 
-  if (current.type === 'union') {
-    if (current.types.length > 0) {
-      return createTypeLiteralFromSlotPropertySignature(slot, current.types[0])
-    }
-    return undefined
+    case 'union':
+      if (current.types.length > 0) {
+        return createTypeLiteralFromSlotPropertySignature(slot, current.types[0])
+      }
+      return undefined
   }
 
   return undefined
@@ -216,7 +223,7 @@ function functionType(modelSignatures: SignatureReflection[]): string {
           return `${param.flags.isRest ? '...' : ''}${backTicks(param.name)}${param.flags.isOptional ? '?' : ''}`
         })
       : []
-    const returns = 'any' //context.someType(fn.type as SomeType);
+    const returns = fn.type?.type === 'reference' ? 'Promise<any>' : 'any'
     return typeParams + `(${params.join(', ')}) => ${returns}`
   })
   return functions.join('')

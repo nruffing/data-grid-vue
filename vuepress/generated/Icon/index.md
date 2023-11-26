@@ -1,8 +1,8 @@
-# ~~Icon~~
+# Icon
 
 ## props
 
-### ~~name~~
+### name
 
 ```ts
 name: {
@@ -20,7 +20,7 @@ name: {
 
 ***
 
-### ~~text~~
+### text
 
 ```ts
 text: {

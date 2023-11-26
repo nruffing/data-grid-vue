@@ -19,7 +19,7 @@ export interface DataService {
    * @param filter The current filter definition or undefined if no filter is set.
    * @returns A Promise that returns the {@link PageData} for the current page.
    */
-  getPage: (pageNum: number, pageSize: number, sort: Sort[], filter: Filter | undefined) => Promise<PageData>
+  getPageAsync: (pageNum: number, pageSize: number, sort: Sort[], filter: Filter | undefined) => Promise<PageData>
 }
 
 /**
@@ -27,7 +27,7 @@ export interface DataService {
  * @description A stub {@link DataService} that will noop the getPage call and return an empty page data object.
  */
 export const StubDataService = {
-  getPage(pageNum: number, pageSize: number, sort: Sort[], filter: Filter | undefined): Promise<PageData> {
+  getPageAsync(pageNum: number, pageSize: number, sort: Sort[], filter: Filter | undefined): Promise<PageData> {
     return Promise.resolve(EmptyPageData)
   },
 } as DataService
@@ -89,7 +89,7 @@ export class ClientSideDataService implements DataService {
     this.previousFilterJson = filterJson
   }
 
-  getPage(pageNum: number, pageSize: number, sort: Sort[], filter: Filter | undefined): Promise<PageData> {
+  getPageAsync(pageNum: number, pageSize: number, sort: Sort[], filter: Filter | undefined): Promise<PageData> {
     if (!this.dataItems.length) {
       return Promise.resolve(EmptyPageData)
     }
@@ -211,7 +211,7 @@ export class ServerSideDataService implements DataService {
     this.options = options
   }
 
-  async getPage(pageNum: number, pageSize: number, sort: Sort[], filter: Filter | undefined): Promise<PageData> {
+  async getPageAsync(pageNum: number, pageSize: number, sort: Sort[], filter: Filter | undefined): Promise<PageData> {
     const body = {
       pageNum,
       pageSize,

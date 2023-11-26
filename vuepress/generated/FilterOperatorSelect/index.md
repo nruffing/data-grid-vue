@@ -1,4 +1,4 @@
-# ~~FilterOperatorSelect~~
+# FilterOperatorSelect
 
 ## Description
 
@@ -13,7 +13,7 @@ is configured with more then one filter operator.
 
 ## props
 
-### ~~operators~~
+### operators
 
 ```ts
 operators: {
@@ -35,7 +35,7 @@ The [FilterOperator](../enumerations/FilterOperator.md) values configured on the
 
 ***
 
-### ~~modelValue~~
+### modelValue
 
 ```ts
 modelValue: {
@@ -65,7 +65,7 @@ FilterOperator.equals
 
 ## emits
 
-### ~~update:modelValue()~~
+### update:modelValue()
 
 ```ts
 update:modelValue(operator): boolean

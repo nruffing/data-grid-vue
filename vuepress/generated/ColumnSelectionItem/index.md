@@ -1,4 +1,4 @@
-# ~~ColumnSelectionItem~~
+# ColumnSelectionItem
 
 ## Description
 
@@ -10,7 +10,7 @@ Column toggle item displayed in the column selected menu.
 
 ## props
 
-### ~~column~~
+### column
 
 ```ts
 column: {
@@ -32,7 +32,7 @@ The [Column](../interfaces/Column.md) to show or hide.
 
 ## emits
 
-### ~~hidden-updated()~~
+### hidden-updated()
 
 ```ts
 hidden-updated(hidden): boolean

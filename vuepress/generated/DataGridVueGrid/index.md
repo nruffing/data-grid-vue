@@ -1,4 +1,4 @@
-# ~~DataGridVueGrid~~
+# DataGridVueGrid
 
 ## Description
 
@@ -6,7 +6,7 @@ Main entrypoint component to render a data grid.
 
 ## props
 
-### ~~data~~
+### data
 
 ```ts
 data: {
@@ -40,7 +40,7 @@ undefined
 
 ***
 
-### ~~serverSideOptions~~
+### serverSideOptions
 
 ```ts
 serverSideOptions: {
@@ -77,7 +77,7 @@ undefined
 
 ***
 
-### ~~customDataService~~
+### customDataService
 
 ```ts
 customDataService: {
@@ -108,7 +108,7 @@ undefined
 
 ***
 
-### ~~columns~~
+### columns
 
 ```ts
 columns: {
@@ -135,7 +135,7 @@ functionality to do things like allowing users to add/remove columns.
 
 ***
 
-### ~~allowColumnReorder~~
+### allowColumnReorder
 
 ```ts
 allowColumnReorder: {
@@ -167,7 +167,7 @@ false
 
 ***
 
-### ~~paged~~
+### paged
 
 ```ts
 paged: {
@@ -198,7 +198,7 @@ true
 
 ***
 
-### ~~initialPageSize~~
+### initialPageSize
 
 ```ts
 initialPageSize: {
@@ -228,7 +228,7 @@ The page size to use when the grid initially loads.
 
 ***
 
-### ~~pageSizes~~
+### pageSizes
 
 ```ts
 pageSizes: {
@@ -259,7 +259,7 @@ will only be displayed if this array contains more then one value.
 
 ***
 
-### ~~sortOptions~~
+### sortOptions
 
 ```ts
 sortOptions: {
@@ -291,7 +291,7 @@ undefined
 
 ***
 
-### ~~showColumnSelection~~
+### showColumnSelection
 
 ```ts
 showColumnSelection: {
@@ -323,7 +323,7 @@ false
 
 ***
 
-### ~~storageKey~~
+### storageKey
 
 ```ts
 storageKey: {
@@ -362,7 +362,7 @@ This is ignored if [serverSideStorageOptions](index.md) or [customStorageService
 
 ***
 
-### ~~localStorageType~~
+### localStorageType
 
 ```ts
 localStorageType: {
@@ -401,7 +401,7 @@ LocalStorageType.sessionStorage
 
 ***
 
-### ~~serverSideStorageOptions~~
+### serverSideStorageOptions
 
 ```ts
 serverSideStorageOptions: {
@@ -437,7 +437,7 @@ undefined
 
 ***
 
-### ~~customStorageService~~
+### customStorageService
 
 ```ts
 customStorageService: {
@@ -468,7 +468,7 @@ undefined
 
 ## emits
 
-### ~~update:columns()~~
+### update:columns()
 
 ```ts
 update:columns(columns): boolean
@@ -492,7 +492,7 @@ the columns prop to update. Leveraging `v-model:columns` is recommended.
 
 ## slots
 
-### ~~filter-$\{column.field.fieldName}~~
+### filter-$\{column.field.fieldName}
 
 ```ts
 filter-${column.field.fieldName}: {
@@ -516,7 +516,7 @@ Slot to override the filter for the specified column. For example, the slot name
 
 ***
 
-### ~~cell-$\{column.field.fieldName}~~
+### cell-$\{column.field.fieldName}
 
 ```ts
 cell-${column.field.fieldName}: {
@@ -538,7 +538,7 @@ based on the formatted value use Field.valueGetter instead.
 
 ***
 
-### ~~options-header~~
+### options-header
 
 ```ts
 options-header: {
@@ -562,7 +562,7 @@ Slot to override what is rendered in the options header above the data grid.
 
 ***
 
-### ~~options-header-filter-options-shown~~
+### options-header-filter-options-shown
 
 ```ts
 options-header-filter-options-shown: {
@@ -582,7 +582,7 @@ Slot to override just the toggle column filters area of the options header above
 
 ***
 
-### ~~options-header-clear-filters~~
+### options-header-clear-filters
 
 ```ts
 options-header-clear-filters: {
@@ -602,7 +602,7 @@ Slot to override just the clear filters area of the options header above the gri
 
 ***
 
-### ~~options-header-column-selection-shown~~
+### options-header-column-selection-shown
 
 ```ts
 options-header-column-selection-shown: {
@@ -622,12 +622,12 @@ Slot to override just the add/remove columns area of the options header above th
 
 ***
 
-### ~~column-selection-popup~~
+### column-selection-popup
 
 ```ts
 column-selection-popup: {
   columns: Column[];
-  hiddenUpdated: (column, hidden) => any;
+  onHiddenUpdated: (column, hidden) => any;
 };
 ```
 
@@ -640,7 +640,93 @@ Slot to override what is rendered in the add/remove columns menu.
 | Member | Type | Description |
 | :------ | :------ | :------ |
 | `columns` | [`Column`](../interfaces/Column.md)[] | All current column state. |
-| `hiddenUpdated` | `(column, hidden) => any` | Function to call when the hidden state of a column should be changed. The function has a [Column](../interfaces/Column.md) parameter and a boolean hidden parameter. |
+| `onHiddenUpdated` | `(column, hidden) => any` | Function to call when the hidden state of a column should be changed. The function has a [Column](../interfaces/Column.md) parameter and a boolean hidden parameter. |
+
+***
+
+### footer
+
+```ts
+footer: {
+  paged: boolean;
+  currentPage: number;
+  pageSize: number;
+  totalItems: number;
+  onCurrentPageChangedAsync: (page) => Promise<any>;
+  onPageSizeChangedAsync: (pageSize) => Promise<any>;
+};
+```
+
+#### Description
+
+Slot to override the entire footer of the data grid.
+
+#### Type declaration
+
+| Member | Type | Description |
+| :------ | :------ | :------ |
+| `paged` | `boolean` | Whether the grid is paged. |
+| `currentPage` | `number` | The current page number starting with `1` for the first page. |
+| `pageSize` | `number` | The current page size. |
+| `totalItems` | `number` | The total number of items in the grid after all filter conditions have been applied. |
+| `onCurrentPageChangedAsync` | `(page) => Promise<any>` | Function to call when the current page changes. Promise resolves when the new page data is loaded. |
+| `onPageSizeChangedAsync` | `(pageSize) => Promise<any>` | Function to call when the page size has changed. Promise resolves when the new page data is loaded. |
+
+***
+
+### footer-page-size-select
+
+```ts
+footer-page-size-select: {
+  pageSize: number;
+  pageSizes: number[];
+  onPageSizeChangedAsync: (pageSize) => Promise<any>;
+};
+```
+
+#### Description
+
+Slot to override the page size select in the footer of the data grid.
+
+#### Type declaration
+
+| Member | Type | Description |
+| :------ | :------ | :------ |
+| `pageSize` | `number` | The current page size. |
+| `pageSizes` | `number`[] | The page sizes to allow the user to select between. |
+| `onPageSizeChangedAsync` | `(pageSize) => Promise<any>` | Function to call when the page size has changed. Promise resolves when the new page data is loaded. |
+
+***
+
+### footer-additional-content
+
+```ts
+footer-additional-content: {};
+```
+
+#### Description
+
+Slot to add custom content to the footer of the data grid. The content is rendered after the page size select.
+
+***
+
+### footer-total-items
+
+```ts
+footer-total-items: {
+  totalItems: number;
+};
+```
+
+#### Description
+
+Slot to override the total items in the footer of the data grid.
+
+#### Type declaration
+
+| Member | Type | Description |
+| :------ | :------ | :------ |
+| `totalItems` | `number` | The total number of items in the grid after all filter conditions have been applied. |
 
 ***
 

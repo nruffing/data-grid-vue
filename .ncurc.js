@@ -6,6 +6,11 @@ module.exports = {
   format: "group",
 }
 
+const allowNewestPatterns = [
+  /vuepress/,
+  /^typedoc-plugin-markdown$/,
+]
+
 function filter(name, semver) {
   if (name === '@types/node') {
     // lock to node 18
@@ -15,8 +20,7 @@ function filter(name, semver) {
 }
 
 function target(name, semver) {
-  // allow pre-releases for vuepress
-  if (name.includes('vuepress')) {
+  if (allowNewestPatterns.some(pattern => pattern.test(name))) {
     return 'newest'
   }
   return 'latest'

@@ -2,6 +2,16 @@
 
 :root {
   --color-primary: #e57f41;
+  --color-primary-opaque: #e57f4157;
+  --color-secondary: #598F91;
+  --color-secondary-opaque: #598F9157;
+
+
+  --color-accent1: #40E6B2;
+  --color-accent2: #40ADE6;
+  --color-accent3: #7ECCCF;
+  --color-accent4: #E66240;
+
 
   --color-most-darkest: #000000;
   --color-darkest: #1a1a1a;
@@ -19,11 +29,11 @@
 
   --content-width: 1100px;
 
-  --shiki-color-text: #CCCCCC; // html carets
-  --shiki-token-string-expression: #4EC9B0; // html elements
-  --shiki-token-function: #9CDCFE; // html attributes
-  --shiki-color-background: #a21f1f;
-  --shiki-token-constant: #569cd6;
+  --shiki-token-string-expression: var(--color-accent3); // html elements
+  --shiki-color-text: var(--shiki-token-string-expression); // html carets
+  --shiki-token-function: var(--color-accent1); // html attributes
+  --shiki-color-background: var(--color-accent4);
+  --shiki-token-constant: var(--color-accent2); // html attribute values
   --shiki-token-string: var(--shiki-color-text);
   --shiki-token-comment: var(--shiki-color-text);
   --shiki-token-keyword: var(--shiki-token-constant);
@@ -41,20 +51,24 @@ html.dark {
   --c-brand: var(--color-primary);
   --c-bg: var(--color-darkest);
   --code-bg-color: var(--color-darker);
-  --c-border: var(--color-light);
+  --c-text: var(--color-lighter);
   --c-text-quote: var(--color-primary);
   --c-bg-light: var(--color-dark);
   --c-text-lighter: var(--color-lighter);
+  --c-tip: var(--color-secondary);
   --c-tip-bg: var(--color-more-dark);
+  --c-details-bg: var(--color-more-dark);
   --c-danger-bg: var(--color-most-darkest);
   --c-danger-text-light: var(--color-danger-text);
+  --c-border-dark: var(--color-primary-opaque);
+  --c-border: var(--color-secondary-opaque);
 }
 
 /*
 TYPOGRAPHY
 */
 h2 {
-  border-bottom-color: var(--color-primary);
+  border-bottom-color: var(--color-secondary-opaque);
 }
 
 .theme-default-content h2 {
@@ -66,11 +80,18 @@ h2 {
 .theme-default-content h3 {
   margin-top: 30px;
   padding-top: 0;
-  text-decoration: underline;
+}
+
+h1 {
+  color: var(--c-text);
+}
+
+h2, h3, h4, h5, h6 {
+  color: var(--color-secondary);
 }
 
 /*
-Custom Containers
+CUSTOM CONTAINERS
 */
 .custom-container.tip, .custom-container.warning, .custom-container.danger  {
   border-width: var(--code-block-border-width);
@@ -148,4 +169,11 @@ BADGES
   .github-buttons {
    margin-right: 0; 
   }
+}
+
+/*
+TABLES
+*/
+tr:nth-child(2n) {
+  background-color: transparent;
 }
