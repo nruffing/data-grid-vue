@@ -228,10 +228,11 @@
           :onHiddenUpdated="onHiddenUpdated"
         >
           <ColumnSelectionItem
-            v-for="column in columns"
+            v-for="(column, index) in columns"
             :key="column.field.fieldName"
             :column="column"
             @hidden-updated="onHiddenUpdated(column, $event)"
+            v-dgv-focus="{ onMount: index === 0 }"
           />
         </slot>
       </div>

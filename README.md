@@ -146,7 +146,8 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
     * Allow sort and reorder actions to be performed via keyboard when header cell has focus
       * Space or enter to cycle through sort options
       * Left and right arrow to reorder
-    * Header options can be triggered via space or enter
+    * Allow header options to be triggered via space or enter
+    * Add/remove column menu is focused when it opens and can be navigated via keyboard using the tab key
    
  
   * Add additional parameters to the `options-header`, `options-header-filter-options-shown`, and `options-header-clear-filters` slots.
@@ -164,6 +165,8 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   * Update ['dragon-drop-vue'](https://www.npmjs.com/package/dragon-drop-vue) dependency to v0.2.0
   * Documentation site theme update
   * Documentation site is now setup up as a [progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps).
+  * bugfix: `DataGridVueOptions.clickOutsideDirectiveName` removed.
+  * bugfix: `DataGridVueOptions.dragonDropVueOptions.dragDirectiveName` and `dropDirectiveName` will always be overridden to `dgv-drag` and `dgv-drop`.
    
 
 ### v2.3.0

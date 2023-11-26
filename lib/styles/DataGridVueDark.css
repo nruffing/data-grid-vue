@@ -11,6 +11,8 @@
 
   --dgv-font-family: Verdana, Arial, Helvetica, sans-serif;
 
+  --dgv-focus-outline: 0.1rem solid var(--dgv-accent);
+
   --dgv-header-text-color: var(--dgv-white);
   --dgv-header-background: transparent;
   --dgv-header-padding: 0.6rem;
@@ -21,7 +23,7 @@
   --dgv-header-icon-size: 0.8rem;
   --dgv-header-icon-color: var(--dgv-accent);
   --dgv-header-drop-border-color: var(--dgv-accent);
-  --dgv-header-focus-outline: 0.2rem solid var(--dgv-accent);
+  --dgv-header-focus-outline: var(--dgv-focus-outline);
 
   --dgv-filter-options-background-color: var(--dgv-opaque-2);
   --dgv-filter-options-border-bottom: 0.2rem solid var(--dgv-opaque-1);
@@ -78,8 +80,7 @@
   --dgv-input-text-color: var(--dgv-black);
   --dgv-input-background: var(--dgv-white);
   --dgv-input-font-size: 1rem;
-  --dgv-input-focus-border: 0.1rem solid var(--dgv-accent);
-
+  --dgv-input-focus-border: var(--dgv-focus-outline);
   --dgv-filter-operator-item-color: var(--dgv-black);
   --dgv-filter-operator-item-opacity: 0.7;
 
@@ -98,6 +99,7 @@
   --dgv-toggle-color: var(--dgv-accent);
   --dgv-toggle-slider-color: var(--dgv-opaque-1);
   --dgv-toggle-padding: 0.3rem;
+  --dgv-toggle-focus-border: 0.1rem solid var(--dgv-black);
 }
 
 /**** Data Grid ****/
@@ -388,6 +390,11 @@
   display: flex;
   flex-direction: row;
   gap: 0.4rem;
+  align-items: center;
+}
+
+.dgv-toggle-container:has(*:focus-visible) {
+  outline: var(--dgv-toggle-focus-border);
 }
 
 .dgv-toggle {

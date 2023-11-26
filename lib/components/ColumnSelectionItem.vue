@@ -1,5 +1,8 @@
 <template>
-  <label class="dgv-toggle-container">
+  <label
+    class="dgv-toggle-container"
+    :aria-label="ariaLabel"
+  >
     <span class="dgv-toggle">
       <input
         type="checkbox"
@@ -60,10 +63,20 @@ export default defineComponent({
     formattedTitle(): string {
       return Formatter.columnTitle(this.column)
     },
+    ariaLabel(): string {
+      return `${Formatter.ariaColumnLabel(this.column)} is currently ${this.shown ? 'shown' : 'hidden'}. Use space bar to ${
+        this.shown ? 'hide' : 'show'
+      } it.`
+    },
   },
   watch: {
     shown(newValue: boolean) {
       this.$emit('hidden-updated', !newValue)
+    },
+  },
+  methods: {
+    toggle() {
+      this.$emit('hidden-updated', !this.shown)
     },
   },
 })
