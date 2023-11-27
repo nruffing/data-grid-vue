@@ -17,8 +17,8 @@ jobs:
   ci:    
     strategy:
       matrix:
-        node-version: [18.x]
-        os: [ubuntu-latest]
+        node-version: [18.x, 20.x, 21.x]
+        os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     env:
       EXISTING_VERSIONS: ''
@@ -60,7 +60,7 @@ jobs:
     - name: Detect new version
       run: echo "SHOULD_PUBLISH=$(echo ${{ env.VERSION != '' && fromJson(env.EXISTING_VERSIONS) != 0 && (contains(fromJson(env.EXISTING_VERSIONS), env.VERSION) == false) }} )" >> $GITHUB_ENV
     - name: Publish
-      if: env.SHOULD_PUBLISH
+      if: fromJson(env.SHOULD_PUBLISH)
       run: npm publish --provenance
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
