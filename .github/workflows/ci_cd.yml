@@ -38,6 +38,8 @@ jobs:
     permissions:
       id-token: write
     steps:
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
       - run: pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
