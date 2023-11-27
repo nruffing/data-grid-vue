@@ -1,8 +1,13 @@
 name: CI/CD
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "**" ]
+
+permissions:
+  id-token: write
+  contents: write
 
 env:
   VERSION: ''
@@ -11,8 +16,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
     strategy:
       matrix:
         node-version: [18.x]
@@ -42,8 +45,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     if: fromJson(needs.build.outputs.should_publish)
-    permissions:
-      contents: write
     env:
       ESCAPED_VERSION: ''
     steps:
