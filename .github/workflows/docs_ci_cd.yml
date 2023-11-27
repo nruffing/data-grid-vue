@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-      - run: pnpm runn ci-all
+      - run: pnpm run ci-all
       - name: Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
