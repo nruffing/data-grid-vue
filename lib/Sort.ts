@@ -3,7 +3,7 @@ import { DataType } from './DataGridVue'
 /**
  * @group Sort
  * @description Grid-level sort options. The grid must be set as sortable for any
- *  column level sort options to take effect.
+ * column level sort options to take effect.
  */
 export interface SortOptions {
   /**

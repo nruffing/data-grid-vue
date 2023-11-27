@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./vuepress/docs/.vuepress/public/favicon.svg" width="100" style="margin: 15px 0;" />
+  <img src="./vuepress/.vuepress/public/favicon.svg" width="100" style="margin: 15px 0;" />
 </p>
 
 <h1 align="center">Data Grid Vue</h1>
@@ -11,14 +11,14 @@
 </p>
 <br />
 
-Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control. Features include numerous slots, paging, sorting, filtering, CSS variables, client and server-data retrieval, client and server-side grid-state storage (i.e. local storage, session storage, etc.), dynamic column widths, selectable page size, drag-and-drop column reorder powered by dragon-drop-vue, and ability for user to add/remove columns.
+Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control. Features include [numerous slots](https://datagridvue.com/generated/DataGridVueGrid/#slots), paging, sorting, filtering, [CSS variables](https://datagridvue.com/theme), client and server-data retrieval, client and server-side grid-state storage (i.e. local storage, session storage, etc.), dynamic column widths, selectable page size, drag-and-drop column reorder powered by [dragon-drop-vue](https://github.com/nruffing/dragon-drop-vue), and ability for user to add/remove columns.
 
 <p align="center">
-  <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/ci.yml">
-    <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/ci.yml/badge.svg" />
+  <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/ci_cd.yml">
+    <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/ci_cd.yml/badge.svg" />
   </a>
-  <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/azure-static-web-apps-white-grass-07ff9650f.yml">
-    <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/azure-static-web-apps-white-grass-07ff9650f.yml/badge.svg" />
+  <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/docs_ci_cd.yml">
+    <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/docs_ci_cd.yml/badge.svg" />
   </a>
   <a href="https://www.npmjs.com/package/data-grid-vue" target="_blank" aria-label="npm">
     <img alt="npm" src="https://img.shields.io/npm/v/data-grid-vue?logo=npm" />
@@ -35,7 +35,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 
 <br />
 <div class="example-image-container">
-  <img src="./vuepress/docs/.vuepress/public/example.png" />
+  <img src="./vuepress/.vuepress/public/example.png" />
 </div>
 
 <br />
@@ -59,7 +59,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 ## Features
 
 * Leverages a flat html structure and CSS grid to allow full layout control. This allows versatility in the parent layout (e.g. a full page page, half page, etc.).
-* CSS variables for quick theming
+* [CSS variables](https://datagridvue.com/theme) for quick theming
 * Cell render templates
 * Supply arrow function to get column's value
 * Supply custom data service to provide custom implementation of data retrieval, paging, sorting, and filtering
@@ -68,6 +68,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   * If using the default data contracts (i.e. PageDataRequest and PageData) just a valid POST url is required to be configured
   * Optional hooks for modifying/replacing the Request and converting the returned data to a PageData object
   * If using an ASP.NET Core API with EF Core or any other ORM leveraging IQueryable [this library](https://github.com/nruffing/data-grid-vue-dotnet) can be used to automatically apply the PageDataRequest to an IQueryable.
+  * Specify user and grid identifier that will be sent with page data requests.
 * Sorting
   * Single and multiple column sorting
   * Enabled per column
@@ -88,13 +89,25 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   * Supply custom storage service to provide custom implementation of storing a user's grid state
   * Saved grid state includes page size, which columns are displayed, current sort, current filters, current external filter, and column order
   * Local and session storage are specified as a prop per grid instance so consumer can have multiple grids with their own state
-* Numerous slots to provide custom render templates including:
+* [Numerous slots](https://datagridvue.com/generated/DataGridVueGrid/#slots) to provide custom render templates including:
   * Entire options header (i.e. Show Filter Options, Clear Filters, etc.)
   * Individual options in the options header
   * Add/Remove columns popup content
   * Filter inputs per column
   * Header cell per column
   * Data cell per column
+  * Entire footer
+  * Individual footer sections
+  * Loader
+* Accessibility
+  * Specific labels for screen readers with additional context leveraging `aria-label` attributes where necessary
+  * Keyboard navigation
+    * Header cells, header options, filter row cells, add/remove column menu, and page navigation in the footer can be keyboard navigated using the tab key.
+    * Header options can be invoked with the space or enter key.
+    * Columns can be sorted with the space or enter key when the header cell is focused.
+    * Columns can be reordered with the left and right arrow keys when the header cell is focused.
+    * Header options can be invoked with the space key when focused.
+    * Add/remove column menu is focused when it opens and can be navigated via keyboard using the tab key.
 
 <hr />
 <p align="center">
@@ -121,6 +134,55 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 # Data Grid Vue
 
 ## Release Notes
+
+### v3.0.0
+> [!CAUTION]
+  * node v18 is now the minimum supported version. This was previously v14. v18 is the [current oldest lts version of node](https://nodejs.org/en/about/previous-releases).
+  * `data-grid-vue` now requires a minimum `vue` version of `3.3.0`. It is also recommended to upgrade to at least version `5.0.2` of `vite`. [Vite v5 migration guide](https://vitejs.dev/guide/migration)
+  * The `column-selection-popup` slot `hiddenUpdated` prop has been renamed to `onHiddenUpdated` to be consistent with similar method names.
+  * Methods that return a `Promise` have been renamed to be suffixed with `Async` to make it clear that they return a `Promise`.
+    * `loadPageData` -> `loadPageDataAsync`
+    * `onPageSizeChanged` -> `onPageSizeChangedAsync`
+    * `DataService.getPage` -> `DataService.getPageAsync`
+    * `StorageService.getGridState` -> `StorageService.getGridStateAsync`
+    * `StorageService.setGridState` -> `StorageService.setGridStateAsync`
+   
+> [!TIP]
+  * New footer slots
+    * `footer` - entire footer
+    * `footer-page-size-select` - footer page size select
+    * `footer-additional-content` - additional content between page size select and total item text
+    * `footer-total-items` - total items text
+  * [#4](https://github.com/nruffing/data-grid-vue/issues/4) accessibility improvements
+    * Add missing aria-label attributes
+    * Allow header to be navigated via keyboard
+    * Allow sort and reorder actions to be performed via keyboard when header cell has focus
+      * Space or enter to cycle through sort options
+      * Left and right arrow to reorder
+    * Allow header options to be triggered via space or enter
+    * Add/remove column menu is focused when it opens and can be navigated via keyboard using the tab key
+  * Display loading spinner when data takes more then a second to load page data. Override loader with `loader` slot.
+   
+ 
+  * Add additional parameters to the `options-header`, `options-header-filter-options-shown`, and `options-header-clear-filters` slots.
+  * `ServerSideStorageService` now has a generic type constraint to allow any type to be used for the user identifier sent in the request to get and set grid state.
+  * `ServerSideStorageService` now has a grid id parameter that can be sent to the server to allow for support of multiple grids.
+  * `ServerSideStorageService.getGridState` and `ServerSideDataService.getPage` will now only try to deserialize the response body as JSON if the status code is `200 OK` and the response `Content-Type` header is `application/json`.
+  * Dynamic column header titles
+  * Entire header cell is now the click target for a sort.
+  * Default color values of CSS variables are now defined in hex.
+  * Default accent color slightly altered to match documentation site.
+  * Improved default layout styles of custom column filters set using the `filter-{fieldName}` slot.
+  * Documentation site now includes documentation for [DataGridVueDotnet](https://github.com/nruffing/data-grid-vue-dotnet).
+  * Repo now uses [`pnpm`](https://pnpm.io/) where the `data-grid-vue` package is build from the root workspace and the documentation site and dev app are nested workspaces.
+  * Now being built with `vite` [v5](https://vitejs.dev/blog/announcing-vite5).
+  * Update [`debounce`](https://www.npmjs.com/package/debounce/v/2.0.0) dependency to new major version v2.0.0 which requires node v18 ([current oldest supported version](https://nodejs.org/en/about/previous-releases)).
+  * Update ['dragon-drop-vue'](https://www.npmjs.com/package/dragon-drop-vue) dependency to v0.2.0
+  * Documentation site theme update
+  * Documentation site is now setup up as a [progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps).
+  * bugfix: `DataGridVueOptions.clickOutsideDirectiveName` removed.
+  * bugfix: `DataGridVueOptions.dragonDropVueOptions.dragDirectiveName` and `dropDirectiveName` will always be overridden to `dgv-drag` and `dgv-drop`.
+   
 
 ### v2.3.0
   - Allow dragon-drop-vue directive names to be overridden via the data-grid-vue plugin options
@@ -152,7 +214,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   - Add css variable for input/select font size
 
 ### v2.0.0-beta
-  > [!IMPORTANT]
+> [!CAUTION]
   DataGridVue component is now exported as DataGridVueGrid in favor of using a new plugin to ensure proper setup. Plugin registers DataGridVueGrid component globally as dgv-data-grid.
    
   - Column reordering via drag-and-drop can be enabled on the grid with the allowColumnReorder property. Drag and drop is powered by [dragon-drop-vue](https://www.npmjs.com/package/dragon-drop-vue) and dragon drop global options can be set on the plugin options.
@@ -195,3 +257,125 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 
 ### v0.0.1-alpha
   - initial release
+
+
+<hr />
+
+## Development Environment
+
+This repo is setup with three [pnpm workspaces](https://pnpm.io/workspaces).
+
+The root workspace is setup with the following options via a `.nmprc` file.
+
+```
+registry = https://registry.npmjs.org/
+recursive-install = true
+include-workspace-root = true
+```
+
+The following will install dependencies for all workspaces including the root.
+
+```sh
+pnpm install
+```
+
+### Workspaces
+
+#### 1. Root Workspace
+
+The root workspace is setup to build/pack the actual `data-grid-vue` package.
+
+```sh
+pnpm build
+```
+
+The compiled javascript module and typescript type definitions are built into the `dist` folder at the root of the repo.
+
+
+#### 2. Vuepress Documentation Site
+
+The `vuepress` folder contains the workspace for the source of the documentation site hosted at [https://datagridvue.com](https://datagridvue).
+
+The site is built using [Vuepress 2](https://v2.vuepress.vuejs.org/).
+
+```sh
+pnpm run docs:dev
+```
+
+The `./vuepress/generated` folder contains markdown source that documents the exports of the `data-grid-vue` package. These markdown files are automatically generated from [TSdoc](https://tsdoc.org/) block comments in the source code using [TypeDoc](https://typedoc.org/guides/overview/) and a custom TypeDoc plugin in `./scripts/typedoc` that parses the comments from `.vue` files. The plugin makes a bit of assumptions on where the comments are located and only supports SFCs using the Vue Options API.
+
+The following script will generate the contents of the `./vuepress/generated` folder. This script is also run during the husky pre-commit hook.
+
+```sh
+pnpm run typedoc
+```
+
+The `./vuepress/dotnet-generated` folder contains markdown source that documents the public interfaces of the [DataGridVueDotnet](https://github.com/nruffing/data-grid-vue-dotnet) NuGet package. These markdown files are generated in the [example api](https://example-api.datagridvue.com/) powering server-side examples of `data-grid-vue`. [XmlDocMarkdown.Core](https://ejball.com/XmlDocMarkdown/) is used to generate markdown from the XML comments in the source. The script located in `./scripts/dotnet-doc-download` downloads the latest markdown from the example-api and places it in the `./vuepress/dotnet-generated` folder.
+
+The following script will generate the contents of the `./vuepress/dotnet-generated` folder. This currently does not run automatically anywhere.
+
+```sh
+pnpm run dotnet-doc
+```
+
+
+#### 3. Local Development App
+
+The `dev-app` folder contains the workspace for an app the consumes `data-grid-vue` directly from the `lib` folder for local development and testing.
+
+```sh
+pnpm run dev-app:dev
+```
+
+
+### Development Tools
+
+* VS Code
+  * Extensions
+    * [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+    * [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+    * [Volar - TypeScript Plugin](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+* Node v18.*
+* pnpm v8.*
+* NPM dependencies
+  * Vue v3.3.8+
+  * Vite v5.*
+  * Typescript v5.*
+  * Husky
+  * Prettier
+    * Formats and spell checks in husky pre-commit hook
+  * Vuepress 2
+  * TypeDoc
+* CSS
+  
+
+
+### Scripts
+
+#### `pnpm ci-all`
+
+Installs all dependencies via `pnpm i` and then runs the `build` script for each workspace including the root workspace.
+
+#### `pnpm dev`
+
+Runs the `dev` script in both the `vuepress` and `dev-app` workspace. The development app will bind to `https://localhost:5173` and the vuepress site will bind to `https://localhost:8080`.
+
+#### `pnpm typedoc`
+
+Generates the contents of the `./vuepress/generated` folder.
+
+#### `pnpm spellcheck`
+
+Spellchecks the entire repo minus a few excluded files and folders configured in `cspell.json`.
+
+#### `pnpm format`
+
+Runs prettier formatter against the entire repo using the configuration in `.prettierrc`.
+
+#### `pnpm compile-readme`
+
+Updates `README.md` from `readme-src.md` and implements the `#include` tags to pull from markdown files shared with vuepress site in `./vuepress/shared`. A few regular expression replacements are always performed to change to GitHub's flavor of expanded markdown features.
+
+#### `pnpm dotnet-doc`
+
+Downloads and updates the contents of the `./vuepress/dotnet-generated` folder.

@@ -39,13 +39,15 @@ export interface GridState {
 export interface StorageService {
   /**
    * @description Retrieves the saved grid state. This is called once when the data grid component is mounted.
+   * @returns A Promise that returns the saved grid state or undefined if no grid state is saved.
    */
-  getGridState(): Promise<GridState | undefined>
+  getGridStateAsync(): Promise<GridState | undefined>
   /**
    * @description Saves a new version of the grid state. This called every time data in the grid state changes.
    * @param gridState The grid state to save
+   * @returns A Promise that returns when the grid state has been saved.
    */
-  setGridState(gridState: GridState): Promise<void>
+  setGridStateAsync(gridState: GridState): Promise<void>
 }
 
 /**
@@ -53,10 +55,10 @@ export interface StorageService {
  * @description A stub {@link StorageService} that will just return empty resolved promises.
  */
 export const StubStorageService = {
-  getGridState(): Promise<GridState | undefined> {
+  getGridStateAsync(): Promise<GridState | undefined> {
     return Promise.resolve(undefined)
   },
-  setGridState(gridState: GridState): Promise<void> {
+  setGridStateAsync(gridState: GridState): Promise<void> {
     return Promise.resolve()
   },
 } as StorageService
@@ -72,7 +74,7 @@ export class SessionStorageService implements StorageService {
     this.key = key
   }
 
-  getGridState(): Promise<GridState | undefined> {
+  getGridStateAsync(): Promise<GridState | undefined> {
     const rawValue = sessionStorage.getItem(this.key)
     let result = undefined as GridState | undefined
     if (rawValue) {
@@ -81,7 +83,7 @@ export class SessionStorageService implements StorageService {
     return Promise.resolve(result)
   }
 
-  setGridState(gridState: GridState): Promise<void> {
+  setGridStateAsync(gridState: GridState): Promise<void> {
     sessionStorage.setItem(this.key, JSON.stringify(gridState))
     return Promise.resolve()
   }
@@ -98,7 +100,7 @@ export class LocalStorageService implements StorageService {
     this.key = key
   }
 
-  getGridState(): Promise<GridState | undefined> {
+  getGridStateAsync(): Promise<GridState | undefined> {
     const rawValue = localStorage.getItem(this.key)
     let result = undefined as GridState | undefined
     if (rawValue) {
@@ -107,7 +109,7 @@ export class LocalStorageService implements StorageService {
     return Promise.resolve(result)
   }
 
-  setGridState(gridState: GridState): Promise<void> {
+  setGridStateAsync(gridState: GridState): Promise<void> {
     localStorage.setItem(this.key, JSON.stringify(gridState))
     return Promise.resolve()
   }
@@ -116,17 +118,28 @@ export class LocalStorageService implements StorageService {
 /**
  * @group Storage Service
  * @description Request data interface sent by the {@link ServerSideStorageService} to get the current grid state.
+ * @typeParam TUserId The type of the user identifier.
+ * @typeParam TGridId The type of the grid identifier.
  */
-export interface GetGridStateRequest {
-  userId: string | number
+export interface GetGridStateRequest<TUserId, TGridId> {
+  /** The unique identifier for the current user.  */
+  userId: TUserId
+  /** The unique identifier for the specific data grid instance. */
+  gridId: TGridId
 }
 
 /**
  * @group Storage Service
  * @description Request data interface sent by the {@link ServerSideStorageService} to save the current grid state.
+ * @typeParam TUserId The type of the user identifier.
+ * @typeParam TGridId The type of the grid identifier.
  */
-export interface SetGridStateRequest {
-  userId: string | number
+export interface SetGridStateRequest<TUserId, TGridId> {
+  /** The unique identifier for the current user.  */
+  userId: TUserId
+  /** The unique identifier for the specific data grid instance. */
+  gridId: TGridId
+  /** The current grid state to save. */
   gridState: GridState
 }
 
@@ -135,8 +148,10 @@ export interface SetGridStateRequest {
  * @description Callback type to change the {@link https://developer.mozilla.org/docs/Web/API/Request | Request}
  * object before it is sent to the server from the built-in server side storage service. This is useful
  * when you need to map the {@link GetGridStateRequest} to a different data contract or alter the HTTP verb/headers.
+ * @typeParam TUserId The type of the user identifier.
+ * @typeParam TGridId The type of the grid identifier.
  */
-export type BeforeGetRequestHandler = (request: Request, body: GetGridStateRequest) => Promise<Request>
+export type BeforeGetRequestHandler<TUserId, TGridId> = (request: Request, body: GetGridStateRequest<TUserId, TGridId>) => Promise<Request>
 
 /**
  * @group Storage Service
@@ -151,8 +166,10 @@ export type GetResponseHandler = (response: Response) => Promise<GridState>
  * @description Callback type to change the {@link https://developer.mozilla.org/docs/Web/API/Request | Request}
  * object before it is sent to the server from the built-in server side storage service. This is useful
  * when you need to map the {@link SetGridStateRequest} to a different data contract or alter the HTTP verb/headers.
+ * @typeParam TUserId The type of the user identifier.
+ * @typeParam TGridId The type of the grid identifier.
  */
-export type BeforeSetRequestHandler = (request: Request, body: SetGridStateRequest) => Promise<Request>
+export type BeforeSetRequestHandler<TUserId, TGridId> = (request: Request, body: SetGridStateRequest<TUserId, TGridId>) => Promise<Request>
 
 /**
  * @group Storage Service
@@ -164,13 +181,21 @@ export type SetResponseHandler = (response: Response) => Promise<boolean>
 /**
  * @group Storage Service
  * @description Options to configure the built-in server-side storage service.
+ * The server-side storage service will only attempt to deserialize the response body for `getGridState`
+ * if the HTTP status code is `200 OK` and the `Content-Type` response header is `application/json`.
+ * @typeParam TUserId The type of the user identifier.
+ * @typeParam TGridId The type of the grid identifier.
  * @see {@link ServerSideStorageService}
  */
-export interface ServerSideStorageServiceOptions {
+export interface ServerSideStorageServiceOptions<TUserId, TGridId> {
   /**
    * The unique identifier for the current user that will be sent to the server with the get and set requests.
    */
-  userId: string | number
+  userId: TUserId
+  /**
+   * The unique identifier for the specific data grid instance that will be sent to the server with the get and set requests.
+   */
+  gridId: TGridId
   /**
    * @description The full HTTP/HTTPS url to send the POST request to retrieve grid state.
    * Use {@link beforeGetRequest} callback to alter the HTTP verb or headers.
@@ -181,7 +206,7 @@ export interface ServerSideStorageServiceOptions {
    * object before it is sent to the server from the built-in server side storage service. This is useful
    * when you need to map the {@link GetGridStateRequest} to a different data contract or alter the HTTP verb/headers.
    */
-  beforeGetRequest?: BeforeGetRequestHandler
+  beforeGetRequest?: BeforeGetRequestHandler<TUserId, TGridId>
   /**
    * Optional callback to change the {@link https://developer.mozilla.org/docs/Web/API/Response | Response}
    * object before it is handled by the data grid. This is useful when you need to map the servers response
@@ -198,7 +223,7 @@ export interface ServerSideStorageServiceOptions {
    * object before it is sent to the server from the built-in server side storage service. This is useful
    * when you need to map the {@link SetGridStateRequest} to a different data contract or alter the HTTP verb/headers.
    */
-  beforeSetRequest?: BeforeGetRequestHandler
+  beforeSetRequest?: BeforeGetRequestHandler<TUserId, TGridId>
   /**
    * Optional callback type to change the {@link https://developer.mozilla.org/docs/Web/API/Response | Response}
    * object before it is handled by the data grid from the built-in server side data service.
@@ -221,18 +246,23 @@ function getDefaultRequestOptions(): RequestInit {
 /**
  * @group Storage Service
  * @description The server-side {@link StorageService} used when {@link DataGridVueGrid.serverSideStorageOptions} is specified.
+ * This storage service will only attempt to deserialize the response body for `getGridState`
+ * if the HTTP status code is `200 OK` and the `Content-Type` response header is `application/json`.
+ * @typeParam TUserId The type of the user identifier.
+ * @typeParam TGridId The type of the grid identifier.
  */
-export class ServerSideStorageService implements StorageService {
-  options: ServerSideStorageServiceOptions
+export class ServerSideStorageService<TUserId, TGridId> implements StorageService {
+  options: ServerSideStorageServiceOptions<TUserId, TGridId>
 
-  constructor(options: ServerSideStorageServiceOptions) {
+  constructor(options: ServerSideStorageServiceOptions<TUserId, TGridId>) {
     this.options = options
   }
 
-  async getGridState(): Promise<GridState | undefined> {
+  async getGridStateAsync(): Promise<GridState | undefined> {
     const body = {
       userId: this.options.userId,
-    } as GetGridStateRequest
+      gridId: this.options.gridId,
+    } as GetGridStateRequest<TUserId, TGridId>
 
     let request = new Request(this.options.getPostRoute ?? '', {
       ...getDefaultRequestOptions(),
@@ -260,14 +290,20 @@ export class ServerSideStorageService implements StorageService {
       console.error('Failed to retrieve grid state', await response.text(), response)
       return undefined
     }
-    return response.json()
+
+    if (response.status == 200 && response.headers.get('Content-Type')?.includes('application/json')) {
+      return response.json()
+    }
+
+    return undefined
   }
 
-  async setGridState(gridState: GridState): Promise<void> {
+  async setGridStateAsync(gridState: GridState): Promise<void> {
     const body = {
       userId: this.options.userId,
+      gridId: this.options.gridId,
       gridState,
-    } as SetGridStateRequest
+    } as SetGridStateRequest<TUserId, TGridId>
 
     let request = new Request(this.options.setPostRoute ?? '', {
       ...getDefaultRequestOptions(),
@@ -296,6 +332,5 @@ export class ServerSideStorageService implements StorageService {
       console.error('Failed to set grid state', await response.text(), response)
       return undefined
     }
-    return response.json()
   }
 }

@@ -11,6 +11,7 @@
       ref="input"
       :type="inputType"
       @input="onFilterValueUpdated"
+      :aria-label="ariaLabel"
     />
   </div>
 </template>
@@ -20,6 +21,7 @@ import { defineComponent, type PropType } from 'vue'
 import { DataType, type Column } from '../DataGridVue'
 import { FilterOperator, ValidOperatorsMap, type FilterCondition } from '../Filter'
 import FilterOperatorSelect from './FilterOperatorSelect.vue'
+import Formatter from '../Formatter'
 
 interface Data {
   operator: FilterOperator
@@ -73,6 +75,9 @@ export default defineComponent({
         return 'number'
       }
       return 'text'
+    },
+    ariaLabel(): string {
+      return Formatter.ariaColumnLabel(this.column, 'Filter')
     },
   },
   mounted() {

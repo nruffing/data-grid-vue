@@ -1,10 +1,11 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx lint-staged
-npm run compile-readme
+pnpm exec lint-staged
+pnpm compile-readme
 git add README.md
-npm run typedoc
-git add typedoc-out.json
+pnpm typedoc
+git add ./scripts/typedoc/typedoc-out.json
+git add ./vuepress/generated/*
 
-exec git diff --cached --name-only | npx cspell --no-summary --no-progress --no-must-find-files --file-list stdin
+exec git diff --cached --name-only | pnpm exec cspell --no-summary --no-progress --no-must-find-files --file-list stdin

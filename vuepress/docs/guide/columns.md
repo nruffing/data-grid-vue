@@ -1,3 +1,0 @@
-# Columns
-
-## Coming Soon

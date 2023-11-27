@@ -10,6 +10,7 @@
         'dgv-selected-filter-operator': operator === modelValue,
       }"
       :title="getTitle(operator)"
+      :aria-label="getTitle(operator)"
       @click="onClick(operator)"
       @keydown.enter="onClick(operator)"
       @keydown.space="onClick(operator)"

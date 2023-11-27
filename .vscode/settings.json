@@ -4,8 +4,5 @@
   "editor.insertSpaces": true,
   "editor.detectIndentation": true,
   "editor.tabSize": 2,
-  "editor.indentSize": "tabSize",
-  "[xml]": {
-    "editor.defaultFormatter": "redhat.vscode-xml"
-  }
+  "editor.indentSize": "tabSize"
 }

@@ -2,6 +2,7 @@ import type { App } from 'vue'
 import { DragonDropVue, type DragonDropVueOptions } from 'dragon-drop-vue'
 import DataGridVueComponent from './components/DataGridVue.vue'
 import ClickOutsideDirective from './directives/ClickOutside'
+import FocusDirective from './directives/Focus'
 
 /**
  * @group Plugin
@@ -13,12 +14,8 @@ export interface DataGridVueOptions {
    */
   dataGridComponentName: string | undefined
   /**
-   * Optionally override the default name of the click-outside directive. By default, `dgv-click-outside` will be used.
-   */
-  clickOutsideDirectiveName: string | undefined
-  /**
    * Drag and drop is powered by `dragon-drop-vue` and that plugin's options can be overridden here on {@link https://www.npmjs.com/package/dragon-drop-vue#plugin-options-ie-dragondropvueoptions | DragonDropVueOptions}.
-   * Be
+   * The `dragDirectiveName` and `dropDirectiveName` options will be overridden by the `data-grid-vue` plugin to `dgv-drag` and `dgv-drop`.
    */
   dragonDropVueOptions: DragonDropVueOptions | undefined
 }
@@ -37,20 +34,13 @@ export const DataGridVue = {
       dropDirectiveName: 'dgv-drop',
     } as DragonDropVueOptions
 
-    if (dragonOptions.dragDirectiveName === 'drag') {
-      dragonOptions.dragDirectiveName = 'dgv-drag'
-    }
-
-    if (dragonOptions.dropDirectiveName === 'drop') {
-      dragonOptions.dropDirectiveName = 'dgv-drop'
-    }
-
     app.use(DragonDropVue, dragonOptions as DragonDropVueOptions | undefined)
 
     /*
      * Register directives
      */
-    app.directive(options?.clickOutsideDirectiveName ? options.clickOutsideDirectiveName : 'dgv-click-outside', ClickOutsideDirective)
+    app.directive('dgv-click-outside', ClickOutsideDirective)
+    app.directive('dgv-focus', FocusDirective)
 
     /*
      * Register components

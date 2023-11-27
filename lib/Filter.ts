@@ -1,4 +1,5 @@
 import { DataType } from './DataGridVue'
+import Formatter from './Formatter'
 
 /**
  * @group Filter
@@ -75,7 +76,7 @@ export const ValidOperatorsMap = new Map<DataType, Set<FilterOperator>>([
 export interface FilterCondition {
   /** The name of the field being filtered by. */
   fieldName: string
-  /** The {@link FilterOperator} being applies. */
+  /** The {@link FilterOperator} being applied. */
   operator: FilterOperator
   /** The {@link DataType} of the column being filtered. */
   dataType: DataType
@@ -92,6 +93,42 @@ export interface Filter {
   or: FilterCondition[]
   /** Optional {@link Filter} to and with the current one. */
   and: Filter | undefined
+}
+
+/**
+ * @group Filter
+ * @description Compiles a {@link FilterCondition} into a string summary.
+ * @param condition The {@link FilterCondition} to compile.
+ */
+export function CompileFilterConditionSummary(condition: FilterCondition | undefined): string {
+  if (!condition) {
+    return ''
+  }
+  return `${Formatter.fromCamelCase(condition.fieldName)} ${Formatter.fromCamelCase(FilterOperator[condition.operator]).toLocaleLowerCase()} ${
+    condition.value
+  }`
+}
+
+/**
+ * @group Filter
+ * @description Compiles a {@link Filter} into a string summary.
+ * @param filter The {@link Filter} to compile.
+ */
+export function CompileFilterSummary(filter: Filter | undefined): string {
+  let summary = ''
+  if (!filter) {
+    return summary
+  }
+
+  if (filter.or.length) {
+    summary = filter.or.map(CompileFilterConditionSummary).join(' or ')
+  }
+
+  if (filter.and) {
+    summary = `(${CompileFilterSummary(filter.and)}) and ${summary}`
+  }
+
+  return summary
 }
 
 /**

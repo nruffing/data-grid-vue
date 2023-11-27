@@ -5,6 +5,7 @@
       @click="setCurrentPage(1)"
       :disabled="currentPage === 1"
       title="First page"
+      aria-label="Go to first page"
     >
       <Icon name="first-page" />
     </button>
@@ -13,6 +14,7 @@
       @click="setCurrentPage(currentPage - 1)"
       :disabled="currentPage === 1"
       title="Previous page"
+      aria-label="Go to previous page"
     >
       <Icon name="previous-page" />
     </button>
@@ -23,6 +25,7 @@
       :key="page"
       @click="setCurrentPage(page)"
       :title="'Page ' + page"
+      :aria-label="page === currentPage ? `Page ${page}. This is the current page.` : `Go to page ${page} of ${numPages}`"
     >
       {{ page }}
     </button>
@@ -31,6 +34,7 @@
       @click="setCurrentPage(currentPage + 1)"
       :disabled="currentPage === numPages"
       title="Next page"
+      aria-label="Go to next page"
     >
       <Icon name="next-page" />
     </button>
@@ -39,6 +43,7 @@
       @click="setCurrentPage(numPages)"
       :disabled="currentPage === numPages"
       title="Last page"
+      aria-label="Go to last page"
     >
       <Icon name="last-page" />
     </button>
