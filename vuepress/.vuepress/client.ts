@@ -1,5 +1,4 @@
 import { defineClientConfig } from '@vuepress/client'
-//import { SidebarConfig } from '@vuepress/theme-default'
 import { DataGridVue } from 'data-grid-vue'
 import DEMO from '../demo-data/DEMO_DATA'
 import constants from './constants'

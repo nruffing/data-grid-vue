@@ -271,6 +271,8 @@ The root workspace is setup with the following options via a `.nmprc` file.
 registry = https://registry.npmjs.org/
 recursive-install = true
 include-workspace-root = true
+workspace-concurrency = 1
+
 ```
 
 The following will install dependencies for all workspaces including the root.

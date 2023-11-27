@@ -30,7 +30,7 @@
     "@vuepress/plugin-shiki": "^2.0.0-rc.0",
     "@vuepress/theme-default": "2.0.0-rc.0",
     "@vuepress/utils": "2.0.0-rc.0",
-    "data-grid-vue": "^2.3.0",
+    "data-grid-vue": "workspace:^",
     "markdown-it-include": "^2.0.0",
     "postcss": "^8.4.31",
     "sitemap": "^7.1.1",
