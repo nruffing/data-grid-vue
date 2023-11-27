@@ -38,6 +38,7 @@ jobs:
     permissions:
       id-token: write
     steps:
+      - uses: actions/checkout@v4
       - name: Install pnpm
         uses: pnpm/action-setup@v2
       - run: pnpm publish --access public --no-git-checks
