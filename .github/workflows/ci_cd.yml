@@ -4,6 +4,10 @@ on:
   push:
     branches: [ "**" ]
 
+env:
+  VERSION: ''
+  EXISTING_VERSIONS: ''
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,23 +24,16 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
     - run: pnpm run ci-all
-    
-  newVersion:
-    needs: build
-    if: ${{ github.ref == 'refs/heads/main' }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: MontyD/package-json-updated-action@1.0.1
-        id: version-updated
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Parse package version
+      run: echo "VERSION=$(grep -Po '(?<=\"version\":\s\")\d+\.\d+\.\d+(?=\")' ./package.json)" >> $GITHUB_ENV
+    - name: Get existing versions from NuGet
+      run: echo "EXISTING_VERSIONS=$(pnpm show data-grid-vue versions --json | tr -d '\r\n ')" >> $GITHUB_ENV
     outputs:
-      versionUpdated: ${{ steps.version-updated.outputs.has-updated }}
-      version: ${{ steps.version-updated.outputs.current-package-version }}
-      
+      should_publish: ${{ env.VERSION != '' && fromJson(env.EXISTING_VERSIONS) != 0 && (contains(fromJson(env.EXISTING_VERSIONS).versions, env.VERSION) == false) }}
+  
   publish:
-    needs: newVersion
-    if: ${{ needs.newVersion.outputs.versionUpdated }}
+    needs: build
+    if: fromJson(needs.build.outputs.should_publish)
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -48,7 +45,7 @@ jobs:
  
   create_release:
     runs-on: ubuntu-latest
-    needs: [publish, newVersion]
+    needs: [publish]
     permissions:
       contents: write
     env:
@@ -56,7 +53,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Escape version
-        run: echo "ESCAPED_VERSION=$(echo "${{ needs.newVersion.outputs.version }}" | sed 's/[^^]/[&]/g; s/\^/\\^/g')" >> $GITHUB_ENV
+        run: echo "ESCAPED_VERSION=$(echo "${{ env.VERSION }}" | sed 's/[^^]/[&]/g; s/\^/\\^/g')" >> $GITHUB_ENV
       - name: Parse release notes
         run: (grep -Pzo '(?<=### v${{ env.ESCAPED_VERSION }}\n)\X+?(?=\n\n)' ./vuepress/docs/shared/changelog.md)) | tr -d '\0' > release_notes.txt
       - name: Create release
@@ -64,6 +61,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v${{ needs.newVersion.outputs.version }}
-          release_name: v${{ needs.newVersion.outputs.version }}
+          tag_name: v${{ env.VERSION }}
+          release_name: v${{ env.VERSION }}
           body_path: ${{ github.workspace }}/release_notes.txt
