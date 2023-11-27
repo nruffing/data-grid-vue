@@ -10,6 +10,7 @@
   * If using the default data contracts (i.e. PageDataRequest and PageData) just a valid POST url is required to be configured
   * Optional hooks for modifying/replacing the Request and converting the returned data to a PageData object
   * If using an ASP.NET Core API with EF Core or any other ORM leveraging IQueryable [this library](https://github.com/nruffing/data-grid-vue-dotnet) can be used to automatically apply the PageDataRequest to an IQueryable.
+  * Specify user and grid identifier that will be sent with page data requests.
 * Sorting
   * Single and multiple column sorting
   * Enabled per column
@@ -37,3 +38,15 @@
   * Filter inputs per column
   * Header cell per column
   * Data cell per column
+  * Entire footer
+  * Individual footer sections
+  * Loader
+* Accessibility
+  * Specific labels for screen readers with additional context leveraging `aria-label` attributes where necessary
+  * Keyboard navigation
+    * Header cells, header options, filter row cells, add/remove column menu, and page navigation in the footer can be keyboard navigated using the tab key.
+    * Header options can be invoked with the space or enter key.
+    * Columns can be sorted with the space or enter key when the header cell is focused.
+    * Columns can be reordered with the left and right arrow keys when the header cell is focused.
+    * Header options can be invoked with the space key when focused.
+    * Add/remove column menu is focused when it opens and can be navigated via keyboard using the tab key.
