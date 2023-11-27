@@ -32,10 +32,9 @@ jobs:
       run: echo "EXISTING_VERSIONS=$(pnpm show data-grid-vue versions --json | tr -d '\r\n ')" >> $GITHUB_ENV
     - name: Publish if new version
       if: env.VERSION != '' && fromJson(env.EXISTING_VERSIONS) != 0 && (contains(fromJson(env.EXISTING_VERSIONS).versions, env.VERSION) == false)
-      run: pnpm publish --access public --no-git-checks
+      run: npm publish --provenance
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        NPM_CONFIG_PROVENANCE: true
     outputs:
       should_publish: ${{ env.VERSION != '' && fromJson(env.EXISTING_VERSIONS) != 0 && (contains(fromJson(env.EXISTING_VERSIONS).versions, env.VERSION) == false) }}
  
