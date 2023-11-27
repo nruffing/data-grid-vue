@@ -750,4 +750,16 @@ Slot to override the total items in the footer of the data grid.
 
 ***
 
+### loader
+
+```ts
+loader: {};
+```
+
+#### Description
+
+Slot to override the loader that is displayed when the data grid is loading page data.
+
+***
+
 Generated using [typedoc-plugin-markdown](https://www.npmjs.com/package/typedoc-plugin-markdown) and [TypeDoc](https://typedoc.org/)

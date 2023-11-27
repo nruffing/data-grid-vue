@@ -28,6 +28,7 @@
       * Left and right arrow to reorder
     * Allow header options to be triggered via space or enter
     * Add/remove column menu is focused when it opens and can be navigated via keyboard using the tab key
+  * Display loading spinner when data takes more then a second to load page data. Override loader with `loader` slot.
   :::
   ::: details More changes
   * Add additional parameters to the `options-header`, `options-header-filter-options-shown`, and `options-header-clear-filters` slots.

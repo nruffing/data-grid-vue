@@ -131,8 +131,21 @@
     </div>
 
     <!-- DATA CELLS -->
+    <Transition name="dgv-delay-in">
+      <slot name="loader">
+        <Loader
+          v-if="isLoading"
+          :style="{
+            gridColumnEnd: cssColumnSpanValue,
+            gridTemplateColumns: gridTemplateColumns,
+            gridTemplateRows: gridBodyTemplateRows,
+          }"
+        />
+      </slot>
+    </Transition>
     <div
       class="dgv-data-grid-body"
+      v-show="!isLoading"
       :style="{
         gridColumnEnd: cssColumnSpanValue,
         gridTemplateColumns: gridTemplateColumns,
@@ -257,6 +270,7 @@ import HeaderFilter from './HeaderFilter.vue'
 import PageNavigation from './PageNavigation.vue'
 import Icon from './Icon.vue'
 import ColumnSelectionItem from './ColumnSelectionItem.vue'
+import Loader from './Loader.vue'
 import type { DragonDropVueDragOptions, DragonDropVueOptions } from 'dragon-drop-vue'
 import { asPxSize } from '../Html'
 import {
@@ -292,6 +306,7 @@ interface Data {
     | undefined
   storageService: StorageService
   focusedColumnFieldName: string | undefined
+  isLoading: boolean
 }
 
 /**
@@ -306,6 +321,7 @@ export default defineComponent({
     PageNavigation,
     Icon,
     ColumnSelectionItem,
+    Loader,
   },
   slots: Object as SlotsType<{
     /**
@@ -446,6 +462,11 @@ export default defineComponent({
       /** The total number of items in the grid after all filter conditions have been applied. */
       totalItems: number
     }) => any
+
+    /**
+     * @description Slot to override the loader that is displayed when the data grid is loading page data.
+     */
+    loader?: (props: {}) => any
   }>,
   emits: {
     /**
@@ -657,6 +678,7 @@ export default defineComponent({
       popupOptions: undefined,
       storageService: StubStorageService,
       focusedColumnFieldName: undefined,
+      isLoading: false,
     }
   },
   computed: {
@@ -775,14 +797,19 @@ export default defineComponent({
   },
   methods: {
     async loadPageDataAsync(): Promise<void> {
-      const pageData = await this.dataService.getPageAsync(
-        this.paged ? this.currentPage : -1,
-        this.paged ? this.pageSize : -1,
-        this.sort,
-        this.filter,
-      )
-      this.displayedData = pageData.dataItems
-      this.totalItems = pageData.totalItems
+      this.isLoading = true
+      try {
+        const pageData = await this.dataService.getPageAsync(
+          this.paged ? this.currentPage : -1,
+          this.paged ? this.pageSize : -1,
+          this.sort,
+          this.filter,
+        )
+        this.displayedData = pageData.dataItems
+        this.totalItems = pageData.totalItems
+      } finally {
+        this.isLoading = false
+      }
     },
     setGridState(gridState: GridState) {
       const columnSet = new Set<string>(this.columns.map(c => c.field.fieldName))
