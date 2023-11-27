@@ -65,6 +65,9 @@ A full example with an ASP.NET API and EF Core context can be seen in the [_Data
 
 ## Release Notes
 
+### v1.2.0
+ - Add grid identifier to storage request models
+
 ### v1.1.0
  - Include symbols
 

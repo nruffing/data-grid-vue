@@ -1,21 +1,23 @@
-# GetGridStateRequest&lt;TUserId&gt; class
+# GetGridStateRequest&lt;TUserId,TGridId&gt; class
 
 Request data interface sent by the data grid to get the current grid state. [Server Side Storage Service](https://datagridvue.com/generated/classes/ServerSideStorageService.html)
 
 ```csharp
-public class GetGridStateRequest<TUserId>
+public class GetGridStateRequest<TUserId, TGridId>
 ```
 
 | parameter | description |
 | --- | --- |
 | TUserId | The type of the user identifier. |
+| TGridId | The type of the grid identifier. |
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [GetGridStateRequest](GetGridStateRequest-1/GetGridStateRequest.md)() | The default constructor. |
-| [UserId](GetGridStateRequest-1/UserId.md) { get; set; } | The unique identifier for the current user. |
+| [GetGridStateRequest](GetGridStateRequest-2/GetGridStateRequest.md)() | The default constructor. |
+| [GridId](GetGridStateRequest-2/GridId.md) { get; set; } | The unique identifier for the current grid. |
+| [UserId](GetGridStateRequest-2/UserId.md) { get; set; } | The unique identifier for the current user. |
 
 ## See Also
 

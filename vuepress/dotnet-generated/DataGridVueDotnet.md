@@ -10,12 +10,12 @@
 | class [FilterCondition](./DataGridVueDotnet/FilterCondition.md) | Model definition for the current state of a column filter. |
 | enum [FilterOperator](./DataGridVueDotnet/FilterOperator.md) | Supported filter operators. |
 | static class [FilterOperatorExtensions](./DataGridVueDotnet/FilterOperatorExtensions.md) | Extension methods for [`FilterOperator`](./DataGridVueDotnet/FilterOperator.md). |
-| class [GetGridStateRequest&lt;TUserId&gt;](./DataGridVueDotnet/GetGridStateRequest-1.md) | Request data interface sent by the data grid to get the current grid state. [Server Side Storage Service](https://datagridvue.com/generated/classes/ServerSideStorageService.html) |
+| class [GetGridStateRequest&lt;TUserId,TGridId&gt;](./DataGridVueDotnet/GetGridStateRequest-2.md) | Request data interface sent by the data grid to get the current grid state. [Server Side Storage Service](https://datagridvue.com/generated/classes/ServerSideStorageService.html) |
 | class [GridState](./DataGridVueDotnet/GridState.md) | The data that is saved as part of the grid state. [Server Side Storage Service](https://datagridvue.com/generated/classes/ServerSideStorageService.html) |
 | class [PageData&lt;TDataItem&gt;](./DataGridVueDotnet/PageData-1.md) | Model definition for the data displaying on the current page. |
 | class [PageDataRequest](./DataGridVueDotnet/PageDataRequest.md) | Request data interface sent by the data grid's [Server Side Data Service](https://datagridviue.com/generated/classes/ServerSideDataService.html) |
 | static class [PageDataRequestExtensions](./DataGridVueDotnet/PageDataRequestExtensions.md) | Extension methods for [`PageDataRequest`](./DataGridVueDotnet/PageDataRequest.md) |
-| class [SetGridStateRequest&lt;TUserId&gt;](./DataGridVueDotnet/SetGridStateRequest-1.md) | Request data interface sent by the data grid to save the current grid state. [Server Side Storage Service](https://datagridvue.com/generated/classes/ServerSideStorageService.html) |
+| class [SetGridStateRequest&lt;TUserId,TGridId&gt;](./DataGridVueDotnet/SetGridStateRequest-2.md) | Request data interface sent by the data grid to save the current grid state. [Server Side Storage Service](https://datagridvue.com/generated/classes/ServerSideStorageService.html) |
 | class [Sort](./DataGridVueDotnet/Sort.md) | Column sort definition. |
 | enum [SortType](./DataGridVueDotnet/SortType.md) | Whether a sort is ascending or descending. |
 
