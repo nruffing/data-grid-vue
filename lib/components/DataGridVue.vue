@@ -620,7 +620,7 @@ export default defineComponent({
      * @defaultValue undefined
      */
     serverSideStorageOptions: {
-      type: Object as PropType<ServerSideStorageServiceOptions<any>>,
+      type: Object as PropType<ServerSideStorageServiceOptions<any, any>>,
       required: false,
       default: undefined,
     },

@@ -152,6 +152,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
  
   * Add additional parameters to the `options-header`, `options-header-filter-options-shown`, and `options-header-clear-filters` slots.
   * `ServerSideStorageService` now has a generic type constraint to allow any type to be used for the user identifier sent in the request to get and set grid state.
+  * `ServerSideStorageService` now has a grid id parameter that can be sent to the server to allow for support of multiple grids.
   * `ServerSideStorageService.getGridState` and `ServerSideDataService.getPage` will now only try to deserialize the response body as JSON if the status code is `200 OK` and the response `Content-Type` header is `application/json`.
   * Dynamic column header titles
   * Entire header cell is now the click target for a sort.

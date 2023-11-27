@@ -13,6 +13,7 @@
       }"
       :server-side-storage-options="{
         userId: 'dev-app-user-1',
+        gridId: 'home-view-grid-1',
         getPostRoute: 'https://example-api.datagridvue.com/GridState/Get',
         setPostRoute: 'https://example-api.datagridvue.com/GridState/Set',
       }"

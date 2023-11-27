@@ -1,7 +1,7 @@
-# Type alias: BeforeSetRequestHandler\<TUserId\>
+# Type alias: BeforeSetRequestHandler\<TUserId, TGridId\>
 
 ```ts
-type BeforeSetRequestHandler<TUserId>: (request, body) => Promise<Request>;
+type BeforeSetRequestHandler<TUserId, TGridId>: (request, body) => Promise<Request>;
 ```
 
 ## Type parameters
@@ -9,13 +9,14 @@ type BeforeSetRequestHandler<TUserId>: (request, body) => Promise<Request>;
 | Parameter | Description |
 | :------ | :------ |
 | `TUserId` | The type of the user identifier. |
+| `TGridId` | The type of the grid identifier. |
 
 ## Parameters
 
 | Parameter | Type |
 | :------ | :------ |
 | `request` | [`Request`]( https://developer.mozilla.org/docs/Web/API/Request ) |
-| `body` | [`SetGridStateRequest`](../interfaces/SetGridStateRequest.md)\<`TUserId`\> |
+| `body` | [`SetGridStateRequest`](../interfaces/SetGridStateRequest.md)\<`TUserId`, `TGridId`\> |
 
 ## Returns
 

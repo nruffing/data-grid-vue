@@ -405,7 +405,7 @@ LocalStorageType.sessionStorage
 
 ```ts
 serverSideStorageOptions: {
-  type: PropType<ServerSideStorageServiceOptions<any>>;
+  type: PropType<ServerSideStorageServiceOptions<any, any>>;
   required: false;
   default: undefined;
 };
@@ -431,7 +431,7 @@ undefined
 
 | Member | Type | Description |
 | :------ | :------ | :------ |
-| `type` | `PropType`\<[`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)\<`any`\>\> | - |
+| `type` | `PropType`\<[`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)\<`any`, `any`\>\> | - |
 | `required` | `false` | - |
 | `default` | `undefined` | - |
 

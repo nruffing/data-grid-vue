@@ -4429,7 +4429,7 @@
 				},
 				{
 					"type": "reference",
-					"target": 589,
+					"target": 597,
 					"name": "ServerSideStorageService"
 				},
 				{
@@ -5043,7 +5043,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "ServerSideStorageService",
-								"target": 589,
+								"target": 597,
 								"tsLinkText": ""
 							},
 							{
@@ -5075,19 +5075,41 @@
 						"name": "TUserId",
 						"refersToTypeParameter": true
 					}
+				},
+				{
+					"id": 555,
+					"name": "gridId",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The unique identifier for the specific data grid instance."
+							}
+						]
+					},
+					"type": {
+						"type": "reference",
+						"target": -1,
+						"name": "TGridId",
+						"refersToTypeParameter": true
+					}
 				}
 			],
 			"groups": [
 				{
 					"title": "Properties",
 					"children": [
-						554
+						554,
+						555
 					]
 				}
 			],
 			"typeParameters": [
 				{
-					"id": 555,
+					"id": 556,
 					"name": "TUserId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -5100,11 +5122,26 @@
 							}
 						]
 					}
+				},
+				{
+					"id": 557,
+					"name": "TGridId",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of the grid identifier."
+							}
+						]
+					}
 				}
 			]
 		},
 		{
-			"id": 556,
+			"id": 558,
 			"name": "SetGridStateRequest",
 			"variant": "declaration",
 			"kind": 256,
@@ -5123,7 +5160,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "ServerSideStorageService",
-								"target": 589,
+								"target": 597,
 								"tsLinkText": ""
 							},
 							{
@@ -5136,7 +5173,7 @@
 			},
 			"children": [
 				{
-					"id": 557,
+					"id": 559,
 					"name": "userId",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5157,7 +5194,28 @@
 					}
 				},
 				{
-					"id": 558,
+					"id": 560,
+					"name": "gridId",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The unique identifier for the specific data grid instance."
+							}
+						]
+					},
+					"type": {
+						"type": "reference",
+						"target": -1,
+						"name": "TGridId",
+						"refersToTypeParameter": true
+					}
+				},
+				{
+					"id": 561,
 					"name": "gridState",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5182,14 +5240,15 @@
 				{
 					"title": "Properties",
 					"children": [
-						557,
-						558
+						559,
+						560,
+						561
 					]
 				}
 			],
 			"typeParameters": [
 				{
-					"id": 559,
+					"id": 562,
 					"name": "TUserId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -5202,18 +5261,33 @@
 							}
 						]
 					}
+				},
+				{
+					"id": 563,
+					"name": "TGridId",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of the grid identifier."
+							}
+						]
+					}
 				}
 			]
 		},
 		{
-			"id": 560,
+			"id": 564,
 			"name": "BeforeGetRequestHandler",
 			"variant": "declaration",
 			"kind": 2097152,
 			"flags": {},
 			"typeParameters": [
 				{
-					"id": 565,
+					"id": 569,
 					"name": "TUserId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -5223,6 +5297,21 @@
 							{
 								"kind": "text",
 								"text": "The type of the user identifier."
+							}
+						]
+					}
+				},
+				{
+					"id": 570,
+					"name": "TGridId",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of the grid identifier."
 							}
 						]
 					}
@@ -5231,14 +5320,14 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 561,
+					"id": 565,
 					"name": "__type",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 562,
+							"id": 566,
 							"name": "__type",
 							"variant": "signature",
 							"kind": 4096,
@@ -5280,7 +5369,7 @@
 							},
 							"parameters": [
 								{
-									"id": 563,
+									"id": 567,
 									"name": "request",
 									"variant": "param",
 									"kind": 32768,
@@ -5297,7 +5386,7 @@
 									}
 								},
 								{
-									"id": 564,
+									"id": 568,
 									"name": "body",
 									"variant": "param",
 									"kind": 32768,
@@ -5310,6 +5399,12 @@
 												"type": "reference",
 												"target": -1,
 												"name": "TUserId",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": -1,
+												"name": "TGridId",
 												"refersToTypeParameter": true
 											}
 										],
@@ -5346,7 +5441,7 @@
 			}
 		},
 		{
-			"id": 566,
+			"id": 571,
 			"name": "GetResponseHandler",
 			"variant": "declaration",
 			"kind": 2097152,
@@ -5354,14 +5449,14 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 567,
+					"id": 572,
 					"name": "__type",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 568,
+							"id": 573,
 							"name": "__type",
 							"variant": "signature",
 							"kind": 4096,
@@ -5403,7 +5498,7 @@
 							},
 							"parameters": [
 								{
-									"id": 569,
+									"id": 574,
 									"name": "response",
 									"variant": "param",
 									"kind": 32768,
@@ -5444,14 +5539,14 @@
 			}
 		},
 		{
-			"id": 570,
+			"id": 575,
 			"name": "BeforeSetRequestHandler",
 			"variant": "declaration",
 			"kind": 2097152,
 			"flags": {},
 			"typeParameters": [
 				{
-					"id": 575,
+					"id": 580,
 					"name": "TUserId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -5464,19 +5559,34 @@
 							}
 						]
 					}
+				},
+				{
+					"id": 581,
+					"name": "TGridId",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of the grid identifier."
+							}
+						]
+					}
 				}
 			],
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 571,
+					"id": 576,
 					"name": "__type",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 572,
+							"id": 577,
 							"name": "__type",
 							"variant": "signature",
 							"kind": 4096,
@@ -5505,7 +5615,7 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "SetGridStateRequest",
-												"target": 556,
+												"target": 558,
 												"tsLinkText": ""
 											},
 											{
@@ -5518,7 +5628,7 @@
 							},
 							"parameters": [
 								{
-									"id": 573,
+									"id": 578,
 									"name": "request",
 									"variant": "param",
 									"kind": 32768,
@@ -5535,19 +5645,25 @@
 									}
 								},
 								{
-									"id": 574,
+									"id": 579,
 									"name": "body",
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"target": 556,
+										"target": 558,
 										"typeArguments": [
 											{
 												"type": "reference",
 												"target": -1,
 												"name": "TUserId",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": -1,
+												"name": "TGridId",
 												"refersToTypeParameter": true
 											}
 										],
@@ -5584,7 +5700,7 @@
 			}
 		},
 		{
-			"id": 576,
+			"id": 582,
 			"name": "SetResponseHandler",
 			"variant": "declaration",
 			"kind": 2097152,
@@ -5592,14 +5708,14 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 577,
+					"id": 583,
 					"name": "__type",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 578,
+							"id": 584,
 							"name": "__type",
 							"variant": "signature",
 							"kind": 4096,
@@ -5630,7 +5746,7 @@
 							},
 							"parameters": [
 								{
-									"id": 579,
+									"id": 585,
 									"name": "response",
 									"variant": "param",
 									"kind": 32768,
@@ -5669,7 +5785,7 @@
 			}
 		},
 		{
-			"id": 580,
+			"id": 586,
 			"name": "ServerSideStorageServiceOptions",
 			"variant": "declaration",
 			"kind": 256,
@@ -5725,7 +5841,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "ServerSideStorageService",
-								"target": 589,
+								"target": 597,
 								"tsLinkText": ""
 							}
 						]
@@ -5734,7 +5850,7 @@
 			},
 			"children": [
 				{
-					"id": 581,
+					"id": 587,
 					"name": "userId",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5748,21 +5864,35 @@
 						]
 					},
 					"type": {
-						"type": "union",
-						"types": [
-							{
-								"type": "intrinsic",
-								"name": "string"
-							},
-							{
-								"type": "intrinsic",
-								"name": "number"
-							}
-						]
+						"type": "reference",
+						"target": -1,
+						"name": "TUserId",
+						"refersToTypeParameter": true
 					}
 				},
 				{
-					"id": 582,
+					"id": 588,
+					"name": "gridId",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The unique identifier for the specific data grid instance that will be sent to the server with the get and set requests."
+							}
+						]
+					},
+					"type": {
+						"type": "reference",
+						"target": -1,
+						"name": "TGridId",
+						"refersToTypeParameter": true
+					}
+				},
+				{
+					"id": 589,
 					"name": "getPostRoute",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5783,7 +5913,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "beforeGetRequest",
-										"target": 583,
+										"target": 590,
 										"tsLinkText": ""
 									},
 									{
@@ -5815,7 +5945,7 @@
 					}
 				},
 				{
-					"id": 583,
+					"id": 590,
 					"name": "beforeGetRequest",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5853,12 +5983,18 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 560,
+						"target": 564,
 						"typeArguments": [
 							{
 								"type": "reference",
 								"target": -1,
 								"name": "TUserId",
+								"refersToTypeParameter": true
+							},
+							{
+								"type": "reference",
+								"target": -1,
+								"name": "TGridId",
 								"refersToTypeParameter": true
 							}
 						],
@@ -5867,7 +6003,7 @@
 					}
 				},
 				{
-					"id": 584,
+					"id": 591,
 					"name": "getResponseHandler",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5905,13 +6041,13 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 566,
+						"target": 571,
 						"name": "GetResponseHandler",
 						"package": "data-grid-vue"
 					}
 				},
 				{
-					"id": 585,
+					"id": 592,
 					"name": "setPostRoute",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5932,7 +6068,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "beforeSetRequest",
-										"target": 586,
+										"target": 593,
 										"tsLinkText": ""
 									},
 									{
@@ -5964,7 +6100,7 @@
 					}
 				},
 				{
-					"id": 586,
+					"id": 593,
 					"name": "beforeSetRequest",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5991,7 +6127,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "SetGridStateRequest",
-								"target": 556,
+								"target": 558,
 								"tsLinkText": ""
 							},
 							{
@@ -6002,12 +6138,18 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 560,
+						"target": 564,
 						"typeArguments": [
 							{
 								"type": "reference",
 								"target": -1,
 								"name": "TUserId",
+								"refersToTypeParameter": true
+							},
+							{
+								"type": "reference",
+								"target": -1,
+								"name": "TGridId",
 								"refersToTypeParameter": true
 							}
 						],
@@ -6016,7 +6158,7 @@
 					}
 				},
 				{
-					"id": 587,
+					"id": 594,
 					"name": "setResponseHandler",
 					"variant": "declaration",
 					"kind": 1024,
@@ -6043,7 +6185,7 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 566,
+						"target": 571,
 						"name": "GetResponseHandler",
 						"package": "data-grid-vue"
 					}
@@ -6053,19 +6195,20 @@
 				{
 					"title": "Properties",
 					"children": [
-						581,
-						582,
-						583,
-						584,
-						585,
-						586,
-						587
+						587,
+						588,
+						589,
+						590,
+						591,
+						592,
+						593,
+						594
 					]
 				}
 			],
 			"typeParameters": [
 				{
-					"id": 588,
+					"id": 595,
 					"name": "TUserId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -6078,11 +6221,26 @@
 							}
 						]
 					}
+				},
+				{
+					"id": 596,
+					"name": "TGridId",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of the grid identifier."
+							}
+						]
+					}
 				}
 			]
 		},
 		{
-			"id": 589,
+			"id": 597,
 			"name": "ServerSideStorageService",
 			"variant": "declaration",
 			"kind": 128,
@@ -6156,19 +6314,25 @@
 			},
 			"children": [
 				{
-					"id": 594,
+					"id": 603,
 					"name": "options",
 					"variant": "declaration",
 					"kind": 1024,
 					"flags": {},
 					"type": {
 						"type": "reference",
-						"target": 580,
+						"target": 586,
 						"typeArguments": [
 							{
 								"type": "reference",
 								"target": -1,
 								"name": "TUserId",
+								"refersToTypeParameter": true
+							},
+							{
+								"type": "reference",
+								"target": -1,
+								"name": "TGridId",
 								"refersToTypeParameter": true
 							}
 						],
@@ -6177,22 +6341,29 @@
 					}
 				},
 				{
-					"id": 590,
+					"id": 598,
 					"name": "constructor",
 					"variant": "declaration",
 					"kind": 512,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 591,
+							"id": 599,
 							"name": "new ServerSideStorageService",
 							"variant": "signature",
 							"kind": 16384,
 							"flags": {},
 							"typeParameter": [
 								{
-									"id": 592,
+									"id": 600,
 									"name": "TUserId",
+									"variant": "typeParam",
+									"kind": 131072,
+									"flags": {}
+								},
+								{
+									"id": 601,
+									"name": "TGridId",
 									"variant": "typeParam",
 									"kind": 131072,
 									"flags": {}
@@ -6200,19 +6371,25 @@
 							],
 							"parameters": [
 								{
-									"id": 593,
+									"id": 602,
 									"name": "options",
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"target": 580,
+										"target": 586,
 										"typeArguments": [
 											{
 												"type": "reference",
 												"target": -1,
 												"name": "TUserId",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "reference",
+												"target": -1,
+												"name": "TGridId",
 												"refersToTypeParameter": true
 											}
 										],
@@ -6223,12 +6400,18 @@
 							],
 							"type": {
 								"type": "reference",
-								"target": 589,
+								"target": 597,
 								"typeArguments": [
 									{
 										"type": "reference",
 										"target": -1,
 										"name": "TUserId",
+										"refersToTypeParameter": true
+									},
+									{
+										"type": "reference",
+										"target": -1,
+										"name": "TGridId",
 										"refersToTypeParameter": true
 									}
 								],
@@ -6239,14 +6422,14 @@
 					]
 				},
 				{
-					"id": 595,
+					"id": 604,
 					"name": "getGridStateAsync",
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 596,
+							"id": 605,
 							"name": "getGridStateAsync",
 							"variant": "signature",
 							"kind": 4096,
@@ -6315,14 +6498,14 @@
 					}
 				},
 				{
-					"id": 597,
+					"id": 606,
 					"name": "setGridStateAsync",
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 598,
+							"id": 607,
 							"name": "setGridStateAsync",
 							"variant": "signature",
 							"kind": 4096,
@@ -6352,7 +6535,7 @@
 							},
 							"parameters": [
 								{
-									"id": 599,
+									"id": 608,
 									"name": "gridState",
 									"variant": "param",
 									"kind": 32768,
@@ -6407,30 +6590,53 @@
 				{
 					"title": "Properties",
 					"children": [
-						594
+						603
 					]
 				},
 				{
 					"title": "Constructors",
 					"children": [
-						590
+						598
 					]
 				},
 				{
 					"title": "Methods",
 					"children": [
-						595,
-						597
+						604,
+						606
 					]
 				}
 			],
 			"typeParameters": [
 				{
-					"id": 600,
+					"id": 609,
 					"name": "TUserId",
 					"variant": "typeParam",
 					"kind": 131072,
-					"flags": {}
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of the user identifier."
+							}
+						]
+					}
+				},
+				{
+					"id": 610,
+					"name": "TGridId",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of the grid identifier."
+							}
+						]
+					}
 				}
 			],
 			"implementedTypes": [
@@ -8236,7 +8442,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "ServerSideStorageService",
-										"target": 589
+										"target": 597
 									},
 									{
 										"kind": "text",
@@ -8292,7 +8498,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "ServerSideStorageServiceOptions",
-										"target": 580,
+										"target": 586,
 										"tsLinkText": ""
 									}
 								]
@@ -8332,8 +8538,12 @@
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": 580,
+												"target": 586,
 												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "any"
+													},
 													{
 														"type": "intrinsic",
 														"name": "any"
@@ -11820,13 +12030,13 @@
 				543,
 				533,
 				553,
-				556,
-				560,
-				566,
-				570,
-				576,
-				580,
-				589
+				558,
+				564,
+				571,
+				575,
+				582,
+				586,
+				597
 			]
 		},
 		{
@@ -13799,71 +14009,71 @@
 		},
 		"555": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GetGridStateRequest.TUserId"
+			"qualifiedName": "GetGridStateRequest.gridId"
 		},
 		"556": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetGridStateRequest"
+			"qualifiedName": "GetGridStateRequest.TUserId"
 		},
 		"557": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetGridStateRequest.userId"
+			"qualifiedName": "GetGridStateRequest.TGridId"
 		},
 		"558": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetGridStateRequest.gridState"
+			"qualifiedName": "SetGridStateRequest"
 		},
 		"559": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetGridStateRequest.TUserId"
+			"qualifiedName": "SetGridStateRequest.userId"
 		},
 		"560": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "BeforeGetRequestHandler"
+			"qualifiedName": "SetGridStateRequest.gridId"
 		},
 		"561": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "SetGridStateRequest.gridState"
 		},
 		"562": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "SetGridStateRequest.TUserId"
 		},
 		"563": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "request"
+			"qualifiedName": "SetGridStateRequest.TGridId"
 		},
 		"564": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "body"
+			"qualifiedName": "BeforeGetRequestHandler"
 		},
 		"565": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "TUserId"
+			"qualifiedName": "__type"
 		},
 		"566": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GetResponseHandler"
+			"qualifiedName": "__type"
 		},
 		"567": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "request"
 		},
 		"568": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "body"
 		},
 		"569": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "response"
+			"qualifiedName": "TUserId"
 		},
 		"570": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "BeforeSetRequestHandler"
+			"qualifiedName": "TGridId"
 		},
 		"571": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "GetResponseHandler"
 		},
 		"572": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -13871,19 +14081,19 @@
 		},
 		"573": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "request"
+			"qualifiedName": "__type"
 		},
 		"574": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "body"
+			"qualifiedName": "response"
 		},
 		"575": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "TUserId"
+			"qualifiedName": "BeforeSetRequestHandler"
 		},
 		"576": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetResponseHandler"
+			"qualifiedName": "__type"
 		},
 		"577": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -13891,95 +14101,135 @@
 		},
 		"578": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "request"
 		},
 		"579": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "response"
+			"qualifiedName": "body"
 		},
 		"580": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions"
+			"qualifiedName": "TUserId"
 		},
 		"581": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.userId"
+			"qualifiedName": "TGridId"
 		},
 		"582": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.getPostRoute"
+			"qualifiedName": "SetResponseHandler"
 		},
 		"583": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.beforeGetRequest"
+			"qualifiedName": "__type"
 		},
 		"584": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.getResponseHandler"
+			"qualifiedName": "__type"
 		},
 		"585": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.setPostRoute"
+			"qualifiedName": "response"
 		},
 		"586": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.beforeSetRequest"
+			"qualifiedName": "ServerSideStorageServiceOptions"
 		},
 		"587": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.setResponseHandler"
+			"qualifiedName": "ServerSideStorageServiceOptions.userId"
 		},
 		"588": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.TUserId"
+			"qualifiedName": "ServerSideStorageServiceOptions.gridId"
 		},
 		"589": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService"
+			"qualifiedName": "ServerSideStorageServiceOptions.getPostRoute"
 		},
 		"590": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.__constructor"
+			"qualifiedName": "ServerSideStorageServiceOptions.beforeGetRequest"
 		},
 		"591": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService"
+			"qualifiedName": "ServerSideStorageServiceOptions.getResponseHandler"
 		},
 		"592": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.TUserId"
+			"qualifiedName": "ServerSideStorageServiceOptions.setPostRoute"
 		},
 		"593": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "options"
+			"qualifiedName": "ServerSideStorageServiceOptions.beforeSetRequest"
 		},
 		"594": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.options"
+			"qualifiedName": "ServerSideStorageServiceOptions.setResponseHandler"
 		},
 		"595": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.getGridStateAsync"
+			"qualifiedName": "ServerSideStorageServiceOptions.TUserId"
 		},
 		"596": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.getGridStateAsync"
+			"qualifiedName": "ServerSideStorageServiceOptions.TGridId"
 		},
 		"597": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.setGridStateAsync"
+			"qualifiedName": "ServerSideStorageService"
 		},
 		"598": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.setGridStateAsync"
+			"qualifiedName": "ServerSideStorageService.__constructor"
 		},
 		"599": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "gridState"
+			"qualifiedName": "ServerSideStorageService"
 		},
 		"600": {
 			"sourceFileName": "dist/types/Storage.d.ts",
 			"qualifiedName": "ServerSideStorageService.TUserId"
+		},
+		"601": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.TGridId"
+		},
+		"602": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "options"
+		},
+		"603": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.options"
+		},
+		"604": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.getGridStateAsync"
+		},
+		"605": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.getGridStateAsync"
+		},
+		"606": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.setGridStateAsync"
+		},
+		"607": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.setGridStateAsync"
+		},
+		"608": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "gridState"
+		},
+		"609": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.TUserId"
+		},
+		"610": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.TGridId"
 		}
 	}
 }

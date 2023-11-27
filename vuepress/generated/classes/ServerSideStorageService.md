@@ -1,4 +1,4 @@
-# Class: ServerSideStorageService\<TUserId\>
+# Class: ServerSideStorageService\<TUserId, TGridId\>
 
 ## Description
 
@@ -8,9 +8,10 @@ if the HTTP status code is `200 OK` and the `Content-Type` response header is `a
 
 ## Type parameters
 
-| Parameter |
-| :------ |
-| `TUserId` |
+| Parameter | Description |
+| :------ | :------ |
+| `TUserId` | The type of the user identifier. |
+| `TGridId` | The type of the grid identifier. |
 
 ## Implements
 
@@ -20,25 +21,25 @@ if the HTTP status code is `200 OK` and the `Content-Type` response header is `a
 
 | Property | Type | Description |
 | :------ | :------ | :------ |
-| `options` | [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)\<`TUserId`\> | - |
+| `options` | [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)\<`TUserId`, `TGridId`\> | - |
 
 ## Constructors
 
 ### new ServerSideStorageService(options)
 
 ```ts
-new ServerSideStorageService<TUserId>(options): ServerSideStorageService<TUserId>
+new ServerSideStorageService<TUserId, TGridId>(options): ServerSideStorageService<TUserId, TGridId>
 ```
 
 #### Parameters
 
 | Parameter | Type |
 | :------ | :------ |
-| `options` | [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)\<`TUserId`\> |
+| `options` | [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)\<`TUserId`, `TGridId`\> |
 
 #### Returns
 
-[`ServerSideStorageService`](ServerSideStorageService.md)\<`TUserId`\>
+[`ServerSideStorageService`](ServerSideStorageService.md)\<`TUserId`, `TGridId`\>
 
 ## Methods
 

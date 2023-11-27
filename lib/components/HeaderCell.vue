@@ -117,12 +117,11 @@ export default defineComponent({
     },
   },
   computed: {
-    sortIndex(): number | undefined {
-      const index = this.sort?.findIndex(s => s.fieldName === this.column.field.fieldName)
-      return index === -1 ? undefined : index
+    sortIndex(): number {
+      return this.sort?.findIndex(s => s.fieldName === this.column.field.fieldName) ?? -1
     },
     currentSort(): Sort | undefined {
-      return this.sort && this.sortIndex ? this.sort[this.sortIndex] : undefined
+      return this.sort && this.sortIndex >= 0 ? this.sort[this.sortIndex] : undefined
     },
     formattedTitle(): string {
       return Formatter.columnTitle(this.column)
@@ -178,7 +177,7 @@ export default defineComponent({
       if (!this.iconName || !this.sort || this.sort.length < 2) {
         return undefined
       }
-      if (!this.sortIndex) {
+      if (this.sortIndex < 0) {
         return undefined
       }
       return (this.sortIndex + 1).toString()
