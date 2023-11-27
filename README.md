@@ -136,7 +136,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 ## Release Notes
 
 ### v3.0.0
-> [!CAUTION]
+ > [!CAUTION]
   * node v18 is now the minimum supported version. This was previously v14. v18 is the [current oldest lts version of node](https://nodejs.org/en/about/previous-releases).
   * `data-grid-vue` now requires a minimum `vue` version of `3.3.0`. It is also recommended to upgrade to at least version `5.0.2` of `vite`. [Vite v5 migration guide](https://vitejs.dev/guide/migration)
   * The `column-selection-popup` slot `hiddenUpdated` prop has been renamed to `onHiddenUpdated` to be consistent with similar method names.
@@ -147,7 +147,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
     * `StorageService.getGridState` -> `StorageService.getGridStateAsync`
     * `StorageService.setGridState` -> `StorageService.setGridStateAsync`
    
-> [!TIP]
+ > [!TIP]
   * New footer slots
     * `footer` - entire footer
     * `footer-page-size-select` - footer page size select
@@ -214,7 +214,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   - Add css variable for input/select font size
 
 ### v2.0.0-beta
-> [!CAUTION]
+ > [!CAUTION]
   DataGridVue component is now exported as DataGridVueGrid in favor of using a new plugin to ensure proper setup. Plugin registers DataGridVueGrid component globally as dgv-data-grid.
    
   - Column reordering via drag-and-drop can be enabled on the grid with the allowColumnReorder property. Drag and drop is powered by [dragon-drop-vue](https://www.npmjs.com/package/dragon-drop-vue) and dragon drop global options can be set on the plugin options.

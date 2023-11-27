@@ -17,7 +17,7 @@ var markdownInclude = require('markdown-include')
  * https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
  */
 const customContainerPatternFormat = '^ *::: +{container-name}(\\w| )+$'
-const customContainerReplaceFormat = '> [!{container-name}]'
+const customContainerReplaceFormat = ' > [!{container-name}]'
 const containerNameMap = [
 	['danger', 'CAUTION'],
 	['tip', 'TIP'],
