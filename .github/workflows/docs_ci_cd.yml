@@ -34,3 +34,6 @@ jobs:
           action: "upload"
           app_location: "/vuepress/.vuepress/dist"
           skip_app_build: true
+      - name: Trigger Algolia docsearch crawler
+        run: curl -H "Content-Type:application/json" --user 8f4b2817-400d-4d96-aa27-171a1165de82:${{ secrets.ALGOLIA_CRAWLER_KEY }} "https://crawler.algolia.com/api/1/"
+

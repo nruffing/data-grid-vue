@@ -2,7 +2,20 @@
   "version": "0.2",
   "language": "en",
   "useGitignore": true,
-  "words": ["clickanalytics", "datagridvue", "nmprc", "nruffing", "octicon", "pageable", "prismjs", "shiki", "vnode", "vuepress", "xmldocmd"],
+  "words": [
+    "clickanalytics",
+    "datagridvue",
+    "nmprc",
+    "nruffing",
+    "octicon",
+    "pageable",
+    "prismjs",
+    "shiki",
+    "vnode",
+    "vuepress",
+    "xmldocmd",
+    "docsearch"
+  ],
   "ignoreWords": ["datagrid"],
   "ignorePaths": ["**/test-data", "**/demo-data", "**tsconfig**", "./typedoc-out.json", "**/pnpm-lock.yaml"]
 }

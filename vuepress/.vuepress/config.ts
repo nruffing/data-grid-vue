@@ -8,6 +8,7 @@ import { SitemapStream, streamToPromise } from 'sitemap'
 import { Readable } from 'stream'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
+import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 
 const __dirname = getDirname(import.meta.url) // @/vuepress/docs/.vuepress
 const dgvStyleContents = await fs.readFile(path.resolve(__dirname, '../node_modules/data-grid-vue/dist/style.css'), 'utf8')
@@ -134,6 +135,11 @@ export default defineUserConfig({
     }),
     pwaPlugin(),
     pwaPopupPlugin(),
+    docsearchPlugin({
+      appId: 'TDK3X6HP00',
+      apiKey: '3d9194a8aad4d39ac138eb89e55153ea',
+      indexName: 'datagridvue',
+    }),
   ],
   async onInitialized(app) {
     generateSitemap(app)
