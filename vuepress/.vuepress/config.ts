@@ -10,6 +10,7 @@ import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 
+const domain = 'datagridvue.com'
 const hostname = 'https://datagridvue.com'
 const sitemapFilename = 'sitemap.xml'
 const sitemapUrl = path.join(hostname, sitemapFilename)
@@ -44,6 +45,7 @@ async function generateSitemap(app: App) {
   const pages = app.pages.map(p => p.path).filter(p => !skipIndex(p))
   const sitemapString = await streamToPromise(Readable.from(pages).pipe(sitemap)).then(data => data.toString())
   fs.writeFile(path.resolve(publicDir, sitemapFilename), sitemapString)
+  fs.writeFile(path.resolve(publicDir, 'urls.txt'), pages.map(p => path.join(domain, p)).join('\n'))
 }
 
 async function generateRobotsTxt() {
@@ -56,7 +58,7 @@ SiteMap: ${sitemapUrl}`
 
 export default defineUserConfig({
   lang: 'en-US',
-  title: 'Data Grid Vue | Native Vue3 Data Grid',
+  title: 'Data Grid Vue',
   description:
     'Customizable and accessible native Vue3 data grid with limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control. MIT Licensed.',
   head: [
