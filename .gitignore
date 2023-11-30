@@ -36,5 +36,6 @@ vuepress-temp
 /scripts/**/*.js
 
 sitemap.xml
+robots.txt
 
 *.tsbuildinfo
