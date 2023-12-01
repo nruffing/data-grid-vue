@@ -177,3 +177,18 @@ TABLES
 tr:nth-child(2n) {
   background-color: transparent;
 }
+
+/*
+DATA GRID VUE EXAMPLES
+*/
+.grid-container {
+  margin: calc(var(--spacer) * 3) 0;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.grid-container > .dgv-data-grid-container {
+  height: 100%;
+}

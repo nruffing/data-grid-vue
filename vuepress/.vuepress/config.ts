@@ -62,6 +62,9 @@ SiteMap: ${sitemapUrl}`
 const descriptions = {
   '/theme/':
     'Data Grid Vue is designed with a fairly flat HTML structure and leverages CSS grid to arrange the HTML into a data grid. This architecture allows for endless layout possibilities both in the data grid and where the data grid is placed on the page.',
+  '/guide/': 'Data Grid Vue is available via both npm and yarn. The data grid component is recommended to be setup via the included Vue.js plugin.',
+  '/guide/columns.html':
+    'Column definitions must be supplied via the columns prop on the dgv-data-grid component. The column definitions describe the desired display behavior and functionality of each column.',
 }
 
 export default defineUserConfig({
@@ -83,7 +86,7 @@ export default defineUserConfig({
     if (skipIndex(page.path)) {
       page.frontmatter.head.push(['meta', { name: 'robots', content: 'noindex' }])
     }
-    const descriptionContent = descriptions[page.path]
+    const descriptionContent = descriptions[page.path] ?? description
     if (descriptionContent) {
       const descriptionMeta = page.frontmatter.head.find(h => h[0] === 'meta' && h[1].name === 'description')
       if (descriptionMeta) {
@@ -102,7 +105,7 @@ export default defineUserConfig({
     logo: '/favicon.svg',
     repo: 'https://github.com/nruffing/data-grid-vue',
     docsBranch: 'main',
-    editLinkPattern: ':repo/edit/:branch/vuepress/docs/:path',
+    editLinkPattern: ':repo/edit/:branch/vuepress/:path',
     colorModeSwitch: false,
     colorMode: 'dark',
     themePlugins: {

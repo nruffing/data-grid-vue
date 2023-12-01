@@ -43,7 +43,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 ```vue
 <dgv-data-grid
   v-model:columns="columns"
-  :data="DEMO.data"
+  :data="dataItems"
   :sort-options="{
     sortable: true,
     multiColumn: false,
