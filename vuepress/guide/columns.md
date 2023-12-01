@@ -13,3 +13,15 @@
 Columns will be displayed in the order in which they are in the array passed to the `columns` prop.
 
 !!!include(columns-note.md)!!!
+
+## Field & Data Type
+
+More guide content coming soon!
+
+## Title
+
+## Key Column
+
+## Width
+
+## Visibility

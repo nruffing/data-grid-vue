@@ -32,7 +32,7 @@ const cacheDir = path.resolve(__dirname, '../vuepress-cache')
 const tempDir = path.resolve(__dirname, '../vuepress-temp')
 const publicDir = path.resolve(__dirname, 'public')
 
-const skipIndexPaths = ['/404.html', '/shared/']
+const skipIndexPaths = ['/404.html', '/shared/', '/guide/'] // skip guide until finished
 function skipIndex(path: string | undefined) {
   if (!path) {
     return false
@@ -134,7 +134,7 @@ export default defineUserConfig({
       '/guide/': [
         {
           text: 'Guide',
-          children: ['/guide/README.md', '/guide/columns.md'],
+          children: ['/guide/README.md', '/guide/columns.md', '/guide/sorting.md', '/guide/filtering.md'],
         },
       ],
       '/generated/': [

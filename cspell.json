@@ -14,7 +14,9 @@
     "vnode",
     "vuepress",
     "xmldocmd",
-    "docsearch"
+    "docsearch",
+    "gapi",
+    "keyvault"
   ],
   "ignoreWords": ["datagrid"],
   "ignorePaths": ["**/test-data", "**/demo-data", "**tsconfig**", "./typedoc-out.json", "**/pnpm-lock.yaml"]

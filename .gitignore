@@ -34,6 +34,7 @@ vuepress-temp
 
 
 /scripts/**/*.js
+.env
 
 sitemap.xml
 robots.txt

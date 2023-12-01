@@ -29,8 +29,8 @@
 
   --content-width: 1100px;
 
-  --shiki-token-string-expression: var(--color-accent3); // html elements
-  --shiki-color-text: var(--shiki-token-string-expression); // html carets
+  --shiki-token-string-expression: var(--color-accent2); // html elements
+  --shiki-color-text: var(--color-accent3); // html carets
   --shiki-token-function: var(--color-accent1); // html attributes
   --shiki-color-background: var(--color-accent4);
   --shiki-token-constant: var(--color-accent2); // html attribute values
