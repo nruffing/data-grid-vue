@@ -147,28 +147,14 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
    
  > [!CAUTION]
   Methods that return a `Promise` have been renamed to be suffixed with `Async` to make it clear that they return a `Promise`.
-    `loadPageData` -> `loadPageDataAsync`
-    `onPageSizeChanged` -> `onPageSizeChangedAsync`
-    `DataService.getPage` -> `DataService.getPageAsync`
-    `StorageService.getGridState` -> `StorageService.getGridStateAsync`
-    `StorageService.setGridState` -> `StorageService.setGridStateAsync`
+    `loadPageData` -> `loadPageDataAsync` | `onPageSizeChanged` -> `onPageSizeChangedAsync` | `DataService.getPage` -> `DataService.getPageAsync` | `StorageService.getGridState` -> `StorageService.getGridStateAsync` | `StorageService.setGridState` -> `StorageService.setGridStateAsync`
    
  > [!TIP]
   New footer slots
-     `footer` - entire footer
-    `footer-page-size-select` - footer page size select
-    `footer-additional-content` - additional content between page size select and total item text
-    `footer-total-items` - total items text
+    `footer` - entire footer | `footer-page-size-select` - footer page size select | `footer-additional-content` - additional content between page size select and total item text | `footer-total-items` - total items text
    
  > [!TIP]
-  [#4](https://github.com/nruffing/data-grid-vue/issues/4) accessibility improvements
-    Add missing aria-label attributes
-    Allow header to be navigated via keyboard
-    Allow sort and reorder actions to be performed via keyboard when header cell has focus
-      Space or enter to cycle through sort options
-      Left and right arrow to reorder
-    Allow header options to be triggered via space or enter
-    Add/remove column menu is focused when it opens and can be navigated via keyboard using the tab key
+  [#4](https://github.com/nruffing/data-grid-vue/issues/4) accessibility improvements. Add missing aria-label attributes. Allow header to be navigated via keyboard. Allow sort and reorder actions to be performed via keyboard when header cell has focus. Space or enter to cycle through sort options. Left and right arrow to reorder. Allow header options to be triggered via space or enter. Add/remove column menu is focused when it opens and can be navigated via keyboard using the tab key.
    
  > [!TIP]
   Display loading spinner when data takes more then a second to load page data. Override loader with `loader` slot.
