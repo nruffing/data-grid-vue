@@ -11,9 +11,10 @@ import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 
 const domain = 'datagridvue.com'
-const hostname = 'https://datagridvue.com'
-const sitemapFilename = 'sitemap.xml'
-const sitemapUrl = path.join(hostname, sitemapFilename)
+const hostname = `https://${domain}`
+const title = 'Data Grid Vue'
+const description =
+  'Customizable and accessible native Vue3 data grid with limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control. MIT Licensed.'
 
 const __dirname = getDirname(import.meta.url) // @/vuepress/docs/.vuepress
 const dgvStyleContents = await fs.readFile(path.resolve(__dirname, '../node_modules/data-grid-vue/dist/style.css'), 'utf8')
@@ -32,7 +33,9 @@ const cacheDir = path.resolve(__dirname, '../vuepress-cache')
 const tempDir = path.resolve(__dirname, '../vuepress-temp')
 const publicDir = path.resolve(__dirname, 'public')
 
-const skipIndexPaths = ['/404.html', '/shared/', '/guide/'] // skip guide until finished
+const sitemapFilename = 'sitemap.xml'
+const sitemapUrl = path.join(hostname, sitemapFilename)
+const skipIndexPaths = ['/404.html', '/shared/', '/generated/', '/dotnet-generated/', '/guide/'] // skip guide until finished
 function skipIndex(path: string | undefined) {
   if (!path) {
     return false
@@ -45,7 +48,7 @@ async function generateSitemap(app: App) {
   const pages = app.pages.map(p => p.path).filter(p => !skipIndex(p))
   const sitemapString = await streamToPromise(Readable.from(pages).pipe(sitemap)).then(data => data.toString())
   fs.writeFile(path.resolve(publicDir, sitemapFilename), sitemapString)
-  fs.writeFile(path.resolve(publicDir, 'urls.txt'), pages.map(p => path.join(domain, p)).join('\n'))
+  fs.writeFile(path.resolve(publicDir, 'urls.txt'), pages.map(p => path.join(hostname, p)).join('\n'))
 }
 
 async function generateRobotsTxt() {
@@ -56,22 +59,41 @@ SiteMap: ${sitemapUrl}`
   fs.writeFile(path.resolve(publicDir, 'robots.txt'), robotsTxt)
 }
 
+const descriptions = {
+  '/theme/':
+    'Data Grid Vue is designed with a fairly flat HTML structure and leverages CSS grid to arrange the HTML into a data grid. This architecture allows for endless layout possibilities both in the data grid and where the data grid is placed on the page.',
+}
+
 export default defineUserConfig({
   lang: 'en-US',
-  title: 'Data Grid Vue',
-  description:
-    'Customizable and accessible native Vue3 data grid with limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control. MIT Licensed.',
+  title,
+  description,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
     ['style', { type: 'text/css' }, dgvStyleContents + '\n\n' + dgvStyleOverrideContents],
+    ['meta', { name: 'og:type', content: 'website' }],
+    ['meta', { name: 'og:image', content: path.join(hostname, 'android-chrome-512x512.png') }],
+    ['meta', { name: 'og:url', content: hostname }],
   ],
-  extendsPageOptions: (pageOptions, app) => {
-    if (skipIndex(pageOptions.path)) {
-      pageOptions.frontmatter = {
-        head: [['meta', { name: 'robots', content: 'noindex' }]],
-      }
+  extendsPage: (page, app) => {
+    if (!page.frontmatter.head) {
+      page.frontmatter.head = []
     }
+    if (skipIndex(page.path)) {
+      page.frontmatter.head.push(['meta', { name: 'robots', content: 'noindex' }])
+    }
+    const descriptionContent = descriptions[page.path]
+    if (descriptionContent) {
+      const descriptionMeta = page.frontmatter.head.find(h => h[0] === 'meta' && h[1].name === 'description')
+      if (descriptionMeta) {
+        descriptionMeta[1].content = descriptionContent
+      } else {
+        page.frontmatter.head.push(['meta', { name: 'description', content: descriptionContent }])
+      }
+      page.frontmatter.head.push(['meta', { name: 'og:description', content: descriptionContent }])
+    }
+    page.frontmatter.head.push(['meta', { name: 'og:title', content: `${page.title} | ${title}` }])
   },
   cache: cacheDir,
   temp: tempDir,
