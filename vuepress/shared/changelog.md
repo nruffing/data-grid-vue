@@ -2,6 +2,9 @@
 
 ## Release Notes
 
+### v3.0.1
+  - bugfix: header title and aria label incorrectly informs user that a column can be sorted when sort is turned on for the grid but not that specific column
+
 ### v3.0.0
   ::: danger BREAKING
   node v18 is now the minimum supported version. This was previously v14. v18 is the [current oldest lts version of node](https://nodejs.org/en/about/previous-releases).

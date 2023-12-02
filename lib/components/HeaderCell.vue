@@ -2,7 +2,7 @@
   <div
     class="dgv-header-cell"
     :key="column.field.fieldName"
-    :class="{ sortable: sortable && column.sortable }"
+    :class="{ sortable: canSort }"
     tabindex="0"
     :title="title"
     :aria-label="ariaLabel"
@@ -117,6 +117,9 @@ export default defineComponent({
     },
   },
   computed: {
+    canSort(): boolean {
+      return (this.sortable && this.column.sortable) ?? false
+    },
     sortIndex(): number {
       return this.sort?.findIndex(s => s.fieldName === this.column.field.fieldName) ?? -1
     },
@@ -129,11 +132,11 @@ export default defineComponent({
     title(): string {
       let title = this.formattedTitle
 
-      if (this.sortable && !this.currentSort) {
+      if (this.canSort && !this.currentSort) {
         title += ' - Click to sort ascending'
-      } else if (this.sortable && this.currentSort?.type === SortType.ascending) {
+      } else if (this.canSort && this.currentSort?.type === SortType.ascending) {
         title += ' - Click to sort descending'
-      } else if (this.sortable && this.currentSort?.type === SortType.descending) {
+      } else if (this.canSort && this.currentSort?.type === SortType.descending) {
         title += ' - Click to remove sort'
       }
 
@@ -146,9 +149,9 @@ export default defineComponent({
     ariaLabel(): string {
       let title = Formatter.ariaColumnLabel(this.column)
 
-      if (this.sortable && !this.currentSort) {
+      if (this.canSort && !this.currentSort) {
         title += ', use space bar to sort ascending'
-      } else if (this.sortable && this.currentSort) {
+      } else if (this.canSort && this.currentSort) {
         title += this.currentSort.type === SortType.ascending ? ', currently sorted ascending' : ', currently sorted descending'
         if (this.sort.length > 1) {
           title += ` with a sort priority of ${this.sortIndex} among ${this.sort.length} sorted columns`
