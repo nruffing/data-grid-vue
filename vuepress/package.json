@@ -5,8 +5,8 @@
   "description": "Vuepress documentation site for data-grid-vue",
   "type": "module",
   "scripts": {
-    "dev": "NODE_ENV=development vuepress dev . --clean-cache --clean-temp",
-    "build": "NODE_ENV=production vuepress build . --clean-cache --clean-temp"
+    "dev": "vuepress dev . --clean-cache --clean-temp",
+    "build": "vuepress build . --clean-cache --clean-temp"
   },
   "repository": {
     "type": "git",
