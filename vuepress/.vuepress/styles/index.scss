@@ -16,7 +16,7 @@
   --color-most-darkest: #000000;
   --color-darkest: #1a1a1a;
   --color-darker: #222222;
-  --color-more-dark: #292929;
+  --color-more-dark: #404040;
   --color-dark: #505050;
   --color-less-dark: #666666;
 
@@ -56,7 +56,7 @@ html.dark {
   --c-bg-light: var(--color-dark);
   --c-text-lighter: var(--color-lighter);
   --c-tip: var(--color-secondary);
-  --c-tip-bg: var(--color-more-dark);
+  --c-tip-bg: var(--color-darker);
   --c-details-bg: var(--color-more-dark);
   --c-danger-bg: var(--color-most-darkest);
   --c-danger-text-light: var(--color-danger-text);
@@ -88,6 +88,14 @@ h1 {
 
 h2, h3, h4, h5, h6 {
   color: var(--color-secondary);
+}
+
+p a code {
+  color: var(--color-accent3);
+}
+
+code {
+  background-color: var(--color-more-dark);
 }
 
 /*
