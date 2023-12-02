@@ -9,6 +9,7 @@ import { Readable } from 'stream'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
+import anchor from 'markdown-it-anchor'
 
 const domain = 'datagridvue.com'
 const hostname = `https://${domain}`
@@ -187,6 +188,9 @@ export default defineUserConfig({
     },
     importCode: {
       handleImportPath: str => str.replace(/^@temp/, tempDir),
+    },
+    anchor: {
+      permalink: anchor.permalink.headerLink({}),
     },
   },
   plugins: [

@@ -187,6 +187,9 @@ importers:
       data-grid-vue:
         specifier: workspace:^
         version: link:..
+      markdown-it-anchor:
+        specifier: ^8.6.7
+        version: 8.6.7(@types/markdown-it@13.0.7)(markdown-it@13.0.2)
       markdown-it-include:
         specifier: ^2.0.0
         version: 2.0.0(markdown-it@13.0.2)
