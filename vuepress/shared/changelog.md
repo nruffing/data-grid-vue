@@ -3,6 +3,7 @@
 ## Release Notes
 
 ### v3.0.1
+  - bugfix: click outside directive used for closing the add/remove columns popup is incorrectly using page position instead of viewport position
   - bugfix: header title and aria label incorrectly informs user that a column can be sorted when sort is turned on for the grid but not that specific column
   - accessibility: scrollable region must have keyboard access for `dgv-data-grid-body`
   - accessibility: `aria-label` attribute cannot be used on a span with no valid `role` attribute for `dgv-filter-operator` and `options-header`.

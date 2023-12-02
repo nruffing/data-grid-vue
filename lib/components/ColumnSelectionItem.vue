@@ -9,6 +9,7 @@
         v-model="shown"
         :name="column.field.fieldName"
         autocomplete="off"
+        @change="toggle"
       />
       <span class="dgv-toggle-slider"></span>
     </span>
@@ -67,11 +68,6 @@ export default defineComponent({
       return `${Formatter.ariaColumnLabel(this.column)} is currently ${this.shown ? 'shown' : 'hidden'}. Use space bar to ${
         this.shown ? 'hide' : 'show'
       } it.`
-    },
-  },
-  watch: {
-    shown(newValue: boolean) {
-      this.$emit('hidden-updated', !newValue)
     },
   },
   methods: {

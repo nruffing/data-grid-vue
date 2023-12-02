@@ -185,7 +185,30 @@ const staticColumns = [
 
 ## Visibility
 
-Columns can be hidden by specifying `true` for the `isHidden` property. The `isHidden` property is how the data grid supports allowing the user to add/remove columns from view.
+Columns can be hidden by specifying `true` for the `isHidden` property.
+
+The `isHidden` property is how the data grid supports allowing the user to add/remove columns from view. The add/remove columns feature can be enabled with the [`showColumnSelection`](/generated/DataGridVueGrid/#showcolumnselection) property. When set to `true` an `Add/Remove Columns` option is added to the header options area above the data grid. Clicking this option will open a popup menu with the ability to toggle the visibility of each column, even ones that were initially hidden.
+
+```vue
+<dgv-data-grid
+  v-model:columns="columns"
+  :data="data"
+  :show-column-selection="true"
+>
+</dgv-data-grid>
+```
+
+<div class="grid-container">
+  <dgv-data-grid
+    v-model:columns="addRemoveColumns"
+    :data="DEMO.data"
+    :showColumnSelection="true"
+  />
+</div>
+
+## Reorder
+
+## Accessibility
 
 
 <script lang="ts" setup>
@@ -224,6 +247,24 @@ const titleColumns = ref([...[
 ] as Column[]])
 
 const widthColumns = ref([...[
+  {
+    field: new Field('id'),
+    dataType: DataType.number,
+    isKey: true,
+    width: '50px',
+  },
+  {
+    field: new Field('firstName'),
+    dataType: DataType.alphanumeric,
+  },
+  {
+    field: new Field('lastName'),
+    dataType: DataType.alphanumeric,
+    width: '2*',
+  },
+] as Column[]])
+
+const addRemoveColumns = ref([...[
   {
     field: new Field('id'),
     dataType: DataType.number,

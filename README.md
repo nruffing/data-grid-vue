@@ -100,9 +100,9 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   * Individual footer sections
   * Loader
 * Accessibility
-  * Specific labels for screen readers with additional context leveraging `aria-label` attributes where necessary
+  * Specific labels for screen readers with additional context leveraging `aria-label` attributes where necessary to supply information about the current state of the grid.
   * Keyboard navigation
-    * Header cells, header options, filter row cells, add/remove column menu, and page navigation in the footer can be keyboard navigated using the tab key.
+    * Header cells, header options, filter row cells, add/remove column menu, grid's scrollable content body, and page navigation in the footer can be keyboard navigated using the tab key.
     * Header options can be invoked with the space or enter key.
     * Columns can be sorted with the space or enter key when the header cell is focused.
     * Columns can be reordered with the left and right arrow keys when the header cell is focused.
@@ -136,6 +136,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 ## Release Notes
 
 ### v3.0.1
+  - bugfix: click outside directive used for closing the add/remove columns popup is incorrectly using page position instead of viewport position
   - bugfix: header title and aria label incorrectly informs user that a column can be sorted when sort is turned on for the grid but not that specific column
   - accessibility: scrollable region must have keyboard access for `dgv-data-grid-body`
   - accessibility: `aria-label` attribute cannot be used on a span with no valid `role` attribute for `dgv-filter-operator` and `options-header`.
