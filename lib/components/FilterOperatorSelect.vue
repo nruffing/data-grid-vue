@@ -1,5 +1,11 @@
 <template>
   <div class="dgv-filter-operator-select">
+    <!--
+      aria-label attribute cannot be used on a span with no valid role attribute.
+      https://dequeuniversity.com/rules/axe/4.8/aria-prohibited-attr?application=AxeChrome
+      https://www.w3.org/TR/wai-aria-1.1/#role_definitions
+      https://dequeuniversity.com/rules/axe/4.8/aria-required-attr?application=AxeChrome
+    -->
     <span
       v-if="operators.length > 1"
       v-for="operator in operators"
@@ -11,6 +17,8 @@
       }"
       :title="getTitle(operator)"
       :aria-label="getTitle(operator)"
+      role="radio"
+      :aria-checked="operator === modelValue"
       @click="onClick(operator)"
       @keydown.enter="onClick(operator)"
       @keydown.space="onClick(operator)"

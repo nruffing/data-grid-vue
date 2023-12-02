@@ -143,6 +143,10 @@
         />
       </slot>
     </Transition>
+    <!-- 
+      Scrollable region must have keyboard access.
+      https://dequeuniversity.com/rules/axe/4.8/scrollable-region-focusable?application=AxeChrome
+    -->
     <div
       class="dgv-data-grid-body"
       v-show="!isLoading"
@@ -151,6 +155,7 @@
         gridTemplateColumns: gridTemplateColumns,
         gridTemplateRows: gridBodyTemplateRows,
       }"
+      tabindex="0"
     >
       <template
         v-for="(dataItem, index) in displayedData"
