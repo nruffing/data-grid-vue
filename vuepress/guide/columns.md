@@ -10,6 +10,25 @@
 </dgv-data-grid>
 ```
 
+```ts
+import { ref } from 'vue'
+import { DataGridVueGrid, type Column } from 'data-grid-vue'
+
+const staticColumns = [
+  {
+    field: new Field('id'),
+    dataType: DataType.number,
+  },
+  {
+    field: new Field('firstName'),
+    dataType: DataType.alphanumeric,
+  }, 
+] as Column[]
+
+const columns = ref<Column[]>([...staticColumns])
+const data = [...] as TestDataItem[]
+```
+
 Columns will be displayed in the order in which they are in the array passed to the `columns` prop.
 
 !!!include(columns-note.md)!!!
@@ -24,7 +43,7 @@ import { type Column, Field, DataType } from 'data-grid-vue'
 const staticColumns = [
   {
     field: new Field('id'),
-    dataType: DataType.numeric,
+    dataType: DataType.number,
   }  
 ] as Column[]
 ```
@@ -43,7 +62,7 @@ import { type Column, Field, DataType } from 'data-grid-vue'
 const staticColumns = [
   {
     field: new Field('id'),
-    dataType: DataType.numeric,
+    dataType: DataType.number,
   },
   {
     field: new Field('fullName', (dataItem) => `${dataItem.firstName} ${dataItem.lastName}`),
@@ -74,7 +93,7 @@ import { type Column, Field, DataType } from 'data-grid-vue'
 const staticColumns = [
   {
     field: new Field('id'),
-    dataType: DataType.numeric,
+    dataType: DataType.number,
     isKey: true,
   },
   {
@@ -132,7 +151,7 @@ import { type Column, Field, DataType } from 'data-grid-vue'
 const staticColumns = [
   {
     field: new Field('id'),
-    dataType: DataType.numeric,
+    dataType: DataType.number,
     isKey: true,
     width: '50px',
   },
@@ -170,7 +189,7 @@ const DEMO = inject('demo')
 const fieldAndDataTypeColumns = ref([...[
   {
     field: new Field('id'),
-    dataType: DataType.numeric,
+    dataType: DataType.number,
   },
   {
     field: new Field('fullName', (dataItem) => `${dataItem.firstName} ${dataItem.lastName}`),
@@ -193,7 +212,7 @@ const titleColumns = ref([...[
 const widthColumns = ref([...[
   {
     field: new Field('id'),
-    dataType: DataType.numeric,
+    dataType: DataType.number,
     isKey: true,
     width: '50px',
   },
