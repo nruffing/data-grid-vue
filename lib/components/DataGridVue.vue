@@ -161,6 +161,7 @@
         gridTemplateRows: gridBodyTemplateRows,
       }"
       tabindex="0"
+      :aria-label="`Data grid content, currently displaying page ${currentPage} with ${displayedData.length} of ${totalItems} total items.`"
     >
       <template
         v-for="(dataItem, index) in displayedData"
