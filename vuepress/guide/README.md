@@ -69,9 +69,9 @@ The data grid component can also be imported locally to the component that will 
 
 If you are not going to be using the functionality that these directives are used for then importing the data grid component locally will work and automatically import the styles. The component is exported as `DataGridVueGrid`.
 
-The click-outside and focus directives are only used for the add/remove columns menu (i.e. the <a href="/generated/DataGridVueGrid/#showColumnSelection" target="_blank">showColumnSelection</a> is `true`).
+The click-outside and focus directives are only used for the add/remove columns menu (i.e. the [showColumnSelection](/generated/DataGridVueGrid/#showcolumnselection) is `true`).
 
-The drag and drop directives are only used for column reordering (i.e. the <a href="/generated/DataGridVueGrid/#allowColumnReorder" target="_blank">allowColumnReorder</a> is `true`).
+The drag and drop directives are only used for column reordering (i.e. the [allowColumnReorder](/generated/DataGridVueGrid/#allowcolumnreorder) is `true`).
 :::
 
 <CodeGroup>
