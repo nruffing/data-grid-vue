@@ -64,7 +64,8 @@
     "typedoc": "pnpm run build && pnpm exec tsc --project ./scripts/typedoc/tsconfig.typedoc-vue.json && pnpm exec typedoc --options ./scripts/typedoc/typedoc.json",
     "spellcheck": "pnpm cspell .",
     "dotnet-doc": "pnpm exec tsc --project ./scripts/dotnet-doc-download/tsconfig.dotnet-doc-download.json && node ./scripts/dotnet-doc-download/dotnet-doc-download.js",
-    "request-index": "pnpm exec tsc --project ./scripts/request-index/tsconfig.request-index.json && node ./scripts/request-index/request-index.js",
+    "request-index": "pnpm run -r build && pnpm exec tsc --project ./scripts/request-index/tsconfig.request-index.json && node ./scripts/request-index/request-index.js",
+    "axe": "pnpm run -r build && pnpm exec tsc --project ./scripts/axe/tsconfig.axe.json && node ./scripts/axe/axe.js",
     "docs:dev": "pnpm run --filter './vuepress' dev",
     "docs:build": "pnpm run --filter './vuepress' build",
     "dev-app:dev": "pnpm run --filter './dev-app' dev",
@@ -74,6 +75,7 @@
     "vue": ">=3.3.0"
   },
   "devDependencies": {
+    "@axe-core/cli": "^4.8.1",
     "@azure/identity": "^4.0.0",
     "@azure/keyvault-secrets": "^4.7.0",
     "@babel/types": "^7.23.4",
@@ -83,6 +85,7 @@
     "@types/node": "^18.11.9",
     "@vitejs/plugin-vue": "^4.5.0",
     "@vue/tsconfig": "^0.4.0",
+    "@vuepress/utils": "2.0.0-rc.0",
     "adm-zip": "^0.5.10",
     "cspell": "^8.0.0",
     "dotenv": "^16.3.1",

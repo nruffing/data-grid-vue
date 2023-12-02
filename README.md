@@ -139,6 +139,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   - bugfix: header title and aria label incorrectly informs user that a column can be sorted when sort is turned on for the grid but not that specific column
   - accessibility: scrollable region must have keyboard access for `dgv-data-grid-body`
   - accessibility: `aria-label` attribute cannot be used on a span with no valid `role` attribute for `dgv-filter-operator` and `options-header`.
+  - docs: fix critical accessibility errors reported by axe
 
 
 ### v3.0.0

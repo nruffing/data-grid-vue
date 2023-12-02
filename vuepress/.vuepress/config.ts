@@ -35,8 +35,8 @@ const tempDir = path.resolve(__dirname, '../vuepress-temp')
 const publicDir = path.resolve(__dirname, 'public')
 
 const sitemapFilename = 'sitemap.xml'
-const sitemapUrl = path.join(hostname, sitemapFilename)
-const skipIndexPaths = ['/404.html', '/shared/', '/generated/', '/dotnet-generated/', '/guide/'] // skip guide until finished
+const sitemapUrl = `https://${path.join(domain, sitemapFilename)}`
+const skipIndexPaths = ['/404.html', '/shared/', '/generated/', '/dotnet-generated/']
 function skipIndex(path: string | undefined) {
   if (!path) {
     return false
@@ -48,8 +48,8 @@ async function generateSitemap(app: App) {
   const sitemap = new SitemapStream({ hostname })
   const pages = app.pages.map(p => p.path).filter(p => !skipIndex(p))
   const sitemapString = await streamToPromise(Readable.from(pages).pipe(sitemap)).then(data => data.toString())
-  fs.writeFile(path.resolve(publicDir, sitemapFilename), sitemapString)
-  fs.writeFile(path.resolve(publicDir, 'urls.txt'), pages.map(p => path.join(hostname, p)).join('\n'))
+  fs.writeFile(path.resolve(publicDir, sitemapFilename), sitemapString, { encoding: 'utf8' })
+  fs.writeFile(path.resolve(publicDir, 'urls.txt'), pages.map(p => `https://${path.join(domain, p)}`).join('\n'), { encoding: 'utf8' })
 }
 
 async function generateRobotsTxt() {
@@ -57,7 +57,7 @@ async function generateRobotsTxt() {
 Allow: /
 
 SiteMap: ${sitemapUrl}`
-  fs.writeFile(path.resolve(publicDir, 'robots.txt'), robotsTxt)
+  fs.writeFile(path.resolve(publicDir, 'robots.txt'), robotsTxt, { encoding: 'utf8' })
 }
 
 const descriptions = {
@@ -77,7 +77,7 @@ export default defineUserConfig({
     ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
     ['style', { type: 'text/css' }, dgvStyleContents + '\n\n' + dgvStyleOverrideContents],
     ['meta', { name: 'og:type', content: 'website' }],
-    ['meta', { name: 'og:image', content: path.join(hostname, 'android-chrome-512x512.png') }],
+    ['meta', { name: 'og:image', content: `https://${path.join(domain, 'android-chrome-512x512.png')}` }],
     ['meta', { name: 'og:url', content: hostname }],
   ],
   extendsPage: (page, app) => {
