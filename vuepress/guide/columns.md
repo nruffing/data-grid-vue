@@ -5,7 +5,7 @@
 ```vue
 <dgv-data-grid
   v-model:columns="columns"
-  :data="DEMO.data"
+  :data="data"
 >
 </dgv-data-grid>
 ```
@@ -18,6 +18,7 @@ const staticColumns = [
   {
     field: new Field('id'),
     dataType: DataType.number,
+    isKey: true,
   },
   {
     field: new Field('firstName'),
@@ -44,6 +45,7 @@ const staticColumns = [
   {
     field: new Field('id'),
     dataType: DataType.number,
+    isKey: true,
   }  
 ] as Column[]
 ```
@@ -63,6 +65,7 @@ const staticColumns = [
   {
     field: new Field('id'),
     dataType: DataType.number,
+    isKey: true,
   },
   {
     field: new Field('fullName', (dataItem) => `${dataItem.firstName} ${dataItem.lastName}`),
@@ -116,6 +119,11 @@ The column's title is rendered as the content of the header cell for that column
 import { type Column, Field, DataType } from 'data-grid-vue'
 
 const staticColumns = [
+  {
+    field: new Field('id'),
+    dataType: DataType.number,
+    isKey: true,
+  },
   {
     field: new Field('firstName'), // Column header will be 'First Name'
     dataType: DataType.alphanumeric,
@@ -190,6 +198,7 @@ const fieldAndDataTypeColumns = ref([...[
   {
     field: new Field('id'),
     dataType: DataType.number,
+    isKey: true,
   },
   {
     field: new Field('fullName', (dataItem) => `${dataItem.firstName} ${dataItem.lastName}`),
@@ -198,6 +207,11 @@ const fieldAndDataTypeColumns = ref([...[
 ] as Column[]])
 
 const titleColumns = ref([...[
+  {
+    field: new Field('id'),
+    dataType: DataType.number,
+    isKey: true,
+  },
   {
     field: new Field('firstName'), // Column header will be 'First Name'
     dataType: DataType.alphanumeric,

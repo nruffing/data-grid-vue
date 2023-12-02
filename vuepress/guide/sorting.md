@@ -1,13 +1,13 @@
 # Sorting
 
-Data Grid Vue supports allowing users to sort data within the data grid by a particular column. To enable this functionality pass [`SortOptions`](/generated/interfaces/SortOptions.html) to the [`sortOptions`](/generated/DataGridVueGrid/#sortoptions) prop of the data grid component. Then set the `sortable` property on each column definition that the user should be allowed to sort. Columns can then be sorted by clicking the column headers.
+Data Grid Vue supports allowing users to sort data within the data grid by a particular column. To enable this functionality pass [`SortOptions`](/generated/interfaces/SortOptions.html) to the [`sortOptions`](/generated/DataGridVueGrid/#sortoptions) prop of the data grid component. Then set the [`sortable`](/generated/interfaces/Column.html#properties) property on each column definition that the user should be allowed to sort. Columns can then be sorted by clicking the column headers.
 
 In the following example all but the `Last Name` column are configured to be sortable.
 
 ```vue
 <dgv-data-grid
   v-model:columns="columns"
-  :data="DEMO.data"
+  :data="data"
   :sort-options="{ sortable: true }"
 >
 </dgv-data-grid>
@@ -21,6 +21,7 @@ const staticColumns = [
   {
     field: new Field('id'),
     dataType: DataType.number,
+    isKey: true,
     sortable: true,
   },
   {
@@ -96,6 +97,7 @@ const sortableColumns = ref([...[
   {
     field: new Field('id'),
     dataType: DataType.number,
+    isKey: true,
     sortable: true,
   },
   {
