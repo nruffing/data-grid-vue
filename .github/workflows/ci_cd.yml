@@ -75,6 +75,8 @@ jobs:
       ESCAPED_VERSION: ''
     steps:
       - uses: actions/checkout@v4
+      - name: Parse package version
+        run: echo "VERSION=$(grep -Po '(?<=\"version\":\s\")\d+\.\d+\.\d+(?=\")' ./package.json)" >> $GITHUB_ENV
       - name: Escape version
         run: echo "ESCAPED_VERSION=$(echo "${{ env.VERSION }}" | sed 's/[^^]/[&]/g; s/\^/\\^/g')" >> $GITHUB_ENV
       - name: Parse release notes
