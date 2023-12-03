@@ -10,6 +10,7 @@ import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import anchor from 'markdown-it-anchor'
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 
 const domain = 'datagridvue.com'
 const hostname = `https://${domain}`
@@ -211,6 +212,9 @@ export default defineUserConfig({
       appId: 'TDK3X6HP00',
       apiKey: '3d9194a8aad4d39ac138eb89e55153ea',
       indexName: 'datagridvue',
+    }),
+    googleAnalyticsPlugin({
+      id: 'G-SEY66XPMSS',
     }),
   ],
   async onInitialized(app) {

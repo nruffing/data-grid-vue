@@ -26,6 +26,7 @@
     "@vuepress/client": "2.0.0-rc.0",
     "@vuepress/core": "2.0.0-rc.0",
     "@vuepress/plugin-docsearch": "2.0.0-rc.0",
+    "@vuepress/plugin-google-analytics": "^1.9.10",
     "@vuepress/plugin-pwa": "^2.0.0-rc.0",
     "@vuepress/plugin-pwa-popup": "^2.0.0-rc.0",
     "@vuepress/plugin-shiki": "^2.0.0-rc.0",
