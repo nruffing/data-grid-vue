@@ -2,7 +2,7 @@
   <div
     class="dgv-header-cell"
     :key="column.field.fieldName"
-    :class="{ sortable: canSort }"
+    :class="{ sortable: canSort, reorder: allowColumnReorder }"
     tabindex="0"
     :title="title"
     :aria-label="ariaLabel"

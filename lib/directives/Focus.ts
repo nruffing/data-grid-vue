@@ -9,8 +9,17 @@ export default {
     }
 
     el.addEventListener('focus', () => {
-      if (binding.value.onFocus) {
-        binding.value.onFocus()
+      // slight delay to let blur event to be handled first
+      setTimeout(() => {
+        if (binding.value.onFocus) {
+          binding.value.onFocus()
+        }
+      }, 200)
+    })
+
+    el.addEventListener('blur', () => {
+      if (binding.value.onBlur) {
+        binding.value.onBlur()
       }
     })
   },
@@ -36,4 +45,9 @@ export interface FocusOptions {
    * Event handler that is called when the element is focused.
    */
   onFocus?: () => void
+
+  /**
+   * Event handler that is called when the element is blurred.
+   */
+  onBlur?: () => void
 }

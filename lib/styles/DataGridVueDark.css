@@ -144,6 +144,7 @@
 
 .dgv-data-grid-container .dgv-header-container {
   display: flex;
+  flex: 1;
 }
 
 .dgv-data-grid-container .ddv-draggable .dgv-drag-area {
@@ -395,6 +396,7 @@
   flex-direction: row;
   gap: 0.4rem;
   align-items: center;
+  cursor: pointer;
 }
 
 .dgv-toggle-container:has(*:focus-visible) {

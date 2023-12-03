@@ -202,13 +202,47 @@ The `isHidden` property is how the data grid supports allowing the user to add/r
   <dgv-data-grid
     v-model:columns="addRemoveColumns"
     :data="DEMO.data"
-    :showColumnSelection="true"
+    :show-column-selection="true"
   />
 </div>
 
 ## Reorder
 
+Columns can be reordered by the user if the [`allowColumnReorder`](/generated/DataGridVueGrid/#allowcolumnreorder) property is set to the `true` on the data grid component.
+
+Columns can be reordered by dragging and dropping the column headers.
+
+```vue
+<dgv-data-grid
+  v-model:columns="columns"
+  :data="data"
+  :allow-column-reorder="true"
+>
+</dgv-data-grid>
+```
+
+<div class="grid-container">
+  <dgv-data-grid
+    v-model:columns="reorderColumns"
+    :data="DEMO.data"
+    :allow-column-reorder="true"
+  />
+</div>
+
+
 ## Accessibility
+
+Column headers cells are part of the tab order in order to allow them to be navigated to via keyboard. When a header cell has focus due to keyboard navigation it is displayed with an additional outline using the `:focus-visible` CSS pseudo-class.
+
+When a header cell is focused the `left` and `right` arrow keys can be used to invoke a column reorder by one column.
+
+Header cells also have a dynamic `aria-label` value set to allow screen readers to inform the user of which column they are on, its current state, and possible actions. For example, `First Name, currently sorted ascending, use space bar to sort descending, use left and right arrow keys to reorder, currently in position 4 of 6 columns`.
+
+Actions in the header options area above the data grid are part of the tab order to allow them to be navigated to via keyboard.
+
+When header options are focused they can be invoked via `space` or `enter` instead of a click. This includes the `Add/Remove Columns`. When invoked focus is placed on the first toggle and the user can cycle through each toggle using the `tab` key. The toggle can be invoked with the `space` key just like a checkbox.
+
+The column visibility toggles also have an `aria-label` specified which informs the user of the current state. For example, `First Name is currently hidden. Use the space bar to show it`.
 
 
 <script lang="ts" setup>
@@ -265,6 +299,24 @@ const widthColumns = ref([...[
 ] as Column[]])
 
 const addRemoveColumns = ref([...[
+  {
+    field: new Field('id'),
+    dataType: DataType.number,
+    isKey: true,
+    width: '50px',
+  },
+  {
+    field: new Field('firstName'),
+    dataType: DataType.alphanumeric,
+  },
+  {
+    field: new Field('lastName'),
+    dataType: DataType.alphanumeric,
+    width: '2*',
+  },
+] as Column[]])
+
+const reorderColumns = ref([...[
   {
     field: new Field('id'),
     dataType: DataType.number,

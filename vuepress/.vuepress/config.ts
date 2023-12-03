@@ -160,7 +160,14 @@ export default defineUserConfig({
       '/guide/': [
         {
           text: 'Guide',
-          children: ['/guide/README.md', '/guide/columns.md', '/guide/sorting.md', '/guide/filtering.md', '/guide/paging.md'],
+          children: [
+            '/guide/README.md',
+            '/guide/columns.md',
+            '/guide/sorting.md',
+            '/guide/filtering.md',
+            '/guide/paging.md',
+            '/guide/more-coming-soon.md',
+          ],
         },
       ],
       '/generated/': [

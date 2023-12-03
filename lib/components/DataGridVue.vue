@@ -110,6 +110,7 @@
       v-dgv-focus="{
         focusOnUpdate: focusedColumnFieldName === column.field.fieldName,
         onFocus: () => (focusedColumnFieldName = column.field.fieldName),
+        onBlur: () => (focusedColumnFieldName = undefined),
       }"
     />
 
