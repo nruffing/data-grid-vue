@@ -3,20 +3,22 @@
   "language": "en",
   "useGitignore": true,
   "words": [
+    "allowcolumnreorder",
     "clickanalytics",
     "datagridvue",
+    "docsearch",
+    "gapi",
+    "keyvault",
     "nmprc",
     "nruffing",
     "octicon",
     "pageable",
     "prismjs",
     "shiki",
+    "showcolumnselection",
     "vnode",
     "vuepress",
-    "xmldocmd",
-    "docsearch",
-    "gapi",
-    "keyvault"
+    "xmldocmd"
   ],
   "ignoreWords": ["datagrid"],
   "ignorePaths": ["**/test-data", "**/demo-data", "**tsconfig**", "./typedoc-out.json", "**/pnpm-lock.yaml"]

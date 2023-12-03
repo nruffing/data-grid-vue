@@ -7,7 +7,7 @@ const clickListenerFactory = (el: HTMLElement, binding: DirectiveBinding<ClickOu
 
   return (ev: MouseEvent) => {
     const target = ev.target as HTMLElement
-    if (ev.pageX > elRect.right || ev.pageX < elRect.left || ev.pageY < elRect.top || ev.pageY > elRect.bottom) {
+    if (ev.x > elRect.right || ev.x < elRect.left || ev.y < elRect.top || ev.y > elRect.bottom) {
       if (binding.value.ignoreSelectors && target.matches(binding.value.ignoreSelectors)) {
         return
       }

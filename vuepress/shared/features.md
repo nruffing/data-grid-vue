@@ -42,9 +42,9 @@
   * Individual footer sections
   * Loader
 * Accessibility
-  * Specific labels for screen readers with additional context leveraging `aria-label` attributes where necessary
+  * Specific labels for screen readers with additional context leveraging `aria-label` attributes where necessary to supply information about the current state of the grid.
   * Keyboard navigation
-    * Header cells, header options, filter row cells, add/remove column menu, and page navigation in the footer can be keyboard navigated using the tab key.
+    * Header cells, header options, filter row cells, add/remove column menu, grid's scrollable content body, and page navigation in the footer can be keyboard navigated using the tab key.
     * Header options can be invoked with the space or enter key.
     * Columns can be sorted with the space or enter key when the header cell is focused.
     * Columns can be reordered with the left and right arrow keys when the header cell is focused.

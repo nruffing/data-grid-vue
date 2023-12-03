@@ -34,22 +34,33 @@ export default defineClientConfig({
     app.provide('demo', DEMO)
     app.config.globalProperties.$dgv = constants
 
-    if (import.meta.env.MODE === 'production') {
-      router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized) => {
+    if (process.env.NODE_ENV === 'production') {
+      router.beforeEach((to, from) => {
         appInsights.startTrackPage(to.fullPath)
       })
-      router.afterEach((to: RouteLocationNormalized) => {
+      router.afterEach(to => {
         appInsights.stopTrackPage(to.fullPath)
         appInsights.flush()
       })
       appInsights.loadAppInsights()
+    }
+
+    router.options.scrollBehavior = (to, from, savedPosition) => {
+      if (to.hash) {
+        return {
+          el: to.hash,
+          top: 200,
+          behavior: 'smooth',
+        }
+      }
+      return savedPosition || { top: 0 }
     }
   },
   setup() {
     const themeLocale = useThemeLocaleData()
     const router = useRouter()
 
-    function isAutoSidebar(route: RouteLocationNormalized): boolean {
+    function isAutoSidebar(route): boolean {
       return route.fullPath?.startsWith('/generated/') || route.fullPath?.startsWith('/dotnet-generated/')
     }
 
@@ -62,7 +73,7 @@ export default defineClientConfig({
       flipToAutoSidebar()
     }
 
-    router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized) => {
+    router.beforeEach((to, from) => {
       const toIsAuto = isAutoSidebar(to)
       const fromIsAuto = isAutoSidebar(from)
       if (toIsAuto && !fromIsAuto) {

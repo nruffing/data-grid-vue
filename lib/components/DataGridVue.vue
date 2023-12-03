@@ -38,6 +38,8 @@
             @keydown.space="toggleFilterOptionsShown"
             @keydown.enter="toggleFilterOptionsShown"
             :aria-label="`Filter options are currently ${filterOptionsShown ? 'shown' : 'hidden'}, use space bar to toggle visibility.`"
+            role="checkbox"
+            :aria-checked="filterOptionsShown"
           >
             <Icon name="filter" />
             <span>{{ filterOptionsShown ? 'Hide' : 'Show' }} Filter Options</span>
@@ -61,6 +63,7 @@
             :aria-label="
               filterSummary ? `Clear all filters. Currently filtering by ${filterSummary}` : `Clear all filters. No filters currently applied.`
             "
+            role="button"
           >
             <Icon name="clear-filter" />
             <span>Clear Filters</span>
@@ -79,6 +82,8 @@
             @keydown.space="toggleColumnSelectionShown($event)"
             @keydown.enter="toggleColumnSelectionShown($event)"
             aria-label="Open the add/remove columns menu."
+            role="checkbox"
+            :aria-checked="!!popupOptions"
           >
             <Icon name="add-column" />
             <span>Add/Remove Columns</span>
@@ -105,6 +110,7 @@
       v-dgv-focus="{
         focusOnUpdate: focusedColumnFieldName === column.field.fieldName,
         onFocus: () => (focusedColumnFieldName = column.field.fieldName),
+        onBlur: () => (focusedColumnFieldName = undefined),
       }"
     />
 
@@ -143,6 +149,10 @@
         />
       </slot>
     </Transition>
+    <!-- 
+      Scrollable region must have keyboard access.
+      https://dequeuniversity.com/rules/axe/4.8/scrollable-region-focusable?application=AxeChrome
+    -->
     <div
       class="dgv-data-grid-body"
       v-show="!isLoading"
@@ -151,6 +161,8 @@
         gridTemplateColumns: gridTemplateColumns,
         gridTemplateRows: gridBodyTemplateRows,
       }"
+      tabindex="0"
+      :aria-label="`Data grid content, currently displaying page ${currentPage} with ${displayedData.length} of ${totalItems} total items.`"
     >
       <template
         v-for="(dataItem, index) in displayedData"

@@ -2,6 +2,15 @@
 
 ## Release Notes
 
+### v3.0.1
+  - bugfix: click outside directive used for closing the add/remove columns popup is incorrectly using page position instead of viewport position
+  - bugfix: header title and aria label incorrectly informs user that a column can be sorted when sort is turned on for the grid but not that specific column
+  - bugfix: focus is placed back on whichever column header was focused last when performing another update like filtering
+  - accessibility: scrollable region must have keyboard access for `dgv-data-grid-body`
+  - accessibility: `aria-label` attribute cannot be used on a span with no valid `role` attribute for `dgv-filter-operator` and `options-header`.
+  - docs: fix critical accessibility errors reported by axe
+
+
 ### v3.0.0
   ::: danger BREAKING
   node v18 is now the minimum supported version. This was previously v14. v18 is the [current oldest lts version of node](https://nodejs.org/en/about/previous-releases).

@@ -6,7 +6,6 @@
   --color-secondary: #598F91;
   --color-secondary-opaque: #598F9157;
 
-
   --color-accent1: #40E6B2;
   --color-accent2: #40ADE6;
   --color-accent3: #7ECCCF;
@@ -16,7 +15,7 @@
   --color-most-darkest: #000000;
   --color-darkest: #1a1a1a;
   --color-darker: #222222;
-  --color-more-dark: #292929;
+  --color-more-dark: #404040;
   --color-dark: #505050;
   --color-less-dark: #666666;
 
@@ -45,6 +44,8 @@
   --code-block-border-left-width: 0.5rem;
   --code-block-border: var(--code-block-border-width) solid var(--color-primary);
   --code-block-radius: 5px;
+
+  --modal-border-radius: 5px;
 }
 
 html.dark {
@@ -56,7 +57,7 @@ html.dark {
   --c-bg-light: var(--color-dark);
   --c-text-lighter: var(--color-lighter);
   --c-tip: var(--color-secondary);
-  --c-tip-bg: var(--color-more-dark);
+  --c-tip-bg: var(--color-darker);
   --c-details-bg: var(--color-more-dark);
   --c-danger-bg: var(--color-most-darkest);
   --c-danger-text-light: var(--color-danger-text);
@@ -67,6 +68,16 @@ html.dark {
 /*
 TYPOGRAPHY
 */
+
+/* 
+Changes to the default theme to support using headerLink of markdown-it-anchor for proper accessibility.
+*/
+a.header-anchor {
+  opacity: 1;
+  float: none;
+  margin-left: 0;
+}
+
 h2 {
   border-bottom-color: var(--color-secondary-opaque);
 }
@@ -82,12 +93,25 @@ h2 {
   padding-top: 0;
 }
 
-h1 {
+h1, h1 a {
   color: var(--c-text);
 }
 
-h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: var(--color-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* add scroll margin to account for fixed navbar */
+  scroll-margin-top: calc(var(--navbar-height) + 1rem);
+}
+
+p a code {
+  color: var(--color-accent3);
+}
+
+code {
+  background-color: var(--color-more-dark);
 }
 
 /*
@@ -191,4 +215,61 @@ DATA GRID VUE EXAMPLES
 
 .grid-container > .dgv-data-grid-container {
   height: 100%;
+}
+
+/*
+DOC SEARCH
+*/
+.navbar-items-wrapper .DocSearch-Button {
+  background: var(--color-darker);
+  border: 1px solid var(--color-primary-opaque);
+}
+
+.navbar-items-wrapper .DocSearch-Button .DocSearch-Search-Icon {
+  color: var(--color-primary);
+}
+
+.DocSearch-Container .DocSearch-Modal {
+  border-radius: var(--modal-border-radius);
+  box-shadow: none;
+  background-color: var(--color-darker);
+  border: 1px solid var(--color-primary-opaque);
+}
+
+.DocSearch-Container .DocSearch-Help,
+.DocSearch-Container .DocSearch-Reset,
+.DocSearch-Container .DocSearch-Input,
+.DocSearch-Container .DocSearch-MagnifierLabel {
+  color: var(--color-lighter);
+}
+
+.DocSearch-Container .DocSearch-Form {
+  background: var(--color-most-darkest);
+  border: 1px solid var(--color-primary-opaque);
+  box-shadow: none;
+  border-radius: var(--modal-border-radius);
+}
+
+.DocSearch-Container .DocSearch-Hit-source {
+  background-color: var(--color-darker);
+}
+
+.DocSearch-Container .DocSearch-Hit {
+  border-radius: var(--modal-border-radius);
+}
+
+.DocSearch-Container .DocSearch-Hit a {
+  box-shadow: none;
+  background: var(--color-most-darkest);
+}
+
+.DocSearch-Container .DocSearch-Hit-Container {
+  color: var(--color-lighter);
+}
+
+.DocSearch-Container .DocSearch-Footer {
+  border-radius: 0 0 var(--modal-border-radius) var(--modal-border-radius);
+  box-shadow: none;
+  border-top: 1px solid var(--color-primary-opaque);
+  background-color: var(--color-most-darkest);
 }
