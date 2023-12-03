@@ -10,7 +10,7 @@ import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import anchor from 'markdown-it-anchor'
-import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import googleAnalyticsPlugin from '@vuepress/plugin-google-analytics'
 
 const domain = 'datagridvue.com'
 const hostname = `https://${domain}`
