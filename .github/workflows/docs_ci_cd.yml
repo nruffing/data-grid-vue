@@ -36,4 +36,11 @@ jobs:
           skip_app_build: true
       - name: Trigger Algolia docsearch crawler
         run: curl -H "Content-Type:application/json" --user 8f4b2817-400d-4d96-aa27-171a1165de82:${{ secrets.ALGOLIA_CRAWLER_KEY }} "https://crawler.algolia.com/api/1/"
+      - name: Request URL Indexing
+        run: pnpm run request-index
+        env:
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+
 

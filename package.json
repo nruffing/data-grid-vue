@@ -64,7 +64,7 @@
     "typedoc": "pnpm run build && pnpm exec tsc --project ./scripts/typedoc/tsconfig.typedoc-vue.json && pnpm exec typedoc --options ./scripts/typedoc/typedoc.json",
     "spellcheck": "pnpm cspell .",
     "dotnet-doc": "pnpm exec tsc --project ./scripts/dotnet-doc-download/tsconfig.dotnet-doc-download.json && node ./scripts/dotnet-doc-download/dotnet-doc-download.js",
-    "request-index": "pnpm run -r build && pnpm exec tsc --project ./scripts/request-index/tsconfig.request-index.json && node ./scripts/request-index/request-index.js",
+    "request-index": "pnpm exec tsc --project ./scripts/request-index/tsconfig.request-index.json && node ./scripts/request-index/request-index.js",
     "axe": "pnpm run -r build && pnpm exec tsc --project ./scripts/axe/tsconfig.axe.json && node ./scripts/axe/axe.js",
     "docs:dev": "pnpm run --filter './vuepress' dev",
     "docs:build": "pnpm run --filter './vuepress' build",
