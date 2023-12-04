@@ -6,26 +6,23 @@ import Layout from './layouts/Layout.vue'
 import { useThemeLocaleData } from '../node_modules/@vuepress/theme-default/lib/client'
 import { useRouter } from 'vue-router'
 import { ApplicationInsights } from '@microsoft/applicationinsights-web'
-import { ClickAnalyticsPlugin } from '@microsoft/applicationinsights-clickanalytics-js'
 
 let sideBarCache: any = false
 
-const clickPluginInstance = new ClickAnalyticsPlugin()
-const clickPluginConfig = {
-  autoCapture: true,
-  useDefaultContentNameOrId: true,
-  urlCollectQuery: true,
-  urlCollectHash: true,
-}
 const appInsights = new ApplicationInsights({
   config: {
     connectionString:
       'InstrumentationKey=99a45096-c9c1-471c-ae4a-03ada9fe086f;IngestionEndpoint=https://eastus2-3.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus2.livediagnostics.monitor.azure.com/',
-    extensions: [clickPluginInstance],
-    extensionConfig: {
-      [clickPluginInstance.identifier]: clickPluginConfig,
-    },
   },
+})
+
+appInsights.addTelemetryInitializer(envelope => {
+  if (!envelope.data) {
+    envelope.data = {}
+  }
+  envelope.data['userAgent'] = navigator.userAgent
+  envelope.data['language'] = navigator.language
+  envelope.data['referrer'] = document.referrer
 })
 
 export default defineClientConfig({

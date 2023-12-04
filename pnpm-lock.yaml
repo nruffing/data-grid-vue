@@ -154,9 +154,6 @@ importers:
 
   vuepress:
     dependencies:
-      '@microsoft/applicationinsights-clickanalytics-js':
-        specifier: ^3.0.5
-        version: 3.0.5(tslib@2.6.2)
       '@microsoft/applicationinsights-web':
         specifier: ^3.0.5
         version: 3.0.5(tslib@2.6.2)
@@ -2402,20 +2399,6 @@ packages:
       '@microsoft/applicationinsights-shims': 3.0.1
       '@microsoft/dynamicproto-js': 2.0.2
       '@nevware21/ts-async': 0.3.0
-      '@nevware21/ts-utils': 0.10.1
-      tslib: 2.6.2
-    dev: false
-
-  /@microsoft/applicationinsights-clickanalytics-js@3.0.5(tslib@2.6.2):
-    resolution: {integrity: sha512-x1+l93eWIY4Gt9XhRkBxoGwebmhMdBoX+dk9LiHVRQhQABOBCW2fokf59OXg+1d3lyANognVCxnjF5LeZjDYnw==}
-    peerDependencies:
-      tslib: '*'
-    dependencies:
-      '@microsoft/applicationinsights-common': 3.0.5(tslib@2.6.2)
-      '@microsoft/applicationinsights-core-js': 3.0.5(tslib@2.6.2)
-      '@microsoft/applicationinsights-properties-js': 3.0.5(tslib@2.6.2)
-      '@microsoft/applicationinsights-shims': 3.0.1
-      '@microsoft/dynamicproto-js': 2.0.2
       '@nevware21/ts-utils': 0.10.1
       tslib: 2.6.2
     dev: false

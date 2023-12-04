@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/nruffing/data-grid-vue#readme",
   "dependencies": {
-    "@microsoft/applicationinsights-clickanalytics-js": "^3.0.5",
     "@microsoft/applicationinsights-web": "^3.0.5",
     "@vuepress/bundler-vite": "2.0.0-rc.0",
     "@vuepress/cli": "2.0.0-rc.0",
