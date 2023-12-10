@@ -1,0 +1,127 @@
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  min-height: 0;
+  min-width: 0;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: flex-start;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+}
+
+.fade-slide-y-leave-active .landing {
+  display: none; // styles are removed when transitioning out since the data-grid-vue-landing class is removed
+}
+
+.data-grid-vue-landing {
+  --content-width: 2000px;
+
+  --landing-color-primary: var(--color-darkest);
+  --landing-color-secondary: var(--color-darker);
+  --landing-container-margin: 4rem;
+
+  .navbar > span {
+    display: none; // remove logo from home page
+  }
+
+  .theme-default-content {
+    padding: 0;
+
+    & > div > *:not(.landing) {
+      margin: 2rem 2.5rem;
+    }
+  }
+
+  .landing {
+    $landingGap: 5rem;
+
+    .landing-container {      
+      @include flex-row;
+      position: absolute;
+      top: var(--navbar-height);
+      margin: var(--landing-container-margin);
+      max-width: calc(var(--content-width) - (2 * var(--landing-container-margin)));
+      width: calc(100% - (2 * var(--landing-container-margin)));
+      gap: $landingGap;
+    }
+
+    .left {
+      @include flex-column;
+      flex-basis: 33%;
+    }
+
+    .right {
+      @include flex-column;
+      flex-basis: 66%;
+    }
+
+    .title {
+      $height: 3rem;
+      @include flex-row;
+
+      & > .logo {
+        height: $height;
+      }
+
+      & > h1 {
+        font-size: $height;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    .sub-title {
+      @include flex-column;
+      align-items: flex-start;
+      margin: 2rem 0;
+      height: auto;
+
+      h2 {
+        text-decoration: none;
+        border: none;
+        margin: 0;
+        color: var(--c-text);
+      }
+
+      h2:before {
+        content: ">";
+        color: var(--color-secondary);
+        margin-right: 0.8rem;
+      }
+    }
+
+    .badges {
+      @include flex-row;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      a {
+        @include flex-row;
+      }
+     
+      button {
+        background-color: var(--color-primary);
+        color: var(--color-darker);
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+      }
+    }
+
+    .dgv-data-grid-container {
+      height: 100%;
+      max-height: 900px;
+    }
+  }
+}

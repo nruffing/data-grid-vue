@@ -35,7 +35,7 @@
 
 <br />
 <div class="example-image-container">
-  <img src="./vuepress/.vuepress/public/example.png" />
+  <img src="./vuepress/.vuepress/public/example2.png" />
 </div>
 
 <br />
