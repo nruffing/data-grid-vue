@@ -2,6 +2,10 @@
 
 ## Release Notes
 
+### v3.1.0
+  - Update ['dragon-drop-vue'](https://www.npmjs.com/package/dragon-drop-vue) dependency to v1.1.0
+  - update development dependencies
+
 ### v3.0.1
   - bugfix: click outside directive used for closing the add/remove columns popup is incorrectly using page position instead of viewport position
   - bugfix: header title and aria label incorrectly informs user that a column can be sorted when sort is turned on for the grid but not that specific column
