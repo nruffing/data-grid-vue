@@ -1,3 +1,10 @@
+# Contribution Guidelines
+
+For more information on the communities code of conduct read the [guide](https://github.com/nruffing/data-grid-vue/blob/main/CODE_OF_CONDUCT.md).
+
+## Pull Requests
+
+Please fork repository from `main` branch and pull request changes back into the `main` branch.
 
 ## Development Environment
 
