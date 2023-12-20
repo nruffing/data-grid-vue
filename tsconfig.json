@@ -5,7 +5,8 @@
     "baseUrl": ".",
     "declaration": true,
     "outDir": "dist/types",
-    "removeComments": false
+    "removeComments": false,
+    "noEmit": false
   },
   "references": [
     {
