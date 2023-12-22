@@ -35,7 +35,7 @@ jobs:
     - run: pnpm run ci-all
 
   build_and_publish:
-    runs-on: mac-latest
+    runs-on: macos-latest
     needs: [ci]
     if: github.ref == 'refs/heads/main'    
     env:
@@ -68,7 +68,7 @@ jobs:
       should_publish: ${{ env.SHOULD_PUBLISH }}
  
   create_release:
-    runs-on: mac-latest
+    runs-on: macos-latest
     needs: [build_and_publish]
     if: fromJson(needs.build_and_publish.outputs.should_publish)
     env:
