@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import ParentLayout from '../../node_modules/@vuepress/theme-default/lib/client/layouts/layout.vue'
+import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
 
 // https://buttons.github.io/
 import GithubButton from 'vue-github-button'
