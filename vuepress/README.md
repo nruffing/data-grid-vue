@@ -5,7 +5,7 @@ pageClass: data-grid-vue-landing
 <div class="landing" :class="{ 'show-nav-logo': showNavLogo }">  
   <div class="left">
     <span class="title">
-      <img class="logo" src="favicon.png" />
+      <img class="logo" src="/favicon.png" />
       <h1>Data Grid Vue</h1>
     </span>
     <div class="flex-spacer"></div>
