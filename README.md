@@ -35,7 +35,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
 
 <br />
 <div class="example-image-container">
-  <img src="./vuepress/.vuepress/public/example.png" />
+  <img src="./vuepress/.vuepress/public/example2.png" />
 </div>
 
 <br />

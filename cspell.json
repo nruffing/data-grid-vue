@@ -9,6 +9,7 @@
     "docsearch",
     "gapi",
     "keyvault",
+    "navigatable",
     "nmprc",
     "nruffing",
     "octicon",
@@ -20,6 +21,6 @@
     "vuepress",
     "xmldocmd"
   ],
-  "ignoreWords": ["datagrid"],
+  "ignoreWords": ["datagrid", "Freepik"],
   "ignorePaths": ["**/test-data", "**/demo-data", "**tsconfig**", "./typedoc-out.json", "**/pnpm-lock.yaml"]
 }
