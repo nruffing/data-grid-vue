@@ -2,81 +2,106 @@
 pageClass: data-grid-vue-landing
 ---
 
-<div class="landing">
-  <div class="landingBackground">
-    <LandingBackground />
+<div class="landing" :class="{ 'show-nav-logo': showNavLogo }">  
+  <div class="left">
+    <span class="title">
+      <img class="logo" src="favicon.png" />
+      <h1>Data Grid Vue</h1>
+    </span>
+    <div class="flex-spacer"></div>
+    <span class="sub-title">
+      <h2><span class="caret"></span>Natively designed for Vue3</h2>
+      <h2><span class="caret"></span>Designed for full customization</h2>
+      <h2><span class="caret"></span>Flat HTML and CSS grid for full layout control</h2>
+      <h2><span class="caret"></span>All features included in MIT license</h2>
+    </span>
+    <div class="get-started-container">
+      <button @click="onGetStarted">Get Started</button>
+    </div>
+    <div class="flex-spacer"></div>
+    <div class="badges">
+      <a href="https://www.npmjs.com/package/data-grid-vue" target="_blank" aria-label="npm">
+        <img alt="npm" src="https://img.shields.io/npm/v/data-grid-vue?logo=npm" />
+      </a>
+      <a href="https://github.com/nruffing/data-grid-vue/actions/workflows/ci_cd.yml">
+        <img src="https://github.com/nruffing/data-grid-vue/actions/workflows/ci_cd.yml/badge.svg" />
+      </a>
+      <a href="https://github.com/nruffing/data-grid-vue/blob/main/LICENSE" target="_blank" aria-label="MIT License">
+        <img alt="GitHub" src="https://img.shields.io/github/license/nruffing/data-grid-vue" />
+      </a>
+    </div>
   </div>
-  <div
-    class="landing-container"
-    :style="{ height: `calc(${landingHeight}px - calc(2 * var(--landing-container-margin)))` }"
-  >
-    <div class="left">
-      <span class="title">
-        <img class="logo" src="favicon.png" />
-        <h1>Data Grid Vue</h1>
-      </span>
-      <span class="sub-title">
-        <h2>Natively designed for Vue3</h2>
-        <h2>Design for full customization</h2>
-        <h2>Flat html and CSS grid for full layout control</h2>
-        <h2>All features included in MIT license</h2>
-      </span>
-      <div class="badges">
-        <button @click="onGetStarted">Get Started</button>
-        <a href="https://www.npmjs.com/package/data-grid-vue" target="_blank" aria-label="npm">
-          <img alt="npm" src="https://img.shields.io/npm/v/data-grid-vue?logo=npm" />
-        </a>
-        <a href="https://github.com/nruffing/data-grid-vue/blob/main/LICENSE" target="_blank" aria-label="MIT License">
-          <img alt="GitHub" src="https://img.shields.io/github/license/nruffing/data-grid-vue" />
-        </a>
-      </div>
-    </div>
-    <div class="right">
-      <dgv-data-grid
-        v-if="columns.length"
-        v-model:columns="columns"
-        :data="data"
-        :sort-options="{
-          sortable: true,
-          multiColumn: false,
-        }"
-        :allow-column-reorder="true"
-        :show-column-selection="true"
-      >
-      </dgv-data-grid>
-    </div>
+  <div class="right">
+    <dgv-data-grid
+      v-if="columns.length"
+      v-model:columns="columns"
+      :data="data"
+      :sort-options="{
+        sortable: true,
+        multiColumn: false,
+      }"
+      :allow-column-reorder="true"
+      :show-column-selection="true"
+    >
+    </dgv-data-grid>
   </div>
 </div>
+<hr />
+<div class="features">
+  <LandingFeature>
+    <template #title>Native Vue3 Design</template>
+    <template #description>This data grid is not a port from another framework or component. All design decisions were made for use in a Vue application.</template>
+  </LandingFeature>
+  <LandingFeature>
+    <template #title>Flat HTML Architecture</template>
+    <template #description>There is only a single layer of nesting for the data rows to be able to scroll. The rest of the HTML is flat and is arranged with CSS grid. This allows for full layout control whether its rendered on an entire page or nested into a few flex containers.</template>
+  </LandingFeature>
+  <LandingFeature>
+    <template #title>Full Customization</template>
+    <template #description>Nearly every part of the data grid can be customized with a slot template. Custom data service can be provided to customize how data is retrieved, paged, sorted, and filtered. Included server-side data server has hooks for request and response contract mapping.</template>
+  </LandingFeature>
+  <LandingFeature>
+    <template #title>Accessible</template>
+    <template #description>All features and markup have correct setup to be fully screen-readable and keyboard-navigatable. This includes custom descriptions for screen readers to describe the current state of the data grid.</template>
+  </LandingFeature>
+  <LandingFeature>
+    <template #title>Few Dependencies</template>
+    <template #description>All of the data grid is implemented using built-in browser functionality. The only dependencies used are flat and just provide easier Vue access to browser APIs. For example, <a href="https://www.npmjs.com/package/dragon-drop-vue" target="_blank">dragon drop vue</a> is used as a reactive wrapper around the browser's drag-and-drop APIs.</template>
+  </LandingFeature>
+  <LandingFeature>
+    <template #title>MIT License, Forever</template>
+    <template #description>All features are currently under an MIT license and free to use for commercial and personal use. We intend to keep it like this forever.</template>
+  </LandingFeature>
+</div>
+<hr />
 
 <script lang="ts" setup>
 import { ref, inject, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 
-const landingHeight = ref<number>(0)
 const columns = ref<Column[]>([])
 const data = ref<any[]>([])
+const showNavLogo = ref(false)
+
+function onScroll() {
+  showNavLogo.value = window.scrollY > 150
+}
 
 onMounted(() => {
   const DEMO = inject('demo')
   columns.value = [...DEMO.columns]
-  data.value = DEMO.data
-  onWindowResize()
-  window.addEventListener('resize', onWindowResize)
+  data.value = DEMO.data  
+
+  window.addEventListener('scroll', onScroll)
+  onScroll()
 })
 
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', onWindowResize)
+  window.removeEventListener('scroll', onScroll)
 })
-
-function onWindowResize() {
-  const backgroundContainer = document.querySelector('.landingBackground')
-  landingHeight.value = backgroundContainer?.clientHeight ?? 0
-}
 
 const router = useRouter()
 function onGetStarted() {
   router.push({ path: '/guide' })
 }
 </script>
-
-!!!include(features.md)!!!

@@ -22,45 +22,44 @@
 }
 
 .data-grid-vue-landing {
-  --content-width: 2000px;
+  $landingGap: 3rem;
 
-  --landing-color-primary: var(--color-darkest);
-  --landing-color-secondary: var(--color-darker);
+  --content-width: 2500px;
   --landing-container-margin: 4rem;
+
+  background-image: url('/background.min.svg');
 
   .navbar > span {
     display: none; // remove logo from home page
   }
 
+  &:has(.show-nav-logo) .navbar > span {
+    display: block;
+  }
+
   .theme-default-content {
     padding: 0;
-
-    & > div > *:not(.landing) {
-      margin: 2rem 2.5rem;
-    }
   }
 
   .landing {
-    $landingGap: 5rem;
-
-    .landing-container {      
-      @include flex-row;
-      position: absolute;
-      top: var(--navbar-height);
-      margin: var(--landing-container-margin);
-      max-width: calc(var(--content-width) - (2 * var(--landing-container-margin)));
-      width: calc(100% - (2 * var(--landing-container-margin)));
-      gap: $landingGap;
-    }
+    @include flex-row;
+    top: var(--navbar-height);
+    margin: var(--landing-container-margin);
+    max-width: calc(var(--content-width) - (2 * var(--landing-container-margin)));
+    width: calc(100% - (2 * var(--landing-container-margin)));
+    gap: $landingGap;
+    flex-wrap: wrap;
+    justify-content: stretch;
 
     .left {
       @include flex-column;
-      flex-basis: 33%;
+      flex-basis: calc(calc(100% - (2 * var(--landing-container-margin))) * 0.33);
+      min-width: 500px;
     }
 
     .right {
       @include flex-column;
-      flex-basis: 66%;
+      flex-basis: calc(calc(100% - (2 * var(--landing-container-margin))) * 0.66);
     }
 
     .title {
@@ -85,13 +84,15 @@
       height: auto;
 
       h2 {
+        @include flex-row;
+        justify-content: center;
         text-decoration: none;
         border: none;
         margin: 0;
         color: var(--c-text);
       }
 
-      h2:before {
+      h2 .caret:before {
         content: ">";
         color: var(--color-secondary);
         margin-right: 0.8rem;
@@ -107,21 +108,99 @@
       a {
         @include flex-row;
       }
-     
+    }
+
+    .get-started-container {
+      @include flex-row;      
+      justify-content: center;
+
       button {
         background-color: var(--color-primary);
         color: var(--color-darker);
-        border: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: var(--color-primary) 2px solid;
         box-shadow: none;
         padding: 0.5rem 1rem;
         border-radius: var(--border-radius);
         cursor: pointer;
       }
+
+      button:hover,
+      button:focus {
+        background-color: transparent;
+        color: var(--color-primary);
+      }
     }
 
     .dgv-data-grid-container {
       height: 100%;
-      max-height: 900px;
+      max-height: 700px;
+    }
+  }
+
+  .features {
+    @include flex-row;
+    margin: var(--landing-container-margin) calc(var(--landing-container-margin) + $landingGap);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: $landingGap;
+
+    .landing-feature {
+      @include flex-column;
+      flex-basis: 25%;
+      border: var(--color-primary-opaque) 2px solid;
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      height: 200px;
+      gap: 1rem;
+
+      .feature-title {
+        h3 {
+          margin: 0;
+        }
+      }
+
+      .feature-description {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  .page-meta {
+    margin-top: 2rem;
+  }
+
+  @media screen and (max-width: 1500px) {
+    .landing {
+      .left {
+        flex-basis: 100%;
+        min-width: 0;
+      }
+
+      .right {
+        flex-basis: 100%;
+        min-width: 0;
+      }
+    }
+    
+    .features {
+      .landing-feature {
+        flex-basis: 35%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .features {
+      margin: var(--landing-container-margin);
+
+      .landing-feature {
+        flex-basis: 80%;
+        height: auto;
+      }
     }
   }
 }
