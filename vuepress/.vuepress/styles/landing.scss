@@ -203,4 +203,16 @@
       }
     }
   }
+
+  @media screen and (max-width: 500px) {
+    .landing {
+      .title h1 {
+        font-size: 2.2rem;
+      }
+
+      .sub-title h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }

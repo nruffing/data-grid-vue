@@ -6,6 +6,15 @@
 }
 
 /*
+NAV
+*/
+@media screen and (max-width: 1200px) and (min-width: 500px) {
+  .site-name.can-hide {
+    display: inline;
+  }
+}
+
+/*
 TYPOGRAPHY
 */
 
@@ -53,6 +62,7 @@ p a code {
 code {
   background-color: var(--color-more-dark);
 }
+
 
 /*
 CUSTOM CONTAINERS
@@ -125,7 +135,7 @@ BADGES
 
 @media (max-width: $MQMobile) {
   .github-buttons {
-   margin-right: 0; 
+    margin-right: 0; 
   }
 }
 
