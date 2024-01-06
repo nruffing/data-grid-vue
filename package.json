@@ -44,7 +44,8 @@
       "types": "./dist/types/main.d.ts",
       "import": "./dist/data-grid-vue.js",
       "require": "./dist/data-grid-vue.umd.cjs"
-    }
+    },
+    "./style": "./dist/style.css"
   },
   "types": "./dist/types/main.d.ts",
   "main": "dist/data-grid-vue.umd.js",

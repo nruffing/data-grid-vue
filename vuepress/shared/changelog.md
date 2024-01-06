@@ -2,6 +2,9 @@
 
 ## Release Notes
 
+### v3.2.0
+  - [#9](https://github.com/nruffing/data-grid-vue/issues/9): Add package export so styles can be loaded via `data-grid-vue/style`.
+
 ### v3.1.0
   - Update ['dragon-drop-vue'](https://www.npmjs.com/package/dragon-drop-vue) dependency to v1.1.0
   - update development dependencies

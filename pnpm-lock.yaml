@@ -111,12 +111,9 @@ importers:
 
   dev-app:
     dependencies:
-      debounce:
-        specifier: ^2.0.0
-        version: 2.0.0
-      dragon-drop-vue:
-        specifier: ^1.1.0
-        version: 1.1.0(vue@3.3.13)
+      data-grid-vue:
+        specifier: workspace:*
+        version: link:..
     devDependencies:
       '@babel/types':
         specifier: ^7.23.6
@@ -390,7 +387,7 @@ packages:
     dependencies:
       '@axe-core/webdriverjs': 4.8.2(selenium-webdriver@4.15.0)
       axe-core: 4.8.2
-      chromedriver: 120.0.0
+      chromedriver: 120.0.1
       colors: 1.4.0
       commander: 9.5.0
       selenium-webdriver: 4.15.0
@@ -4114,8 +4111,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /chromedriver@120.0.0:
-    resolution: {integrity: sha512-LGy2LhWRBiqDarFIU8gQ43EEyj+07Tc3JuUhthkESAwZ99lrifSnKZwKU0aVwansU84+k6bt71z7K3dkk65gZg==}
+  /chromedriver@120.0.1:
+    resolution: {integrity: sha512-ETTJlkibcAmvoKsaEoq2TFqEsJw18N0O9gOQZX6Uv/XoEiOV8p+IZdidMeIRYELWJIgCZESvlOx5d1QVnB4v0w==}
     engines: {node: '>=18'}
     hasBin: true
     requiresBuild: true

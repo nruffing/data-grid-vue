@@ -37,7 +37,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { DataGridVue } from 'data-grid-vue'
 
-import '../node_modules/data-grid-vue/dist/style.css'
+import 'data-grid-vue/style'
 
 createApp(App).use(DataGridVue).mount('#app')
 ```
@@ -46,7 +46,7 @@ createApp(App).use(DataGridVue).mount('#app')
 
 Make sure to import the data grid core styles prior to any application-specific styles to be able to override the values of the predefined <a href="/theme" target="_blank">CSS Variables</a>.
 
-The styles and variables can be imported from `../node_modules/data-grid-vue/dist/style.css`.
+The styles and variables can be imported from `data-grid-vue/style`.
 
 ### Plugin Options
 
@@ -55,7 +55,7 @@ The `DataGridVue` plugin has additional options that can be specified. These opt
 ```ts
 import { DataGridVue, type DataGridVueOptions } from 'data-grid-vue'
 
-import '../node_modules/data-grid-vue/dist/style.css'
+import 'data-grid-vue/style'
 
 const dataGridVueOptions = {
   dataGridComponentName: 'custom-data-grid',

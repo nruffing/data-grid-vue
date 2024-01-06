@@ -43,7 +43,7 @@ Here is a high level overview of the HTML that gets rendered.
 Including the data grid's core styles will come with the CSS variables below.  The below also includes their default values.  The data grid can be themed by adjusting the values of these CSS variables.  The core stylesheet can be loaded using an import statement similar to the following in your `main.ts` file. It is recommended to import it prior to any application stylesheets to be able to properly override the variable values.
 
 ```ts
-import '../node_modules/data-grid-vue/dist/style.css'
+import 'data-grid-vue/style'
 ```
 
 ::: tip Note
