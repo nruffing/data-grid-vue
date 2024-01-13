@@ -17,7 +17,8 @@ describe('justADatePlease', () => {
 
   test('date with offset rollover on day', () => {
     const date = new Date(2021, 0, 1, 22, 2, 3, 4)
-    expect(justADatePlease(date)).toEqual(new Date(Date.UTC(2021, 0, 2, 0, 0, 0, 0)))
+    const expectedDate = date.getTimezoneOffset() > 120 ? 2 : 1
+    expect(justADatePlease(date)).toEqual(new Date(Date.UTC(2021, 0, expectedDate, 0, 0, 0, 0)))
   })
 })
 
