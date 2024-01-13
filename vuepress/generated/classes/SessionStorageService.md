@@ -10,9 +10,9 @@ Storage service that saves grid state in [sessionStorage](https://developer.mozi
 
 ## Properties
 
-| Property | Type | Description |
-| :------ | :------ | :------ |
-| `key` | `string` | - |
+| Property | Type |
+| :------ | :------ |
+| `key` | `string` |
 
 ## Constructors
 

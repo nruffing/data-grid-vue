@@ -938,6 +938,120 @@
 					"variant": "declaration",
 					"kind": 1024,
 					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Called to get data for the currently rendered page."
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@param",
+								"name": "pageNum",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The page number for the page to load starting with "
+									},
+									{
+										"kind": "code",
+										"text": "`1`"
+									},
+									{
+										"kind": "text",
+										"text": " for the first page.\nIf the data grid is not set configured to be pageable with the "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "DataGridVueGrid.paged",
+										"target": 228
+									},
+									{
+										"kind": "text",
+										"text": "\nprop then this will always be "
+									},
+									{
+										"kind": "code",
+										"text": "`-1`"
+									},
+									{
+										"kind": "text",
+										"text": "."
+									}
+								]
+							},
+							{
+								"tag": "@param",
+								"name": "pageSize",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The maximum number of data items to display on each page. If the data grid is\nnot set configured to be pageable with the "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "DataGridVueGrid.paged",
+										"target": 228
+									},
+									{
+										"kind": "text",
+										"text": " prop then this\nwill always be "
+									},
+									{
+										"kind": "code",
+										"text": "`-1`"
+									},
+									{
+										"kind": "text",
+										"text": "."
+									}
+								]
+							},
+							{
+								"tag": "@param",
+								"name": "sort",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The current column sort definitions in the order in which they should be applied."
+									}
+								]
+							},
+							{
+								"tag": "@param",
+								"name": "filter",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The current filter definition or undefined if no filter is set."
+									}
+								]
+							},
+							{
+								"tag": "@returns",
+								"content": [
+									{
+										"kind": "text",
+										"text": "A Promise that returns the "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "PageData",
+										"target": 43,
+										"tsLinkText": ""
+									},
+									{
+										"kind": "text",
+										"text": " for the current page."
+									}
+								]
+							}
+						]
+					},
 					"type": {
 						"type": "reflection",
 						"declaration": {
@@ -1438,6 +1552,120 @@
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Called to get data for the currently rendered page."
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@param",
+								"name": "pageNum",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The page number for the page to load starting with "
+									},
+									{
+										"kind": "code",
+										"text": "`1`"
+									},
+									{
+										"kind": "text",
+										"text": " for the first page.\nIf the data grid is not set configured to be pageable with the "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "DataGridVueGrid.paged",
+										"target": 228
+									},
+									{
+										"kind": "text",
+										"text": "\nprop then this will always be "
+									},
+									{
+										"kind": "code",
+										"text": "`-1`"
+									},
+									{
+										"kind": "text",
+										"text": "."
+									}
+								]
+							},
+							{
+								"tag": "@param",
+								"name": "pageSize",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The maximum number of data items to display on each page. If the data grid is\nnot set configured to be pageable with the "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "DataGridVueGrid.paged",
+										"target": 228
+									},
+									{
+										"kind": "text",
+										"text": " prop then this\nwill always be "
+									},
+									{
+										"kind": "code",
+										"text": "`-1`"
+									},
+									{
+										"kind": "text",
+										"text": "."
+									}
+								]
+							},
+							{
+								"tag": "@param",
+								"name": "sort",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The current column sort definitions in the order in which they should be applied."
+									}
+								]
+							},
+							{
+								"tag": "@param",
+								"name": "filter",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The current filter definition or undefined if no filter is set."
+									}
+								]
+							},
+							{
+								"tag": "@returns",
+								"content": [
+									{
+										"kind": "text",
+										"text": "A Promise that returns the "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "PageData",
+										"target": 43,
+										"tsLinkText": ""
+									},
+									{
+										"kind": "text",
+										"text": " for the current page."
+									}
+								]
+							}
+						]
+					},
 					"signatures": [
 						{
 							"id": 72,
@@ -1924,6 +2152,52 @@
 			"variant": "declaration",
 			"kind": 2097152,
 			"flags": {},
+			"comment": {
+				"summary": [],
+				"blockTags": [
+					{
+						"tag": "@description",
+						"content": [
+							{
+								"kind": "text",
+								"text": "Callback type to change the "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "Request",
+								"target": "https://developer.mozilla.org/docs/Web/API/Request"
+							},
+							{
+								"kind": "text",
+								"text": "\nobject before it is sent to the server from the built-in server side data service. This is useful\nwhen you need to map the "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "PageDataRequest",
+								"target": 77,
+								"tsLinkText": ""
+							},
+							{
+								"kind": "text",
+								"text": " to a different data contract."
+							}
+						]
+					},
+					{
+						"tag": "@see",
+						"content": [
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "dotnet IQueryable helpers",
+								"target": "https://www.nuget.org/packages/DataGridVueDotnet/0.0.1-alpha"
+							}
+						]
+					}
+				]
+			},
 			"type": {
 				"type": "reflection",
 				"declaration": {
@@ -1939,52 +2213,6 @@
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
-							"comment": {
-								"summary": [],
-								"blockTags": [
-									{
-										"tag": "@description",
-										"content": [
-											{
-												"kind": "text",
-												"text": "Callback type to change the "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "Request",
-												"target": "https://developer.mozilla.org/docs/Web/API/Request"
-											},
-											{
-												"kind": "text",
-												"text": "\nobject before it is sent to the server from the built-in server side data service. This is useful\nwhen you need to map the "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "PageDataRequest",
-												"target": 77,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": " to a different data contract."
-											}
-										]
-									},
-									{
-										"tag": "@see",
-										"content": [
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "dotnet IQueryable helpers",
-												"target": "https://www.nuget.org/packages/DataGridVueDotnet/0.0.1-alpha"
-											}
-										]
-									}
-								]
-							},
 							"parameters": [
 								{
 									"id": 85,
@@ -2050,6 +2278,52 @@
 			"variant": "declaration",
 			"kind": 2097152,
 			"flags": {},
+			"comment": {
+				"summary": [],
+				"blockTags": [
+					{
+						"tag": "@description",
+						"content": [
+							{
+								"kind": "text",
+								"text": "Callback type to change the "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "Response",
+								"target": "https://developer.mozilla.org/docs/Web/API/Response"
+							},
+							{
+								"kind": "text",
+								"text": "\nobject before it is handled by the data grid from the built-in server side data service.\nThis is useful when you need to map the servers response data back to "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "PageData",
+								"target": 43,
+								"tsLinkText": ""
+							},
+							{
+								"kind": "text",
+								"text": "."
+							}
+						]
+					},
+					{
+						"tag": "@see",
+						"content": [
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "dotnet IQueryable helpers",
+								"target": "https://www.nuget.org/packages/DataGridVueDotnet/0.0.1-alpha"
+							}
+						]
+					}
+				]
+			},
 			"type": {
 				"type": "reflection",
 				"declaration": {
@@ -2065,52 +2339,6 @@
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
-							"comment": {
-								"summary": [],
-								"blockTags": [
-									{
-										"tag": "@description",
-										"content": [
-											{
-												"kind": "text",
-												"text": "Callback type to change the "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "Response",
-												"target": "https://developer.mozilla.org/docs/Web/API/Response"
-											},
-											{
-												"kind": "text",
-												"text": "\nobject before it is handled by the data grid from the built-in server side data service.\nThis is useful when you need to map the servers response data back to "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "PageData",
-												"target": 43,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": "."
-											}
-										]
-									},
-									{
-										"tag": "@see",
-										"content": [
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "dotnet IQueryable helpers",
-												"target": "https://www.nuget.org/packages/DataGridVueDotnet/0.0.1-alpha"
-											}
-										]
-									}
-								]
-							},
 							"parameters": [
 								{
 									"id": 90,
@@ -2507,6 +2735,120 @@
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Called to get data for the currently rendered page."
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@param",
+								"name": "pageNum",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The page number for the page to load starting with "
+									},
+									{
+										"kind": "code",
+										"text": "`1`"
+									},
+									{
+										"kind": "text",
+										"text": " for the first page.\nIf the data grid is not set configured to be pageable with the "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "DataGridVueGrid.paged",
+										"target": 228
+									},
+									{
+										"kind": "text",
+										"text": "\nprop then this will always be "
+									},
+									{
+										"kind": "code",
+										"text": "`-1`"
+									},
+									{
+										"kind": "text",
+										"text": "."
+									}
+								]
+							},
+							{
+								"tag": "@param",
+								"name": "pageSize",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The maximum number of data items to display on each page. If the data grid is\nnot set configured to be pageable with the "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "DataGridVueGrid.paged",
+										"target": 228
+									},
+									{
+										"kind": "text",
+										"text": " prop then this\nwill always be "
+									},
+									{
+										"kind": "code",
+										"text": "`-1`"
+									},
+									{
+										"kind": "text",
+										"text": "."
+									}
+								]
+							},
+							{
+								"tag": "@param",
+								"name": "sort",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The current column sort definitions in the order in which they should be applied."
+									}
+								]
+							},
+							{
+								"tag": "@param",
+								"name": "filter",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The current filter definition or undefined if no filter is set."
+									}
+								]
+							},
+							{
+								"tag": "@returns",
+								"content": [
+									{
+										"kind": "text",
+										"text": "A Promise that returns the "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "PageData",
+										"target": 43,
+										"tsLinkText": ""
+									},
+									{
+										"kind": "text",
+										"text": " for the current page."
+									}
+								]
+							}
+						]
+					},
 					"signatures": [
 						{
 							"id": 101,
@@ -3549,7 +3891,7 @@
 							{
 								"type": "reference",
 								"target": {
-									"sourceFileName": "node_modules/.pnpm/dragon-drop-vue@1.1.0_vue@3.3.13/node_modules/dragon-drop-vue/dist/types/options.d.ts",
+									"sourceFileName": "node_modules/.pnpm/dragon-drop-vue@2.1.0_vue@3.4.12/node_modules/dragon-drop-vue/dist/types/options.d.ts",
 									"qualifiedName": "DragonDropVueOptions"
 								},
 								"name": "DragonDropVueOptions",
@@ -3617,7 +3959,7 @@
 													"type": {
 														"type": "reference",
 														"target": {
-															"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+															"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 															"qualifiedName": "App"
 														},
 														"name": "App",
@@ -5071,8 +5413,10 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": -1,
+						"target": 562,
 						"name": "TUserId",
+						"package": "data-grid-vue",
+						"qualifiedName": "GetGridStateRequest.TUserId",
 						"refersToTypeParameter": true
 					}
 				},
@@ -5092,8 +5436,10 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": -1,
+						"target": 563,
 						"name": "TGridId",
+						"package": "data-grid-vue",
+						"qualifiedName": "GetGridStateRequest.TGridId",
 						"refersToTypeParameter": true
 					}
 				}
@@ -5188,8 +5534,10 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": -1,
+						"target": 568,
 						"name": "TUserId",
+						"package": "data-grid-vue",
+						"qualifiedName": "SetGridStateRequest.TUserId",
 						"refersToTypeParameter": true
 					}
 				},
@@ -5209,8 +5557,10 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": -1,
+						"target": 569,
 						"name": "TGridId",
+						"package": "data-grid-vue",
+						"qualifiedName": "SetGridStateRequest.TGridId",
 						"refersToTypeParameter": true
 					}
 				},
@@ -5285,6 +5635,41 @@
 			"variant": "declaration",
 			"kind": 2097152,
 			"flags": {},
+			"comment": {
+				"summary": [],
+				"blockTags": [
+					{
+						"tag": "@description",
+						"content": [
+							{
+								"kind": "text",
+								"text": "Callback type to change the "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "Request",
+								"target": "https://developer.mozilla.org/docs/Web/API/Request"
+							},
+							{
+								"kind": "text",
+								"text": "\nobject before it is sent to the server from the built-in server side storage service. This is useful\nwhen you need to map the "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "GetGridStateRequest",
+								"target": 559,
+								"tsLinkText": ""
+							},
+							{
+								"kind": "text",
+								"text": " to a different data contract or alter the HTTP verb/headers."
+							}
+						]
+					}
+				]
+			},
 			"typeParameters": [
 				{
 					"id": 575,
@@ -5332,41 +5717,6 @@
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
-							"comment": {
-								"summary": [],
-								"blockTags": [
-									{
-										"tag": "@description",
-										"content": [
-											{
-												"kind": "text",
-												"text": "Callback type to change the "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "Request",
-												"target": "https://developer.mozilla.org/docs/Web/API/Request"
-											},
-											{
-												"kind": "text",
-												"text": "\nobject before it is sent to the server from the built-in server side storage service. This is useful\nwhen you need to map the "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "GetGridStateRequest",
-												"target": 559,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": " to a different data contract or alter the HTTP verb/headers."
-											}
-										]
-									}
-								]
-							},
 							"parameters": [
 								{
 									"id": 573,
@@ -5397,14 +5747,16 @@
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": -1,
+												"target": 575,
 												"name": "TUserId",
+												"package": "data-grid-vue",
 												"refersToTypeParameter": true
 											},
 											{
 												"type": "reference",
-												"target": -1,
+												"target": 576,
 												"name": "TGridId",
+												"package": "data-grid-vue",
 												"refersToTypeParameter": true
 											}
 										],
@@ -5446,6 +5798,41 @@
 			"variant": "declaration",
 			"kind": 2097152,
 			"flags": {},
+			"comment": {
+				"summary": [],
+				"blockTags": [
+					{
+						"tag": "@description",
+						"content": [
+							{
+								"kind": "text",
+								"text": "Callback type to change the "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "Response",
+								"target": "https://developer.mozilla.org/docs/Web/API/Response"
+							},
+							{
+								"kind": "text",
+								"text": "\nobject before it is handled by the data grid from the built-in server side storage service.\nThis is useful when you need to map the servers response data back to "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "GridState",
+								"target": 525,
+								"tsLinkText": ""
+							},
+							{
+								"kind": "text",
+								"text": "."
+							}
+						]
+					}
+				]
+			},
 			"type": {
 				"type": "reflection",
 				"declaration": {
@@ -5461,41 +5848,6 @@
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
-							"comment": {
-								"summary": [],
-								"blockTags": [
-									{
-										"tag": "@description",
-										"content": [
-											{
-												"kind": "text",
-												"text": "Callback type to change the "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "Response",
-												"target": "https://developer.mozilla.org/docs/Web/API/Response"
-											},
-											{
-												"kind": "text",
-												"text": "\nobject before it is handled by the data grid from the built-in server side storage service.\nThis is useful when you need to map the servers response data back to "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "GridState",
-												"target": 525,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": "."
-											}
-										]
-									}
-								]
-							},
 							"parameters": [
 								{
 									"id": 580,
@@ -5544,6 +5896,41 @@
 			"variant": "declaration",
 			"kind": 2097152,
 			"flags": {},
+			"comment": {
+				"summary": [],
+				"blockTags": [
+					{
+						"tag": "@description",
+						"content": [
+							{
+								"kind": "text",
+								"text": "Callback type to change the "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "Request",
+								"target": "https://developer.mozilla.org/docs/Web/API/Request"
+							},
+							{
+								"kind": "text",
+								"text": "\nobject before it is sent to the server from the built-in server side storage service. This is useful\nwhen you need to map the "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "SetGridStateRequest",
+								"target": 564,
+								"tsLinkText": ""
+							},
+							{
+								"kind": "text",
+								"text": " to a different data contract or alter the HTTP verb/headers."
+							}
+						]
+					}
+				]
+			},
 			"typeParameters": [
 				{
 					"id": 586,
@@ -5591,41 +5978,6 @@
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
-							"comment": {
-								"summary": [],
-								"blockTags": [
-									{
-										"tag": "@description",
-										"content": [
-											{
-												"kind": "text",
-												"text": "Callback type to change the "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "Request",
-												"target": "https://developer.mozilla.org/docs/Web/API/Request"
-											},
-											{
-												"kind": "text",
-												"text": "\nobject before it is sent to the server from the built-in server side storage service. This is useful\nwhen you need to map the "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "SetGridStateRequest",
-												"target": 564,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": " to a different data contract or alter the HTTP verb/headers."
-											}
-										]
-									}
-								]
-							},
 							"parameters": [
 								{
 									"id": 584,
@@ -5656,14 +6008,16 @@
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": -1,
+												"target": 586,
 												"name": "TUserId",
+												"package": "data-grid-vue",
 												"refersToTypeParameter": true
 											},
 											{
 												"type": "reference",
-												"target": -1,
+												"target": 587,
 												"name": "TGridId",
+												"package": "data-grid-vue",
 												"refersToTypeParameter": true
 											}
 										],
@@ -5705,6 +6059,30 @@
 			"variant": "declaration",
 			"kind": 2097152,
 			"flags": {},
+			"comment": {
+				"summary": [],
+				"blockTags": [
+					{
+						"tag": "@description",
+						"content": [
+							{
+								"kind": "text",
+								"text": "Callback type to change the "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "Response",
+								"target": "https://developer.mozilla.org/docs/Web/API/Response"
+							},
+							{
+								"kind": "text",
+								"text": "\nobject before it is handled by the data grid from the built-in server side data service."
+							}
+						]
+					}
+				]
+			},
 			"type": {
 				"type": "reflection",
 				"declaration": {
@@ -5720,30 +6098,6 @@
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
-							"comment": {
-								"summary": [],
-								"blockTags": [
-									{
-										"tag": "@description",
-										"content": [
-											{
-												"kind": "text",
-												"text": "Callback type to change the "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "Response",
-												"target": "https://developer.mozilla.org/docs/Web/API/Response"
-											},
-											{
-												"kind": "text",
-												"text": "\nobject before it is handled by the data grid from the built-in server side data service."
-											}
-										]
-									}
-								]
-							},
 							"parameters": [
 								{
 									"id": 591,
@@ -5865,8 +6219,10 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": -1,
+						"target": 601,
 						"name": "TUserId",
+						"package": "data-grid-vue",
+						"qualifiedName": "ServerSideStorageServiceOptions.TUserId",
 						"refersToTypeParameter": true
 					}
 				},
@@ -5886,8 +6242,10 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": -1,
+						"target": 602,
 						"name": "TGridId",
+						"package": "data-grid-vue",
+						"qualifiedName": "ServerSideStorageServiceOptions.TGridId",
 						"refersToTypeParameter": true
 					}
 				},
@@ -5987,14 +6345,18 @@
 						"typeArguments": [
 							{
 								"type": "reference",
-								"target": -1,
+								"target": 601,
 								"name": "TUserId",
+								"package": "data-grid-vue",
+								"qualifiedName": "ServerSideStorageServiceOptions.TUserId",
 								"refersToTypeParameter": true
 							},
 							{
 								"type": "reference",
-								"target": -1,
+								"target": 602,
 								"name": "TGridId",
+								"package": "data-grid-vue",
+								"qualifiedName": "ServerSideStorageServiceOptions.TGridId",
 								"refersToTypeParameter": true
 							}
 						],
@@ -6142,14 +6504,18 @@
 						"typeArguments": [
 							{
 								"type": "reference",
-								"target": -1,
+								"target": 601,
 								"name": "TUserId",
+								"package": "data-grid-vue",
+								"qualifiedName": "ServerSideStorageServiceOptions.TUserId",
 								"refersToTypeParameter": true
 							},
 							{
 								"type": "reference",
-								"target": -1,
+								"target": 602,
 								"name": "TGridId",
+								"package": "data-grid-vue",
+								"qualifiedName": "ServerSideStorageServiceOptions.TGridId",
 								"refersToTypeParameter": true
 							}
 						],
@@ -6325,14 +6691,18 @@
 						"typeArguments": [
 							{
 								"type": "reference",
-								"target": -1,
+								"target": 606,
 								"name": "TUserId",
+								"package": "data-grid-vue",
+								"qualifiedName": "ServerSideStorageService.TUserId",
 								"refersToTypeParameter": true
 							},
 							{
 								"type": "reference",
-								"target": -1,
+								"target": 607,
 								"name": "TGridId",
+								"package": "data-grid-vue",
+								"qualifiedName": "ServerSideStorageService.TGridId",
 								"refersToTypeParameter": true
 							}
 						],
@@ -6382,14 +6752,18 @@
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": -1,
+												"target": 606,
 												"name": "TUserId",
+												"package": "data-grid-vue",
+												"qualifiedName": "ServerSideStorageService.TUserId",
 												"refersToTypeParameter": true
 											},
 											{
 												"type": "reference",
-												"target": -1,
+												"target": 607,
 												"name": "TGridId",
+												"package": "data-grid-vue",
+												"qualifiedName": "ServerSideStorageService.TGridId",
 												"refersToTypeParameter": true
 											}
 										],
@@ -6404,14 +6778,18 @@
 								"typeArguments": [
 									{
 										"type": "reference",
-										"target": -1,
+										"target": 606,
 										"name": "TUserId",
+										"package": "data-grid-vue",
+										"qualifiedName": "ServerSideStorageService.TUserId",
 										"refersToTypeParameter": true
 									},
 									{
 										"type": "reference",
-										"target": -1,
+										"target": 607,
 										"name": "TGridId",
+										"package": "data-grid-vue",
+										"qualifiedName": "ServerSideStorageService.TGridId",
 										"refersToTypeParameter": true
 									}
 								],
@@ -6729,7 +7107,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -6841,7 +7219,7 @@
 			"type": {
 				"type": "reference",
 				"target": {
-					"sourceFileName": "node_modules/.pnpm/vue@3.3.13_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
+					"sourceFileName": "node_modules/.pnpm/vue@3.4.12_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
 					"qualifiedName": ""
 				},
 				"name": "DefineComponent",
@@ -6964,7 +7342,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -7094,7 +7472,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -7223,7 +7601,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -7346,7 +7724,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -7761,7 +8139,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -7874,7 +8252,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -8532,7 +8910,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -8692,7 +9070,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -8931,7 +9309,8 @@
 									{
 										"kind": "inline-tag",
 										"tag": "@link",
-										"text": "Field.valueGetter"
+										"text": "Field.valueGetter",
+										"target": 39
 									},
 									{
 										"kind": "text",
@@ -10120,7 +10499,7 @@
 			"type": {
 				"type": "reference",
 				"target": {
-					"sourceFileName": "node_modules/.pnpm/vue@3.3.13_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
+					"sourceFileName": "node_modules/.pnpm/vue@3.4.12_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
 					"qualifiedName": ""
 				},
 				"name": "DefineComponent",
@@ -10255,7 +10634,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -10355,7 +10734,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -10506,7 +10885,7 @@
 			"type": {
 				"type": "reference",
 				"target": {
-					"sourceFileName": "node_modules/.pnpm/vue@3.3.13_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
+					"sourceFileName": "node_modules/.pnpm/vue@3.4.12_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
 					"qualifiedName": ""
 				},
 				"name": "DefineComponent",
@@ -10583,7 +10962,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -10750,7 +11129,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -11199,7 +11578,7 @@
 			"type": {
 				"type": "reference",
 				"target": {
-					"sourceFileName": "node_modules/.pnpm/vue@3.3.13_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
+					"sourceFileName": "node_modules/.pnpm/vue@3.4.12_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
 					"qualifiedName": ""
 				},
 				"name": "DefineComponent",
@@ -11276,7 +11655,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -11373,7 +11752,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.3.13/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.12/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -11518,7 +11897,7 @@
 			"type": {
 				"type": "reference",
 				"target": {
-					"sourceFileName": "node_modules/.pnpm/vue@3.3.13_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
+					"sourceFileName": "node_modules/.pnpm/vue@3.4.12_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
 					"qualifiedName": ""
 				},
 				"name": "DefineComponent",
@@ -11667,7 +12046,7 @@
 			"type": {
 				"type": "reference",
 				"target": {
-					"sourceFileName": "node_modules/.pnpm/vue@3.3.13_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
+					"sourceFileName": "node_modules/.pnpm/vue@3.4.12_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
 					"qualifiedName": ""
 				},
 				"name": "DefineComponent",
@@ -11985,7 +12364,7 @@
 			"type": {
 				"type": "reference",
 				"target": {
-					"sourceFileName": "node_modules/.pnpm/vue@3.3.13_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
+					"sourceFileName": "node_modules/.pnpm/vue@3.4.12_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
 					"qualifiedName": ""
 				},
 				"name": "DefineComponent",

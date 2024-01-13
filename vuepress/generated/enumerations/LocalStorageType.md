@@ -7,12 +7,12 @@ or [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sess
 
 ## See
 
- - [DataGridVueGrid.localStorageType](../DataGridVueGrid/index.md)
- - [DataGridVueGrid.storageKey](../DataGridVueGrid/index.md)
+ - [DataGridVueGrid.localStorageType](../DataGridVueGrid/README.md)
+ - [DataGridVueGrid.storageKey](../DataGridVueGrid/README.md)
 
 ## Enumeration Members
 
-| Member | Value |
+| Enumeration Member | Value |
 | :------ | :------ |
 | `sessionStorage` | `0` |
 | `localStorage` | `1` |

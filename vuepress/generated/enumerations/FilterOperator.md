@@ -6,7 +6,7 @@ Supported filter operators
 
 ## Enumeration Members
 
-| Member | Value |
+| Enumeration Member | Value |
 | :------ | :------ |
 | `equals` | `0` |
 | `notEquals` | `1` |

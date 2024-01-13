@@ -271,7 +271,7 @@
 
 <script lang="ts">
 import { defineComponent, type PropType, nextTick, type SlotsType } from 'vue'
-import debounce from 'debounce'
+import { useNativeEvent, type NativeEvent, DebounceMode } from 'native-event-vue'
 import { DataType, Field, type Column } from '../DataGridVue'
 import { type DataService, StubDataService, ClientSideDataService, type ServerSideDataServiceOptions, ServerSideDataService } from '../DataService'
 import { type Sort, type SortOptions, SortType } from '../Sort'
@@ -307,7 +307,7 @@ interface Data {
   filters: FilterCondition[]
   filterOptionsShown: boolean
   externalFilter: Filter | undefined
-  windowResizeDebounce: any | undefined
+  windowResizeDebounce: NativeEvent | undefined
   columnWidths: string[]
   draggingColumn: Column | undefined
   popupOptions:
@@ -788,16 +788,14 @@ export default defineComponent({
 
     await this.loadPageDataAsync()
 
-    this.windowResizeDebounce = debounce(this.onWindowResize, 50)
-    window.addEventListener('resize', this.windowResizeDebounce)
+    this.windowResizeDebounce = useNativeEvent(window, 'resize', this.onWindowResize, undefined, 200, DebounceMode.MaximumFrequency)
 
     nextTick(() => {
       this.calculateColumnWidths()
     })
   },
   beforeUnmount() {
-    window.removeEventListener('resize', this.windowResizeDebounce)
-    this.windowResizeDebounce?.clear()
+    this.windowResizeDebounce?.destroy()
     this.windowResizeDebounce = undefined
   },
   watch: {

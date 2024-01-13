@@ -4,9 +4,15 @@
 type BeforeSetRequestHandler<TUserId, TGridId>: (request, body) => Promise<Request>;
 ```
 
+## Description
+
+Callback type to change the [Request](https://developer.mozilla.org/docs/Web/API/Request)
+object before it is sent to the server from the built-in server side storage service. This is useful
+when you need to map the [SetGridStateRequest](../interfaces/SetGridStateRequest.md) to a different data contract or alter the HTTP verb/headers.
+
 ## Type parameters
 
-| Parameter | Description |
+| Type parameter | Description |
 | :------ | :------ |
 | `TUserId` | The type of the user identifier. |
 | `TGridId` | The type of the grid identifier. |
@@ -21,12 +27,6 @@ type BeforeSetRequestHandler<TUserId, TGridId>: (request, body) => Promise<Reque
 ## Returns
 
 [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`Request`]( https://developer.mozilla.org/docs/Web/API/Request )\>
-
-## Description
-
-Callback type to change the [Request](https://developer.mozilla.org/docs/Web/API/Request)
-object before it is sent to the server from the built-in server side storage service. This is useful
-when you need to map the [SetGridStateRequest](../interfaces/SetGridStateRequest.md) to a different data contract or alter the HTTP verb/headers.
 
 ***
 

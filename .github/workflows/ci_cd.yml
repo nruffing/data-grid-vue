@@ -33,6 +33,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
     - run: pnpm run ci-all
+    - run: pnpm test
 
   build_and_publish:
     runs-on: ubuntu-latest

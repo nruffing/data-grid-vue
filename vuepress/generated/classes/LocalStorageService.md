@@ -10,9 +10,9 @@ Storage service that saves grid state in [localStorage](https://developer.mozill
 
 ## Properties
 
-| Property | Type | Description |
-| :------ | :------ | :------ |
-| `key` | `string` | - |
+| Property | Type |
+| :------ | :------ |
+| `key` | `string` |
 
 ## Constructors
 

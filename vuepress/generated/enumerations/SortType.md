@@ -6,7 +6,7 @@ Whether a sort is ascending or descending.
 
 ## Enumeration Members
 
-| Member | Value |
+| Enumeration Member | Value |
 | :------ | :------ |
 | `ascending` | `0` |
 | `descending` | `1` |

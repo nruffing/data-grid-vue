@@ -8,6 +8,12 @@
       "type": "node-terminal"
     },
     {
+      "command": "pnpm test",
+      "name": "Debug vitest",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
       "type": "chrome",
       "request": "attach",
       "name": "Chrome: Dev App",
