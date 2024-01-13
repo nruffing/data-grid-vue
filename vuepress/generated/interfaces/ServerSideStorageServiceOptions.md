@@ -12,7 +12,7 @@ if the HTTP status code is `200 OK` and the `Content-Type` response header is `a
 
 ## Type parameters
 
-| Parameter | Description |
+| Type parameter | Description |
 | :------ | :------ |
 | `TUserId` | The type of the user identifier. |
 | `TGridId` | The type of the grid identifier. |

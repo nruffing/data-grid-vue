@@ -6,7 +6,7 @@ Supported data types for a column.
 
 ## Enumeration Members
 
-| Member | Value |
+| Enumeration Member | Value |
 | :------ | :------ |
 | `none` | `0` |
 | `alphanumeric` | `1` |

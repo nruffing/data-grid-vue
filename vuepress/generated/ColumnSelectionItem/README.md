@@ -6,7 +6,7 @@ Column toggle item displayed in the column selected menu.
 
 ## See
 
-[DataGridVueGrid.showColumnSelection](../DataGridVueGrid/index.md)
+[DataGridVueGrid.showColumnSelection](../DataGridVueGrid/README.md)
 
 ## props
 

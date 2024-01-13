@@ -6,7 +6,7 @@ Request data interface sent by the [ServerSideStorageService](../classes/ServerS
 
 ## Type parameters
 
-| Parameter | Description |
+| Type parameter | Description |
 | :------ | :------ |
 | `TUserId` | The type of the user identifier. |
 | `TGridId` | The type of the grid identifier. |

@@ -2,16 +2,16 @@
 
 ## Data Grid Component
 
-- [DataGridVueGrid](DataGridVueGrid/index.md)
+- [DataGridVueGrid](DataGridVueGrid/README.md)
 
 ## Components
 
-- [ColumnSelectionItem](ColumnSelectionItem/index.md)
-- [FilterOperatorSelect](FilterOperatorSelect/index.md)
-- [HeaderCell](HeaderCell/index.md)
-- [HeaderFilter](HeaderFilter/index.md)
-- [Icon](Icon/index.md)
-- [PageNavigation](PageNavigation/index.md)
+- [ColumnSelectionItem](ColumnSelectionItem/README.md)
+- [FilterOperatorSelect](FilterOperatorSelect/README.md)
+- [HeaderCell](HeaderCell/README.md)
+- [HeaderFilter](HeaderFilter/README.md)
+- [Icon](Icon/README.md)
+- [PageNavigation](PageNavigation/README.md)
 
 ## Column
 

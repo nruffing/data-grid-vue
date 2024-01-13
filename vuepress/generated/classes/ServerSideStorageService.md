@@ -2,13 +2,13 @@
 
 ## Description
 
-The server-side [StorageService](../interfaces/StorageService.md) used when [DataGridVueGrid.serverSideStorageOptions](../DataGridVueGrid/index.md) is specified.
+The server-side [StorageService](../interfaces/StorageService.md) used when [DataGridVueGrid.serverSideStorageOptions](../DataGridVueGrid/README.md) is specified.
 This storage service will only attempt to deserialize the response body for `getGridState`
 if the HTTP status code is `200 OK` and the `Content-Type` response header is `application/json`.
 
 ## Type parameters
 
-| Parameter | Description |
+| Type parameter | Description |
 | :------ | :------ |
 | `TUserId` | The type of the user identifier. |
 | `TGridId` | The type of the grid identifier. |
@@ -19,9 +19,9 @@ if the HTTP status code is `200 OK` and the `Content-Type` response header is `a
 
 ## Properties
 
-| Property | Type | Description |
-| :------ | :------ | :------ |
-| `options` | [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)\<`TUserId`, `TGridId`\> | - |
+| Property | Type |
+| :------ | :------ |
+| `options` | [`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)\<`TUserId`, `TGridId`\> |
 
 ## Constructors
 

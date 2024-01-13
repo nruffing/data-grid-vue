@@ -4,6 +4,16 @@
 type BeforeRequestHandler: (request, body) => Promise<Request>;
 ```
 
+## Description
+
+Callback type to change the [Request](https://developer.mozilla.org/docs/Web/API/Request)
+object before it is sent to the server from the built-in server side data service. This is useful
+when you need to map the [PageDataRequest](../interfaces/PageDataRequest.md) to a different data contract.
+
+## See
+
+[dotnet IQueryable helpers](https://www.nuget.org/packages/DataGridVueDotnet/0.0.1-alpha)
+
 ## Parameters
 
 | Parameter | Type |
@@ -14,16 +24,6 @@ type BeforeRequestHandler: (request, body) => Promise<Request>;
 ## Returns
 
 [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`Request`]( https://developer.mozilla.org/docs/Web/API/Request )\>
-
-## Description
-
-Callback type to change the [Request](https://developer.mozilla.org/docs/Web/API/Request)
-object before it is sent to the server from the built-in server side data service. This is useful
-when you need to map the [PageDataRequest](../interfaces/PageDataRequest.md) to a different data contract.
-
-## See
-
-[dotnet IQueryable helpers](https://www.nuget.org/packages/DataGridVueDotnet/0.0.1-alpha)
 
 ***
 

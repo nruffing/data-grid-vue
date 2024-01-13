@@ -139,6 +139,7 @@ Customizable native Vue3 data grid with very limited dependencies. Leverages a f
   - [#9](https://github.com/nruffing/data-grid-vue/issues/9): Add package export so styles can be loaded via `data-grid-vue/style`.
   - Update ['dragon-drop-vue'](https://www.npmjs.com/package/dragon-drop-vue) dependency to v2.1.0 to leverage ability to debounce the `dragover` event.
   - Replace [`debounce`](https://www.npmjs.com/package/debounce) with new [`native-event-vue`](https://www.npmjs.com/package/native-event-vue) package to leverage the lightweight vue-friendly native event handling with debounce.
+  - Update development dependencies.
 
 ### v3.1.0
   - Update ['dragon-drop-vue'](https://www.npmjs.com/package/dragon-drop-vue) dependency to v1.1.0
