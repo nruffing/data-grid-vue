@@ -107,6 +107,76 @@ describe('ClientSideDataService', () => {
         expectedTotalItems: 1,
         expected: [TestDataItemFour],
       },
+      {
+        filter: {
+          or: [{ fieldName: 'date', dataType: DataType.dateTime, operator: FilterOperator.equals, value: '2024-01-10T14:30:00.000+02:00' }],
+          and: undefined,
+        },
+        pageNum: 1,
+        pageSize: 2,
+        expectedTotalItems: 1,
+        expected: [TestDataItemFour],
+      },
+      {
+        filter: {
+          or: [{ fieldName: 'name', dataType: DataType.alphanumeric, operator: FilterOperator.equals, value: 'Test 3' }],
+          and: undefined,
+        },
+        pageNum: 1,
+        pageSize: 2,
+        expectedTotalItems: 1,
+        expected: [TestDataItemThree],
+      },
+      {
+        filter: {
+          or: [{ fieldName: 'name', dataType: DataType.alphanumeric, operator: FilterOperator.notEquals, value: 'Test 3' }],
+          and: undefined,
+        },
+        pageNum: 1,
+        pageSize: 4,
+        expectedTotalItems: 4,
+        expected: [TestDataItemTwo, TestDataItemFour, TestDataItemFive, TestDataItemOne],
+      },
+      {
+        filter: {
+          or: [{ fieldName: 'name', dataType: DataType.alphanumeric, operator: FilterOperator.contains, value: '2' }],
+          and: undefined,
+        },
+        pageNum: 1,
+        pageSize: 4,
+        expectedTotalItems: 1,
+        expected: [TestDataItemTwo],
+      },
+      {
+        filter: {
+          or: [{ fieldName: 'name', dataType: DataType.alphanumeric, operator: FilterOperator.startsWith, value: 'te' }],
+          and: undefined,
+        },
+        pageNum: 1,
+        pageSize: 4,
+        expectedTotalItems: 5,
+        expected: [TestDataItemThree, TestDataItemTwo, TestDataItemFour, TestDataItemFive],
+      },
+      {
+        filter: {
+          or: [{ fieldName: 'name', dataType: DataType.alphanumeric, operator: FilterOperator.endsWith, value: '2' }],
+          and: undefined,
+        },
+        pageNum: 1,
+        pageSize: 4,
+        expectedTotalItems: 1,
+        expected: [TestDataItemTwo],
+      },
+      {
+        filter: {
+          or: [{ fieldName: 'id', dataType: DataType.number, operator: FilterOperator.notEquals, value: '2' }],
+          and: undefined,
+        },
+        pageNum: 1,
+        pageSize: 4,
+        expectedTotalItems: 3,
+        expected: [TestDataItemFour, TestDataItemFive, TestDataItemOne],
+      },
     ]
 
     for (const testCase of testCases) {
