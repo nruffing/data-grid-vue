@@ -58,6 +58,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
     "ci-all": "pnpm i && pnpm run --recursive build",
+    "test": "vitest",
+    "test:unit": "vitest --run",
     "format": "pnpm exec prettier --write \"./**/*.{ts,json,vue,css}\"",
     "upgrade-all": "ncu --upgrade",
     "check-upgrade-all": "clear && ncu",
@@ -86,6 +88,7 @@
     "@types/debounce": "^1.2.4",
     "@types/node": "^18.11.9",
     "@vitejs/plugin-vue": "^5.0.3",
+    "@vitest/browser": "^1.2.0",
     "@vue/tsconfig": "^0.5.1",
     "@vuepress/utils": "2.0.0-rc.0",
     "adm-zip": "^0.5.10",
@@ -105,9 +108,11 @@
     "typedoc-plugin-vue": "^1.1.0",
     "typescript": "~5.3.3",
     "vite": "^5.0.11",
+    "vitest": "^1.2.0",
     "vue": "^3.4.12",
     "vue-router": "^4.2.5",
-    "vue-tsc": "^1.8.27"
+    "vue-tsc": "^1.8.27",
+    "webdriverio": "^8.27.2"
   },
   "dependencies": {
     "dragon-drop-vue": "^2.1.0",

@@ -12,6 +12,8 @@ node_modules
 dist
 dist-ssr
 coverage
+coverage-e2e
+coverage-unit
 *.local
 
 /cypress/videos/
@@ -41,3 +43,5 @@ robots.txt
 urls.txt
 
 *.tsbuildinfo
+.nyc_output
+screenshots

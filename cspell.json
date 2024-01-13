@@ -18,9 +18,11 @@
     "prismjs",
     "shiki",
     "showcolumnselection",
+    "typecheck",
     "vnode",
     "vuejs",
     "vuepress",
+    "webdriverio",
     "xmldocmd"
   ],
   "ignoreWords": ["datagrid", "Freepik"],
