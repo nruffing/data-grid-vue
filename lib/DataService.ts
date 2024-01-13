@@ -52,20 +52,16 @@ export class ClientSideDataService implements DataService {
   }
 
   sort(sort: Sort[]) {
-    this.sorted = [...this.filtered]
-
-    if (!sort?.length && this.previousSortJson === '[]') {
+    if (!sort?.length) {
+      this.sorted = [...this.filtered]
+      this.previousSortJson = '[]'
       return
     }
 
-    if (!sort?.length) {
-      this.previousSortJson = '[]'
-    } else {
-      const sortJson = JSON.stringify(sort)
-      if (sortJson !== this.previousSortJson) {
-        ClientSideSort.sort(sort, this.sorted)
-        this.previousSortJson = sortJson
-      }
+    const sortJson = JSON.stringify(sort)
+    if (sortJson !== this.previousSortJson) {
+      ClientSideSort.sort(sort, this.sorted)
+      this.previousSortJson = sortJson
     }
   }
 
@@ -103,7 +99,7 @@ export class ClientSideDataService implements DataService {
       const endIndex = startIndex + pageSize
 
       if (startIndex >= this.dataItems.length) {
-        console.warn(`ClientSideDataRepository - getPage - pageNum exceeds data length`)
+        console.warn(`ClientSideDataService - getPage - pageNum exceeds data length`)
         return Promise.resolve(EmptyPageData)
       }
 
