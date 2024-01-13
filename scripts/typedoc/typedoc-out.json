@@ -3549,7 +3549,7 @@
 							{
 								"type": "reference",
 								"target": {
-									"sourceFileName": "node_modules/.pnpm/dragon-drop-vue@1.1.0_vue@3.3.13/node_modules/dragon-drop-vue/dist/types/options.d.ts",
+									"sourceFileName": "node_modules/.pnpm/dragon-drop-vue@2.1.0_vue@3.3.13/node_modules/dragon-drop-vue/dist/types/options.d.ts",
 									"qualifiedName": "DragonDropVueOptions"
 								},
 								"name": "DragonDropVueOptions",
