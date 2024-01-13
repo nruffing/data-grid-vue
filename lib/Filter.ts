@@ -1,4 +1,5 @@
 import { DataType } from './DataGridVue'
+import { parseDate } from './DateUtils'
 import Formatter from './Formatter'
 
 /**
@@ -133,6 +134,7 @@ export function CompileFilterSummary(filter: Filter | undefined): string {
 
 /**
  * @ignore
+ * Filter implementation for client-side filtering (i.e. `ClientSideDataService`).
  */
 export const ClientSideFilter = {
   filter(filter: Filter, dataItems: any[]): any[] {
@@ -174,6 +176,10 @@ export const ClientSideFilter = {
         return this.evaluateAlphanumericCondition(value as string, condition.operator, condition.value as string)
       case DataType.number:
         return this.evaluateNumericCondition(value as number, condition.operator, parseFloat(condition.value ?? ''))
+      case DataType.date:
+        return this.evaluateDateTimeCondition(parseDate(value, true), condition.operator, parseDate(condition.value, true))
+      case DataType.dateTime:
+        return this.evaluateDateTimeCondition(parseDate(value, false), condition.operator, parseDate(condition.value, false))
     }
 
     console.warn(`Unknown data type detected while filtering: ${DataType[condition.dataType]}`)
@@ -218,5 +224,10 @@ export const ClientSideFilter = {
 
     console.warn(`Filter operator ${FilterOperator[operator]} is not supported for columns with the numeric data type`)
     return false
+  },
+  evaluateDateTimeCondition(value: Date, operator: FilterOperator, conditionValue: Date): boolean {
+    const valueTime = value.getTime()
+    const conditionValueTime = conditionValue.getTime()
+    return this.evaluateNumericCondition(valueTime, operator, conditionValueTime)
   },
 }

@@ -290,7 +290,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "DataGridVueGrid.sortOptions",
-										"target": 243
+										"target": 244
 									},
 									{
 										"kind": "text",
@@ -966,7 +966,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "DataGridVueGrid.paged",
-										"target": 228
+										"target": 229
 									},
 									{
 										"kind": "text",
@@ -994,7 +994,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "DataGridVueGrid.paged",
-										"target": 228
+										"target": 229
 									},
 									{
 										"kind": "text",
@@ -1122,7 +1122,7 @@
 														"kind": "inline-tag",
 														"tag": "@link",
 														"text": "DataGridVueGrid.paged",
-														"target": 228
+														"target": 229
 													},
 													{
 														"kind": "text",
@@ -1159,7 +1159,7 @@
 														"kind": "inline-tag",
 														"tag": "@link",
 														"text": "DataGridVueGrid.paged",
-														"target": 228
+														"target": 229
 													},
 													{
 														"kind": "text",
@@ -1198,7 +1198,7 @@
 												"type": "array",
 												"elementType": {
 													"type": "reference",
-													"target": 171,
+													"target": 176,
 													"name": "Sort",
 													"package": "data-grid-vue"
 												}
@@ -1351,7 +1351,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "DataGridVueGrid.data",
-								"target": 204
+								"target": 205
 							},
 							{
 								"kind": "text",
@@ -1488,7 +1488,7 @@
 										"type": "array",
 										"elementType": {
 											"type": "reference",
-											"target": 171,
+											"target": 176,
 											"name": "Sort",
 											"package": "data-grid-vue"
 										}
@@ -1580,7 +1580,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "DataGridVueGrid.paged",
-										"target": 228
+										"target": 229
 									},
 									{
 										"kind": "text",
@@ -1608,7 +1608,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "DataGridVueGrid.paged",
-										"target": 228
+										"target": 229
 									},
 									{
 										"kind": "text",
@@ -1728,7 +1728,7 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "DataGridVueGrid.paged",
-												"target": 228
+												"target": 229
 											},
 											{
 												"kind": "text",
@@ -1765,7 +1765,7 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "DataGridVueGrid.paged",
-												"target": 228
+												"target": 229
 											},
 											{
 												"kind": "text",
@@ -1804,7 +1804,7 @@
 										"type": "array",
 										"elementType": {
 											"type": "reference",
-											"target": 171,
+											"target": 176,
 											"name": "Sort",
 											"package": "data-grid-vue"
 										}
@@ -2001,7 +2001,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "DataGridVueGrid.paged",
-										"target": 228
+										"target": 229
 									},
 									{
 										"kind": "text",
@@ -2044,7 +2044,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "DataGridVueGrid.paged",
-										"target": 228
+										"target": 229
 									},
 									{
 										"kind": "text",
@@ -2091,7 +2091,7 @@
 						"type": "array",
 						"elementType": {
 							"type": "reference",
-							"target": 171,
+							"target": 176,
 							"name": "Sort",
 							"package": "data-grid-vue"
 						}
@@ -2644,7 +2644,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "DataGridVueGrid.serverSideOptions",
-								"target": 209
+								"target": 210
 							},
 							{
 								"kind": "text",
@@ -2763,7 +2763,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "DataGridVueGrid.paged",
-										"target": 228
+										"target": 229
 									},
 									{
 										"kind": "text",
@@ -2791,7 +2791,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "DataGridVueGrid.paged",
-										"target": 228
+										"target": 229
 									},
 									{
 										"kind": "text",
@@ -2911,7 +2911,7 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "DataGridVueGrid.paged",
-												"target": 228
+												"target": 229
 											},
 											{
 												"kind": "text",
@@ -2948,7 +2948,7 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "DataGridVueGrid.paged",
-												"target": 228
+												"target": 229
 											},
 											{
 												"kind": "text",
@@ -2987,7 +2987,7 @@
 										"type": "array",
 										"elementType": {
 											"type": "reference",
-											"target": 171,
+											"target": 176,
 											"name": "Sort",
 											"package": "data-grid-vue"
 										}
@@ -3558,7 +3558,7 @@
 			]
 		},
 		{
-			"id": 153,
+			"id": 158,
 			"name": "Formatter",
 			"variant": "declaration",
 			"kind": 32,
@@ -3568,21 +3568,21 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 154,
+					"id": 159,
 					"name": "__type",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"children": [
 						{
-							"id": 155,
+							"id": 160,
 							"name": "fromCamelCase",
 							"variant": "declaration",
 							"kind": 2048,
 							"flags": {},
 							"signatures": [
 								{
-									"id": 156,
+									"id": 161,
 									"name": "fromCamelCase",
 									"variant": "signature",
 									"kind": 4096,
@@ -3597,7 +3597,7 @@
 									},
 									"parameters": [
 										{
-											"id": 157,
+											"id": 162,
 											"name": "value",
 											"variant": "param",
 											"kind": 32768,
@@ -3624,14 +3624,14 @@
 							]
 						},
 						{
-							"id": 158,
+							"id": 163,
 							"name": "columnTitle",
 							"variant": "declaration",
 							"kind": 2048,
 							"flags": {},
 							"signatures": [
 								{
-									"id": 159,
+									"id": 164,
 									"name": "columnTitle",
 									"variant": "signature",
 									"kind": 4096,
@@ -3646,7 +3646,7 @@
 									},
 									"parameters": [
 										{
-											"id": 160,
+											"id": 165,
 											"name": "column",
 											"variant": "param",
 											"kind": 32768,
@@ -3675,14 +3675,14 @@
 							]
 						},
 						{
-							"id": 161,
+							"id": 166,
 							"name": "ariaColumnLabel",
 							"variant": "declaration",
 							"kind": 2048,
 							"flags": {},
 							"signatures": [
 								{
-									"id": 162,
+									"id": 167,
 									"name": "ariaColumnLabel",
 									"variant": "signature",
 									"kind": 4096,
@@ -3697,7 +3697,7 @@
 									},
 									"parameters": [
 										{
-											"id": 163,
+											"id": 168,
 											"name": "column",
 											"variant": "param",
 											"kind": 32768,
@@ -3718,7 +3718,7 @@
 											}
 										},
 										{
-											"id": 164,
+											"id": 169,
 											"name": "prefix",
 											"variant": "param",
 											"kind": 32768,
@@ -3743,9 +3743,9 @@
 						{
 							"title": "Methods",
 							"children": [
-								155,
-								158,
-								161
+								160,
+								163,
+								166
 							]
 						}
 					]
@@ -4004,7 +4004,7 @@
 			}
 		},
 		{
-			"id": 165,
+			"id": 170,
 			"name": "SortOptions",
 			"variant": "declaration",
 			"kind": 256,
@@ -4025,7 +4025,7 @@
 			},
 			"children": [
 				{
-					"id": 166,
+					"id": 171,
 					"name": "sortable",
 					"variant": "declaration",
 					"kind": 1024,
@@ -4050,7 +4050,7 @@
 					}
 				},
 				{
-					"id": 167,
+					"id": 172,
 					"name": "multiColumn",
 					"variant": "declaration",
 					"kind": 1024,
@@ -4079,14 +4079,14 @@
 				{
 					"title": "Properties",
 					"children": [
-						166,
-						167
+						171,
+						172
 					]
 				}
 			]
 		},
 		{
-			"id": 168,
+			"id": 173,
 			"name": "SortType",
 			"variant": "declaration",
 			"kind": 8,
@@ -4107,7 +4107,7 @@
 			},
 			"children": [
 				{
-					"id": 169,
+					"id": 174,
 					"name": "ascending",
 					"variant": "declaration",
 					"kind": 16,
@@ -4118,7 +4118,7 @@
 					}
 				},
 				{
-					"id": 170,
+					"id": 175,
 					"name": "descending",
 					"variant": "declaration",
 					"kind": 16,
@@ -4133,14 +4133,14 @@
 				{
 					"title": "Enumeration Members",
 					"children": [
-						169,
-						170
+						174,
+						175
 					]
 				}
 			]
 		},
 		{
-			"id": 171,
+			"id": 176,
 			"name": "Sort",
 			"variant": "declaration",
 			"kind": 256,
@@ -4161,7 +4161,7 @@
 			},
 			"children": [
 				{
-					"id": 172,
+					"id": 177,
 					"name": "fieldName",
 					"variant": "declaration",
 					"kind": 1024,
@@ -4206,7 +4206,7 @@
 					}
 				},
 				{
-					"id": 173,
+					"id": 178,
 					"name": "dataType",
 					"variant": "declaration",
 					"kind": 1024,
@@ -4255,7 +4255,7 @@
 					}
 				},
 				{
-					"id": 174,
+					"id": 179,
 					"name": "type",
 					"variant": "declaration",
 					"kind": 1024,
@@ -4274,7 +4274,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "SortType",
-										"target": 168,
+										"target": 173,
 										"tsLinkText": ""
 									},
 									{
@@ -4287,7 +4287,7 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 168,
+						"target": 173,
 						"name": "SortType",
 						"package": "data-grid-vue"
 					}
@@ -4297,15 +4297,15 @@
 				{
 					"title": "Properties",
 					"children": [
-						172,
-						173,
-						174
+						177,
+						178,
+						179
 					]
 				}
 			]
 		},
 		{
-			"id": 522,
+			"id": 523,
 			"name": "LocalStorageType",
 			"variant": "declaration",
 			"kind": 8,
@@ -4353,7 +4353,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "DataGridVueGrid.localStorageType",
-								"target": 258
+								"target": 259
 							},
 							{
 								"kind": "text",
@@ -4367,7 +4367,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "DataGridVueGrid.storageKey",
-								"target": 253
+								"target": 254
 							},
 							{
 								"kind": "text",
@@ -4379,7 +4379,7 @@
 			},
 			"children": [
 				{
-					"id": 523,
+					"id": 524,
 					"name": "sessionStorage",
 					"variant": "declaration",
 					"kind": 16,
@@ -4390,7 +4390,7 @@
 					}
 				},
 				{
-					"id": 524,
+					"id": 525,
 					"name": "localStorage",
 					"variant": "declaration",
 					"kind": 16,
@@ -4405,14 +4405,14 @@
 				{
 					"title": "Enumeration Members",
 					"children": [
-						523,
-						524
+						524,
+						525
 					]
 				}
 			]
 		},
 		{
-			"id": 525,
+			"id": 526,
 			"name": "GridState",
 			"variant": "declaration",
 			"kind": 256,
@@ -4433,7 +4433,7 @@
 			},
 			"children": [
 				{
-					"id": 526,
+					"id": 527,
 					"name": "pageSize",
 					"variant": "declaration",
 					"kind": 1024,
@@ -4452,7 +4452,7 @@
 					}
 				},
 				{
-					"id": 527,
+					"id": 528,
 					"name": "hiddenFields",
 					"variant": "declaration",
 					"kind": 1024,
@@ -4474,7 +4474,7 @@
 					}
 				},
 				{
-					"id": 528,
+					"id": 529,
 					"name": "sort",
 					"variant": "declaration",
 					"kind": 1024,
@@ -4491,14 +4491,14 @@
 						"type": "array",
 						"elementType": {
 							"type": "reference",
-							"target": 171,
+							"target": 176,
 							"name": "Sort",
 							"package": "data-grid-vue"
 						}
 					}
 				},
 				{
-					"id": 529,
+					"id": 530,
 					"name": "filters",
 					"variant": "declaration",
 					"kind": 1024,
@@ -4522,7 +4522,7 @@
 					}
 				},
 				{
-					"id": 530,
+					"id": 531,
 					"name": "externalFilter",
 					"variant": "declaration",
 					"kind": 1024,
@@ -4552,7 +4552,7 @@
 					}
 				},
 				{
-					"id": 531,
+					"id": 532,
 					"name": "columnOrder",
 					"variant": "declaration",
 					"kind": 1024,
@@ -4578,18 +4578,18 @@
 				{
 					"title": "Properties",
 					"children": [
-						526,
 						527,
 						528,
 						529,
 						530,
-						531
+						531,
+						532
 					]
 				}
 			]
 		},
 		{
-			"id": 532,
+			"id": 533,
 			"name": "StorageService",
 			"variant": "declaration",
 			"kind": 256,
@@ -4610,14 +4610,14 @@
 			},
 			"children": [
 				{
-					"id": 533,
+					"id": 534,
 					"name": "getGridStateAsync",
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 534,
+							"id": 535,
 							"name": "getGridStateAsync",
 							"variant": "signature",
 							"kind": 4096,
@@ -4661,7 +4661,7 @@
 											},
 											{
 												"type": "reference",
-												"target": 525,
+												"target": 526,
 												"name": "GridState",
 												"package": "data-grid-vue"
 											}
@@ -4676,14 +4676,14 @@
 					]
 				},
 				{
-					"id": 535,
+					"id": 536,
 					"name": "setGridStateAsync",
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 536,
+							"id": 537,
 							"name": "setGridStateAsync",
 							"variant": "signature",
 							"kind": 4096,
@@ -4713,7 +4713,7 @@
 							},
 							"parameters": [
 								{
-									"id": 537,
+									"id": 538,
 									"name": "gridState",
 									"variant": "param",
 									"kind": 32768,
@@ -4728,7 +4728,7 @@
 									},
 									"type": {
 										"type": "reference",
-										"target": 525,
+										"target": 526,
 										"name": "GridState",
 										"package": "data-grid-vue"
 									}
@@ -4758,31 +4758,31 @@
 				{
 					"title": "Methods",
 					"children": [
-						533,
-						535
+						534,
+						536
 					]
 				}
 			],
 			"implementedBy": [
 				{
 					"type": "reference",
-					"target": 539,
+					"target": 540,
 					"name": "LocalStorageService"
 				},
 				{
 					"type": "reference",
-					"target": 603,
+					"target": 604,
 					"name": "ServerSideStorageService"
 				},
 				{
 					"type": "reference",
-					"target": 549,
+					"target": 550,
 					"name": "SessionStorageService"
 				}
 			]
 		},
 		{
-			"id": 538,
+			"id": 539,
 			"name": "StubStorageService",
 			"variant": "declaration",
 			"kind": 32,
@@ -4803,7 +4803,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "StorageService",
-								"target": 532,
+								"target": 533,
 								"tsLinkText": ""
 							},
 							{
@@ -4816,13 +4816,13 @@
 			},
 			"type": {
 				"type": "reference",
-				"target": 532,
+				"target": 533,
 				"name": "StorageService",
 				"package": "data-grid-vue"
 			}
 		},
 		{
-			"id": 549,
+			"id": 550,
 			"name": "SessionStorageService",
 			"variant": "declaration",
 			"kind": 128,
@@ -4853,7 +4853,7 @@
 			},
 			"children": [
 				{
-					"id": 553,
+					"id": 554,
 					"name": "key",
 					"variant": "declaration",
 					"kind": 1024,
@@ -4864,21 +4864,21 @@
 					}
 				},
 				{
-					"id": 550,
+					"id": 551,
 					"name": "constructor",
 					"variant": "declaration",
 					"kind": 512,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 551,
+							"id": 552,
 							"name": "new SessionStorageService",
 							"variant": "signature",
 							"kind": 16384,
 							"flags": {},
 							"parameters": [
 								{
-									"id": 552,
+									"id": 553,
 									"name": "key",
 									"variant": "param",
 									"kind": 32768,
@@ -4891,7 +4891,7 @@
 							],
 							"type": {
 								"type": "reference",
-								"target": 549,
+								"target": 550,
 								"name": "SessionStorageService",
 								"package": "data-grid-vue"
 							}
@@ -4899,14 +4899,14 @@
 					]
 				},
 				{
-					"id": 554,
+					"id": 555,
 					"name": "getGridStateAsync",
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 555,
+							"id": 556,
 							"name": "getGridStateAsync",
 							"variant": "signature",
 							"kind": 4096,
@@ -4950,7 +4950,7 @@
 											},
 											{
 												"type": "reference",
-												"target": 525,
+												"target": 526,
 												"name": "GridState",
 												"package": "data-grid-vue"
 											}
@@ -4963,26 +4963,26 @@
 							},
 							"implementationOf": {
 								"type": "reference",
-								"target": 534,
+								"target": 535,
 								"name": "StorageService.getGridStateAsync"
 							}
 						}
 					],
 					"implementationOf": {
 						"type": "reference",
-						"target": 533,
+						"target": 534,
 						"name": "StorageService.getGridStateAsync"
 					}
 				},
 				{
-					"id": 556,
+					"id": 557,
 					"name": "setGridStateAsync",
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 557,
+							"id": 558,
 							"name": "setGridStateAsync",
 							"variant": "signature",
 							"kind": 4096,
@@ -5012,7 +5012,7 @@
 							},
 							"parameters": [
 								{
-									"id": 558,
+									"id": 559,
 									"name": "gridState",
 									"variant": "param",
 									"kind": 32768,
@@ -5027,7 +5027,7 @@
 									},
 									"type": {
 										"type": "reference",
-										"target": 525,
+										"target": 526,
 										"name": "GridState",
 										"package": "data-grid-vue"
 									}
@@ -5051,14 +5051,14 @@
 							},
 							"implementationOf": {
 								"type": "reference",
-								"target": 536,
+								"target": 537,
 								"name": "StorageService.setGridStateAsync"
 							}
 						}
 					],
 					"implementationOf": {
 						"type": "reference",
-						"target": 535,
+						"target": 536,
 						"name": "StorageService.setGridStateAsync"
 					}
 				}
@@ -5067,34 +5067,34 @@
 				{
 					"title": "Properties",
 					"children": [
-						553
+						554
 					]
 				},
 				{
 					"title": "Constructors",
 					"children": [
-						550
+						551
 					]
 				},
 				{
 					"title": "Methods",
 					"children": [
-						554,
-						556
+						555,
+						557
 					]
 				}
 			],
 			"implementedTypes": [
 				{
 					"type": "reference",
-					"target": 532,
+					"target": 533,
 					"name": "StorageService",
 					"package": "data-grid-vue"
 				}
 			]
 		},
 		{
-			"id": 539,
+			"id": 540,
 			"name": "LocalStorageService",
 			"variant": "declaration",
 			"kind": 128,
@@ -5125,7 +5125,7 @@
 			},
 			"children": [
 				{
-					"id": 543,
+					"id": 544,
 					"name": "key",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5136,21 +5136,21 @@
 					}
 				},
 				{
-					"id": 540,
+					"id": 541,
 					"name": "constructor",
 					"variant": "declaration",
 					"kind": 512,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 541,
+							"id": 542,
 							"name": "new LocalStorageService",
 							"variant": "signature",
 							"kind": 16384,
 							"flags": {},
 							"parameters": [
 								{
-									"id": 542,
+									"id": 543,
 									"name": "key",
 									"variant": "param",
 									"kind": 32768,
@@ -5163,7 +5163,7 @@
 							],
 							"type": {
 								"type": "reference",
-								"target": 539,
+								"target": 540,
 								"name": "LocalStorageService",
 								"package": "data-grid-vue"
 							}
@@ -5171,14 +5171,14 @@
 					]
 				},
 				{
-					"id": 544,
+					"id": 545,
 					"name": "getGridStateAsync",
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 545,
+							"id": 546,
 							"name": "getGridStateAsync",
 							"variant": "signature",
 							"kind": 4096,
@@ -5222,7 +5222,7 @@
 											},
 											{
 												"type": "reference",
-												"target": 525,
+												"target": 526,
 												"name": "GridState",
 												"package": "data-grid-vue"
 											}
@@ -5235,26 +5235,26 @@
 							},
 							"implementationOf": {
 								"type": "reference",
-								"target": 534,
+								"target": 535,
 								"name": "StorageService.getGridStateAsync"
 							}
 						}
 					],
 					"implementationOf": {
 						"type": "reference",
-						"target": 533,
+						"target": 534,
 						"name": "StorageService.getGridStateAsync"
 					}
 				},
 				{
-					"id": 546,
+					"id": 547,
 					"name": "setGridStateAsync",
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 547,
+							"id": 548,
 							"name": "setGridStateAsync",
 							"variant": "signature",
 							"kind": 4096,
@@ -5284,7 +5284,7 @@
 							},
 							"parameters": [
 								{
-									"id": 548,
+									"id": 549,
 									"name": "gridState",
 									"variant": "param",
 									"kind": 32768,
@@ -5299,7 +5299,7 @@
 									},
 									"type": {
 										"type": "reference",
-										"target": 525,
+										"target": 526,
 										"name": "GridState",
 										"package": "data-grid-vue"
 									}
@@ -5323,14 +5323,14 @@
 							},
 							"implementationOf": {
 								"type": "reference",
-								"target": 536,
+								"target": 537,
 								"name": "StorageService.setGridStateAsync"
 							}
 						}
 					],
 					"implementationOf": {
 						"type": "reference",
-						"target": 535,
+						"target": 536,
 						"name": "StorageService.setGridStateAsync"
 					}
 				}
@@ -5339,34 +5339,34 @@
 				{
 					"title": "Properties",
 					"children": [
-						543
+						544
 					]
 				},
 				{
 					"title": "Constructors",
 					"children": [
-						540
+						541
 					]
 				},
 				{
 					"title": "Methods",
 					"children": [
-						544,
-						546
+						545,
+						547
 					]
 				}
 			],
 			"implementedTypes": [
 				{
 					"type": "reference",
-					"target": 532,
+					"target": 533,
 					"name": "StorageService",
 					"package": "data-grid-vue"
 				}
 			]
 		},
 		{
-			"id": 559,
+			"id": 560,
 			"name": "GetGridStateRequest",
 			"variant": "declaration",
 			"kind": 256,
@@ -5385,7 +5385,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "ServerSideStorageService",
-								"target": 603,
+								"target": 604,
 								"tsLinkText": ""
 							},
 							{
@@ -5398,7 +5398,7 @@
 			},
 			"children": [
 				{
-					"id": 560,
+					"id": 561,
 					"name": "userId",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5413,7 +5413,7 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 562,
+						"target": 563,
 						"name": "TUserId",
 						"package": "data-grid-vue",
 						"qualifiedName": "GetGridStateRequest.TUserId",
@@ -5421,7 +5421,7 @@
 					}
 				},
 				{
-					"id": 561,
+					"id": 562,
 					"name": "gridId",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5436,7 +5436,7 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 563,
+						"target": 564,
 						"name": "TGridId",
 						"package": "data-grid-vue",
 						"qualifiedName": "GetGridStateRequest.TGridId",
@@ -5448,14 +5448,14 @@
 				{
 					"title": "Properties",
 					"children": [
-						560,
-						561
+						561,
+						562
 					]
 				}
 			],
 			"typeParameters": [
 				{
-					"id": 562,
+					"id": 563,
 					"name": "TUserId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -5470,7 +5470,7 @@
 					}
 				},
 				{
-					"id": 563,
+					"id": 564,
 					"name": "TGridId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -5487,7 +5487,7 @@
 			]
 		},
 		{
-			"id": 564,
+			"id": 565,
 			"name": "SetGridStateRequest",
 			"variant": "declaration",
 			"kind": 256,
@@ -5506,7 +5506,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "ServerSideStorageService",
-								"target": 603,
+								"target": 604,
 								"tsLinkText": ""
 							},
 							{
@@ -5519,7 +5519,7 @@
 			},
 			"children": [
 				{
-					"id": 565,
+					"id": 566,
 					"name": "userId",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5534,7 +5534,7 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 568,
+						"target": 569,
 						"name": "TUserId",
 						"package": "data-grid-vue",
 						"qualifiedName": "SetGridStateRequest.TUserId",
@@ -5542,7 +5542,7 @@
 					}
 				},
 				{
-					"id": 566,
+					"id": 567,
 					"name": "gridId",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5557,7 +5557,7 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 569,
+						"target": 570,
 						"name": "TGridId",
 						"package": "data-grid-vue",
 						"qualifiedName": "SetGridStateRequest.TGridId",
@@ -5565,7 +5565,7 @@
 					}
 				},
 				{
-					"id": 567,
+					"id": 568,
 					"name": "gridState",
 					"variant": "declaration",
 					"kind": 1024,
@@ -5580,7 +5580,7 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 525,
+						"target": 526,
 						"name": "GridState",
 						"package": "data-grid-vue"
 					}
@@ -5590,15 +5590,15 @@
 				{
 					"title": "Properties",
 					"children": [
-						565,
 						566,
-						567
+						567,
+						568
 					]
 				}
 			],
 			"typeParameters": [
 				{
-					"id": 568,
+					"id": 569,
 					"name": "TUserId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -5613,7 +5613,7 @@
 					}
 				},
 				{
-					"id": 569,
+					"id": 570,
 					"name": "TGridId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -5630,7 +5630,7 @@
 			]
 		},
 		{
-			"id": 570,
+			"id": 571,
 			"name": "BeforeGetRequestHandler",
 			"variant": "declaration",
 			"kind": 2097152,
@@ -5659,7 +5659,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "GetGridStateRequest",
-								"target": 559,
+								"target": 560,
 								"tsLinkText": ""
 							},
 							{
@@ -5672,7 +5672,7 @@
 			},
 			"typeParameters": [
 				{
-					"id": 575,
+					"id": 576,
 					"name": "TUserId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -5687,7 +5687,7 @@
 					}
 				},
 				{
-					"id": 576,
+					"id": 577,
 					"name": "TGridId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -5705,21 +5705,21 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 571,
+					"id": 572,
 					"name": "__type",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 572,
+							"id": 573,
 							"name": "__type",
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
 							"parameters": [
 								{
-									"id": 573,
+									"id": 574,
 									"name": "request",
 									"variant": "param",
 									"kind": 32768,
@@ -5736,25 +5736,25 @@
 									}
 								},
 								{
-									"id": 574,
+									"id": 575,
 									"name": "body",
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"target": 559,
+										"target": 560,
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": 575,
+												"target": 576,
 												"name": "TUserId",
 												"package": "data-grid-vue",
 												"refersToTypeParameter": true
 											},
 											{
 												"type": "reference",
-												"target": 576,
+												"target": 577,
 												"name": "TGridId",
 												"package": "data-grid-vue",
 												"refersToTypeParameter": true
@@ -5793,7 +5793,7 @@
 			}
 		},
 		{
-			"id": 577,
+			"id": 578,
 			"name": "GetResponseHandler",
 			"variant": "declaration",
 			"kind": 2097152,
@@ -5822,7 +5822,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "GridState",
-								"target": 525,
+								"target": 526,
 								"tsLinkText": ""
 							},
 							{
@@ -5836,21 +5836,21 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 578,
+					"id": 579,
 					"name": "__type",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 579,
+							"id": 580,
 							"name": "__type",
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
 							"parameters": [
 								{
-									"id": 580,
+									"id": 581,
 									"name": "response",
 									"variant": "param",
 									"kind": 32768,
@@ -5876,7 +5876,7 @@
 								"typeArguments": [
 									{
 										"type": "reference",
-										"target": 525,
+										"target": 526,
 										"name": "GridState",
 										"package": "data-grid-vue"
 									}
@@ -5891,7 +5891,7 @@
 			}
 		},
 		{
-			"id": 581,
+			"id": 582,
 			"name": "BeforeSetRequestHandler",
 			"variant": "declaration",
 			"kind": 2097152,
@@ -5920,7 +5920,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "SetGridStateRequest",
-								"target": 564,
+								"target": 565,
 								"tsLinkText": ""
 							},
 							{
@@ -5933,7 +5933,7 @@
 			},
 			"typeParameters": [
 				{
-					"id": 586,
+					"id": 587,
 					"name": "TUserId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -5948,7 +5948,7 @@
 					}
 				},
 				{
-					"id": 587,
+					"id": 588,
 					"name": "TGridId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -5966,21 +5966,21 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 582,
+					"id": 583,
 					"name": "__type",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 583,
+							"id": 584,
 							"name": "__type",
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
 							"parameters": [
 								{
-									"id": 584,
+									"id": 585,
 									"name": "request",
 									"variant": "param",
 									"kind": 32768,
@@ -5997,25 +5997,25 @@
 									}
 								},
 								{
-									"id": 585,
+									"id": 586,
 									"name": "body",
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"target": 564,
+										"target": 565,
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": 586,
+												"target": 587,
 												"name": "TUserId",
 												"package": "data-grid-vue",
 												"refersToTypeParameter": true
 											},
 											{
 												"type": "reference",
-												"target": 587,
+												"target": 588,
 												"name": "TGridId",
 												"package": "data-grid-vue",
 												"refersToTypeParameter": true
@@ -6054,7 +6054,7 @@
 			}
 		},
 		{
-			"id": 588,
+			"id": 589,
 			"name": "SetResponseHandler",
 			"variant": "declaration",
 			"kind": 2097152,
@@ -6086,21 +6086,21 @@
 			"type": {
 				"type": "reflection",
 				"declaration": {
-					"id": 589,
+					"id": 590,
 					"name": "__type",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 590,
+							"id": 591,
 							"name": "__type",
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
 							"parameters": [
 								{
-									"id": 591,
+									"id": 592,
 									"name": "response",
 									"variant": "param",
 									"kind": 32768,
@@ -6139,7 +6139,7 @@
 			}
 		},
 		{
-			"id": 592,
+			"id": 593,
 			"name": "ServerSideStorageServiceOptions",
 			"variant": "declaration",
 			"kind": 256,
@@ -6195,7 +6195,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "ServerSideStorageService",
-								"target": 603,
+								"target": 604,
 								"tsLinkText": ""
 							}
 						]
@@ -6204,7 +6204,7 @@
 			},
 			"children": [
 				{
-					"id": 593,
+					"id": 594,
 					"name": "userId",
 					"variant": "declaration",
 					"kind": 1024,
@@ -6219,7 +6219,7 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 601,
+						"target": 602,
 						"name": "TUserId",
 						"package": "data-grid-vue",
 						"qualifiedName": "ServerSideStorageServiceOptions.TUserId",
@@ -6227,7 +6227,7 @@
 					}
 				},
 				{
-					"id": 594,
+					"id": 595,
 					"name": "gridId",
 					"variant": "declaration",
 					"kind": 1024,
@@ -6242,7 +6242,7 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 602,
+						"target": 603,
 						"name": "TGridId",
 						"package": "data-grid-vue",
 						"qualifiedName": "ServerSideStorageServiceOptions.TGridId",
@@ -6250,7 +6250,7 @@
 					}
 				},
 				{
-					"id": 595,
+					"id": 596,
 					"name": "getPostRoute",
 					"variant": "declaration",
 					"kind": 1024,
@@ -6271,7 +6271,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "beforeGetRequest",
-										"target": 596,
+										"target": 597,
 										"tsLinkText": ""
 									},
 									{
@@ -6303,7 +6303,7 @@
 					}
 				},
 				{
-					"id": 596,
+					"id": 597,
 					"name": "beforeGetRequest",
 					"variant": "declaration",
 					"kind": 1024,
@@ -6330,7 +6330,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "GetGridStateRequest",
-								"target": 559,
+								"target": 560,
 								"tsLinkText": ""
 							},
 							{
@@ -6341,11 +6341,11 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 570,
+						"target": 571,
 						"typeArguments": [
 							{
 								"type": "reference",
-								"target": 601,
+								"target": 602,
 								"name": "TUserId",
 								"package": "data-grid-vue",
 								"qualifiedName": "ServerSideStorageServiceOptions.TUserId",
@@ -6353,7 +6353,7 @@
 							},
 							{
 								"type": "reference",
-								"target": 602,
+								"target": 603,
 								"name": "TGridId",
 								"package": "data-grid-vue",
 								"qualifiedName": "ServerSideStorageServiceOptions.TGridId",
@@ -6365,7 +6365,7 @@
 					}
 				},
 				{
-					"id": 597,
+					"id": 598,
 					"name": "getResponseHandler",
 					"variant": "declaration",
 					"kind": 1024,
@@ -6392,7 +6392,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "GridState",
-								"target": 525,
+								"target": 526,
 								"tsLinkText": ""
 							},
 							{
@@ -6403,13 +6403,13 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 577,
+						"target": 578,
 						"name": "GetResponseHandler",
 						"package": "data-grid-vue"
 					}
 				},
 				{
-					"id": 598,
+					"id": 599,
 					"name": "setPostRoute",
 					"variant": "declaration",
 					"kind": 1024,
@@ -6430,7 +6430,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "beforeSetRequest",
-										"target": 599,
+										"target": 600,
 										"tsLinkText": ""
 									},
 									{
@@ -6462,7 +6462,7 @@
 					}
 				},
 				{
-					"id": 599,
+					"id": 600,
 					"name": "beforeSetRequest",
 					"variant": "declaration",
 					"kind": 1024,
@@ -6489,7 +6489,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "SetGridStateRequest",
-								"target": 564,
+								"target": 565,
 								"tsLinkText": ""
 							},
 							{
@@ -6500,11 +6500,11 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 570,
+						"target": 571,
 						"typeArguments": [
 							{
 								"type": "reference",
-								"target": 601,
+								"target": 602,
 								"name": "TUserId",
 								"package": "data-grid-vue",
 								"qualifiedName": "ServerSideStorageServiceOptions.TUserId",
@@ -6512,7 +6512,7 @@
 							},
 							{
 								"type": "reference",
-								"target": 602,
+								"target": 603,
 								"name": "TGridId",
 								"package": "data-grid-vue",
 								"qualifiedName": "ServerSideStorageServiceOptions.TGridId",
@@ -6524,7 +6524,7 @@
 					}
 				},
 				{
-					"id": 600,
+					"id": 601,
 					"name": "setResponseHandler",
 					"variant": "declaration",
 					"kind": 1024,
@@ -6551,7 +6551,7 @@
 					},
 					"type": {
 						"type": "reference",
-						"target": 577,
+						"target": 578,
 						"name": "GetResponseHandler",
 						"package": "data-grid-vue"
 					}
@@ -6561,20 +6561,20 @@
 				{
 					"title": "Properties",
 					"children": [
-						593,
 						594,
 						595,
 						596,
 						597,
 						598,
 						599,
-						600
+						600,
+						601
 					]
 				}
 			],
 			"typeParameters": [
 				{
-					"id": 601,
+					"id": 602,
 					"name": "TUserId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -6589,7 +6589,7 @@
 					}
 				},
 				{
-					"id": 602,
+					"id": 603,
 					"name": "TGridId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -6606,7 +6606,7 @@
 			]
 		},
 		{
-			"id": 603,
+			"id": 604,
 			"name": "ServerSideStorageService",
 			"variant": "declaration",
 			"kind": 128,
@@ -6625,7 +6625,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "StorageService",
-								"target": 532,
+								"target": 533,
 								"tsLinkText": ""
 							},
 							{
@@ -6636,7 +6636,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "DataGridVueGrid.serverSideStorageOptions",
-								"target": 263
+								"target": 264
 							},
 							{
 								"kind": "text",
@@ -6680,18 +6680,18 @@
 			},
 			"children": [
 				{
-					"id": 609,
+					"id": 610,
 					"name": "options",
 					"variant": "declaration",
 					"kind": 1024,
 					"flags": {},
 					"type": {
 						"type": "reference",
-						"target": 592,
+						"target": 593,
 						"typeArguments": [
 							{
 								"type": "reference",
-								"target": 606,
+								"target": 607,
 								"name": "TUserId",
 								"package": "data-grid-vue",
 								"qualifiedName": "ServerSideStorageService.TUserId",
@@ -6699,7 +6699,7 @@
 							},
 							{
 								"type": "reference",
-								"target": 607,
+								"target": 608,
 								"name": "TGridId",
 								"package": "data-grid-vue",
 								"qualifiedName": "ServerSideStorageService.TGridId",
@@ -6711,28 +6711,28 @@
 					}
 				},
 				{
-					"id": 604,
+					"id": 605,
 					"name": "constructor",
 					"variant": "declaration",
 					"kind": 512,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 605,
+							"id": 606,
 							"name": "new ServerSideStorageService",
 							"variant": "signature",
 							"kind": 16384,
 							"flags": {},
 							"typeParameter": [
 								{
-									"id": 606,
+									"id": 607,
 									"name": "TUserId",
 									"variant": "typeParam",
 									"kind": 131072,
 									"flags": {}
 								},
 								{
-									"id": 607,
+									"id": 608,
 									"name": "TGridId",
 									"variant": "typeParam",
 									"kind": 131072,
@@ -6741,18 +6741,18 @@
 							],
 							"parameters": [
 								{
-									"id": 608,
+									"id": 609,
 									"name": "options",
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"target": 592,
+										"target": 593,
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": 606,
+												"target": 607,
 												"name": "TUserId",
 												"package": "data-grid-vue",
 												"qualifiedName": "ServerSideStorageService.TUserId",
@@ -6760,7 +6760,7 @@
 											},
 											{
 												"type": "reference",
-												"target": 607,
+												"target": 608,
 												"name": "TGridId",
 												"package": "data-grid-vue",
 												"qualifiedName": "ServerSideStorageService.TGridId",
@@ -6774,11 +6774,11 @@
 							],
 							"type": {
 								"type": "reference",
-								"target": 603,
+								"target": 604,
 								"typeArguments": [
 									{
 										"type": "reference",
-										"target": 606,
+										"target": 607,
 										"name": "TUserId",
 										"package": "data-grid-vue",
 										"qualifiedName": "ServerSideStorageService.TUserId",
@@ -6786,7 +6786,7 @@
 									},
 									{
 										"type": "reference",
-										"target": 607,
+										"target": 608,
 										"name": "TGridId",
 										"package": "data-grid-vue",
 										"qualifiedName": "ServerSideStorageService.TGridId",
@@ -6800,14 +6800,14 @@
 					]
 				},
 				{
-					"id": 610,
+					"id": 611,
 					"name": "getGridStateAsync",
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 611,
+							"id": 612,
 							"name": "getGridStateAsync",
 							"variant": "signature",
 							"kind": 4096,
@@ -6851,7 +6851,7 @@
 											},
 											{
 												"type": "reference",
-												"target": 525,
+												"target": 526,
 												"name": "GridState",
 												"package": "data-grid-vue"
 											}
@@ -6864,26 +6864,26 @@
 							},
 							"implementationOf": {
 								"type": "reference",
-								"target": 534,
+								"target": 535,
 								"name": "StorageService.getGridStateAsync"
 							}
 						}
 					],
 					"implementationOf": {
 						"type": "reference",
-						"target": 533,
+						"target": 534,
 						"name": "StorageService.getGridStateAsync"
 					}
 				},
 				{
-					"id": 612,
+					"id": 613,
 					"name": "setGridStateAsync",
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 613,
+							"id": 614,
 							"name": "setGridStateAsync",
 							"variant": "signature",
 							"kind": 4096,
@@ -6913,7 +6913,7 @@
 							},
 							"parameters": [
 								{
-									"id": 614,
+									"id": 615,
 									"name": "gridState",
 									"variant": "param",
 									"kind": 32768,
@@ -6928,7 +6928,7 @@
 									},
 									"type": {
 										"type": "reference",
-										"target": 525,
+										"target": 526,
 										"name": "GridState",
 										"package": "data-grid-vue"
 									}
@@ -6952,14 +6952,14 @@
 							},
 							"implementationOf": {
 								"type": "reference",
-								"target": 536,
+								"target": 537,
 								"name": "StorageService.setGridStateAsync"
 							}
 						}
 					],
 					"implementationOf": {
 						"type": "reference",
-						"target": 535,
+						"target": 536,
 						"name": "StorageService.setGridStateAsync"
 					}
 				}
@@ -6968,26 +6968,26 @@
 				{
 					"title": "Properties",
 					"children": [
-						609
+						610
 					]
 				},
 				{
 					"title": "Constructors",
 					"children": [
-						604
+						605
 					]
 				},
 				{
 					"title": "Methods",
 					"children": [
-						610,
-						612
+						611,
+						613
 					]
 				}
 			],
 			"typeParameters": [
 				{
-					"id": 615,
+					"id": 616,
 					"name": "TUserId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -7002,7 +7002,7 @@
 					}
 				},
 				{
-					"id": 616,
+					"id": 617,
 					"name": "TGridId",
 					"variant": "typeParam",
 					"kind": 131072,
@@ -7020,14 +7020,14 @@
 			"implementedTypes": [
 				{
 					"type": "reference",
-					"target": 532,
+					"target": 533,
 					"name": "StorageService",
 					"package": "data-grid-vue"
 				}
 			]
 		},
 		{
-			"id": 416,
+			"id": 417,
 			"name": "ColumnSelectionItem",
 			"variant": "declaration",
 			"kind": 2,
@@ -7051,7 +7051,7 @@
 								"kind": "inline-tag",
 								"tag": "@link",
 								"text": "DataGridVueGrid.showColumnSelection",
-								"target": 248
+								"target": 249
 							}
 						]
 					}
@@ -7059,7 +7059,7 @@
 			},
 			"children": [
 				{
-					"id": 418,
+					"id": 419,
 					"name": "column",
 					"variant": "declaration",
 					"kind": 65536,
@@ -7092,14 +7092,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 419,
+							"id": 420,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 420,
+									"id": 421,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7123,7 +7123,7 @@
 									}
 								},
 								{
-									"id": 421,
+									"id": 422,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7138,8 +7138,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										420,
-										421
+										421,
+										422
 									]
 								}
 							]
@@ -7147,14 +7147,14 @@
 					}
 				},
 				{
-					"id": 423,
+					"id": 424,
 					"name": "hidden-updated",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 424,
+							"id": 425,
 							"name": "hidden-updated",
 							"variant": "signature",
 							"kind": 4096,
@@ -7175,7 +7175,7 @@
 							},
 							"parameters": [
 								{
-									"id": 425,
+									"id": 426,
 									"name": "hidden",
 									"variant": "param",
 									"kind": 32768,
@@ -7206,13 +7206,13 @@
 				{
 					"title": "props",
 					"children": [
-						418
+						419
 					]
 				},
 				{
 					"title": "emits",
 					"children": [
-						423
+						424
 					]
 				}
 			],
@@ -7227,7 +7227,7 @@
 			}
 		},
 		{
-			"id": 202,
+			"id": 203,
 			"name": "DataGridVueGrid",
 			"variant": "declaration",
 			"kind": 2,
@@ -7248,7 +7248,7 @@
 			},
 			"children": [
 				{
-					"id": 204,
+					"id": 205,
 					"name": "data",
 					"variant": "declaration",
 					"kind": 65536,
@@ -7277,7 +7277,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "customDataService",
-										"target": 214
+										"target": 215
 									},
 									{
 										"kind": "text",
@@ -7287,7 +7287,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "serverSideOptions",
-										"target": 209
+										"target": 210
 									},
 									{
 										"kind": "text",
@@ -7297,7 +7297,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "data",
-										"target": 204
+										"target": 205
 									},
 									{
 										"kind": "text",
@@ -7327,14 +7327,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 205,
+							"id": 206,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 206,
+									"id": 207,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7359,7 +7359,7 @@
 									}
 								},
 								{
-									"id": 207,
+									"id": 208,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7370,7 +7370,7 @@
 									}
 								},
 								{
-									"id": 208,
+									"id": 209,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7385,9 +7385,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										206,
 										207,
-										208
+										208,
+										209
 									]
 								}
 							]
@@ -7395,7 +7395,7 @@
 					}
 				},
 				{
-					"id": 209,
+					"id": 210,
 					"name": "serverSideOptions",
 					"variant": "declaration",
 					"kind": 65536,
@@ -7424,7 +7424,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "customDataService",
-										"target": 214
+										"target": 215
 									},
 									{
 										"kind": "text",
@@ -7457,14 +7457,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 210,
+							"id": 211,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 211,
+									"id": 212,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7488,7 +7488,7 @@
 									}
 								},
 								{
-									"id": 212,
+									"id": 213,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7499,7 +7499,7 @@
 									}
 								},
 								{
-									"id": 213,
+									"id": 214,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7514,9 +7514,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										211,
 										212,
-										213
+										213,
+										214
 									]
 								}
 							]
@@ -7524,7 +7524,7 @@
 					}
 				},
 				{
-					"id": 214,
+					"id": 215,
 					"name": "customDataService",
 					"variant": "declaration",
 					"kind": 65536,
@@ -7554,7 +7554,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "data",
-										"target": 204
+										"target": 205
 									},
 									{
 										"kind": "text",
@@ -7564,7 +7564,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "serverSideOptions",
-										"target": 209
+										"target": 210
 									},
 									{
 										"kind": "text",
@@ -7586,14 +7586,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 215,
+							"id": 216,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 216,
+									"id": 217,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7617,7 +7617,7 @@
 									}
 								},
 								{
-									"id": 217,
+									"id": 218,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7628,7 +7628,7 @@
 									}
 								},
 								{
-									"id": 218,
+									"id": 219,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7643,9 +7643,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										216,
 										217,
-										218
+										218,
+										219
 									]
 								}
 							]
@@ -7653,7 +7653,7 @@
 					}
 				},
 				{
-					"id": 219,
+					"id": 220,
 					"name": "columns",
 					"variant": "declaration",
 					"kind": 65536,
@@ -7709,14 +7709,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 220,
+							"id": 221,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 221,
+									"id": 222,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7743,7 +7743,7 @@
 									}
 								},
 								{
-									"id": 222,
+									"id": 223,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7758,8 +7758,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										221,
-										222
+										222,
+										223
 									]
 								}
 							]
@@ -7767,7 +7767,7 @@
 					}
 				},
 				{
-					"id": 223,
+					"id": 224,
 					"name": "allowColumnReorder",
 					"variant": "declaration",
 					"kind": 65536,
@@ -7796,7 +7796,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "columns",
-										"target": 219
+										"target": 220
 									},
 									{
 										"kind": "text",
@@ -7826,14 +7826,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 224,
+							"id": 225,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 225,
+									"id": 226,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7849,7 +7849,7 @@
 									}
 								},
 								{
-									"id": 226,
+									"id": 227,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7860,7 +7860,7 @@
 									}
 								},
 								{
-									"id": 227,
+									"id": 228,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7875,9 +7875,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										225,
 										226,
-										227
+										227,
+										228
 									]
 								}
 							]
@@ -7885,7 +7885,7 @@
 					}
 				},
 				{
-					"id": 228,
+					"id": 229,
 					"name": "paged",
 					"variant": "declaration",
 					"kind": 65536,
@@ -7944,14 +7944,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 229,
+							"id": 230,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 230,
+									"id": 231,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7967,7 +7967,7 @@
 									}
 								},
 								{
-									"id": 231,
+									"id": 232,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7978,7 +7978,7 @@
 									}
 								},
 								{
-									"id": 232,
+									"id": 233,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -7993,9 +7993,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										230,
 										231,
-										232
+										232,
+										233
 									]
 								}
 							]
@@ -8003,7 +8003,7 @@
 					}
 				},
 				{
-					"id": 233,
+					"id": 234,
 					"name": "initialPageSize",
 					"variant": "declaration",
 					"kind": 65536,
@@ -8034,14 +8034,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 234,
+							"id": 235,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 235,
+									"id": 236,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8057,7 +8057,7 @@
 									}
 								},
 								{
-									"id": 236,
+									"id": 237,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8068,7 +8068,7 @@
 									}
 								},
 								{
-									"id": 237,
+									"id": 238,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8083,9 +8083,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										235,
 										236,
-										237
+										237,
+										238
 									]
 								}
 							]
@@ -8093,7 +8093,7 @@
 					}
 				},
 				{
-					"id": 238,
+					"id": 239,
 					"name": "pageSizes",
 					"variant": "declaration",
 					"kind": 65536,
@@ -8124,14 +8124,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 239,
+							"id": 240,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 240,
+									"id": 241,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8156,7 +8156,7 @@
 									}
 								},
 								{
-									"id": 241,
+									"id": 242,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8167,7 +8167,7 @@
 									}
 								},
 								{
-									"id": 242,
+									"id": 243,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8185,9 +8185,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										240,
 										241,
-										242
+										242,
+										243
 									]
 								}
 							]
@@ -8195,7 +8195,7 @@
 					}
 				},
 				{
-					"id": 243,
+					"id": 244,
 					"name": "sortOptions",
 					"variant": "declaration",
 					"kind": 65536,
@@ -8214,7 +8214,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "SortOptions",
-										"target": 165,
+										"target": 170,
 										"tsLinkText": ""
 									},
 									{
@@ -8237,14 +8237,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 244,
+							"id": 245,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 245,
+									"id": 246,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8258,7 +8258,7 @@
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": 165,
+												"target": 170,
 												"name": "SortOptions",
 												"package": "data-grid-vue"
 											}
@@ -8268,7 +8268,7 @@
 									}
 								},
 								{
-									"id": 246,
+									"id": 247,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8279,7 +8279,7 @@
 									}
 								},
 								{
-									"id": 247,
+									"id": 248,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8294,9 +8294,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										245,
 										246,
-										247
+										247,
+										248
 									]
 								}
 							]
@@ -8304,7 +8304,7 @@
 					}
 				},
 				{
-					"id": 248,
+					"id": 249,
 					"name": "showColumnSelection",
 					"variant": "declaration",
 					"kind": 65536,
@@ -8342,7 +8342,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "columns",
-										"target": 219
+										"target": 220
 									},
 									{
 										"kind": "text",
@@ -8372,14 +8372,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 249,
+							"id": 250,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 250,
+									"id": 251,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8395,7 +8395,7 @@
 									}
 								},
 								{
-									"id": 251,
+									"id": 252,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8406,7 +8406,7 @@
 									}
 								},
 								{
-									"id": 252,
+									"id": 253,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8421,9 +8421,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										250,
 										251,
-										252
+										252,
+										253
 									]
 								}
 							]
@@ -8431,7 +8431,7 @@
 					}
 				},
 				{
-					"id": 253,
+					"id": 254,
 					"name": "storageKey",
 					"variant": "declaration",
 					"kind": 65536,
@@ -8470,7 +8470,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "localStorageType",
-										"target": 258
+										"target": 259
 									},
 									{
 										"kind": "text",
@@ -8480,7 +8480,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "GridState",
-										"target": 525,
+										"target": 526,
 										"tsLinkText": ""
 									},
 									{
@@ -8491,7 +8491,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "serverSideStorageOptions",
-										"target": 263
+										"target": 264
 									},
 									{
 										"kind": "text",
@@ -8501,7 +8501,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "customStorageService",
-										"target": 268
+										"target": 269
 									},
 									{
 										"kind": "text",
@@ -8520,7 +8520,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "SessionStorageService",
-										"target": 549
+										"target": 550
 									},
 									{
 										"kind": "text",
@@ -8534,7 +8534,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "LocalStorageService",
-										"target": 539
+										"target": 540
 									},
 									{
 										"kind": "text",
@@ -8556,14 +8556,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 254,
+							"id": 255,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 255,
+									"id": 256,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8579,7 +8579,7 @@
 									}
 								},
 								{
-									"id": 256,
+									"id": 257,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8590,7 +8590,7 @@
 									}
 								},
 								{
-									"id": 257,
+									"id": 258,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8605,9 +8605,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										255,
 										256,
-										257
+										257,
+										258
 									]
 								}
 							]
@@ -8615,7 +8615,7 @@
 					}
 				},
 				{
-					"id": 258,
+					"id": 259,
 					"name": "localStorageType",
 					"variant": "declaration",
 					"kind": 65536,
@@ -8654,7 +8654,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "storageKey",
-										"target": 253
+										"target": 254
 									},
 									{
 										"kind": "text",
@@ -8664,7 +8664,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "GridState",
-										"target": 525,
+										"target": 526,
 										"tsLinkText": ""
 									},
 									{
@@ -8675,7 +8675,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "serverSideStorageOptions",
-										"target": 263
+										"target": 264
 									},
 									{
 										"kind": "text",
@@ -8685,7 +8685,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "customStorageService",
-										"target": 268
+										"target": 269
 									},
 									{
 										"kind": "text",
@@ -8704,7 +8704,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "SessionStorageService",
-										"target": 549
+										"target": 550
 									},
 									{
 										"kind": "text",
@@ -8718,7 +8718,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "LocalStorageService",
-										"target": 539
+										"target": 540
 									},
 									{
 										"kind": "text",
@@ -8740,14 +8740,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 259,
+							"id": 260,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 260,
+									"id": 261,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8763,7 +8763,7 @@
 									}
 								},
 								{
-									"id": 261,
+									"id": 262,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8774,14 +8774,14 @@
 									}
 								},
 								{
-									"id": 262,
+									"id": 263,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"target": 522,
+										"target": 523,
 										"name": "LocalStorageType",
 										"package": "data-grid-vue"
 									}
@@ -8791,9 +8791,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										260,
 										261,
-										262
+										262,
+										263
 									]
 								}
 							]
@@ -8801,7 +8801,7 @@
 					}
 				},
 				{
-					"id": 263,
+					"id": 264,
 					"name": "serverSideStorageOptions",
 					"variant": "declaration",
 					"kind": 65536,
@@ -8820,7 +8820,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "ServerSideStorageService",
-										"target": 603
+										"target": 604
 									},
 									{
 										"kind": "text",
@@ -8830,7 +8830,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "GridState",
-										"target": 525,
+										"target": 526,
 										"tsLinkText": ""
 									},
 									{
@@ -8841,7 +8841,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "storageKey",
-										"target": 253
+										"target": 254
 									},
 									{
 										"kind": "text",
@@ -8851,7 +8851,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "localStorageType",
-										"target": 258
+										"target": 259
 									},
 									{
 										"kind": "text",
@@ -8861,7 +8861,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "customStorageService",
-										"target": 268
+										"target": 269
 									},
 									{
 										"kind": "text",
@@ -8876,7 +8876,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "ServerSideStorageServiceOptions",
-										"target": 592,
+										"target": 593,
 										"tsLinkText": ""
 									}
 								]
@@ -8895,14 +8895,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 264,
+							"id": 265,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 265,
+									"id": 266,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8916,7 +8916,7 @@
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": 592,
+												"target": 593,
 												"typeArguments": [
 													{
 														"type": "intrinsic",
@@ -8936,7 +8936,7 @@
 									}
 								},
 								{
-									"id": 266,
+									"id": 267,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8947,7 +8947,7 @@
 									}
 								},
 								{
-									"id": 267,
+									"id": 268,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -8962,9 +8962,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										265,
 										266,
-										267
+										267,
+										268
 									]
 								}
 							]
@@ -8972,7 +8972,7 @@
 					}
 				},
 				{
-					"id": 268,
+					"id": 269,
 					"name": "customStorageService",
 					"variant": "declaration",
 					"kind": 65536,
@@ -8991,7 +8991,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "StorageService",
-										"target": 532,
+										"target": 533,
 										"tsLinkText": ""
 									},
 									{
@@ -9002,7 +9002,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "GridState",
-										"target": 525,
+										"target": 526,
 										"tsLinkText": ""
 									},
 									{
@@ -9013,7 +9013,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "storageKey",
-										"target": 253
+										"target": 254
 									},
 									{
 										"kind": "text",
@@ -9023,7 +9023,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "localStorageType",
-										"target": 258
+										"target": 259
 									},
 									{
 										"kind": "text",
@@ -9033,7 +9033,7 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "serverSideStorageOptions",
-										"target": 263
+										"target": 264
 									},
 									{
 										"kind": "text",
@@ -9055,14 +9055,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 269,
+							"id": 270,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 270,
+									"id": 271,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9076,7 +9076,7 @@
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": 532,
+												"target": 533,
 												"name": "StorageService",
 												"package": "data-grid-vue"
 											}
@@ -9086,7 +9086,7 @@
 									}
 								},
 								{
-									"id": 271,
+									"id": 272,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9097,7 +9097,7 @@
 									}
 								},
 								{
-									"id": 272,
+									"id": 273,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9112,9 +9112,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										270,
 										271,
-										272
+										272,
+										273
 									]
 								}
 							]
@@ -9122,7 +9122,7 @@
 					}
 				},
 				{
-					"id": 400,
+					"id": 401,
 					"name": "filter-${column.field.fieldName}",
 					"variant": "declaration",
 					"kind": 65536,
@@ -9160,14 +9160,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 278,
+							"id": 279,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 279,
+									"id": 280,
 									"name": "column",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9199,7 +9199,7 @@
 									}
 								},
 								{
-									"id": 280,
+									"id": 281,
 									"name": "initialFilterCondition",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9231,7 +9231,7 @@
 									}
 								},
 								{
-									"id": 281,
+									"id": 282,
 									"name": "onFilterUpdated",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9265,9 +9265,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										279,
 										280,
-										281
+										281,
+										282
 									]
 								}
 							]
@@ -9275,7 +9275,7 @@
 					}
 				},
 				{
-					"id": 401,
+					"id": 402,
 					"name": "cell-${column.field.fieldName}",
 					"variant": "declaration",
 					"kind": 65536,
@@ -9323,14 +9323,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 289,
+							"id": 290,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 290,
+									"id": 291,
 									"name": "dataItem",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9353,7 +9353,7 @@
 								{
 									"title": "Properties",
 									"children": [
-										290
+										291
 									]
 								}
 							]
@@ -9361,7 +9361,7 @@
 					}
 				},
 				{
-					"id": 402,
+					"id": 403,
 					"name": "options-header",
 					"variant": "declaration",
 					"kind": 65536,
@@ -9383,14 +9383,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 295,
+							"id": 296,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 296,
+									"id": 297,
 									"name": "toggleFilterOptionsShown",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9409,7 +9409,7 @@
 									}
 								},
 								{
-									"id": 299,
+									"id": 300,
 									"name": "toggleColumnSelectionShown",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9428,7 +9428,7 @@
 									}
 								},
 								{
-									"id": 303,
+									"id": 304,
 									"name": "clearFilters",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9447,7 +9447,7 @@
 									}
 								},
 								{
-									"id": 306,
+									"id": 307,
 									"name": "filter",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9477,7 +9477,7 @@
 									}
 								},
 								{
-									"id": 307,
+									"id": 308,
 									"name": "filterOptionsShown",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9496,7 +9496,7 @@
 									}
 								},
 								{
-									"id": 308,
+									"id": 309,
 									"name": "filterSummary",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9515,7 +9515,7 @@
 									}
 								},
 								{
-									"id": 309,
+									"id": 310,
 									"name": "clearSort",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9534,7 +9534,7 @@
 									}
 								},
 								{
-									"id": 312,
+									"id": 313,
 									"name": "sort",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9551,7 +9551,7 @@
 										"type": "array",
 										"elementType": {
 											"type": "reference",
-											"target": 171,
+											"target": 176,
 											"name": "Sort",
 											"package": "data-grid-vue"
 										}
@@ -9562,14 +9562,14 @@
 								{
 									"title": "Properties",
 									"children": [
-										296,
-										299,
-										303,
-										306,
+										297,
+										300,
+										304,
 										307,
 										308,
 										309,
-										312
+										310,
+										313
 									]
 								}
 							]
@@ -9577,7 +9577,7 @@
 					}
 				},
 				{
-					"id": 403,
+					"id": 404,
 					"name": "options-header-filter-options-shown",
 					"variant": "declaration",
 					"kind": 65536,
@@ -9599,14 +9599,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 317,
+							"id": 318,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 318,
+									"id": 319,
 									"name": "toggleFilterOptionsShown",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9625,7 +9625,7 @@
 									}
 								},
 								{
-									"id": 321,
+									"id": 322,
 									"name": "filterOptionsShown",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9648,8 +9648,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										318,
-										321
+										319,
+										322
 									]
 								}
 							]
@@ -9657,7 +9657,7 @@
 					}
 				},
 				{
-					"id": 404,
+					"id": 405,
 					"name": "options-header-clear-filters",
 					"variant": "declaration",
 					"kind": 65536,
@@ -9679,14 +9679,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 326,
+							"id": 327,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 327,
+									"id": 328,
 									"name": "clearFilters",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9705,7 +9705,7 @@
 									}
 								},
 								{
-									"id": 330,
+									"id": 331,
 									"name": "filter",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9735,7 +9735,7 @@
 									}
 								},
 								{
-									"id": 331,
+									"id": 332,
 									"name": "filterSummary",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9754,7 +9754,7 @@
 									}
 								},
 								{
-									"id": 332,
+									"id": 333,
 									"name": "clearSort",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9773,7 +9773,7 @@
 									}
 								},
 								{
-									"id": 335,
+									"id": 336,
 									"name": "sort",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9790,7 +9790,7 @@
 										"type": "array",
 										"elementType": {
 											"type": "reference",
-											"target": 171,
+											"target": 176,
 											"name": "Sort",
 											"package": "data-grid-vue"
 										}
@@ -9801,11 +9801,11 @@
 								{
 									"title": "Properties",
 									"children": [
-										327,
-										330,
+										328,
 										331,
 										332,
-										335
+										333,
+										336
 									]
 								}
 							]
@@ -9813,7 +9813,7 @@
 					}
 				},
 				{
-					"id": 405,
+					"id": 406,
 					"name": "options-header-column-selection-shown",
 					"variant": "declaration",
 					"kind": 65536,
@@ -9835,14 +9835,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 340,
+							"id": 341,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 341,
+									"id": 342,
 									"name": "toggleColumnSelectionShown",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9865,7 +9865,7 @@
 								{
 									"title": "Properties",
 									"children": [
-										341
+										342
 									]
 								}
 							]
@@ -9873,7 +9873,7 @@
 					}
 				},
 				{
-					"id": 406,
+					"id": 407,
 					"name": "column-selection-popup",
 					"variant": "declaration",
 					"kind": 65536,
@@ -9895,14 +9895,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 349,
+							"id": 350,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 350,
+									"id": 351,
 									"name": "columns",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9926,7 +9926,7 @@
 									}
 								},
 								{
-									"id": 351,
+									"id": 352,
 									"name": "onHiddenUpdated",
 									"variant": "declaration",
 									"kind": 1024,
@@ -9960,8 +9960,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										350,
-										351
+										351,
+										352
 									]
 								}
 							]
@@ -9969,7 +9969,7 @@
 					}
 				},
 				{
-					"id": 407,
+					"id": 408,
 					"name": "footer",
 					"variant": "declaration",
 					"kind": 65536,
@@ -9991,14 +9991,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 360,
+							"id": 361,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 361,
+									"id": 362,
 									"name": "paged",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10017,7 +10017,7 @@
 									}
 								},
 								{
-									"id": 362,
+									"id": 363,
 									"name": "currentPage",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10044,7 +10044,7 @@
 									}
 								},
 								{
-									"id": 363,
+									"id": 364,
 									"name": "pageSize",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10063,7 +10063,7 @@
 									}
 								},
 								{
-									"id": 364,
+									"id": 365,
 									"name": "totalItems",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10082,7 +10082,7 @@
 									}
 								},
 								{
-									"id": 365,
+									"id": 366,
 									"name": "onCurrentPageChangedAsync",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10101,7 +10101,7 @@
 									}
 								},
 								{
-									"id": 369,
+									"id": 370,
 									"name": "onPageSizeChangedAsync",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10124,12 +10124,12 @@
 								{
 									"title": "Properties",
 									"children": [
-										361,
 										362,
 										363,
 										364,
 										365,
-										369
+										366,
+										370
 									]
 								}
 							]
@@ -10137,7 +10137,7 @@
 					}
 				},
 				{
-					"id": 408,
+					"id": 409,
 					"name": "footer-page-size-select",
 					"variant": "declaration",
 					"kind": 65536,
@@ -10159,14 +10159,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 377,
+							"id": 378,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 378,
+									"id": 379,
 									"name": "pageSize",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10185,7 +10185,7 @@
 									}
 								},
 								{
-									"id": 379,
+									"id": 380,
 									"name": "pageSizes",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10207,7 +10207,7 @@
 									}
 								},
 								{
-									"id": 380,
+									"id": 381,
 									"name": "onPageSizeChangedAsync",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10230,9 +10230,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										378,
 										379,
-										380
+										380,
+										381
 									]
 								}
 							]
@@ -10240,7 +10240,7 @@
 					}
 				},
 				{
-					"id": 409,
+					"id": 410,
 					"name": "footer-additional-content",
 					"variant": "declaration",
 					"kind": 65536,
@@ -10262,7 +10262,7 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 388,
+							"id": 389,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
@@ -10271,7 +10271,7 @@
 					}
 				},
 				{
-					"id": 410,
+					"id": 411,
 					"name": "footer-total-items",
 					"variant": "declaration",
 					"kind": 65536,
@@ -10293,14 +10293,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 393,
+							"id": 394,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 394,
+									"id": 395,
 									"name": "totalItems",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10323,7 +10323,7 @@
 								{
 									"title": "Properties",
 									"children": [
-										394
+										395
 									]
 								}
 							]
@@ -10331,7 +10331,7 @@
 					}
 				},
 				{
-					"id": 411,
+					"id": 412,
 					"name": "loader",
 					"variant": "declaration",
 					"kind": 65536,
@@ -10353,7 +10353,7 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 399,
+							"id": 400,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
@@ -10362,14 +10362,14 @@
 					}
 				},
 				{
-					"id": 413,
+					"id": 414,
 					"name": "update:columns",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 414,
+							"id": 415,
 							"name": "update:columns",
 							"variant": "signature",
 							"kind": 4096,
@@ -10420,7 +10420,7 @@
 							},
 							"parameters": [
 								{
-									"id": 415,
+									"id": 416,
 									"name": "columns",
 									"variant": "param",
 									"kind": 32768,
@@ -10456,32 +10456,31 @@
 				{
 					"title": "props",
 					"children": [
-						204,
-						209,
-						214,
-						219,
-						223,
-						228,
-						233,
-						238,
-						243,
-						248,
-						253,
-						258,
-						263,
-						268
+						205,
+						210,
+						215,
+						220,
+						224,
+						229,
+						234,
+						239,
+						244,
+						249,
+						254,
+						259,
+						264,
+						269
 					]
 				},
 				{
 					"title": "emits",
 					"children": [
-						413
+						414
 					]
 				},
 				{
 					"title": "slots",
 					"children": [
-						400,
 						401,
 						402,
 						403,
@@ -10492,7 +10491,8 @@
 						408,
 						409,
 						410,
-						411
+						411,
+						412
 					]
 				}
 			],
@@ -10507,7 +10507,7 @@
 			}
 		},
 		{
-			"id": 426,
+			"id": 427,
 			"name": "FilterOperatorSelect",
 			"variant": "declaration",
 			"kind": 2,
@@ -10576,7 +10576,7 @@
 			},
 			"children": [
 				{
-					"id": 428,
+					"id": 429,
 					"name": "operators",
 					"variant": "declaration",
 					"kind": 65536,
@@ -10619,14 +10619,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 429,
+							"id": 430,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 430,
+									"id": 431,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10653,7 +10653,7 @@
 									}
 								},
 								{
-									"id": 431,
+									"id": 432,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10668,8 +10668,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										430,
-										431
+										431,
+										432
 									]
 								}
 							]
@@ -10677,7 +10677,7 @@
 					}
 				},
 				{
-					"id": 432,
+					"id": 433,
 					"name": "modelValue",
 					"variant": "declaration",
 					"kind": 65536,
@@ -10719,14 +10719,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 433,
+							"id": 434,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 434,
+									"id": 435,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10750,7 +10750,7 @@
 									}
 								},
 								{
-									"id": 435,
+									"id": 436,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10761,7 +10761,7 @@
 									}
 								},
 								{
-									"id": 436,
+									"id": 437,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10778,9 +10778,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										434,
 										435,
-										436
+										436,
+										437
 									]
 								}
 							]
@@ -10788,14 +10788,14 @@
 					}
 				},
 				{
-					"id": 438,
+					"id": 439,
 					"name": "update:modelValue",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 439,
+							"id": 440,
 							"name": "update:modelValue",
 							"variant": "signature",
 							"kind": 4096,
@@ -10827,7 +10827,7 @@
 							},
 							"parameters": [
 								{
-									"id": 440,
+									"id": 441,
 									"name": "operator",
 									"variant": "param",
 									"kind": 32768,
@@ -10871,14 +10871,14 @@
 				{
 					"title": "props",
 					"children": [
-						428,
-						432
+						429,
+						433
 					]
 				},
 				{
 					"title": "emits",
 					"children": [
-						438
+						439
 					]
 				}
 			],
@@ -10893,7 +10893,7 @@
 			}
 		},
 		{
-			"id": 441,
+			"id": 442,
 			"name": "HeaderCell",
 			"variant": "declaration",
 			"kind": 2,
@@ -10914,7 +10914,7 @@
 			},
 			"children": [
 				{
-					"id": 443,
+					"id": 444,
 					"name": "column",
 					"variant": "declaration",
 					"kind": 65536,
@@ -10947,14 +10947,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 444,
+							"id": 445,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 445,
+									"id": 446,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10978,7 +10978,7 @@
 									}
 								},
 								{
-									"id": 446,
+									"id": 447,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -10993,8 +10993,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										445,
-										446
+										446,
+										447
 									]
 								}
 							]
@@ -11002,7 +11002,7 @@
 					}
 				},
 				{
-					"id": 447,
+					"id": 448,
 					"name": "sortable",
 					"variant": "declaration",
 					"kind": 65536,
@@ -11033,14 +11033,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 448,
+							"id": 449,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 449,
+									"id": 450,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11056,7 +11056,7 @@
 									}
 								},
 								{
-									"id": 450,
+									"id": 451,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11067,7 +11067,7 @@
 									}
 								},
 								{
-									"id": 451,
+									"id": 452,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11082,9 +11082,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										449,
 										450,
-										451
+										451,
+										452
 									]
 								}
 							]
@@ -11092,7 +11092,7 @@
 					}
 				},
 				{
-					"id": 452,
+					"id": 453,
 					"name": "sort",
 					"variant": "declaration",
 					"kind": 65536,
@@ -11114,14 +11114,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 453,
+							"id": 454,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 454,
+									"id": 455,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11137,7 +11137,7 @@
 												"type": "array",
 												"elementType": {
 													"type": "reference",
-													"target": 171,
+													"target": 176,
 													"name": "Sort",
 													"package": "data-grid-vue"
 												}
@@ -11148,7 +11148,7 @@
 									}
 								},
 								{
-									"id": 455,
+									"id": 456,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11163,8 +11163,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										454,
-										455
+										455,
+										456
 									]
 								}
 							]
@@ -11172,7 +11172,7 @@
 					}
 				},
 				{
-					"id": 456,
+					"id": 457,
 					"name": "allowColumnReorder",
 					"variant": "declaration",
 					"kind": 65536,
@@ -11204,14 +11204,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 457,
+							"id": 458,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 458,
+									"id": 459,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11227,7 +11227,7 @@
 									}
 								},
 								{
-									"id": 459,
+									"id": 460,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11242,8 +11242,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										458,
-										459
+										459,
+										460
 									]
 								}
 							]
@@ -11251,7 +11251,7 @@
 					}
 				},
 				{
-					"id": 460,
+					"id": 461,
 					"name": "columnIndex",
 					"variant": "declaration",
 					"kind": 65536,
@@ -11273,14 +11273,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 461,
+							"id": 462,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 462,
+									"id": 463,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11296,7 +11296,7 @@
 									}
 								},
 								{
-									"id": 463,
+									"id": 464,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11311,8 +11311,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										462,
-										463
+										463,
+										464
 									]
 								}
 							]
@@ -11320,7 +11320,7 @@
 					}
 				},
 				{
-					"id": 464,
+					"id": 465,
 					"name": "totalColumnCount",
 					"variant": "declaration",
 					"kind": 65536,
@@ -11342,14 +11342,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 465,
+							"id": 466,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 466,
+									"id": 467,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11365,7 +11365,7 @@
 									}
 								},
 								{
-									"id": 467,
+									"id": 468,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11380,8 +11380,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										466,
-										467
+										467,
+										468
 									]
 								}
 							]
@@ -11389,14 +11389,14 @@
 					}
 				},
 				{
-					"id": 469,
+					"id": 470,
 					"name": "onClick",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 470,
+							"id": 471,
 							"name": "onClick",
 							"variant": "signature",
 							"kind": 4096,
@@ -11417,7 +11417,7 @@
 							},
 							"parameters": [
 								{
-									"id": 471,
+									"id": 472,
 									"name": "columnIndex",
 									"variant": "param",
 									"kind": 32768,
@@ -11444,14 +11444,14 @@
 					]
 				},
 				{
-					"id": 472,
+					"id": 473,
 					"name": "onLeft",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 473,
+							"id": 474,
 							"name": "onLeft",
 							"variant": "signature",
 							"kind": 4096,
@@ -11472,7 +11472,7 @@
 							},
 							"parameters": [
 								{
-									"id": 474,
+									"id": 475,
 									"name": "columnIndex",
 									"variant": "param",
 									"kind": 32768,
@@ -11499,14 +11499,14 @@
 					]
 				},
 				{
-					"id": 475,
+					"id": 476,
 					"name": "onRight",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 476,
+							"id": 477,
 							"name": "onRight",
 							"variant": "signature",
 							"kind": 4096,
@@ -11527,7 +11527,7 @@
 							},
 							"parameters": [
 								{
-									"id": 477,
+									"id": 478,
 									"name": "columnIndex",
 									"variant": "param",
 									"kind": 32768,
@@ -11558,20 +11558,20 @@
 				{
 					"title": "props",
 					"children": [
-						443,
-						447,
-						452,
-						456,
-						460,
-						464
+						444,
+						448,
+						453,
+						457,
+						461,
+						465
 					]
 				},
 				{
 					"title": "emits",
 					"children": [
-						469,
-						472,
-						475
+						470,
+						473,
+						476
 					]
 				}
 			],
@@ -11586,7 +11586,7 @@
 			}
 		},
 		{
-			"id": 478,
+			"id": 479,
 			"name": "HeaderFilter",
 			"variant": "declaration",
 			"kind": 2,
@@ -11607,7 +11607,7 @@
 			},
 			"children": [
 				{
-					"id": 480,
+					"id": 481,
 					"name": "column",
 					"variant": "declaration",
 					"kind": 65536,
@@ -11640,14 +11640,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 481,
+							"id": 482,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 482,
+									"id": 483,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11671,7 +11671,7 @@
 									}
 								},
 								{
-									"id": 483,
+									"id": 484,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11686,8 +11686,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										482,
-										483
+										483,
+										484
 									]
 								}
 							]
@@ -11695,7 +11695,7 @@
 					}
 				},
 				{
-					"id": 484,
+					"id": 485,
 					"name": "initialFilterCondition",
 					"variant": "declaration",
 					"kind": 65536,
@@ -11737,14 +11737,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 485,
+							"id": 486,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 486,
+									"id": 487,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11768,7 +11768,7 @@
 									}
 								},
 								{
-									"id": 487,
+									"id": 488,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11779,7 +11779,7 @@
 									}
 								},
 								{
-									"id": 488,
+									"id": 489,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11794,9 +11794,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										486,
 										487,
-										488
+										488,
+										489
 									]
 								}
 							]
@@ -11804,14 +11804,14 @@
 					}
 				},
 				{
-					"id": 490,
+					"id": 491,
 					"name": "updated",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 491,
+							"id": 492,
 							"name": "updated",
 							"variant": "signature",
 							"kind": 4096,
@@ -11843,7 +11843,7 @@
 							},
 							"parameters": [
 								{
-									"id": 492,
+									"id": 493,
 									"name": "condition",
 									"variant": "param",
 									"kind": 32768,
@@ -11883,14 +11883,14 @@
 				{
 					"title": "props",
 					"children": [
-						480,
-						484
+						481,
+						485
 					]
 				},
 				{
 					"title": "emits",
 					"children": [
-						490
+						491
 					]
 				}
 			],
@@ -11905,14 +11905,14 @@
 			}
 		},
 		{
-			"id": 493,
+			"id": 494,
 			"name": "Icon",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 495,
+					"id": 496,
 					"name": "name",
 					"variant": "declaration",
 					"kind": 65536,
@@ -11920,14 +11920,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 496,
+							"id": 497,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 497,
+									"id": 498,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11943,7 +11943,7 @@
 									}
 								},
 								{
-									"id": 498,
+									"id": 499,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11958,8 +11958,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										497,
-										498
+										498,
+										499
 									]
 								}
 							]
@@ -11967,7 +11967,7 @@
 					}
 				},
 				{
-					"id": 499,
+					"id": 500,
 					"name": "text",
 					"variant": "declaration",
 					"kind": 65536,
@@ -11975,14 +11975,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 500,
+							"id": 501,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 501,
+									"id": 502,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -11998,7 +11998,7 @@
 									}
 								},
 								{
-									"id": 502,
+									"id": 503,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -12009,7 +12009,7 @@
 									}
 								},
 								{
-									"id": 503,
+									"id": 504,
 									"name": "default",
 									"variant": "declaration",
 									"kind": 1024,
@@ -12024,9 +12024,9 @@
 								{
 									"title": "Properties",
 									"children": [
-										501,
 										502,
-										503
+										503,
+										504
 									]
 								}
 							]
@@ -12038,8 +12038,8 @@
 				{
 					"title": "props",
 					"children": [
-						495,
-						499
+						496,
+						500
 					]
 				}
 			],
@@ -12054,7 +12054,7 @@
 			}
 		},
 		{
-			"id": 504,
+			"id": 505,
 			"name": "PageNavigation",
 			"variant": "declaration",
 			"kind": 2,
@@ -12075,7 +12075,7 @@
 			},
 			"children": [
 				{
-					"id": 506,
+					"id": 507,
 					"name": "pageSize",
 					"variant": "declaration",
 					"kind": 65536,
@@ -12097,14 +12097,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 507,
+							"id": 508,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 508,
+									"id": 509,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -12120,7 +12120,7 @@
 									}
 								},
 								{
-									"id": 509,
+									"id": 510,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -12135,8 +12135,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										508,
-										509
+										509,
+										510
 									]
 								}
 							]
@@ -12144,7 +12144,7 @@
 					}
 				},
 				{
-					"id": 510,
+					"id": 511,
 					"name": "currentPage",
 					"variant": "declaration",
 					"kind": 65536,
@@ -12174,14 +12174,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 511,
+							"id": 512,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 512,
+									"id": 513,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -12197,7 +12197,7 @@
 									}
 								},
 								{
-									"id": 513,
+									"id": 514,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -12212,8 +12212,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										512,
-										513
+										513,
+										514
 									]
 								}
 							]
@@ -12221,7 +12221,7 @@
 					}
 				},
 				{
-					"id": 514,
+					"id": 515,
 					"name": "totalItems",
 					"variant": "declaration",
 					"kind": 65536,
@@ -12243,14 +12243,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 515,
+							"id": 516,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 516,
+									"id": 517,
 									"name": "type",
 									"variant": "declaration",
 									"kind": 1024,
@@ -12266,7 +12266,7 @@
 									}
 								},
 								{
-									"id": 517,
+									"id": 518,
 									"name": "required",
 									"variant": "declaration",
 									"kind": 1024,
@@ -12281,8 +12281,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										516,
-										517
+										517,
+										518
 									]
 								}
 							]
@@ -12290,14 +12290,14 @@
 					}
 				},
 				{
-					"id": 519,
+					"id": 520,
 					"name": "update:currentPage",
 					"variant": "declaration",
 					"kind": 65536,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 520,
+							"id": 521,
 							"name": "update:currentPage",
 							"variant": "signature",
 							"kind": 4096,
@@ -12318,7 +12318,7 @@
 							},
 							"parameters": [
 								{
-									"id": 521,
+									"id": 522,
 									"name": "page",
 									"variant": "param",
 									"kind": 32768,
@@ -12349,15 +12349,15 @@
 				{
 					"title": "props",
 					"children": [
-						506,
-						510,
-						514
+						507,
+						511,
+						515
 					]
 				},
 				{
 					"title": "emits",
 					"children": [
-						519
+						520
 					]
 				}
 			],
@@ -12376,18 +12376,18 @@
 		{
 			"title": "Data Grid Component",
 			"children": [
-				202
+				203
 			]
 		},
 		{
 			"title": "Components",
 			"children": [
-				416,
-				426,
-				441,
-				478,
-				493,
-				504
+				417,
+				427,
+				442,
+				479,
+				494,
+				505
 			]
 		},
 		{
@@ -12412,9 +12412,9 @@
 		{
 			"title": "Sort",
 			"children": [
-				165,
-				168,
-				171
+				170,
+				173,
+				176
 			]
 		},
 		{
@@ -12434,20 +12434,20 @@
 		{
 			"title": "Storage Service",
 			"children": [
-				522,
-				525,
-				532,
-				538,
-				549,
+				523,
+				526,
+				533,
 				539,
-				559,
-				564,
-				570,
-				577,
-				581,
-				588,
-				592,
-				603
+				550,
+				540,
+				560,
+				565,
+				571,
+				578,
+				582,
+				589,
+				593,
+				604
 			]
 		},
 		{
@@ -12460,7 +12460,7 @@
 		{
 			"title": "Utilities",
 			"children": [
-				153
+				158
 			]
 		}
 	],
@@ -12962,389 +12962,385 @@
 			"sourceFileName": "dist/types/Filter.d.ts",
 			"qualifiedName": "Filter.and"
 		},
-		"153": {
-			"sourceFileName": "dist/types/Formatter.d.ts",
-			"qualifiedName": "_default"
-		},
-		"154": {
-			"sourceFileName": "dist/types/Formatter.d.ts",
-			"qualifiedName": "__type"
-		},
-		"155": {
-			"sourceFileName": "dist/types/Formatter.d.ts",
-			"qualifiedName": "__type.fromCamelCase"
-		},
-		"156": {
-			"sourceFileName": "dist/types/Formatter.d.ts",
-			"qualifiedName": "__type.fromCamelCase"
-		},
-		"157": {
-			"sourceFileName": "dist/types/Formatter.d.ts",
-			"qualifiedName": "value"
-		},
 		"158": {
 			"sourceFileName": "dist/types/Formatter.d.ts",
-			"qualifiedName": "__type.columnTitle"
+			"qualifiedName": "_default"
 		},
 		"159": {
 			"sourceFileName": "dist/types/Formatter.d.ts",
-			"qualifiedName": "__type.columnTitle"
+			"qualifiedName": "__type"
 		},
 		"160": {
 			"sourceFileName": "dist/types/Formatter.d.ts",
-			"qualifiedName": "column"
+			"qualifiedName": "__type.fromCamelCase"
 		},
 		"161": {
 			"sourceFileName": "dist/types/Formatter.d.ts",
-			"qualifiedName": "__type.ariaColumnLabel"
+			"qualifiedName": "__type.fromCamelCase"
 		},
 		"162": {
 			"sourceFileName": "dist/types/Formatter.d.ts",
-			"qualifiedName": "__type.ariaColumnLabel"
+			"qualifiedName": "value"
 		},
 		"163": {
 			"sourceFileName": "dist/types/Formatter.d.ts",
-			"qualifiedName": "column"
+			"qualifiedName": "__type.columnTitle"
 		},
 		"164": {
 			"sourceFileName": "dist/types/Formatter.d.ts",
-			"qualifiedName": "prefix"
+			"qualifiedName": "__type.columnTitle"
 		},
 		"165": {
-			"sourceFileName": "dist/types/Sort.d.ts",
-			"qualifiedName": "SortOptions"
+			"sourceFileName": "dist/types/Formatter.d.ts",
+			"qualifiedName": "column"
 		},
 		"166": {
-			"sourceFileName": "dist/types/Sort.d.ts",
-			"qualifiedName": "SortOptions.sortable"
+			"sourceFileName": "dist/types/Formatter.d.ts",
+			"qualifiedName": "__type.ariaColumnLabel"
 		},
 		"167": {
-			"sourceFileName": "dist/types/Sort.d.ts",
-			"qualifiedName": "SortOptions.multiColumn"
+			"sourceFileName": "dist/types/Formatter.d.ts",
+			"qualifiedName": "__type.ariaColumnLabel"
 		},
 		"168": {
-			"sourceFileName": "dist/types/Sort.d.ts",
-			"qualifiedName": "SortType"
+			"sourceFileName": "dist/types/Formatter.d.ts",
+			"qualifiedName": "column"
 		},
 		"169": {
-			"sourceFileName": "dist/types/Sort.d.ts",
-			"qualifiedName": "SortType.ascending"
+			"sourceFileName": "dist/types/Formatter.d.ts",
+			"qualifiedName": "prefix"
 		},
 		"170": {
 			"sourceFileName": "dist/types/Sort.d.ts",
-			"qualifiedName": "SortType.descending"
+			"qualifiedName": "SortOptions"
 		},
 		"171": {
 			"sourceFileName": "dist/types/Sort.d.ts",
-			"qualifiedName": "Sort"
+			"qualifiedName": "SortOptions.sortable"
 		},
 		"172": {
 			"sourceFileName": "dist/types/Sort.d.ts",
-			"qualifiedName": "Sort.fieldName"
+			"qualifiedName": "SortOptions.multiColumn"
 		},
 		"173": {
 			"sourceFileName": "dist/types/Sort.d.ts",
-			"qualifiedName": "Sort.dataType"
+			"qualifiedName": "SortType"
 		},
 		"174": {
 			"sourceFileName": "dist/types/Sort.d.ts",
-			"qualifiedName": "Sort.type"
+			"qualifiedName": "SortType.ascending"
 		},
-		"202": {
-			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "_default"
+		"175": {
+			"sourceFileName": "dist/types/Sort.d.ts",
+			"qualifiedName": "SortType.descending"
+		},
+		"176": {
+			"sourceFileName": "dist/types/Sort.d.ts",
+			"qualifiedName": "Sort"
+		},
+		"177": {
+			"sourceFileName": "dist/types/Sort.d.ts",
+			"qualifiedName": "Sort.fieldName"
+		},
+		"178": {
+			"sourceFileName": "dist/types/Sort.d.ts",
+			"qualifiedName": "Sort.dataType"
+		},
+		"179": {
+			"sourceFileName": "dist/types/Sort.d.ts",
+			"qualifiedName": "Sort.type"
 		},
 		"203": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "_default"
 		},
 		"204": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.data"
+			"qualifiedName": "__type"
 		},
 		"205": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.data"
 		},
 		"206": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"207": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"208": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"209": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.serverSideOptions"
+			"qualifiedName": "__type.default"
 		},
 		"210": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.serverSideOptions"
 		},
 		"211": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"212": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"213": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"214": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.customDataService"
+			"qualifiedName": "__type.default"
 		},
 		"215": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.customDataService"
 		},
 		"216": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"217": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"218": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"219": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.columns"
+			"qualifiedName": "__type.default"
 		},
 		"220": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.columns"
 		},
 		"221": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"222": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"223": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.allowColumnReorder"
+			"qualifiedName": "__type.required"
 		},
 		"224": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.allowColumnReorder"
 		},
 		"225": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"226": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"227": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"228": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.paged"
+			"qualifiedName": "__type.default"
 		},
 		"229": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.paged"
 		},
 		"230": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"231": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"232": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"233": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.initialPageSize"
+			"qualifiedName": "__type.default"
 		},
 		"234": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.initialPageSize"
 		},
 		"235": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"236": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"237": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"238": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.pageSizes"
+			"qualifiedName": "__type.default"
 		},
 		"239": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.pageSizes"
 		},
 		"240": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"241": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"242": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"243": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.sortOptions"
+			"qualifiedName": "__type.default"
 		},
 		"244": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.sortOptions"
 		},
 		"245": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"246": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"247": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"248": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.showColumnSelection"
+			"qualifiedName": "__type.default"
 		},
 		"249": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.showColumnSelection"
 		},
 		"250": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"251": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"252": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"253": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.storageKey"
+			"qualifiedName": "__type.default"
 		},
 		"254": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.storageKey"
 		},
 		"255": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"256": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"257": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"258": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.localStorageType"
+			"qualifiedName": "__type.default"
 		},
 		"259": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.localStorageType"
 		},
 		"260": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"261": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"262": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"263": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.serverSideStorageOptions"
+			"qualifiedName": "__type.default"
 		},
 		"264": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.serverSideStorageOptions"
 		},
 		"265": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"266": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"267": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"268": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.customStorageService"
+			"qualifiedName": "__type.default"
 		},
 		"269": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.customStorageService"
 		},
 		"270": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"271": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"272": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"273": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.default"
 		},
 		"274": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.filter-${column.field.fieldName}"
+			"qualifiedName": "__type"
 		},
 		"275": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.filter-${column.field.fieldName}"
 		},
 		"276": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13352,27 +13348,27 @@
 		},
 		"277": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "props"
+			"qualifiedName": "__type"
 		},
 		"278": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "props"
 		},
 		"279": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.column"
+			"qualifiedName": "__type"
 		},
 		"280": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.initialFilterCondition"
+			"qualifiedName": "__type.column"
 		},
 		"281": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.onFilterUpdated"
+			"qualifiedName": "__type.initialFilterCondition"
 		},
 		"282": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.onFilterUpdated"
 		},
 		"283": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13380,15 +13376,15 @@
 		},
 		"284": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "condition"
+			"qualifiedName": "__type"
 		},
 		"285": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.cell-${column.field.fieldName}"
+			"qualifiedName": "condition"
 		},
 		"286": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.cell-${column.field.fieldName}"
 		},
 		"287": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13396,23 +13392,23 @@
 		},
 		"288": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "props"
+			"qualifiedName": "__type"
 		},
 		"289": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "props"
 		},
 		"290": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.dataItem"
+			"qualifiedName": "__type"
 		},
 		"291": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.options-header"
+			"qualifiedName": "__type.dataItem"
 		},
 		"292": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.options-header"
 		},
 		"293": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13420,19 +13416,19 @@
 		},
 		"294": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "props"
+			"qualifiedName": "__type"
 		},
 		"295": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "props"
 		},
 		"296": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.toggleFilterOptionsShown"
+			"qualifiedName": "__type"
 		},
 		"297": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.toggleFilterOptionsShown"
 		},
 		"298": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13440,11 +13436,11 @@
 		},
 		"299": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.toggleColumnSelectionShown"
+			"qualifiedName": "__type"
 		},
 		"300": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.toggleColumnSelectionShown"
 		},
 		"301": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13452,15 +13448,15 @@
 		},
 		"302": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "event"
+			"qualifiedName": "__type"
 		},
 		"303": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.clearFilters"
+			"qualifiedName": "event"
 		},
 		"304": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.clearFilters"
 		},
 		"305": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13468,23 +13464,23 @@
 		},
 		"306": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.filter"
+			"qualifiedName": "__type"
 		},
 		"307": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.filterOptionsShown"
+			"qualifiedName": "__type.filter"
 		},
 		"308": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.filterSummary"
+			"qualifiedName": "__type.filterOptionsShown"
 		},
 		"309": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.clearSort"
+			"qualifiedName": "__type.filterSummary"
 		},
 		"310": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.clearSort"
 		},
 		"311": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13492,15 +13488,15 @@
 		},
 		"312": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.sort"
+			"qualifiedName": "__type"
 		},
 		"313": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.options-header-filter-options-shown"
+			"qualifiedName": "__type.sort"
 		},
 		"314": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.options-header-filter-options-shown"
 		},
 		"315": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13508,19 +13504,19 @@
 		},
 		"316": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "props"
+			"qualifiedName": "__type"
 		},
 		"317": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "props"
 		},
 		"318": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.toggleFilterOptionsShown"
+			"qualifiedName": "__type"
 		},
 		"319": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.toggleFilterOptionsShown"
 		},
 		"320": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13528,15 +13524,15 @@
 		},
 		"321": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.filterOptionsShown"
+			"qualifiedName": "__type"
 		},
 		"322": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.options-header-clear-filters"
+			"qualifiedName": "__type.filterOptionsShown"
 		},
 		"323": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.options-header-clear-filters"
 		},
 		"324": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13544,19 +13540,19 @@
 		},
 		"325": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "props"
+			"qualifiedName": "__type"
 		},
 		"326": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "props"
 		},
 		"327": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.clearFilters"
+			"qualifiedName": "__type"
 		},
 		"328": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.clearFilters"
 		},
 		"329": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13564,19 +13560,19 @@
 		},
 		"330": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.filter"
+			"qualifiedName": "__type"
 		},
 		"331": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.filterSummary"
+			"qualifiedName": "__type.filter"
 		},
 		"332": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.clearSort"
+			"qualifiedName": "__type.filterSummary"
 		},
 		"333": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.clearSort"
 		},
 		"334": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13584,15 +13580,15 @@
 		},
 		"335": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.sort"
+			"qualifiedName": "__type"
 		},
 		"336": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.options-header-column-selection-shown"
+			"qualifiedName": "__type.sort"
 		},
 		"337": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.options-header-column-selection-shown"
 		},
 		"338": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13600,19 +13596,19 @@
 		},
 		"339": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "props"
+			"qualifiedName": "__type"
 		},
 		"340": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "props"
 		},
 		"341": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.toggleColumnSelectionShown"
+			"qualifiedName": "__type"
 		},
 		"342": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.toggleColumnSelectionShown"
 		},
 		"343": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13620,15 +13616,15 @@
 		},
 		"344": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "event"
+			"qualifiedName": "__type"
 		},
 		"345": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.column-selection-popup"
+			"qualifiedName": "event"
 		},
 		"346": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.column-selection-popup"
 		},
 		"347": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13636,23 +13632,23 @@
 		},
 		"348": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "props"
+			"qualifiedName": "__type"
 		},
 		"349": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "props"
 		},
 		"350": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.columns"
+			"qualifiedName": "__type"
 		},
 		"351": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.onHiddenUpdated"
+			"qualifiedName": "__type.columns"
 		},
 		"352": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.onHiddenUpdated"
 		},
 		"353": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13660,19 +13656,19 @@
 		},
 		"354": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "column"
+			"qualifiedName": "__type"
 		},
 		"355": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "hidden"
+			"qualifiedName": "column"
 		},
 		"356": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.footer"
+			"qualifiedName": "hidden"
 		},
 		"357": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.footer"
 		},
 		"358": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13680,35 +13676,35 @@
 		},
 		"359": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "props"
+			"qualifiedName": "__type"
 		},
 		"360": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "props"
 		},
 		"361": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.paged"
+			"qualifiedName": "__type"
 		},
 		"362": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.currentPage"
+			"qualifiedName": "__type.paged"
 		},
 		"363": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.pageSize"
+			"qualifiedName": "__type.currentPage"
 		},
 		"364": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.totalItems"
+			"qualifiedName": "__type.pageSize"
 		},
 		"365": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.onCurrentPageChangedAsync"
+			"qualifiedName": "__type.totalItems"
 		},
 		"366": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.onCurrentPageChangedAsync"
 		},
 		"367": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13716,15 +13712,15 @@
 		},
 		"368": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "page"
+			"qualifiedName": "__type"
 		},
 		"369": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.onPageSizeChangedAsync"
+			"qualifiedName": "page"
 		},
 		"370": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.onPageSizeChangedAsync"
 		},
 		"371": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13732,15 +13728,15 @@
 		},
 		"372": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "pageSize"
+			"qualifiedName": "__type"
 		},
 		"373": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.footer-page-size-select"
+			"qualifiedName": "pageSize"
 		},
 		"374": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.footer-page-size-select"
 		},
 		"375": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13748,27 +13744,27 @@
 		},
 		"376": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "props"
+			"qualifiedName": "__type"
 		},
 		"377": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "props"
 		},
 		"378": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.pageSize"
+			"qualifiedName": "__type"
 		},
 		"379": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.pageSizes"
+			"qualifiedName": "__type.pageSize"
 		},
 		"380": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.onPageSizeChangedAsync"
+			"qualifiedName": "__type.pageSizes"
 		},
 		"381": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.onPageSizeChangedAsync"
 		},
 		"382": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13776,15 +13772,15 @@
 		},
 		"383": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "pageSize"
+			"qualifiedName": "__type"
 		},
 		"384": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.footer-additional-content"
+			"qualifiedName": "pageSize"
 		},
 		"385": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.footer-additional-content"
 		},
 		"386": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13792,19 +13788,19 @@
 		},
 		"387": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "props"
+			"qualifiedName": "__type"
 		},
 		"388": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "props"
 		},
 		"389": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.footer-total-items"
+			"qualifiedName": "__type"
 		},
 		"390": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.footer-total-items"
 		},
 		"391": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13812,23 +13808,23 @@
 		},
 		"392": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "props"
+			"qualifiedName": "__type"
 		},
 		"393": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "props"
 		},
 		"394": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.totalItems"
+			"qualifiedName": "__type"
 		},
 		"395": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.loader"
+			"qualifiedName": "__type.totalItems"
 		},
 		"396": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.loader"
 		},
 		"397": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13836,19 +13832,19 @@
 		},
 		"398": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "props"
+			"qualifiedName": "__type"
 		},
 		"399": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "props"
 		},
-		"412": {
+		"400": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
 			"qualifiedName": "__type"
 		},
 		"413": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "__type.update:columns"
+			"qualifiedName": "__type"
 		},
 		"414": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
@@ -13856,39 +13852,39 @@
 		},
 		"415": {
 			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
-			"qualifiedName": "columns"
+			"qualifiedName": "__type.update:columns"
 		},
 		"416": {
-			"sourceFileName": "dist/types/components/ColumnSelectionItem.vue.d.ts",
-			"qualifiedName": "_default"
+			"sourceFileName": "dist/types/components/DataGridVue.vue.d.ts",
+			"qualifiedName": "columns"
 		},
 		"417": {
 			"sourceFileName": "dist/types/components/ColumnSelectionItem.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "_default"
 		},
 		"418": {
 			"sourceFileName": "dist/types/components/ColumnSelectionItem.vue.d.ts",
-			"qualifiedName": "__type.column"
+			"qualifiedName": "__type"
 		},
 		"419": {
 			"sourceFileName": "dist/types/components/ColumnSelectionItem.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.column"
 		},
 		"420": {
 			"sourceFileName": "dist/types/components/ColumnSelectionItem.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"421": {
 			"sourceFileName": "dist/types/components/ColumnSelectionItem.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"422": {
 			"sourceFileName": "dist/types/components/ColumnSelectionItem.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.required"
 		},
 		"423": {
 			"sourceFileName": "dist/types/components/ColumnSelectionItem.vue.d.ts",
-			"qualifiedName": "__type.hidden-updated"
+			"qualifiedName": "__type"
 		},
 		"424": {
 			"sourceFileName": "dist/types/components/ColumnSelectionItem.vue.d.ts",
@@ -13896,59 +13892,59 @@
 		},
 		"425": {
 			"sourceFileName": "dist/types/components/ColumnSelectionItem.vue.d.ts",
-			"qualifiedName": "hidden"
+			"qualifiedName": "__type.hidden-updated"
 		},
 		"426": {
-			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
-			"qualifiedName": "_default"
+			"sourceFileName": "dist/types/components/ColumnSelectionItem.vue.d.ts",
+			"qualifiedName": "hidden"
 		},
 		"427": {
 			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "_default"
 		},
 		"428": {
 			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
-			"qualifiedName": "__type.operators"
+			"qualifiedName": "__type"
 		},
 		"429": {
 			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.operators"
 		},
 		"430": {
 			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"431": {
 			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"432": {
 			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
-			"qualifiedName": "__type.modelValue"
+			"qualifiedName": "__type.required"
 		},
 		"433": {
 			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.modelValue"
 		},
 		"434": {
 			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"435": {
 			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"436": {
 			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"437": {
 			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.default"
 		},
 		"438": {
 			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
-			"qualifiedName": "__type.update:modelValue"
+			"qualifiedName": "__type"
 		},
 		"439": {
 			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
@@ -13956,123 +13952,123 @@
 		},
 		"440": {
 			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
-			"qualifiedName": "operator"
+			"qualifiedName": "__type.update:modelValue"
 		},
 		"441": {
-			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "_default"
+			"sourceFileName": "dist/types/components/FilterOperatorSelect.vue.d.ts",
+			"qualifiedName": "operator"
 		},
 		"442": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "_default"
 		},
 		"443": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.column"
+			"qualifiedName": "__type"
 		},
 		"444": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.column"
 		},
 		"445": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"446": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"447": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.sortable"
+			"qualifiedName": "__type.required"
 		},
 		"448": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.sortable"
 		},
 		"449": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"450": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"451": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"452": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.sort"
+			"qualifiedName": "__type.default"
 		},
 		"453": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.sort"
 		},
 		"454": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"455": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"456": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.allowColumnReorder"
+			"qualifiedName": "__type.required"
 		},
 		"457": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.allowColumnReorder"
 		},
 		"458": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"459": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"460": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.columnIndex"
+			"qualifiedName": "__type.required"
 		},
 		"461": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.columnIndex"
 		},
 		"462": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"463": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"464": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.totalColumnCount"
+			"qualifiedName": "__type.required"
 		},
 		"465": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.totalColumnCount"
 		},
 		"466": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"467": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"468": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.required"
 		},
 		"469": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.onClick"
+			"qualifiedName": "__type"
 		},
 		"470": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
@@ -14080,11 +14076,11 @@
 		},
 		"471": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "columnIndex"
+			"qualifiedName": "__type.onClick"
 		},
 		"472": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.onLeft"
+			"qualifiedName": "columnIndex"
 		},
 		"473": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
@@ -14092,11 +14088,11 @@
 		},
 		"474": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "columnIndex"
+			"qualifiedName": "__type.onLeft"
 		},
 		"475": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "__type.onRight"
+			"qualifiedName": "columnIndex"
 		},
 		"476": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
@@ -14104,59 +14100,59 @@
 		},
 		"477": {
 			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
-			"qualifiedName": "columnIndex"
+			"qualifiedName": "__type.onRight"
 		},
 		"478": {
-			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
-			"qualifiedName": "_default"
+			"sourceFileName": "dist/types/components/HeaderCell.vue.d.ts",
+			"qualifiedName": "columnIndex"
 		},
 		"479": {
 			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "_default"
 		},
 		"480": {
 			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
-			"qualifiedName": "__type.column"
+			"qualifiedName": "__type"
 		},
 		"481": {
 			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.column"
 		},
 		"482": {
 			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"483": {
 			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"484": {
 			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
-			"qualifiedName": "__type.initialFilterCondition"
+			"qualifiedName": "__type.required"
 		},
 		"485": {
 			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.initialFilterCondition"
 		},
 		"486": {
 			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"487": {
 			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"488": {
 			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"489": {
 			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.default"
 		},
 		"490": {
 			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
-			"qualifiedName": "__type.updated"
+			"qualifiedName": "__type"
 		},
 		"491": {
 			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
@@ -14164,115 +14160,115 @@
 		},
 		"492": {
 			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
-			"qualifiedName": "condition"
+			"qualifiedName": "__type.updated"
 		},
 		"493": {
-			"sourceFileName": "dist/types/components/Icon.vue.d.ts",
-			"qualifiedName": "_default"
+			"sourceFileName": "dist/types/components/HeaderFilter.vue.d.ts",
+			"qualifiedName": "condition"
 		},
 		"494": {
 			"sourceFileName": "dist/types/components/Icon.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "_default"
 		},
 		"495": {
 			"sourceFileName": "dist/types/components/Icon.vue.d.ts",
-			"qualifiedName": "__type.name"
+			"qualifiedName": "__type"
 		},
 		"496": {
 			"sourceFileName": "dist/types/components/Icon.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.name"
 		},
 		"497": {
 			"sourceFileName": "dist/types/components/Icon.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"498": {
 			"sourceFileName": "dist/types/components/Icon.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"499": {
 			"sourceFileName": "dist/types/components/Icon.vue.d.ts",
-			"qualifiedName": "__type.text"
+			"qualifiedName": "__type.required"
 		},
 		"500": {
 			"sourceFileName": "dist/types/components/Icon.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.text"
 		},
 		"501": {
 			"sourceFileName": "dist/types/components/Icon.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"502": {
 			"sourceFileName": "dist/types/components/Icon.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"503": {
 			"sourceFileName": "dist/types/components/Icon.vue.d.ts",
-			"qualifiedName": "__type.default"
+			"qualifiedName": "__type.required"
 		},
 		"504": {
-			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "_default"
+			"sourceFileName": "dist/types/components/Icon.vue.d.ts",
+			"qualifiedName": "__type.default"
 		},
 		"505": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "_default"
 		},
 		"506": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type.pageSize"
+			"qualifiedName": "__type"
 		},
 		"507": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.pageSize"
 		},
 		"508": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"509": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"510": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type.currentPage"
+			"qualifiedName": "__type.required"
 		},
 		"511": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.currentPage"
 		},
 		"512": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"513": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"514": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type.totalItems"
+			"qualifiedName": "__type.required"
 		},
 		"515": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.totalItems"
 		},
 		"516": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type.type"
+			"qualifiedName": "__type"
 		},
 		"517": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type.required"
+			"qualifiedName": "__type.type"
 		},
 		"518": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "__type.required"
 		},
 		"519": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "__type.update:currentPage"
+			"qualifiedName": "__type"
 		},
 		"520": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
@@ -14280,55 +14276,55 @@
 		},
 		"521": {
 			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
-			"qualifiedName": "page"
+			"qualifiedName": "__type.update:currentPage"
 		},
 		"522": {
-			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "LocalStorageType"
+			"sourceFileName": "dist/types/components/PageNavigation.vue.d.ts",
+			"qualifiedName": "page"
 		},
 		"523": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "LocalStorageType.sessionStorage"
+			"qualifiedName": "LocalStorageType"
 		},
 		"524": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "LocalStorageType.localStorage"
+			"qualifiedName": "LocalStorageType.sessionStorage"
 		},
 		"525": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GridState"
+			"qualifiedName": "LocalStorageType.localStorage"
 		},
 		"526": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GridState.pageSize"
+			"qualifiedName": "GridState"
 		},
 		"527": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GridState.hiddenFields"
+			"qualifiedName": "GridState.pageSize"
 		},
 		"528": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GridState.sort"
+			"qualifiedName": "GridState.hiddenFields"
 		},
 		"529": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GridState.filters"
+			"qualifiedName": "GridState.sort"
 		},
 		"530": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GridState.externalFilter"
+			"qualifiedName": "GridState.filters"
 		},
 		"531": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GridState.columnOrder"
+			"qualifiedName": "GridState.externalFilter"
 		},
 		"532": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "StorageService"
+			"qualifiedName": "GridState.columnOrder"
 		},
 		"533": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "StorageService.getGridStateAsync"
+			"qualifiedName": "StorageService"
 		},
 		"534": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -14336,7 +14332,7 @@
 		},
 		"535": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "StorageService.setGridStateAsync"
+			"qualifiedName": "StorageService.getGridStateAsync"
 		},
 		"536": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -14344,35 +14340,35 @@
 		},
 		"537": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "gridState"
+			"qualifiedName": "StorageService.setGridStateAsync"
 		},
 		"538": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "StubStorageService"
+			"qualifiedName": "gridState"
 		},
 		"539": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "LocalStorageService"
+			"qualifiedName": "StubStorageService"
 		},
 		"540": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "LocalStorageService.__constructor"
+			"qualifiedName": "LocalStorageService"
 		},
 		"541": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "LocalStorageService"
+			"qualifiedName": "LocalStorageService.__constructor"
 		},
 		"542": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "key"
+			"qualifiedName": "LocalStorageService"
 		},
 		"543": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "LocalStorageService.key"
+			"qualifiedName": "key"
 		},
 		"544": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "LocalStorageService.getGridStateAsync"
+			"qualifiedName": "LocalStorageService.key"
 		},
 		"545": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -14380,7 +14376,7 @@
 		},
 		"546": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "LocalStorageService.setGridStateAsync"
+			"qualifiedName": "LocalStorageService.getGridStateAsync"
 		},
 		"547": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -14388,31 +14384,31 @@
 		},
 		"548": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "gridState"
+			"qualifiedName": "LocalStorageService.setGridStateAsync"
 		},
 		"549": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SessionStorageService"
+			"qualifiedName": "gridState"
 		},
 		"550": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SessionStorageService.__constructor"
+			"qualifiedName": "SessionStorageService"
 		},
 		"551": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SessionStorageService"
+			"qualifiedName": "SessionStorageService.__constructor"
 		},
 		"552": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "key"
+			"qualifiedName": "SessionStorageService"
 		},
 		"553": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SessionStorageService.key"
+			"qualifiedName": "key"
 		},
 		"554": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SessionStorageService.getGridStateAsync"
+			"qualifiedName": "SessionStorageService.key"
 		},
 		"555": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -14420,7 +14416,7 @@
 		},
 		"556": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SessionStorageService.setGridStateAsync"
+			"qualifiedName": "SessionStorageService.getGridStateAsync"
 		},
 		"557": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -14428,59 +14424,59 @@
 		},
 		"558": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "gridState"
+			"qualifiedName": "SessionStorageService.setGridStateAsync"
 		},
 		"559": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GetGridStateRequest"
+			"qualifiedName": "gridState"
 		},
 		"560": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GetGridStateRequest.userId"
+			"qualifiedName": "GetGridStateRequest"
 		},
 		"561": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GetGridStateRequest.gridId"
+			"qualifiedName": "GetGridStateRequest.userId"
 		},
 		"562": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GetGridStateRequest.TUserId"
+			"qualifiedName": "GetGridStateRequest.gridId"
 		},
 		"563": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GetGridStateRequest.TGridId"
+			"qualifiedName": "GetGridStateRequest.TUserId"
 		},
 		"564": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetGridStateRequest"
+			"qualifiedName": "GetGridStateRequest.TGridId"
 		},
 		"565": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetGridStateRequest.userId"
+			"qualifiedName": "SetGridStateRequest"
 		},
 		"566": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetGridStateRequest.gridId"
+			"qualifiedName": "SetGridStateRequest.userId"
 		},
 		"567": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetGridStateRequest.gridState"
+			"qualifiedName": "SetGridStateRequest.gridId"
 		},
 		"568": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetGridStateRequest.TUserId"
+			"qualifiedName": "SetGridStateRequest.gridState"
 		},
 		"569": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetGridStateRequest.TGridId"
+			"qualifiedName": "SetGridStateRequest.TUserId"
 		},
 		"570": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "BeforeGetRequestHandler"
+			"qualifiedName": "SetGridStateRequest.TGridId"
 		},
 		"571": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "BeforeGetRequestHandler"
 		},
 		"572": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -14488,27 +14484,27 @@
 		},
 		"573": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "request"
+			"qualifiedName": "__type"
 		},
 		"574": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "body"
+			"qualifiedName": "request"
 		},
 		"575": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "TUserId"
+			"qualifiedName": "body"
 		},
 		"576": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "TGridId"
+			"qualifiedName": "TUserId"
 		},
 		"577": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "GetResponseHandler"
+			"qualifiedName": "TGridId"
 		},
 		"578": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "GetResponseHandler"
 		},
 		"579": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -14516,15 +14512,15 @@
 		},
 		"580": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "response"
+			"qualifiedName": "__type"
 		},
 		"581": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "BeforeSetRequestHandler"
+			"qualifiedName": "response"
 		},
 		"582": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "BeforeSetRequestHandler"
 		},
 		"583": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -14532,27 +14528,27 @@
 		},
 		"584": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "request"
+			"qualifiedName": "__type"
 		},
 		"585": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "body"
+			"qualifiedName": "request"
 		},
 		"586": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "TUserId"
+			"qualifiedName": "body"
 		},
 		"587": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "TGridId"
+			"qualifiedName": "TUserId"
 		},
 		"588": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "SetResponseHandler"
+			"qualifiedName": "TGridId"
 		},
 		"589": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "__type"
+			"qualifiedName": "SetResponseHandler"
 		},
 		"590": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -14560,83 +14556,83 @@
 		},
 		"591": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "response"
+			"qualifiedName": "__type"
 		},
 		"592": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions"
+			"qualifiedName": "response"
 		},
 		"593": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.userId"
+			"qualifiedName": "ServerSideStorageServiceOptions"
 		},
 		"594": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.gridId"
+			"qualifiedName": "ServerSideStorageServiceOptions.userId"
 		},
 		"595": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.getPostRoute"
+			"qualifiedName": "ServerSideStorageServiceOptions.gridId"
 		},
 		"596": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.beforeGetRequest"
+			"qualifiedName": "ServerSideStorageServiceOptions.getPostRoute"
 		},
 		"597": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.getResponseHandler"
+			"qualifiedName": "ServerSideStorageServiceOptions.beforeGetRequest"
 		},
 		"598": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.setPostRoute"
+			"qualifiedName": "ServerSideStorageServiceOptions.getResponseHandler"
 		},
 		"599": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.beforeSetRequest"
+			"qualifiedName": "ServerSideStorageServiceOptions.setPostRoute"
 		},
 		"600": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.setResponseHandler"
+			"qualifiedName": "ServerSideStorageServiceOptions.beforeSetRequest"
 		},
 		"601": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.TUserId"
+			"qualifiedName": "ServerSideStorageServiceOptions.setResponseHandler"
 		},
 		"602": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageServiceOptions.TGridId"
+			"qualifiedName": "ServerSideStorageServiceOptions.TUserId"
 		},
 		"603": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService"
+			"qualifiedName": "ServerSideStorageServiceOptions.TGridId"
 		},
 		"604": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.__constructor"
+			"qualifiedName": "ServerSideStorageService"
 		},
 		"605": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService"
+			"qualifiedName": "ServerSideStorageService.__constructor"
 		},
 		"606": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.TUserId"
+			"qualifiedName": "ServerSideStorageService"
 		},
 		"607": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.TGridId"
+			"qualifiedName": "ServerSideStorageService.TUserId"
 		},
 		"608": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "options"
+			"qualifiedName": "ServerSideStorageService.TGridId"
 		},
 		"609": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.options"
+			"qualifiedName": "options"
 		},
 		"610": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.getGridStateAsync"
+			"qualifiedName": "ServerSideStorageService.options"
 		},
 		"611": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -14644,7 +14640,7 @@
 		},
 		"612": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.setGridStateAsync"
+			"qualifiedName": "ServerSideStorageService.getGridStateAsync"
 		},
 		"613": {
 			"sourceFileName": "dist/types/Storage.d.ts",
@@ -14652,13 +14648,17 @@
 		},
 		"614": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "gridState"
+			"qualifiedName": "ServerSideStorageService.setGridStateAsync"
 		},
 		"615": {
 			"sourceFileName": "dist/types/Storage.d.ts",
-			"qualifiedName": "ServerSideStorageService.TUserId"
+			"qualifiedName": "gridState"
 		},
 		"616": {
+			"sourceFileName": "dist/types/Storage.d.ts",
+			"qualifiedName": "ServerSideStorageService.TUserId"
+		},
+		"617": {
 			"sourceFileName": "dist/types/Storage.d.ts",
 			"qualifiedName": "ServerSideStorageService.TGridId"
 		}

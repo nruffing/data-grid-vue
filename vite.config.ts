@@ -34,11 +34,11 @@ export default defineConfig({
     env: {
       VITE_DEBUG_NATIVE_EVENT_VUE: 'true',
     },
-    // browser: {
-    //   enabled: true,
-    //   name: 'chrome',
-    //   provider: 'webdriverio',
-    // },
+    browser: {
+      enabled: true,
+      name: 'chrome',
+      provider: 'webdriverio',
+    },
     coverage: {
       provider: 'istanbul',
       reporter: ['text', 'json', 'html'],

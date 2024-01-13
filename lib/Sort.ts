@@ -1,4 +1,5 @@
 import { DataType } from './DataGridVue'
+import { parseDate } from './DateUtils'
 
 /**
  * @group Sort
@@ -50,6 +51,7 @@ export interface Sort {
 
 /**
  * @ignore
+ * Sort implementation for client-side sorting (i.e. `ClientSideDataService`).
  */
 export const ClientSideSort = {
   sort(sort: Sort[], dataItems: any[]) {
@@ -77,9 +79,9 @@ export const ClientSideSort = {
       case DataType.number:
         return this.compareNumeric(aValue as number, bValue as number)
       case DataType.date:
-        return this.compareDate(new Date(aValue), new Date(bValue))
+        return this.compareDateTime(parseDate(aValue, true), parseDate(bValue, true))
       case DataType.dateTime:
-        return this.compareDateTime(new Date(aValue), new Date(bValue))
+        return this.compareDateTime(parseDate(aValue, false), parseDate(bValue, false))
     }
 
     console.warn(`Unknown data type detected while sorting: ${DataType[sort.dataType]}`)
@@ -96,11 +98,6 @@ export const ClientSideSort = {
   },
   compareNumeric(a: number, b: number) {
     return a - b
-  },
-  compareDate(a: Date, b: Date) {
-    const aJustDate = new Date(a.getFullYear(), a.getMonth(), a.getDate())
-    const bJustDate = new Date(b.getFullYear(), b.getMonth(), b.getDate())
-    return this.compareDateTime(aJustDate, bJustDate)
   },
   compareDateTime(a: Date, b: Date) {
     return a.getTime() - b.getTime()

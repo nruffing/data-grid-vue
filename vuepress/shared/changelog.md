@@ -2,15 +2,20 @@
 
 ## Release Notes
 
+### v3.3.0
+  - Add `date` and `dateTime` filtering support to `ClientSideDataService`.
+  - Improved `date` and `dateTime` support for sorting and filtering in `ClientSideDataService` ensuring all computations are done on UTC dates and falsey values are converted to the JS minimum date of `1970-01-01 00:00:00.000+00:00`.
+  - Fix for sorting being able to override the filter.
+
 ### v3.2.0
   - [#9](https://github.com/nruffing/data-grid-vue/issues/9): Add package export so styles can be loaded via `data-grid-vue/style`.
   - Fix bug in `ClientSideDataService` where paging through a sorted grid could cause data to not stay sorted.
-  - Update ['dragon-drop-vue'](https://www.npmjs.com/package/dragon-drop-vue) dependency to v2.1.0 to leverage ability to debounce the `dragover` event.
+  - Update [`dragon-drop-vue`](https://www.npmjs.com/package/dragon-drop-vue) dependency to v2.1.0 to leverage ability to debounce the `dragover` event.
   - Replace [`debounce`](https://www.npmjs.com/package/debounce) with new [`native-event-vue`](https://www.npmjs.com/package/native-event-vue) package to leverage the lightweight vue-friendly native event handling with debounce.
   - Update development dependencies.
 
 ### v3.1.0
-  - Update ['dragon-drop-vue'](https://www.npmjs.com/package/dragon-drop-vue) dependency to v1.1.0
+  - Update [`dragon-drop-vue`](https://www.npmjs.com/package/dragon-drop-vue) dependency to v1.1.0
   - update development dependencies
 
 ### v3.0.1
@@ -60,7 +65,7 @@
   - Repo now uses [`pnpm`](https://pnpm.io/) where the `data-grid-vue` package is build from the root workspace and the documentation site and dev app are nested workspaces.
   - Now being built with `vite` [v5](https://vitejs.dev/blog/announcing-vite5).
   - Update [`debounce`](https://www.npmjs.com/package/debounce/v/2.0.0) dependency to new major version v2.0.0 which requires node v18 ([current oldest supported version](https://nodejs.org/en/about/previous-releases)).
-  - Update ['dragon-drop-vue'](https://www.npmjs.com/package/dragon-drop-vue) dependency to v0.2.0
+  - Update [`dragon-drop-vue`](https://www.npmjs.com/package/dragon-drop-vue) dependency to v0.2.0
   - Documentation site theme update
   - Documentation site is now setup up as a [progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps).
   - bugfix: `DataGridVueOptions.clickOutsideDirectiveName` removed.

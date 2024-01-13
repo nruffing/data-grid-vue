@@ -60,6 +60,7 @@ export class ClientSideDataService implements DataService {
 
     const sortJson = JSON.stringify(sort)
     if (sortJson !== this.previousSortJson) {
+      this.sorted = [...this.filtered]
       ClientSideSort.sort(sort, this.sorted)
       this.previousSortJson = sortJson
     }
