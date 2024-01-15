@@ -67,7 +67,7 @@ createApp(App).use(DataGridVue, dataGridVueOptions).mount('#app')
 ::: tip Note
 The data grid component can also be imported locally to the component that will be using it but it is recommended to use the plugin since it also sets up a click-outside directive and drag and drop directives powered by [dragon-drop-vue](https://www.npmjs.com/package/dragon-drop-vue).
 
-If you are not going to be using the functionality that these directives are used for then importing the data grid component locally will work and automatically import the styles. The component is exported as `DataGridVueGrid`.
+If you are not going to be using the functionality that these directives are used for then importing the data grid component locally will work and automatically import the styles. The component is exported as `DataGridVueGrid`. However, you will need to keep in mind the order in which the CSS will be included and in this case you will likely need to override any of the data grid's CSS variables in the [SFC](https://vuejs.org/guide/scaling-up/sfc.html) style block of the local component.
 
 The click-outside and focus directives are only used for the add/remove columns menu (i.e. the [showColumnSelection](/generated/DataGridVueGrid/#showcolumnselection) is `true`).
 
@@ -100,8 +100,8 @@ import { DataGridVueGrid } from 'data-grid-vue'
 
 ## Usage
 
-A simple example populating a data grid with static client-side data is shown below. The `columns` and `data` props are the only required props in this scenario but this example also shows the data grid with sorting, filtering, column reorder and the ability to add/remove columns. These configuration options and other features will be further explained in later sections.
-
-!!!include(simple-example.md)!!!
+A simple example populating a data grid with static client-side data is shown below. The `columns` and `data` props are the only required props in this scenario but this example also shows the data grid with sorting, filtering, column reordering and the ability to add/remove columns. These configuration options and other features will be further explained in later sections.
 
 !!!include(columns-note.md)!!!
+
+!!!include(simple-example.md)!!!
