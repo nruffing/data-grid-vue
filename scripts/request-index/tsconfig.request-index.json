@@ -4,7 +4,8 @@
     "baseUrl": "./",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "noEmit": false
+    "noEmit": false,
+    "noImplicitAny": false
   },
   "include": ["./**/*.ts", "../shared/**/*.ts"]
 }
