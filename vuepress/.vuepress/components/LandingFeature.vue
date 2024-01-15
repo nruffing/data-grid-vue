@@ -4,6 +4,7 @@
       <h3><slot name="title"></slot></h3>
     </div>
     <div class="feature-description"><slot name="description"></slot></div>
+    <div class="feature-badges"><slot name="badges"></slot></div>
   </div>
 </template>
 

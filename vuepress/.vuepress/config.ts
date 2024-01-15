@@ -1,4 +1,4 @@
-import { defineUserConfig, defaultTheme, App } from 'vuepress'
+import { defineUserConfig, defaultTheme, App, viteBundler } from 'vuepress'
 import { fs, getDirname, path } from '@vuepress/utils'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 import markdownItInclude from 'markdown-it-include'
@@ -81,6 +81,16 @@ export default defineUserConfig({
     ['meta', { name: 'og:image', content: `https://${path.join(domain, 'android-chrome-512x512.png')}` }],
     ['meta', { name: 'og:url', content: hostname }],
   ],
+  bundler: viteBundler({
+    viteOptions: {
+      define: {
+        /* https://github.com/vuejs/core/tree/main/packages/vue#bundler-build-feature-flags */
+        __VUE_OPTIONS_API__: true,
+        __VUE_PROD_DEVTOOLS__: false,
+        __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
+      },
+    },
+  }),
   extendsPage: (page, app) => {
     if (!page.frontmatter.head) {
       page.frontmatter.head = []

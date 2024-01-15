@@ -36,7 +36,7 @@ Columns will be displayed in the order in which they are in the array passed to 
 
 ## Field & Data Type
 
-At a minimum a column requires a [field](/generated/classes/Field.html) and a [data type](/generated/enumerations/DataType.html) to be defined.
+At a minimum a column requires [`field`](/generated/classes/Field.html) and [`dataType`](/generated/enumerations/DataType.html) to be defined.
 
 ```ts
 import { type Column, Field, DataType } from 'data-grid-vue'
