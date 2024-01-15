@@ -4,6 +4,7 @@
   "useGitignore": true,
   "words": [
     "allowcolumnreorder",
+    "ansicolor",
     "clickanalytics",
     "datagridvue",
     "docsearch",

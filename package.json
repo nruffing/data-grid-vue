@@ -80,6 +80,7 @@
   },
   "devDependencies": {
     "@axe-core/cli": "^4.8.2",
+    "@azure/communication-email": "^1.0.0",
     "@azure/identity": "^4.0.0",
     "@azure/keyvault-secrets": "^4.7.0",
     "@babel/types": "^7.23.6",
@@ -92,6 +93,7 @@
     "@vue/tsconfig": "^0.5.1",
     "@vuepress/utils": "2.0.0-rc.0",
     "adm-zip": "^0.5.10",
+    "ansicolor": "^2.0.1",
     "cspell": "^8.3.2",
     "dotenv": "^16.3.1",
     "googleapis": "^130.0.0",
