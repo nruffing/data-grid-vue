@@ -38,7 +38,7 @@
     "postcss": "^8.4.33",
     "sitemap": "^7.1.1",
     "tsconfig-vuepress": "^4.5.0",
-    "vue": "3.4.12",
+    "vue": "3.4.15",
     "vue-github-button": "^3.1.0",
     "vue-router": "^4.2.5",
     "vuepress": "^2.0.0-rc.0",
