@@ -6,6 +6,8 @@
   - Rev development dependencies. This addresses the security vulnerabilities reported in package [`ip`](https://github.com/nruffing/data-grid-vue/security/dependabot/12).
   - Update [`dragon-drop-vue`](http://dragondropvue.com) dependency to v2.1.1.
   - Update [`native-event-vue`](http://nativeeventvue.com) dependency to v1.4.1.
+  - Resolve breaking changes in vuepress v2 RC.
+  - Leverage new heading sidebar option in vuepress's default theme.
 
 ### v3.3.0
   - Add `date` and `dateTime` filtering support to `ClientSideDataService`.
