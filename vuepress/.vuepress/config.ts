@@ -1,6 +1,9 @@
-import { defineUserConfig, defaultTheme, App, viteBundler } from 'vuepress'
+import { defineUserConfig, App } from 'vuepress'
+import { defaultTheme } from '@vuepress/theme-default'
+import { viteBundler } from '@vuepress/bundler-vite'
 import { fs, getDirname, path } from '@vuepress/utils'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
+import { createCssVariablesTheme } from 'shiki'
 import markdownItInclude from 'markdown-it-include'
 import postcss from 'postcss'
 import constants from './constants'
@@ -71,6 +74,7 @@ const descriptions = {
 
 export default defineUserConfig({
   lang: 'en-US',
+  shouldPrefetch: false,
   title,
   description,
   head: [
@@ -123,6 +127,7 @@ export default defineUserConfig({
     themePlugins: {
       git: true,
       prismjs: false,
+      backToTop: false,
     },
     navbar: [
       {
@@ -181,16 +186,8 @@ export default defineUserConfig({
           ],
         },
       ],
-      '/generated/': [
-        {
-          text: 'API',
-        },
-      ],
-      '/dotnet-generated/': [
-        {
-          text: '.NET',
-        },
-      ],
+      '/generated/': 'heading',
+      '/dotnet-generated/': 'heading',
     },
     sidebarDepth: 2,
   }),
@@ -213,7 +210,12 @@ export default defineUserConfig({
   },
   plugins: [
     shikiPlugin({
-      theme: 'css-variables',
+      theme: createCssVariablesTheme({
+        name: 'css-variables',
+        variablePrefix: '--shiki-',
+        variableDefaults: {},
+        fontStyle: true,
+      }),
       langs: ['vue', 'css', 'sh', 'csharp'],
     }),
     pwaPlugin(),

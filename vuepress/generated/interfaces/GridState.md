@@ -14,7 +14,3 @@ The data that is saved as part of the grid state.
 | `filters` | [`FilterCondition`](FilterCondition.md)[] | The current filter conditions |
 | `externalFilter` | `undefined` \| [`Filter`](Filter.md) | The current external filter if applied |
 | `columnOrder` | `string`[] | The field name of the columns in the order they are currently displayed |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

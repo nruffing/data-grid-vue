@@ -32,11 +32,11 @@ undefined
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<`any`[]\> | - |
-| `required` | `false` | - |
-| `default` | `undefined` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<`any`[]\> |
+| `required` | `false` |
+| `default` | `undefined` |
 
 ***
 
@@ -69,11 +69,11 @@ undefined
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<[`ServerSideDataServiceOptions`](../interfaces/ServerSideDataServiceOptions.md)\> | - |
-| `required` | `false` | - |
-| `default` | `undefined` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`ServerSideDataServiceOptions`](../interfaces/ServerSideDataServiceOptions.md)\> |
+| `required` | `false` |
+| `default` | `undefined` |
 
 ***
 
@@ -100,11 +100,11 @@ undefined
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<[`DataService`](../interfaces/DataService.md)\> | - |
-| `required` | `false` | - |
-| `default` | `undefined` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`DataService`](../interfaces/DataService.md)\> |
+| `required` | `false` |
+| `default` | `undefined` |
 
 ***
 
@@ -128,10 +128,10 @@ functionality to do things like allowing users to add/remove columns.
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<[`Column`](../interfaces/Column.md)[]\> | - |
-| `required` | `true` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`Column`](../interfaces/Column.md)[]\> |
+| `required` | `true` |
 
 ***
 
@@ -159,11 +159,11 @@ false
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `BooleanConstructor` | - |
-| `required` | `false` | - |
-| `default` | `boolean` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `BooleanConstructor` |
+| `required` | `false` |
+| `default` | `boolean` |
 
 ***
 
@@ -190,11 +190,11 @@ true
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `BooleanConstructor` | - |
-| `required` | `false` | - |
-| `default` | `boolean` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `BooleanConstructor` |
+| `required` | `false` |
+| `default` | `boolean` |
 
 ***
 
@@ -220,11 +220,11 @@ The page size to use when the grid initially loads.
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `NumberConstructor` | - |
-| `required` | `false` | - |
-| `default` | `number` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `NumberConstructor` |
+| `required` | `false` |
+| `default` | `number` |
 
 ***
 
@@ -251,11 +251,11 @@ will only be displayed if this array contains more then one value.
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<`number`[]\> | - |
-| `required` | `false` | - |
-| `default` | `number`[] | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<`number`[]\> |
+| `required` | `false` |
+| `default` | `number`[] |
 
 ***
 
@@ -283,11 +283,11 @@ undefined
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<[`SortOptions`](../interfaces/SortOptions.md)\> | - |
-| `required` | `false` | - |
-| `default` | `undefined` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`SortOptions`](../interfaces/SortOptions.md)\> |
+| `required` | `false` |
+| `default` | `undefined` |
 
 ***
 
@@ -315,11 +315,11 @@ false
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `BooleanConstructor` | - |
-| `required` | `false` | - |
-| `default` | `boolean` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `BooleanConstructor` |
+| `required` | `false` |
+| `default` | `boolean` |
 
 ***
 
@@ -354,11 +354,11 @@ This is ignored if [serverSideStorageOptions](README.md) or [customStorageServic
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `StringConstructor` | - |
-| `required` | `false` | - |
-| `default` | `string` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `StringConstructor` |
+| `required` | `false` |
+| `default` | `string` |
 
 ***
 
@@ -393,11 +393,11 @@ LocalStorageType.sessionStorage
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `NumberConstructor` | - |
-| `required` | `false` | - |
-| `default` | [`LocalStorageType`](../enumerations/LocalStorageType.md) | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `NumberConstructor` |
+| `required` | `false` |
+| `default` | [`LocalStorageType`](../enumerations/LocalStorageType.md) |
 
 ***
 
@@ -429,11 +429,11 @@ undefined
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<[`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)\<`any`, `any`\>\> | - |
-| `required` | `false` | - |
-| `default` | `undefined` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`ServerSideStorageServiceOptions`](../interfaces/ServerSideStorageServiceOptions.md)\<`any`, `any`\>\> |
+| `required` | `false` |
+| `default` | `undefined` |
 
 ***
 
@@ -460,11 +460,11 @@ undefined
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<[`StorageService`](../interfaces/StorageService.md)\> | - |
-| `required` | `false` | - |
-| `default` | `undefined` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`StorageService`](../interfaces/StorageService.md)\> |
+| `required` | `false` |
+| `default` | `undefined` |
 
 ## emits
 
@@ -495,7 +495,7 @@ the columns prop to update. Leveraging `v-model:columns` is recommended.
 ### filter-$\{column.field.fieldName}
 
 ```ts
-filter-${column.field.fieldName}: {
+fieldName}: {
   column: Column;
   initialFilterCondition: FilterCondition;
   onFilterUpdated: (condition) => any;
@@ -519,7 +519,7 @@ Slot to override the filter for the specified column. For example, the slot name
 ### cell-$\{column.field.fieldName}
 
 ```ts
-cell-${column.field.fieldName}: {
+fieldName}: {
   dataItem: any;
 };
 ```
@@ -759,7 +759,3 @@ loader: {};
 #### Description
 
 Slot to override the loader that is displayed when the data grid is loading page data.
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

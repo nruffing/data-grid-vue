@@ -29,7 +29,3 @@ if the HTTP status code is `200 OK` and the `Content-Type` response header is `a
 | `setPostRoute?` | `string` \| [`URL`]( https://developer.mozilla.org/docs/Web/API/URL ) | **Description**<br />The full HTTP/HTTPS url to send the POST request to save grid state.<br />Use [beforeSetRequest](ServerSideStorageServiceOptions.md) callback to alter the HTTP verb or headers. |
 | `beforeSetRequest?` | [`BeforeGetRequestHandler`](../type-aliases/BeforeGetRequestHandler.md)\<`TUserId`, `TGridId`\> | Optional callback to change the [Request](https://developer.mozilla.org/docs/Web/API/Request)<br />object before it is sent to the server from the built-in server side storage service. This is useful<br />when you need to map the [SetGridStateRequest](SetGridStateRequest.md) to a different data contract or alter the HTTP verb/headers. |
 | `setResponseHandler?` | [`GetResponseHandler`](../type-aliases/GetResponseHandler.md) | Optional callback type to change the [Response](https://developer.mozilla.org/docs/Web/API/Response)<br />object before it is handled by the data grid from the built-in server side data service. |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

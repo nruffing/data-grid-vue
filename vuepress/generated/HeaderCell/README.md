@@ -21,10 +21,10 @@ The [Column](../interfaces/Column.md) being rendered.
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<[`Column`](../interfaces/Column.md)\> | - |
-| `required` | `true` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`Column`](../interfaces/Column.md)\> |
+| `required` | `true` |
 
 ***
 
@@ -50,11 +50,11 @@ false
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `BooleanConstructor` | - |
-| `required` | `false` | - |
-| `default` | `boolean` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `BooleanConstructor` |
+| `required` | `false` |
+| `default` | `boolean` |
 
 ***
 
@@ -73,10 +73,10 @@ The current sort for the entire data grid.
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<[`Sort`](../interfaces/Sort.md)[]\> | - |
-| `required` | `true` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`Sort`](../interfaces/Sort.md)[]\> |
+| `required` | `true` |
 
 ***
 
@@ -96,10 +96,10 @@ powered by [drag-drop-vue](https://www.npmjs.com/package/dragon-drop-vue).
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `BooleanConstructor` | - |
-| `required` | `true` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `BooleanConstructor` |
+| `required` | `true` |
 
 ***
 
@@ -118,10 +118,10 @@ The zero-based index of the column that defines the current column order.
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `NumberConstructor` | - |
-| `required` | `true` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `NumberConstructor` |
+| `required` | `true` |
 
 ***
 
@@ -140,10 +140,10 @@ The total number of columns in the grid.
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `NumberConstructor` | - |
-| `required` | `true` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `NumberConstructor` |
+| `required` | `true` |
 
 ## emits
 
@@ -211,7 +211,3 @@ onRight(columnIndex): boolean
 #### Description
 
 Event emitted when the right arrow key is pressed and the header cell is focused.
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

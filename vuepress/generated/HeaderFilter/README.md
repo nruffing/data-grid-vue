@@ -21,10 +21,10 @@ The [Column](../interfaces/Column.md) currently being rendered.
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<[`Column`](../interfaces/Column.md)\> | - |
-| `required` | `true` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`Column`](../interfaces/Column.md)\> |
+| `required` | `true` |
 
 ***
 
@@ -50,11 +50,11 @@ undefined
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<[`FilterCondition`](../interfaces/FilterCondition.md)\> | - |
-| `required` | `false` | - |
-| `default` | `undefined` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`FilterCondition`](../interfaces/FilterCondition.md)\> |
+| `required` | `false` |
+| `default` | `undefined` |
 
 ## emits
 
@@ -77,7 +77,3 @@ updated(condition): boolean
 #### Description
 
 Event emitted when the [FilterCondition](../interfaces/FilterCondition.md) is updated.
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

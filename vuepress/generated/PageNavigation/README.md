@@ -21,10 +21,10 @@ The current page size.
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `NumberConstructor` | - |
-| `required` | `true` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `NumberConstructor` |
+| `required` | `true` |
 
 ***
 
@@ -43,10 +43,10 @@ The current page number starting with `1` for the first page.
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `NumberConstructor` | - |
-| `required` | `true` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `NumberConstructor` |
+| `required` | `true` |
 
 ***
 
@@ -66,10 +66,10 @@ have been applied.
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `NumberConstructor` | - |
-| `required` | `true` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `NumberConstructor` |
+| `required` | `true` |
 
 ## emits
 
@@ -92,7 +92,3 @@ update:currentPage(page): boolean
 #### Description
 
 Event emitted when the page changes.
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

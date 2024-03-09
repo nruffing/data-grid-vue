@@ -97,14 +97,10 @@ Called to get data for the currently rendered page.
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`PageData`](../interfaces/PageData.md)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`PageData`](../interfaces/PageData.md)\>
 
 A Promise that returns the [PageData](../interfaces/PageData.md) for the current page.
 
 #### Implementation of
 
-[`DataService.getPageAsync`](../interfaces/DataService.md)
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).
+[`DataService`](../interfaces/DataService.md).`getPageAsync`

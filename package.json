@@ -1,9 +1,9 @@
 {
   "name": "data-grid-vue",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "type": "module",
   "private": false,
-  "description": "Customizable native Vue3 data grid with very limited dependencies. Leverages a flat html structure and CSS grid to allow full layout control.",
+  "description": "Customizable native Vue3 data grid with only a few first-party dependencies. Leverages a flat html structure and CSS grid to allow full layout control.",
   "license": "MIT",
   "author": {
     "name": "Nicholas Ruffing",
@@ -79,46 +79,46 @@
     "vue": ">=3.3.0"
   },
   "devDependencies": {
-    "@axe-core/cli": "^4.8.3",
+    "@axe-core/cli": "^4.8.5",
     "@azure/communication-email": "^1.0.0",
-    "@azure/identity": "^4.0.0",
-    "@azure/keyvault-secrets": "^4.7.0",
-    "@babel/types": "^7.23.6",
+    "@azure/identity": "^4.0.1",
+    "@azure/keyvault-secrets": "^4.8.0",
+    "@babel/types": "^7.24.0",
     "@tsconfig/node18": "^18.2.2",
     "@types/adm-zip": "^0.5.5",
     "@types/debounce": "^1.2.4",
     "@types/node": "^18.11.9",
-    "@vitejs/plugin-vue": "^5.0.3",
-    "@vitest/browser": "^1.2.1",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitest/browser": "^1.3.1",
     "@vue/tsconfig": "^0.5.1",
-    "@vuepress/utils": "2.0.0-rc.0",
+    "@vuepress/utils": "2.0.0-rc.8",
     "adm-zip": "^0.5.10",
-    "ansicolor": "^2.0.1",
-    "cspell": "^8.3.2",
-    "dotenv": "^16.3.2",
-    "googleapis": "^131.0.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.2.0",
+    "ansicolor": "^2.0.3",
+    "cspell": "^8.6.0",
+    "dotenv": "^16.4.5",
+    "googleapis": "^133.0.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "markdown-include": "^0.4.3",
-    "npm-check-updates": "^16.14.12",
-    "prettier": "^3.2.4",
+    "npm-check-updates": "^16.14.15",
+    "prettier": "^3.2.5",
     "rollup-plugin-delete": "^2.0.0",
     "tslib": "^2.6.2",
-    "typedoc": "^0.25.7",
-    "typedoc-plugin-markdown": "4.0.0-next.43",
-    "typedoc-plugin-mdn-links": "^3.1.12",
+    "typedoc": "0.25.7",
+    "typedoc-plugin-markdown": "4.0.0-next.53",
+    "typedoc-plugin-mdn-links": "^3.1.17",
     "typedoc-plugin-vue": "^1.1.0",
-    "typescript": "~5.3.3",
-    "vite": "^5.0.12",
-    "vitest": "^1.2.1",
-    "vue": "^3.4.15",
-    "vue-router": "^4.2.5",
-    "vue-tsc": "^1.8.27",
-    "webdriverio": "^8.28.8"
+    "typescript": "5.3.3",
+    "vite": "^5.1.5",
+    "vitest": "^1.3.1",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "vue-tsc": "^2.0.6",
+    "webdriverio": "^8.33.1"
   },
   "dependencies": {
-    "dragon-drop-vue": "^2.1.0",
-    "native-event-vue": "^1.4.0"
+    "dragon-drop-vue": "^2.1.1",
+    "native-event-vue": "^1.4.1"
   },
   "lint-staged": {
     "*.{ts,json,vue,css}": "prettier --write"
@@ -126,7 +126,9 @@
   "pnpm": {
     "overrides": {
       "glob-parent@<5.1.2": ">=5.1.2",
-      "follow-redirects@<1.15.4": ">=1.15.4"
+      "follow-redirects@<1.15.4": ">=1.15.4",
+      "ip@<1.1.9": ">=1.1.9",
+      "ip@=2.0.0": ">=2.0.1"
     }
   }
 }

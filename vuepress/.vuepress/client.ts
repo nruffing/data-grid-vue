@@ -1,14 +1,10 @@
-import { defineClientConfig } from '@vuepress/client'
+import { defineClientConfig } from 'vuepress/client'
 import { DataGridVue } from 'data-grid-vue'
 import LandingFeature from './components/LandingFeature.vue'
 import DEMO from '../demo-data/DEMO_DATA'
 import constants from './constants'
 import Layout from './layouts/Layout.vue'
-import { useThemeLocaleData } from '../node_modules/@vuepress/theme-default/lib/client'
-import { useRouter } from 'vue-router'
 import { ApplicationInsights } from '@microsoft/applicationinsights-web'
-
-let sideBarCache: any = false
 
 const appInsights = new ApplicationInsights({
   config: {
@@ -24,6 +20,10 @@ appInsights.addTelemetryInitializer(envelope => {
   envelope.data['userAgent'] = navigator.userAgent
   envelope.data['language'] = navigator.language
   envelope.data['referrer'] = document.referrer
+  envelope.data['screenHeight'] = window?.screen?.height
+  envelope.data['screenWidth'] = window?.screen?.width
+  envelope.data['windowInnerHeight'] = window?.innerHeight
+  envelope.data['windowInnerWidth'] = window?.innerWidth
 })
 
 export default defineClientConfig({
@@ -55,34 +55,6 @@ export default defineClientConfig({
       }
       return savedPosition || { top: 0 }
     }
-  },
-  setup() {
-    const themeLocale = useThemeLocaleData()
-    const router = useRouter()
-
-    function isAutoSidebar(route): boolean {
-      return route.fullPath?.startsWith('/generated/') || route.fullPath?.startsWith('/dotnet-generated/')
-    }
-
-    function flipToAutoSidebar() {
-      sideBarCache = themeLocale.value.sidebar
-      themeLocale.value.sidebar = 'auto'
-    }
-
-    if (isAutoSidebar(router.currentRoute.value)) {
-      flipToAutoSidebar()
-    }
-
-    router.beforeEach((to, from) => {
-      const toIsAuto = isAutoSidebar(to)
-      const fromIsAuto = isAutoSidebar(from)
-      if (toIsAuto && !fromIsAuto) {
-        flipToAutoSidebar()
-      } else if (!toIsAuto && fromIsAuto) {
-        themeLocale.value.sidebar = sideBarCache
-        sideBarCache = false
-      }
-    })
   },
   layouts: {
     Layout,

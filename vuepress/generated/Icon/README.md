@@ -13,10 +13,10 @@ name: {
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `StringConstructor` | - |
-| `required` | `true` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `StringConstructor` |
+| `required` | `true` |
 
 ***
 
@@ -32,12 +32,8 @@ text: {
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `StringConstructor` | - |
-| `required` | `false` | - |
-| `default` | `undefined` | - |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).
+| Member | Type |
+| :------ | :------ |
+| `type` | `StringConstructor` |
+| `required` | `false` |
+| `default` | `undefined` |

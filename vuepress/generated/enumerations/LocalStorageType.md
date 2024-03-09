@@ -16,7 +16,3 @@ or [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sess
 | :------ | :------ |
 | `sessionStorage` | `0` |
 | `localStorage` | `1` |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

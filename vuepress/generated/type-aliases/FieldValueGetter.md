@@ -9,9 +9,5 @@ type FieldValueGetter: (dataItem) => any | undefined;
 Type for optional callback function to map how to retrieve and/or format the columns
 value from the data item. Using this callback will include any data modifications or formatting
 in sorting and filtering. Similar mapping and formatting could be done with the
-cell template slot (i.e. cell-${column.field.fieldName}) but those changes will not
+cell template slot (i.e. cell-$\{column.field.fieldName\}) but those changes will not
 be included in any sorting or filtering.
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

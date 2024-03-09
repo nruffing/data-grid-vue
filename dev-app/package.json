@@ -24,17 +24,17 @@
     "node": ">=18"
   },
   "devDependencies": {
-    "@babel/types": "^7.23.6",
+    "@babel/types": "^7.24.0",
     "@tsconfig/node18": "^18.2.2",
     "@types/node": "^18.11.9",
-    "@vitejs/plugin-vue": "^5.0.3",
+    "@vitejs/plugin-vue": "^5.0.4",
     "@vue/tsconfig": "^0.5.1",
     "tslib": "^2.6.2",
-    "typescript": "~5.3.3",
-    "vite": "^5.0.12",
-    "vue": "^3.4.15",
-    "vue-router": "^4.2.5",
-    "vue-tsc": "^1.8.27"
+    "typescript": "5.3.3",
+    "vite": "^5.1.5",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "vue-tsc": "^2.0.6"
   },
   "dependencies": {
     "data-grid-vue": "workspace:*"

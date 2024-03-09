@@ -2,6 +2,13 @@
 
 ## Release Notes
 
+### v3.3.1
+  - Rev development dependencies. This addresses the security vulnerabilities reported in package [`ip`](https://github.com/nruffing/data-grid-vue/security/dependabot/12).
+  - Update [`dragon-drop-vue`](http://dragondropvue.com) dependency to v2.1.1.
+  - Update [`native-event-vue`](http://nativeeventvue.com) dependency to v1.4.1.
+  - Resolve breaking changes in vuepress v2 RC.
+  - Leverage new heading sidebar option in vuepress's default theme.
+
 ### v3.3.0
   - Add `date` and `dateTime` filtering support to `ClientSideDataService`.
   - Improved `date` and `dateTime` support for sorting and filtering in `ClientSideDataService` ensuring all computations are done on UTC dates and falsey values are converted to the JS minimum date of `1970-01-01 00:00:00.000+00:00`.

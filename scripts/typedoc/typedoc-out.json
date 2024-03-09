@@ -3891,7 +3891,7 @@
 							{
 								"type": "reference",
 								"target": {
-									"sourceFileName": "node_modules/.pnpm/dragon-drop-vue@2.1.0_vue@3.4.15/node_modules/dragon-drop-vue/dist/types/options.d.ts",
+									"sourceFileName": "node_modules/.pnpm/dragon-drop-vue@2.1.1_vue@3.4.21/node_modules/dragon-drop-vue/dist/types/options.d.ts",
 									"qualifiedName": "DragonDropVueOptions"
 								},
 								"name": "DragonDropVueOptions",
@@ -3959,7 +3959,7 @@
 													"type": {
 														"type": "reference",
 														"target": {
-															"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+															"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 															"qualifiedName": "App"
 														},
 														"name": "App",
@@ -7107,7 +7107,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -7219,7 +7219,7 @@
 			"type": {
 				"type": "reference",
 				"target": {
-					"sourceFileName": "node_modules/.pnpm/vue@3.4.15_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
+					"sourceFileName": "node_modules/.pnpm/vue@3.4.21_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
 					"qualifiedName": ""
 				},
 				"name": "DefineComponent",
@@ -7342,7 +7342,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -7472,7 +7472,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -7601,7 +7601,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -7724,7 +7724,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -8139,7 +8139,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -8252,7 +8252,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -8910,7 +8910,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -9070,7 +9070,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -10499,7 +10499,7 @@
 			"type": {
 				"type": "reference",
 				"target": {
-					"sourceFileName": "node_modules/.pnpm/vue@3.4.15_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
+					"sourceFileName": "node_modules/.pnpm/vue@3.4.21_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
 					"qualifiedName": ""
 				},
 				"name": "DefineComponent",
@@ -10634,7 +10634,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -10734,7 +10734,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -10885,7 +10885,7 @@
 			"type": {
 				"type": "reference",
 				"target": {
-					"sourceFileName": "node_modules/.pnpm/vue@3.4.15_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
+					"sourceFileName": "node_modules/.pnpm/vue@3.4.21_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
 					"qualifiedName": ""
 				},
 				"name": "DefineComponent",
@@ -10962,7 +10962,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -11129,7 +11129,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -11578,7 +11578,7 @@
 			"type": {
 				"type": "reference",
 				"target": {
-					"sourceFileName": "node_modules/.pnpm/vue@3.4.15_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
+					"sourceFileName": "node_modules/.pnpm/vue@3.4.21_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
 					"qualifiedName": ""
 				},
 				"name": "DefineComponent",
@@ -11655,7 +11655,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -11752,7 +11752,7 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.15/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
+											"sourceFileName": "node_modules/.pnpm/@vue+runtime-core@3.4.21/node_modules/@vue/runtime-core/dist/runtime-core.d.ts",
 											"qualifiedName": "PropType"
 										},
 										"typeArguments": [
@@ -11897,7 +11897,7 @@
 			"type": {
 				"type": "reference",
 				"target": {
-					"sourceFileName": "node_modules/.pnpm/vue@3.4.15_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
+					"sourceFileName": "node_modules/.pnpm/vue@3.4.21_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
 					"qualifiedName": ""
 				},
 				"name": "DefineComponent",
@@ -12046,7 +12046,7 @@
 			"type": {
 				"type": "reference",
 				"target": {
-					"sourceFileName": "node_modules/.pnpm/vue@3.4.15_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
+					"sourceFileName": "node_modules/.pnpm/vue@3.4.21_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
 					"qualifiedName": ""
 				},
 				"name": "DefineComponent",
@@ -12364,7 +12364,7 @@
 			"type": {
 				"type": "reference",
 				"target": {
-					"sourceFileName": "node_modules/.pnpm/vue@3.4.15_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
+					"sourceFileName": "node_modules/.pnpm/vue@3.4.21_typescript@5.3.3/node_modules/vue/dist/vue.d.mts",
 					"qualifiedName": ""
 				},
 				"name": "DefineComponent",

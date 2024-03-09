@@ -13,7 +13,3 @@ Supported data types for a column.
 | `number` | `2` |
 | `date` | `3` |
 | `dateTime` | `4` |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

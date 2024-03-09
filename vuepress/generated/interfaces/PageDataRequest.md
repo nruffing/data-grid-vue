@@ -17,7 +17,3 @@ the HTTP request is sent using the [BeforeRequestHandler](../type-aliases/Before
 | `pageSize` | `number` | **Description**<br />The maximum number of data items to display on each page. If the data grid is<br />not set configured to be pageable with the [DataGridVueGrid.paged](../DataGridVueGrid/README.md) prop then this<br />will always be `-1`. |
 | `sort` | [`Sort`](Sort.md)[] | **Description**<br />The current column sort definitions in the order in which they should be applied. |
 | `filter` | `undefined` \| [`Filter`](Filter.md) | **Description**<br />The current filter definition or undefined if no filter is set. |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).
