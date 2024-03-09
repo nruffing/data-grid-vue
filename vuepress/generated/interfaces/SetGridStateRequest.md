@@ -18,7 +18,3 @@ Request data interface sent by the [ServerSideStorageService](../classes/ServerS
 | `userId` | `TUserId` | The unique identifier for the current user. |
 | `gridId` | `TGridId` | The unique identifier for the specific data grid instance. |
 | `gridState` | [`GridState`](GridState.md) | The current grid state to save. |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

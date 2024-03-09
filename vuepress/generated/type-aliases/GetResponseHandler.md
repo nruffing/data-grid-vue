@@ -18,8 +18,4 @@ This is useful when you need to map the servers response data back to [GridState
 
 ## Returns
 
-[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`GridState`](../interfaces/GridState.md)\>
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`GridState`](../interfaces/GridState.md)\>

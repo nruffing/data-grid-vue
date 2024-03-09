@@ -11,7 +11,3 @@ column level sort options to take effect.
 | :------ | :------ | :------ |
 | `sortable` | `boolean` | **Description**<br />Whether the grid should be sortable. |
 | `multiColumn` | `boolean` | **Description**<br />Whether more then one column can be sorted at once. |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

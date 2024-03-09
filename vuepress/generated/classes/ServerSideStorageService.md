@@ -51,13 +51,13 @@ getGridStateAsync(): Promise<undefined | GridState>
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`undefined` \| [`GridState`](../interfaces/GridState.md)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`undefined` \| [`GridState`](../interfaces/GridState.md)\>
 
 A Promise that returns the saved grid state or undefined if no grid state is saved.
 
 #### Implementation of
 
-[`StorageService.getGridStateAsync`](../interfaces/StorageService.md#getgridstateasync)
+[`StorageService`](../interfaces/StorageService.md).[`getGridStateAsync`](../interfaces/StorageService.md#getgridstateasync)
 
 #### Description
 
@@ -79,18 +79,14 @@ setGridStateAsync(gridState): Promise<void>
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`void`\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
 A Promise that returns when the grid state has been saved.
 
 #### Implementation of
 
-[`StorageService.setGridStateAsync`](../interfaces/StorageService.md#setgridstateasync)
+[`StorageService`](../interfaces/StorageService.md).[`setGridStateAsync`](../interfaces/StorageService.md#setgridstateasync)
 
 #### Description
 
 Saves a new version of the grid state. This called every time data in the grid state changes.
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

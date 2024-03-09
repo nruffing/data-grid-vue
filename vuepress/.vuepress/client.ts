@@ -1,4 +1,4 @@
-import { defineClientConfig } from '@vuepress/client'
+import { defineClientConfig } from 'vuepress/client'
 import { DataGridVue } from 'data-grid-vue'
 import LandingFeature from './components/LandingFeature.vue'
 import DEMO from '../demo-data/DEMO_DATA'

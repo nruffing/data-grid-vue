@@ -28,10 +28,10 @@ The [FilterOperator](../enumerations/FilterOperator.md) values configured on the
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<[`FilterOperator`](../enumerations/FilterOperator.md)[]\> | - |
-| `required` | `true` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`FilterOperator`](../enumerations/FilterOperator.md)[]\> |
+| `required` | `true` |
 
 ***
 
@@ -57,11 +57,11 @@ FilterOperator.equals
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<[`FilterOperator`](../enumerations/FilterOperator.md)\> | - |
-| `required` | `false` | - |
-| `default` | [`FilterOperator`](../enumerations/FilterOperator.md) | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`FilterOperator`](../enumerations/FilterOperator.md)\> |
+| `required` | `false` |
+| `default` | [`FilterOperator`](../enumerations/FilterOperator.md) |
 
 ## emits
 
@@ -84,7 +84,3 @@ update:modelValue(operator): boolean
 #### Description
 
 Event emitted when the [FilterOperator](../enumerations/FilterOperator.md) state has been updated.
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

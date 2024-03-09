@@ -10,7 +10,3 @@ Model definition for the aggregated filter currently being applied to the entire
 | :------ | :------ | :------ |
 | `or` | [`FilterCondition`](FilterCondition.md)[] | Collection of [FilterCondition](FilterCondition.md)s that will be or-ed together. |
 | `and` | `undefined` \| [`Filter`](Filter.md) | Optional [Filter](Filter.md) to and with the current one. |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

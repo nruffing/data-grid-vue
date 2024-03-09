@@ -8,10 +8,6 @@ const DataGridVue: {
 
 ## Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `install` | (`app`, `options`?) => `void` | - |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).
+| Member | Type |
+| :------ | :------ |
+| `install` | (`app`, `options`?) => `void` |

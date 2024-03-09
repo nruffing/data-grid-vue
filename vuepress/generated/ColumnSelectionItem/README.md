@@ -25,10 +25,10 @@ The [Column](../interfaces/Column.md) to show or hide.
 
 #### Type declaration
 
-| Member | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `PropType`\<[`Column`](../interfaces/Column.md)\> | - |
-| `required` | `true` | - |
+| Member | Type |
+| :------ | :------ |
+| `type` | `PropType`\<[`Column`](../interfaces/Column.md)\> |
+| `required` | `true` |
 
 ## emits
 
@@ -51,7 +51,3 @@ hidden-updated(hidden): boolean
 #### Description
 
 Event emitted when the shown/hidden state of the column has been updated.
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

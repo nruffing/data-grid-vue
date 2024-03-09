@@ -17,7 +17,3 @@ Supported filter operators
 | `lessThan` | `6` |
 | `greaterThanOrEqualTo` | `7` |
 | `lessThanOrEqualTo` | `8` |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

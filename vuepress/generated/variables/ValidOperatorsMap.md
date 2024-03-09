@@ -14,7 +14,3 @@ Map of which [FilterOperator](../enumerations/FilterOperator.md)s are valid for 
 | number | equals, notEquals, greaterThan, lessThan, greaterThanOrEqualTo, lessThanOrEqualTo |
 | date | equals, notEquals, greaterThan, lessThan, greaterThanOrEqualTo, lessThanOrEqualTo |
 | dateTime | equals, notEquals, greaterThan, lessThan, greaterThanOrEqualTo, lessThanOrEqualTo |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

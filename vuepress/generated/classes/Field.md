@@ -10,7 +10,7 @@ that field to a [Column](../interfaces/Column.md).
 | Property | Type | Description |
 | :------ | :------ | :------ |
 | `fieldName` | `string` | The name of the field. This should be unique across all fields on the data grid.<br />If [valueGetter](Field.md) is not specified the field name is also assumed to be the property<br />name of the desired value on the data item and is used to retrieve the value from the<br />data item using a direct string index. |
-| `valueGetter?` | [`FieldValueGetter`](../type-aliases/FieldValueGetter.md) | An optional callback function to map how to retrieve and/or format the columns<br />value from the data item. Using this callback will include any data modifications or formatting<br />in sorting and filtering. Similar mapping and formatting could be done with the<br />cell template slot (i.e. cell-${column.field.fieldName}) but those changes will not<br />be included in any sorting or filtering. |
+| `valueGetter?` | [`FieldValueGetter`](../type-aliases/FieldValueGetter.md) | An optional callback function to map how to retrieve and/or format the columns<br />value from the data item. Using this callback will include any data modifications or formatting<br />in sorting and filtering. Similar mapping and formatting could be done with the<br />cell template slot (i.e. cell-$\{column.field.fieldName\}) but those changes will not<br />be included in any sorting or filtering. |
 
 ## Constructors
 
@@ -48,7 +48,3 @@ resolveValue(dataItem): any
 #### Returns
 
 `any`
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

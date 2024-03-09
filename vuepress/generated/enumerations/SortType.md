@@ -10,7 +10,3 @@ Whether a sort is ascending or descending.
 | :------ | :------ |
 | `ascending` | `0` |
 | `descending` | `1` |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

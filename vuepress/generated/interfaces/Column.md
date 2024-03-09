@@ -17,7 +17,3 @@ Column definition
 | `filterOptions?` | [`ColumnFilterOptions`](ColumnFilterOptions.md) | **Description**<br />Additional options for how the column's filter behaves including the [FilterOperator](../enumerations/FilterOperator.md)s to<br />allow the user to select from. Valid filter operators are defined in [ValidOperatorsMap](../variables/ValidOperatorsMap.md). |
 | `width?` | `string` | **Description**<br />Optionally specify an absolute or relative column width. Column widths can be specified with px, % or *.<br />By default columns without a width specified will take up an equal share of the remaining space.<br />The relative * unit can be used to specify a column to take a relational share of the remaining space.<br />Column widths automatically regenerate when the window/page size changes. |
 | `hidden?` | `boolean` | **Description**<br />Whether the column is currently hidden. |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).

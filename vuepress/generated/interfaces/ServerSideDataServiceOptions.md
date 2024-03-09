@@ -19,7 +19,3 @@ body if the HTTP status code is `200 OK` and the `Content-Type` response header 
 | `postRoute?` | `string` \| [`URL`]( https://developer.mozilla.org/docs/Web/API/URL ) | **Description**<br />The full HTTP/HTTPS url to send the POST request.<br />Use [beforeRequest](ServerSideDataServiceOptions.md) callback to alter the HTTP verb or headers. |
 | `beforeRequest?` | [`BeforeRequestHandler`](../type-aliases/BeforeRequestHandler.md) | Optional callback to change the [Request](https://developer.mozilla.org/docs/Web/API/Request)<br />object before it is sent to the server. This is useful when you need to map the [PageDataRequest](PageDataRequest.md)<br />to a different data contract. |
 | `responseHandler?` | [`ResponseHandler`](../type-aliases/ResponseHandler.md) | Optional callback to change the [Response](https://developer.mozilla.org/docs/Web/API/Response)<br />object before it is handled by the data grid. This is useful when you need to map the servers response<br />data back to [PageData](PageData.md). |
-
-***
-
-Generated using [TypeDoc](https://typedoc.org) and [typedoc-plugin-markdown](https://typedoc-plugin-markdown.org).
