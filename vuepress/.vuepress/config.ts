@@ -186,16 +186,8 @@ export default defineUserConfig({
           ],
         },
       ],
-      '/generated/': [
-        {
-          text: 'API',
-        },
-      ],
-      '/dotnet-generated/': [
-        {
-          text: '.NET',
-        },
-      ],
+      '/generated/': 'heading',
+      '/dotnet-generated/': 'heading',
     },
     sidebarDepth: 2,
   }),
