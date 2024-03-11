@@ -111,6 +111,6 @@ onBeforeUnmount(() => {
 
 const router = useRouter()
 function onGetStarted() {
-  router.push({ path: '/guide' })
+  router.push({ path: '/guide/' })
 }
 </script>
