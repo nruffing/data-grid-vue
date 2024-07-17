@@ -185,7 +185,7 @@ const staticColumns = [
 
 ## Visibility
 
-Columns can be hidden by specifying `true` for the `isHidden` property.
+Columns can be hidden by specifying `true` for the `column.hidden` property.
 
 The `isHidden` property is how the data grid supports allowing the user to add/remove columns from view. The add/remove columns feature can be enabled with the [`showColumnSelection`](/generated/DataGridVueGrid/#showcolumnselection) property. When set to `true` an `Add/Remove Columns` option is added to the header options area above the data grid. Clicking this option will open a popup menu with the ability to toggle the visibility of each column, even ones that were initially hidden.
 
